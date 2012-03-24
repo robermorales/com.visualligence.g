@@ -1,0 +1,765 @@
+grammar com.visualligence.g.VML with org.eclipse.xtext.common.Terminals
+
+import "http://www.eclipse.org/emf/2002/Ecore" as ecore
+
+generate vML "http://www.visualligence.com/g/VML"
+
+// @TODO syntax coloring for numeric terminals
+// @TODO revisar tuplas !!! tupla vacía??? (: a:a, a:b )
+// @TODO genericidad en los tipos
+// @TODO Nombre con estilo Java y paquetes. imprescindible para crecer.
+
+Module:
+	{Module}
+	( 'module'   name       = ID       )?
+	( 'input'    inputtype  = TypeRef  )?
+	( 'output'   outputtype = TypeRef  )?
+	( 'author'   author     = STRING   )?
+	( 'creation' creation   = STRING   )?
+	( 'more'     link       = STRING   )?
+	
+	imports   += Import*
+
+	sentences += Sentence*
+;
+
+Import:
+	'import'
+	importURI = STRING
+;
+
+Sentence:
+	Multi     |
+	Unit      |
+	Box       |
+	Constant  |
+	Shape     |
+	TypeAlias |
+	Node      |
+	Stream    |
+	Canvas    |
+
+	Block     |
+
+	Noop
+;
+
+Node:
+	Invokation  |
+	Factory     |
+	Loop        |
+	Switch      |
+	File
+;
+
+Switch:
+	'switch'
+	name = ID
+	test = LiteralExpression
+	'?'
+	a = LiteralExpression
+	':'
+	b = LiteralExpression
+;
+
+LiteralExpression:
+	LiteralExpressionBin
+;
+
+LiteralExpressionBin returns LiteralExpression:
+	LiteralExpressionComp
+	(
+		{Operation.left=current}
+		op    = BinOp
+		right = LiteralExpressionBin
+	)?
+;
+
+LiteralExpressionComp returns LiteralExpression:
+	LiteralExpressionAdd
+	(
+		{Operation.left=current}
+		op    = CompOp
+		right = LiteralExpressionComp
+	)?
+;
+
+LiteralExpressionAdd returns LiteralExpression:
+	LiteralExpressionMulti
+	(
+		{Operation.left=current}
+		op    = AddOp
+		right = LiteralExpressionAdd
+	)?
+;
+
+LiteralExpressionMulti returns LiteralExpression:
+	LiteralExpressionExp
+	(
+		{Operation.left=current}
+		op    = MultiOp
+		right = LiteralExpressionMulti	
+	)?
+;
+
+LiteralExpressionExp returns LiteralExpression:
+	LiteralExpressionSigned
+	(
+		{Operation.left=current}
+		op    = ExpOp
+		right = LiteralExpressionExp
+	)?
+;
+
+LiteralExpressionSigned returns LiteralExpression:
+	(
+		{UnaryOperation}
+		op    = ( AddOp | NegationOp )
+		right = LiteralExpressionTerminal
+	)|
+	LiteralExpressionTerminal
+;
+
+LiteralExpressionTerminal returns LiteralExpression:
+	(
+		'(' LiteralExpression ')' |
+		RValue
+	)
+;
+
+enum BinOp returns Op:
+	and = '&&' |
+	or  = '||'
+;
+
+enum NegationOp returns Op:
+	neg = '!'
+;
+
+enum CompOp returns Op:
+	eq = '==' |
+	ne = '!=' |
+	lt = '<'  |
+	gt = '>'  |
+	le = '<=' |
+	ge = '>='
+;
+
+enum AddOp returns Op:
+	plus  = '+' |
+	minus = '-'
+;
+
+enum MultiOp returns Op:
+	times       = '*'  |
+	modulo      = '%'  |
+	intdivision = '//' |
+	divideby    = '/'
+;
+
+enum ExpOp returns Op:
+	exp = '**'
+;
+
+RValue:
+	SingleLiteral   |
+	SequenceLiteral |
+	TupleLiteral    |
+	SetLiteral      |
+
+//	NodeRef         |
+//	MemberRef       |
+	ConstantRef
+;
+
+NodeRef:
+	node = [Node|ID]
+;
+
+MemberRef:
+//	(
+//		node = [Node|ID]
+//		'.'
+//	)?
+	member = [LoopSentence|ID]
+;
+
+ConstantRef:
+	constantref = [Constant|ID]
+;
+
+SingleLiteral:
+	value = SingleLiteralDT
+;
+
+SingleLiteralDT:
+	BoolLiteral   |
+	NumberLiteral |
+	StringLiteral
+;
+
+StringLiteral:
+	STRING
+;
+
+NumberLiteral:
+	Integer   |
+	Float     |
+	SNotation |
+	Imaginary
+;
+
+Integer:
+	INT |
+	OCT |
+	HEX |
+	BIN
+;
+
+Float:
+	( INT '.' INT? )
+	|
+	( '.' INT )
+;
+
+SNotation:
+	( INT | Float )
+	ExpConstant
+	Sign?
+	INT
+;
+
+ExpConstant: 'e' | 'E' ;
+
+Sign: '+' | '-';
+
+Imaginary:
+	( INT | Float )?
+	ImaginaryConstant
+;
+
+ImaginaryConstant: 'i' | 'j';
+
+BoolLiteral: 'true' | 'false';
+
+SequenceLiteral:
+	SequenceLiteralPlain |
+	SequenceLiteralSerie
+;
+
+SequenceLiteralSerie:
+	'[..'
+		init = LiteralExpression
+		'->'
+		end  = LiteralExpression
+		(
+			','
+			inc  = LiteralExpression
+		)?
+	']'
+;
+
+SequenceLiteralPlain:
+	{SequenceLiteralPlain}
+	'['
+		(
+			items += LiteralExpression
+			( ',' items += LiteralExpression )*
+		)?
+	']'
+;
+
+TupleLiteral:
+	{TupleLiteral}
+	'('
+		(
+			items += TupleItem
+			( ',' items += TupleItem )*
+		)?
+	')'
+;
+
+TupleItem:
+	name  = ID
+	':'
+	value = LiteralExpression
+;
+
+SetLiteral:
+	{SetLiteral}
+	'{'
+		(
+			items += LiteralExpression
+			( ',' items += LiteralExpression )*
+		)?
+	'}'
+;
+
+//terminal DEC returns ecore::EInt:     ('0'..'9')                  +;
+terminal OCT returns ecore::EInt:     ('0'..'7')                  + 'o';
+terminal HEX returns ecore::EInt: '0x'('0'..'9'|'A'..'F'|'a'..'f')+    ;
+terminal BIN returns ecore::EInt:     ('0'..'1')                  + 'b';
+
+Block:
+	{Block}
+	'{'
+		( '~' name = ID )?
+		sentences += Sentence*
+	'}'
+;
+
+Noop:
+	{Noop}
+	name = 'noop'
+;
+
+Pair:
+	name  = ID
+	'='
+	value = STRING
+;
+
+Constant:
+	'constant'
+	name  = ID
+	type  = TypeRef
+	'='
+	value = LiteralExpression
+;
+
+Multi:
+	'multi'
+	name     = ID
+	'='
+	op       = MultiOp?
+	factor   = INT
+	parent   = [Multi|ID]?
+;
+
+Unit:
+	DUnit |
+	NUnit
+;
+
+DUnit:
+	'unit'
+	name     = ID
+	'='
+	op       = MultiOp?
+	factor   = INT
+	multi    = [Multi|ID]?
+	parent   = [Unit|ID]
+;
+
+NUnit:
+	'unit'
+	name       = ID
+	numbertype = NumberType
+;
+
+Box:
+	'box' name=ID
+	'{'
+		members += Member*
+	'}'
+;
+
+Shape:
+	'shape'
+	name = ID
+;
+
+Member:
+	name = ID
+	type = TypeRef
+;
+
+TypeRef:
+	PlainTypeRef     |
+	CompositeTypeRef
+;
+
+PlainTypeRef:
+	VoidTypeRef       |
+	AutoTypeRef       |
+	NumberTypeRef     |
+	VisualTypeRef     |
+	AuxTypeRef        |
+	TypeAliasRef      |
+	ShapeRef          |
+	BoxRef            |
+	UnitRef           |
+	CollectionRef
+;
+
+CompositeTypeRef:
+	SequenceTypeRef   |
+	TupleTypeRef      |
+	SetTypeRef
+;
+
+SequenceTypeRef:
+	{SequenceTypeRef}
+	'['
+		type = TypeRef
+	']'
+;
+
+TupleTypeRef:
+	{TupleTypeRef}
+	'('
+		(
+			items += TupleTypeRefItem
+			( ',' items += TupleTypeRefItem )*
+		)?
+	')'
+;
+
+TupleTypeRefItem:
+	name = ID
+	':'
+	type = TypeRef
+;
+
+SetTypeRef:
+	{SetTypeRef}
+	'{'
+		type = TypeRef
+	'}'
+;
+
+VoidTypeRef:
+	name = 'void'
+;
+
+AutoTypeRef:
+	{AutoTypeRef}
+	'auto'
+;
+
+CollectionRef:
+	collection = CollectionType '<' typeref = TypeRef '>'
+;
+
+UnitRef:
+	'in' unittype = [Unit|ID]
+;
+
+BoxRef:
+	'->' ref = [Box|ID]
+;
+
+TypeAliasRef:
+	ref = [TypeAlias|ID]
+;
+
+AuxTypeRef:
+	ref = AuxType
+;
+
+ShapeRef:
+	'~>' ref = [Shape|ID]
+;
+
+NumberTypeRef:
+	ref = NumberType
+;
+
+VisualTypeRef:
+	ref = VisualType
+;
+
+enum NumberType:
+	positive |
+	natural  |
+	integer  |
+	rational
+;
+
+enum VisualType:
+	shape      |
+	color      |
+	angle      |
+	size       |
+	position   |
+	texture
+;
+
+enum AuxType :
+	string     |
+	bool
+;
+
+TypeAlias:
+	'alias'
+	name = ID
+	type = TypeRef
+;
+
+enum CollectionType:
+	set     |
+	bag     |
+	list    |
+	graph   |
+	single //trees, graphs, heaps, queues, stacks, ...?
+;
+
+Stream:
+	( name = 'stream' )?
+	left = LStreamValue
+	'<-'
+	right = RStreamValue
+;
+
+LStreamValue:
+	OutputRef
+;
+
+RStreamValue:
+	InputRef         |
+	LiteralExpression
+;
+
+InputRef:
+	{InputRef}
+	'I'
+;
+
+OutputRef:
+	{OutputRef}
+	'O'
+;
+
+Invokation:
+	module = ID//Module
+	name = ID
+	'{'
+		( sentences += InvokationParam )*
+	'}'
+;
+
+InvokationParam:
+	name = ID
+	'<-'
+	source = LiteralExpression
+;
+
+Loop:
+	'loop' 	
+	it = (
+		LoopFor
+	)?
+	name = ID
+	'{'
+		( sentences += LoopSentence )*
+	'}'
+;
+
+LoopSentence:
+	name = ID
+	type = TypeRef
+	'<-'
+	o = LiteralExpression
+	(
+		'<-'
+		i = LiteralExpression
+	)?
+;
+
+LoopFor:
+	( 'for' SequenceLiteral )
+;
+
+Factory:
+	'factory'
+	name = ID
+	type = TypeRef
+;
+
+File:
+	'file'
+	name = ID
+	(
+		( isinput ?= '<-' ) |
+		'->'
+	)
+	path = STRING
+;
+
+Canvas:
+	'canvas'
+	name = ID
+	'{'
+		( properties += Pair ';' )*
+	'}'
+;
+
+//terminal ID: ('a'..'z'|'A'..'Z');
+
+//terminal DATE: ('0'..'9')('0'..'9')('0'..'9')('0'..'9')'/'('0'..'9')('0'..'9')'/'('0'..'9')('0'..'9');
+
+//enum eConstant:
+//	PI   |
+//	G    |
+//	e    |
+//	A    |
+//	
+//	zero
+//;
+//
+//enum DecimalUpMulti:
+//	I    |//24
+//	Z    |//21
+//	E    |//18
+//	P    |//15
+//	T    |//12
+//	G    |//9
+//	M    |//6
+//	K    |//3
+//	H    |//2
+//	D    |//1
+//	
+//	regular
+//;
+//	
+//enum DecimalDownMulti:
+//	d    |//-1
+//	c    |//-2
+//	m    |//-3
+//	u    |//-6 µ
+//	n    |//-9
+//	p    |//-12
+//	f    |//-15
+//	a    |//-18
+//	z    |//-21
+//	y    |//-24
+//
+//	regular
+//;
+//
+//enum NonDecimalMulti:
+//	dozen      |//12
+//	twelve     |//12
+//	sixty      |//60
+//	twentyfour |//24
+//	
+//	regular
+//;
+//
+//enum TimeDerivedUnits:
+//	minute    |
+//	hour      |
+//	day       |
+//	month     |
+//	year      |
+//	century   |
+//	millenium
+//;
+//
+//enum eUnit:
+//	second |
+//	meter  |
+//	gram   |
+//	newton |
+//	joule  |
+//	watt   |
+//	rad    |
+//	kelvin |
+//	
+//	units
+//;
+//
+
+//enum
+//	time    |
+//	date    |
+//	duration|
+//	
+//	geopos  |
+//	
+//	auto
+//;
+//
+//Source:
+//	'source' name=ID
+//	'{'
+//		( properties += Pair ';' )*
+//	'}'
+//;
+//
+//SourceRef:
+//	'^' ref=[Source|ID]
+//;
+
+//Model:
+//	(imports += Import)*
+//	(elements += Invokation)*
+//;
+//	
+//Import:
+//	'import' name=ID ';'
+//;
+//
+//Invokation:
+//	name=ID '(' (pars += Par)* ')'
+//;
+//
+//Par:
+//	value=STRING
+//;
+	
+//
+//Program :
+//		'main' name = VARNAME content = Block
+//;
+//
+//Block :
+//		'{' ( sentences += Sentence )+ '}' |
+//		Sentence
+//;
+//
+//Sentence : ( Var | Asg | Print ) ';' ;
+//
+//Var : 'var' name = VARNAME ( init ?= '=' content = Exp ) ?;
+//
+//Asg : left = [Var] '=' right = Exp;
+//
+//Print : 'print' Exp;
+//
+//Exp :
+//		'(' includes = Exp ')'
+//;
+//
+//BinExp returns Exp :
+//		left = Exp operator = sumop right = Exp
+//;
+//
+//LitExp returns Exp :
+//		ref = VARNAME |
+//		val = INTEGER
+//;
+//
+//enum sumop returns BinOperator:
+//		ADD = '+' |
+//		SUB = '-'
+//;
+//		
+//enum mulop returns BinOperator:
+//		MUL = '*' |
+//		DIV = '/' |
+//		MOD = '%'
+//;
+//
+//terminal VARNAME : ('a'..'z')('a'..'z'|'_'|'0'..'9')*;
+//
+//terminal INTEGER : ('0'..'9') + ;
+//
+////enum monop returns Op:
+////		INV = '-' | INV = 'inv' |
+////		LN  = '~' | LN  = 'ln'
+////;
+//
+//// terminal FLOAT returns ecore::EFloat : INT '.' UINT? ( ( 'e' | 'E' ) INT )? ;
+//
+//
+//	
