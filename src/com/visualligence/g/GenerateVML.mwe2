@@ -25,10 +25,11 @@ Workflow {
 
     component = Generator {
         pathRtProject = runtimeProject
-        pathUiProject = "${runtimeProject}.ui"
-        pathTestProject = "${runtimeProject}.tests"
+        pathUiProject = "${runtimeProject}"
+        pathTestProject = "${runtimeProject}"
         projectNameRt = projectName
-        projectNameUi = "${projectName}.ui"
+        projectNameUi = "${projectName}"
+        
         language = {
             uri = grammarURI
             fileExtensions = file.extensions
