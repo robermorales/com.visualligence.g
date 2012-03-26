@@ -1,0 +1,35 @@
+package com.visualligence.g.tests
+
+import org.eclipse.xtext.junit4.InjectWith
+import org.junit.runner.RunWith
+import org.eclipse.xtext.junit4.XtextRunner
+import org.eclipse.xtext.junit4.util.ParseHelper
+import com.visualligence.g.parser.antlr.VMLParser
+import com.google.inject.Inject
+import com.visualligence.g.vML.Module
+import org.junit.Test
+import static org.junit.Assert.*
+import com.visualligence.g.VMLInjectorProvider
+
+@RunWith(typeof(XtextRunner))
+@InjectWith(typeof(VMLInjectorProvider))
+
+class XtendSetup {
+
+	@Inject extension ParseHelper<Module> parser
+	
+	@Test
+	def void filesetup(){
+		var model = '''
+			module a
+		'''.parse
+		
+		assertNotNull(model);
+		assertEquals(model.name,"a")
+	}
+	
+	@Test
+	def void test10(){
+		filesetup();
+	}
+}
