@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Thank you for using Xtext -->
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<prerequisites>
+		<maven>3.0</maven>
+	</prerequisites>
+
+	<groupId>p2.osgi.bundle</groupId>
+	<artifactId>com.visualligence.g.parent</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>pom</packaging>
+	<name>vml - parent</name>
+
+	<properties>
+		<tycho.version>0.12.0</tycho.version>
+		<junit.version>4.8.2</junit.version>
+		<eclipse.download>http://download.eclipse.org</eclipse.download>
+		<eclipse.p2.repository>${eclipse.download}/releases/indigo</eclipse.p2.repository>
+		<xtext.p2.repository>${eclipse.download}/modeling/tmf/xtext/updates/composite/releases</xtext.p2.repository>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+
+	<modules>
+		<module>../com.visualligence.g/pom-grammar.xml</module>
+		<!-- <module>../com.visualligence.g.ui</module> <module>../com.visualligence.g.tests</module> -->
+	</modules>
+
+	<build>
+		<resources>
+			<resource>
+				<directory>src</directory>
+			</resource>
+		</resources>
+		<plugins>
+			<plugin>
+				<groupId>org.eclipse.tycho</groupId>
+				<artifactId>tycho-maven-plugin</artifactId>
+				<version>${tycho.version}</version>
+				<extensions>true</extensions>
+			</plugin>
+			<plugin>
+				<groupId>org.eclipse.tycho</groupId>
+				<artifactId>target-platform-configuration</artifactId>
+				<version>${tycho.version}</version>
+				<configuration>
+					<resolver>p2</resolver>
+					<pomDependencies>consider</pomDependencies>
+				</configuration>
+			</plugin>
+		</plugins>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.fornax.toolsupport</groupId>
+					<artifactId>fornax-oaw-m2-plugin</artifactId>
+					<version>3.1.0-SNAPSHOT</version>
+					<configuration>
+						<workflowEngine>mwe2</workflowEngine>
+					</configuration>
+					<executions>
+						<execution>
+							<phase>generate-sources</phase>
+							<goals>
+								<goal>run-workflow</goal>
+							</goals>
+						</execution>
+					</executions>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+	</build>
+
+	<repositories>
+		<repository>
+			<id>eclipse-platform</id>
+			<layout>p2</layout>
+			<url>${eclipse.p2.repository}</url>
+		</repository>
+		<!-- <repository> <id>xtext-composite</id> <layout>p2</layout> <url>${xtext.p2.repository}</url> 
+			</repository> -->
+	</repositories>
+
+	<pluginRepositories>
+		<!-- <pluginRepository> <id>maven.eclipse.org</id> <url>http://maven.eclipse.org/nexus/content/repositories/milestone-indigo</url> 
+			</pluginRepository> -->
+		<pluginRepository>
+			<id>fornax.plugin.repository</id>
+			<name>Fornax Plugin Repository</name>
+			<url>http://www.fornax-platform.org/m2/repository</url>
+		</pluginRepository>
+	</pluginRepositories>
+
+	<!-- <dependencyManagement> <dependencies> <dependency> <groupId>junit</groupId> 
+		<artifactId>junit</artifactId> <version>4.8.2</version> <scope>test</scope> 
+		</dependency> <dependency> <groupId>org.eclipse.xtext</groupId> <artifactId>org.eclipse.xtext.xtend2.lib</artifactId> 
+		<version>2.2.1</version> </dependency> <dependency> <groupId>com.google.inject</groupId> 
+		<artifactId>com.google.inject</artifactId> <version>3.0.0.no_aop</version> 
+		</dependency> </dependencies> </dependencyManagement> -->
+</project>
