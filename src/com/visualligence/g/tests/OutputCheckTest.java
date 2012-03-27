@@ -18,7 +18,7 @@ import com.visualligence.g.vML.Module;
 
 @InjectWith(VMLInjectorProvider.class)
 @RunWith(XtextRunner.class)
-public class OutputCheck {
+public class OutputCheckTest {
 
 	@Inject
 	ParseHelper<Module> parser;

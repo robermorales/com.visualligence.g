@@ -17,7 +17,7 @@ import com.visualligence.g.vML.VoidTypeRef;
 
 @InjectWith(VMLInjectorProvider.class)
 @RunWith(XtextRunner.class)
-public class ModuleInfo {
+public class ModuleInfoTest {
 
 	@Inject
 	ParseHelper<Module> parser;
