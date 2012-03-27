@@ -1,0 +1,15 @@
+module fibonacci
+
+input void
+output [positive]
+
+author "Rober Morales-Chaparro"
+creation "2011/12/01"
+more "http://visualligence.com/"
+
+loop fibonacci{
+	n_2 natural <- 1 <- n_1
+	n_1 natural <- 1 <- n_1 + n_2
+}
+
+O <- n_2//[0:10]

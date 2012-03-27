@@ -1,0 +1,10 @@
+module hello
+
+input void
+output string
+
+author "Rober Morales-Chaparro"
+creation "2011/12/01"
+more "http://visualligence.com/"
+
+O <- "hello"

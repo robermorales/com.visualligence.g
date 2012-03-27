@@ -1,0 +1,31 @@
+module gdc
+
+author "Rober Morales-Chaparro"
+creation "2011/12/01"
+more "http://visualligence.com/"
+
+input ( a : positive, b : positive )
+output positive
+
+min m{
+	a <- I.a
+	b <- I.b
+}
+
+max M{
+	a <- a
+	b <- b
+}
+
+gdc g{
+	a <- m
+	b <- M % m
+}
+
+switch s {
+	m == 0
+	M
+	m
+}
+
+O <- s

@@ -1,0 +1,30 @@
+module plot
+
+/*
+      |               |
+      |       ///--->[ ]->O
+  I->[ ]------[x]     |
+      |   +---[y]     |
+      |   |           |
+  0-->#---+---[+]---->#
+      |        |      |
+      |       10      |
+      |               |
+*/
+
+input [positive]
+output [->point2D]
+
+author "Rober Morales-Chaparro"
+creation "2011/12/19"
+more "http://visualligence.com/"
+
+import "standard.vml"
+
+loop for I main{
+	acc positive <- acc + 10 <- 0
+	out ->point2D <- { x: it, y: acc }
+}
+
+O <- main.out
+

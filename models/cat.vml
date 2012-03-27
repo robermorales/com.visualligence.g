@@ -1,0 +1,10 @@
+module cat
+
+input string
+output string
+
+author "Rober Morales-Chaparro"
+creation "2011/12/01"
+more "http://visualligence.com/"
+
+O <- I

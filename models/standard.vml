@@ -1,0 +1,42 @@
+module standard
+
+input void
+output void
+
+author "Rober Morales-Chaparro"
+creation "2011/10/17"
+more "http://visualligence.com/"
+
+multi unity = * 1
+multi K = * 1000
+multi M = * 1000 K
+multi m = / 1000
+multi u = / 1000 m
+
+unit meter  rational
+unit second rational
+unit gram   rational
+
+unit km = * 1 K meter
+unit min = * 60 second
+unit hour = * 60 min
+unit day = * 24 hour
+
+//unit kmh = km / hour;
+
+constant pi rational = 3.1415492
+constant r2 rational = 1.41
+
+box point2D
+{
+	x rational
+	y rational
+}
+
+box point3D
+{
+	x rational
+	y rational
+	z rational
+}
+

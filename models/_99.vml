@@ -1,0 +1,16 @@
+module _99
+
+input void
+output [string]
+
+author "Rober Morales-Chaparro"
+creation "2011/12/01"
+more "http://visualligence.com/"
+
+
+loop for [.. 99 -> 1 , -1 ] song{
+	lines string <- "%(1) ... %(2)" % [1,-1]
+}
+//( a : it, b : it - 1)
+
+O <- lines 
