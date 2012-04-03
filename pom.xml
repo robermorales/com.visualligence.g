@@ -37,7 +37,7 @@
 				<artifactId>fornax-oaw-m2-plugin</artifactId>
 				<version>3.3.0</version>
 				<configuration>
-					<workflowDescriptor>com.visualligence.g.GenerateVML</workflowDescriptor>
+					<workflowDescriptor>src/com/visualligence/g/GenerateVML.mwe2</workflowDescriptor>
 					<jvmSettings>
 						<fork>true</fork>
 						<jvmArgs>
