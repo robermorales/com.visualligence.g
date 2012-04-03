@@ -41,6 +41,7 @@
 			</plugin>
 
 			<!-- estos tres son para xtend -> xtend-gen -->
+			<!---
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>build-helper-maven-plugin</artifactId>
@@ -90,6 +91,7 @@
 					</execution>
 				</executions>
 			</plugin>
+			-->
 		</plugins>
 		<pluginManagement>
 			<plugins>
@@ -137,19 +139,15 @@
 		</repository>
 
 		<!-- xtend -->
+		<!---
 		<repository>
 			<id>xtend</id>
 			<url>http://build.eclipse.org/common/xtend/maven/</url>
 		</repository>
+		-->
 	</repositories>
 
 	<pluginRepositories>
-
-		<!-- 1 para xtend -->
-		<pluginRepository>
-			<id>xtend</id>
-			<url>http://build.eclipse.org/common/xtend/maven/</url>
-		</pluginRepository>
 
 		<!-- 1 para mwe2 -->
 		<pluginRepository>
@@ -157,6 +155,14 @@
 			<name>Fornax Plugin Repository</name>
 			<url>http://www.fornax-platform.org/m2/repository</url>
 		</pluginRepository>
+
+		<!-- 1 para xtend -->
+		<!---
+		<pluginRepository>
+			<id>xtend</id>
+			<url>http://build.eclipse.org/common/xtend/maven/</url>
+		</pluginRepository>
+		-->
 
 	</pluginRepositories>
 

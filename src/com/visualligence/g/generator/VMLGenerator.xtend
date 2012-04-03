@@ -35,7 +35,6 @@ import com.visualligence.g.vML.OutputRef
 import com.visualligence.g.vML.AuxTypeRef
 import com.visualligence.g.vML.AuxType
 import com.visualligence.g.vML.Op
-import org.eclipse.xtext.xtend2.lib.StringConcatenation
 import com.visualligence.g.vML.SingleLiteral
 
 class VMLGenerator implements IGenerator {
@@ -55,12 +54,22 @@ class VMLGenerator implements IGenerator {
 	
 	override void doGenerate(Resource resource, IFileSystemAccess fsa) {
 		var Module m = ( resource.contents.head as Module )
-		fsa.generateFile( resource.pName + resource.cName + ".dump.txt", m.toTxt )
-		fsa.generateFile( resource.pName + resource.cName + ".java", m.toJavaCode )
-		for( Sentence s : m.sentences.filter( e | e instanceof Box )){
-			fsa.generateFile( resource.pName + (s as Box).name + ".java",
-				(s as Box).toJavaCodeBox( m )
-			)
+
+		try{
+			var txt = m.toTxt
+			fsa.generateFile( resource.pName + resource.cName + ".dump.txt", txt )
+
+			var java = m.toJavaCode
+			fsa.generateFile( resource.pName + resource.cName + ".java", java )
+
+			for( Sentence s : m.sentences.filter( e | e instanceof Box )){
+				var java_box = (s as Box).toJavaCodeBox( m )
+				var java_box_filename = resource.pName + (s as Box).name + ".java"
+				fsa.generateFile( java_box_filename, java_box )
+			}
+		} catch (Exception e){
+			var error = "/*" + e + "*/"
+			fsa.generateFile( resource.pName + resource.cName + ".java", error )
 		}
 	}
 
