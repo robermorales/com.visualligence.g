@@ -11,6 +11,9 @@
 		<tycho-version>0.14.1</tycho-version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
+		<!--
+		<eclipse.download>ftp://ftp.rediris.es/mirror/eclipse</eclipse.download>
+		-->
 		<eclipse.download>http://download.eclipse.org</eclipse.download>
 		<xtext.p2.repository>${eclipse.download}/modeling/tmf/xtext/updates/composite/releases</xtext.p2.repository>
 		<eclipse.p2.repository>${eclipse.download}/releases/indigo</eclipse.p2.repository>
@@ -23,6 +26,8 @@
 				<directory>src</directory>
 			</resource>
 		</resources>
+		<!--
+		-->
 		<plugins>
 			<plugin>
 				<groupId>org.eclipse.tycho</groupId>
