@@ -37,6 +37,7 @@
 			</plugin>
 
 			<!-- este es para mwe -> src-gen -->
+			<!--
 			<plugin>
 				<groupId>org.fornax.toolsupport</groupId>
 				<artifactId>fornax-oaw-m2-plugin</artifactId>
@@ -54,6 +55,7 @@
 					</jvmSettings>
 				</configuration>
 			</plugin>
+			-->
 
 			<!-- estos tres son para xtend -> xtend-gen -->
 			<!---
@@ -111,6 +113,7 @@
 		<pluginManagement>
 			<plugins>
 				<!-- este es para invocar al mwe2 -->
+				<!--
 				<plugin>
 					<groupId>org.fornax.toolsupport</groupId>
 					<artifactId>fornax-oaw-m2-plugin</artifactId>
@@ -127,6 +130,7 @@
 						</execution>
 					</executions>
 				</plugin>
+				-->
 			</plugins>
 		</pluginManagement>
 	</build>
@@ -138,20 +142,22 @@
 			<url>http://maven.eclipse.org/nexus/content/groups/public/</url>
 		</repository>
 		-->
-		
+
 		<!-- eclipse -->
 		<repository>
 			<id>eclipse-platform</id>
 			<layout>p2</layout>
 			<url>${eclipse.p2.repository}</url>
 		</repository>
-		
+
 		<!-- xtext --> 
+		<!--
 		<repository>
 			<id>xtext-composite</id>
 			<layout>p2</layout>
 			<url>${xtext.p2.repository}</url>
 		</repository>
+		-->
 
 		<!-- xtend -->
 		<!---
@@ -165,11 +171,13 @@
 	<pluginRepositories>
 
 		<!-- 1 para mwe2 -->
+		<!--
 		<pluginRepository>
 			<id>fornax.plugin.repository</id>
 			<name>Fornax Plugin Repository</name>
 			<url>http://www.fornax-platform.org/m2/repository</url>
 		</pluginRepository>
+		-->
 
 		<!-- 1 para xtend -->
 		<!---
