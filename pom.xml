@@ -21,12 +21,12 @@
 
 	<build>
 		<sourceDirectory>src</sourceDirectory>
+		<!--
 		<resources>
 			<resource>
 				<directory>src</directory>
 			</resource>
 		</resources>
-		<!--
 		-->
 		<plugins>
 			<plugin>
@@ -151,41 +151,33 @@
 		</repository>
 
 		<!-- xtext --> 
-		<!--
 		<repository>
 			<id>xtext-composite</id>
 			<layout>p2</layout>
 			<url>${xtext.p2.repository}</url>
 		</repository>
-		-->
 
 		<!-- xtend -->
-		<!---
 		<repository>
 			<id>xtend</id>
 			<url>http://build.eclipse.org/common/xtend/maven/</url>
 		</repository>
-		-->
 	</repositories>
 
 	<pluginRepositories>
 
 		<!-- 1 para mwe2 -->
-		<!--
 		<pluginRepository>
 			<id>fornax.plugin.repository</id>
 			<name>Fornax Plugin Repository</name>
 			<url>http://www.fornax-platform.org/m2/repository</url>
 		</pluginRepository>
-		-->
 
 		<!-- 1 para xtend -->
-		<!---
 		<pluginRepository>
 			<id>xtend</id>
 			<url>http://build.eclipse.org/common/xtend/maven/</url>
 		</pluginRepository>
-		-->
 
 	</pluginRepositories>
 
