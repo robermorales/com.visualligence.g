@@ -40,12 +40,23 @@
 			<plugin>
 				<groupId>org.fornax.toolsupport</groupId>
 				<artifactId>fornax-oaw-m2-plugin</artifactId>
+				<version>3.3.0</version>
 				<configuration>
 					<workflowDescriptor>src/com/visualligence/g/GenerateVML.mwe2</workflowDescriptor>
+					<jvmSettings>
+						<fork>true</fork>
+						<jvmArgs>
+							<jvmArg>-Xms100m</jvmArg>
+							<jvmArg>-Xmx700m</jvmArg>
+							<jvmArg>-XX:MaxPermSize=128m</jvmArg>
+							<jvmArg>-Dlog4j.configuration=file:${basedir}/log4j.properties</jvmArg>
+						</jvmArgs>
+					</jvmSettings>
 				</configuration>
 			</plugin>
 
 			<!-- estos tres son para xtend -> xtend-gen -->
+			<!---
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>build-helper-maven-plugin</artifactId>
@@ -82,7 +93,7 @@
 			<plugin>
 				<groupId>org.eclipse.xtend2</groupId>
 				<artifactId>xtend-maven-plugin</artifactId>
-				<version>2.2.0</version>
+				<version>2.2.2</version>
 				<executions>
 					<execution>
 						<goals>
@@ -95,6 +106,7 @@
 					</execution>
 				</executions>
 			</plugin>
+			-->
 		</plugins>
 		<pluginManagement>
 			<plugins>
@@ -142,19 +154,15 @@
 		</repository>
 
 		<!-- xtend -->
+		<!---
 		<repository>
 			<id>xtend</id>
 			<url>http://build.eclipse.org/common/xtend/maven/</url>
 		</repository>
+		-->
 	</repositories>
 
 	<pluginRepositories>
-
-		<!-- 1 para xtend -->
-		<pluginRepository>
-			<id>xtend</id>
-			<url>http://build.eclipse.org/common/xtend/maven/</url>
-		</pluginRepository>
 
 		<!-- 1 para mwe2 -->
 		<pluginRepository>
@@ -162,6 +170,14 @@
 			<name>Fornax Plugin Repository</name>
 			<url>http://www.fornax-platform.org/m2/repository</url>
 		</pluginRepository>
+
+		<!-- 1 para xtend -->
+		<!---
+		<pluginRepository>
+			<id>xtend</id>
+			<url>http://build.eclipse.org/common/xtend/maven/</url>
+		</pluginRepository>
+		-->
 
 	</pluginRepositories>
 
