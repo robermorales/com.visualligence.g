@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/com.visualligence.g/src-gen"
+    editDirectory="/com.visualligence.g.edit/src" editorDirectory="/com.visualligence.g.editor/src"
+    modelPluginID="com.visualligence.g" forceOverwrite="true" modelName="VML" updateClasspath="false"
+    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" complianceLevel="5.0"
+    copyrightFields="false" editPluginID="com.visualligence.g.edit" editorPluginID="com.visualligence.g.editor">
+  <genPackages prefix="VML" basePackage="com.visualligence.g" disposableProviderFactory="true"
+      ecorePackage="VML.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="VML.ecore#//Op">
+      <genEnumLiterals ecoreEnumLiteral="VML.ecore#//Op/and"/>
+      <genEnumLiterals ecoreEnumLiteral="VML.ecore#//Op/or"/>
+      <genEnumLiterals ecoreEnumLiteral="VML.ecore#//Op/neg"/>
+      <genEnumLiterals ecoreEnumLiteral="VML.ecore#//Op/eq"/>
+      <genEnumLiterals ecoreEnumLiteral="VML.ecore#//Op/ne"/>
+      <genEnumLiterals ecoreEnumLiteral="VML.ecore#//Op/lt"/>
+      <genEnumLiterals ecoreEnumLiteral="VML.ecore#//Op/gt"/>
+      <genEnumLiterals ecoreEnumLiteral="VML.ecore#//Op/le"/>
+      <genEnumLiterals ecoreEnumLiteral="VML.ecore#//Op/ge"/>
+      <genEnumLiterals ecoreEnumLiteral="VML.ecore#//Op/plus"/>
+      <genEnumLiterals ecoreEnumLiteral="VML.ecore#//Op/minus"/>
+      <genEnumLiterals ecoreEnumLiteral="VML.ecore#//Op/times"/>
+      <genEnumLiterals ecoreEnumLiteral="VML.ecore#//Op/modulo"/>
+      <genEnumLiterals ecoreEnumLiteral="VML.ecore#//Op/intdivision"/>
+      <genEnumLiterals ecoreEnumLiteral="VML.ecore#//Op/divideby"/>
+      <genEnumLiterals ecoreEnumLiteral="VML.ecore#//Op/exp"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="VML.ecore#//NumberType">
+      <genEnumLiterals ecoreEnumLiteral="VML.ecore#//NumberType/positive"/>
+      <genEnumLiterals ecoreEnumLiteral="VML.ecore#//NumberType/natural"/>
+      <genEnumLiterals ecoreEnumLiteral="VML.ecore#//NumberType/integer"/>
+      <genEnumLiterals ecoreEnumLiteral="VML.ecore#//NumberType/rational"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="VML.ecore#//VisualType">
+      <genEnumLiterals ecoreEnumLiteral="VML.ecore#//VisualType/shape"/>
+      <genEnumLiterals ecoreEnumLiteral="VML.ecore#//VisualType/color"/>
+      <genEnumLiterals ecoreEnumLiteral="VML.ecore#//VisualType/angle"/>
+      <genEnumLiterals ecoreEnumLiteral="VML.ecore#//VisualType/size"/>
+      <genEnumLiterals ecoreEnumLiteral="VML.ecore#//VisualType/position"/>
+      <genEnumLiterals ecoreEnumLiteral="VML.ecore#//VisualType/texture"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="VML.ecore#//AuxType">
+      <genEnumLiterals ecoreEnumLiteral="VML.ecore#//AuxType/string"/>
+      <genEnumLiterals ecoreEnumLiteral="VML.ecore#//AuxType/bool"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="VML.ecore#//CollectionType">
+      <genEnumLiterals ecoreEnumLiteral="VML.ecore#//CollectionType/set"/>
+      <genEnumLiterals ecoreEnumLiteral="VML.ecore#//CollectionType/bag"/>
+      <genEnumLiterals ecoreEnumLiteral="VML.ecore#//CollectionType/list"/>
+      <genEnumLiterals ecoreEnumLiteral="VML.ecore#//CollectionType/graph"/>
+      <genEnumLiterals ecoreEnumLiteral="VML.ecore#//CollectionType/single"/>
+    </genEnums>
+    <genClasses ecoreClass="VML.ecore#//Module">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute VML.ecore#//Module/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference VML.ecore#//Module/inputtype"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference VML.ecore#//Module/outputtype"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute VML.ecore#//Module/author"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute VML.ecore#//Module/creation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute VML.ecore#//Module/link"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference VML.ecore#//Module/imports"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference VML.ecore#//Module/sentences"/>
+    </genClasses>
+    <genClasses ecoreClass="VML.ecore#//Import">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute VML.ecore#//Import/importURI"/>
+    </genClasses>
+    <genClasses ecoreClass="VML.ecore#//Sentence">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute VML.ecore#//Sentence/name"/>
+    </genClasses>
+    <genClasses ecoreClass="VML.ecore#//Node"/>
+    <genClasses ecoreClass="VML.ecore#//Switch">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference VML.ecore#//Switch/test"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference VML.ecore#//Switch/a"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference VML.ecore#//Switch/b"/>
+    </genClasses>
+    <genClasses ecoreClass="VML.ecore#//LiteralExpression"/>
+    <genClasses ecoreClass="VML.ecore#//RValue"/>
+    <genClasses ecoreClass="VML.ecore#//NodeRef">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference VML.ecore#//NodeRef/node"/>
+    </genClasses>
+    <genClasses ecoreClass="VML.ecore#//MemberRef">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference VML.ecore#//MemberRef/member"/>
+    </genClasses>
+    <genClasses ecoreClass="VML.ecore#//ConstantRef">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference VML.ecore#//ConstantRef/constantref"/>
+    </genClasses>
+    <genClasses ecoreClass="VML.ecore#//SingleLiteral">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute VML.ecore#//SingleLiteral/value"/>
+    </genClasses>
+    <genClasses ecoreClass="VML.ecore#//SequenceLiteral"/>
+    <genClasses ecoreClass="VML.ecore#//SequenceLiteralSerie">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference VML.ecore#//SequenceLiteralSerie/init"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference VML.ecore#//SequenceLiteralSerie/end"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference VML.ecore#//SequenceLiteralSerie/inc"/>
+    </genClasses>
+    <genClasses ecoreClass="VML.ecore#//SequenceLiteralPlain">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference VML.ecore#//SequenceLiteralPlain/items"/>
+    </genClasses>
+    <genClasses ecoreClass="VML.ecore#//TupleLiteral">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference VML.ecore#//TupleLiteral/items"/>
+    </genClasses>
+    <genClasses ecoreClass="VML.ecore#//TupleItem">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute VML.ecore#//TupleItem/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference VML.ecore#//TupleItem/value"/>
+    </genClasses>
+    <genClasses ecoreClass="VML.ecore#//SetLiteral">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference VML.ecore#//SetLiteral/items"/>
+    </genClasses>
+    <genClasses ecoreClass="VML.ecore#//Block">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference VML.ecore#//Block/sentences"/>
+    </genClasses>
+    <genClasses ecoreClass="VML.ecore#//Noop"/>
+    <genClasses ecoreClass="VML.ecore#//Pair">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute VML.ecore#//Pair/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute VML.ecore#//Pair/value"/>
+    </genClasses>
+    <genClasses ecoreClass="VML.ecore#//Constant">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference VML.ecore#//Constant/type"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference VML.ecore#//Constant/value"/>
+    </genClasses>
+    <genClasses ecoreClass="VML.ecore#//Multi">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute VML.ecore#//Multi/op"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute VML.ecore#//Multi/factor"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference VML.ecore#//Multi/parent"/>
+    </genClasses>
+    <genClasses ecoreClass="VML.ecore#//Unit"/>
+    <genClasses ecoreClass="VML.ecore#//DUnit">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute VML.ecore#//DUnit/op"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute VML.ecore#//DUnit/factor"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference VML.ecore#//DUnit/multi"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference VML.ecore#//DUnit/parent"/>
+    </genClasses>
+    <genClasses ecoreClass="VML.ecore#//NUnit">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute VML.ecore#//NUnit/numbertype"/>
+    </genClasses>
+    <genClasses ecoreClass="VML.ecore#//Box">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference VML.ecore#//Box/members"/>
+    </genClasses>
+    <genClasses ecoreClass="VML.ecore#//Shape"/>
+    <genClasses ecoreClass="VML.ecore#//Member">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute VML.ecore#//Member/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference VML.ecore#//Member/type"/>
+    </genClasses>
+    <genClasses ecoreClass="VML.ecore#//TypeRef"/>
+    <genClasses ecoreClass="VML.ecore#//PlainTypeRef"/>
+    <genClasses ecoreClass="VML.ecore#//CompositeTypeRef"/>
+    <genClasses ecoreClass="VML.ecore#//SequenceTypeRef">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference VML.ecore#//SequenceTypeRef/type"/>
+    </genClasses>
+    <genClasses ecoreClass="VML.ecore#//TupleTypeRef">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference VML.ecore#//TupleTypeRef/items"/>
+    </genClasses>
+    <genClasses ecoreClass="VML.ecore#//TupleTypeRefItem">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute VML.ecore#//TupleTypeRefItem/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference VML.ecore#//TupleTypeRefItem/type"/>
+    </genClasses>
+    <genClasses ecoreClass="VML.ecore#//SetTypeRef">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference VML.ecore#//SetTypeRef/type"/>
+    </genClasses>
+    <genClasses ecoreClass="VML.ecore#//VoidTypeRef">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute VML.ecore#//VoidTypeRef/name"/>
+    </genClasses>
+    <genClasses ecoreClass="VML.ecore#//AutoTypeRef"/>
+    <genClasses ecoreClass="VML.ecore#//CollectionRef">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute VML.ecore#//CollectionRef/collection"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference VML.ecore#//CollectionRef/typeref"/>
+    </genClasses>
+    <genClasses ecoreClass="VML.ecore#//UnitRef">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference VML.ecore#//UnitRef/unittype"/>
+    </genClasses>
+    <genClasses ecoreClass="VML.ecore#//BoxRef">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference VML.ecore#//BoxRef/ref"/>
+    </genClasses>
+    <genClasses ecoreClass="VML.ecore#//TypeAliasRef">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference VML.ecore#//TypeAliasRef/ref"/>
+    </genClasses>
+    <genClasses ecoreClass="VML.ecore#//AuxTypeRef">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute VML.ecore#//AuxTypeRef/ref"/>
+    </genClasses>
+    <genClasses ecoreClass="VML.ecore#//ShapeRef">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference VML.ecore#//ShapeRef/ref"/>
+    </genClasses>
+    <genClasses ecoreClass="VML.ecore#//NumberTypeRef">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute VML.ecore#//NumberTypeRef/ref"/>
+    </genClasses>
+    <genClasses ecoreClass="VML.ecore#//VisualTypeRef">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute VML.ecore#//VisualTypeRef/ref"/>
+    </genClasses>
+    <genClasses ecoreClass="VML.ecore#//TypeAlias">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference VML.ecore#//TypeAlias/type"/>
+    </genClasses>
+    <genClasses ecoreClass="VML.ecore#//Stream">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference VML.ecore#//Stream/left"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference VML.ecore#//Stream/right"/>
+    </genClasses>
+    <genClasses ecoreClass="VML.ecore#//LStreamValue"/>
+    <genClasses ecoreClass="VML.ecore#//RStreamValue"/>
+    <genClasses ecoreClass="VML.ecore#//InputRef"/>
+    <genClasses ecoreClass="VML.ecore#//OutputRef"/>
+    <genClasses ecoreClass="VML.ecore#//Invokation">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute VML.ecore#//Invokation/module"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference VML.ecore#//Invokation/sentences"/>
+    </genClasses>
+    <genClasses ecoreClass="VML.ecore#//InvokationParam">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute VML.ecore#//InvokationParam/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference VML.ecore#//InvokationParam/source"/>
+    </genClasses>
+    <genClasses ecoreClass="VML.ecore#//Loop">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference VML.ecore#//Loop/it"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference VML.ecore#//Loop/sentences"/>
+    </genClasses>
+    <genClasses ecoreClass="VML.ecore#//LoopSentence">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute VML.ecore#//LoopSentence/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference VML.ecore#//LoopSentence/type"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference VML.ecore#//LoopSentence/o"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference VML.ecore#//LoopSentence/i"/>
+    </genClasses>
+    <genClasses ecoreClass="VML.ecore#//LoopFor"/>
+    <genClasses ecoreClass="VML.ecore#//Factory">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference VML.ecore#//Factory/type"/>
+    </genClasses>
+    <genClasses ecoreClass="VML.ecore#//File">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute VML.ecore#//File/isinput"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute VML.ecore#//File/path"/>
+    </genClasses>
+    <genClasses ecoreClass="VML.ecore#//Canvas">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference VML.ecore#//Canvas/properties"/>
+    </genClasses>
+    <genClasses ecoreClass="VML.ecore#//Operation">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference VML.ecore#//Operation/left"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute VML.ecore#//Operation/op"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference VML.ecore#//Operation/right"/>
+    </genClasses>
+    <genClasses ecoreClass="VML.ecore#//UnaryOperation">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute VML.ecore#//UnaryOperation/op"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference VML.ecore#//UnaryOperation/right"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
