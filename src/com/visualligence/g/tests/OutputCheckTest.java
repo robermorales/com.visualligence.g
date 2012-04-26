@@ -50,11 +50,9 @@ public class OutputCheckTest {
 						byte[] buffer_out = new byte[(int) body.length()];
 						new FileInputStream(output).read(buffer_out);
 
-						
-						
-//						System.out.println(new String(buffer_in));
-//						System.out.println(new String(buffer_out));
-//						System.out.println(new String(buffer_vml));
+						// System.out.println(new String(buffer_in));
+						// System.out.println(new String(buffer_out));
+						// System.out.println(new String(buffer_vml));
 
 					} catch (Exception e) {
 
