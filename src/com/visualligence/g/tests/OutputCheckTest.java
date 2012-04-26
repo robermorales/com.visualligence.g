@@ -6,6 +6,7 @@ import static org.junit.Assert.assertTrue;
 import java.io.File;
 import java.io.FileInputStream;
 
+import org.apache.log4j.Logger;
 import org.eclipse.xtext.junit4.InjectWith;
 import org.eclipse.xtext.junit4.XtextRunner;
 import org.eclipse.xtext.junit4.util.ParseHelper;
@@ -23,6 +24,9 @@ public class OutputCheckTest {
 	@Inject
 	ParseHelper<Module> parser;
 
+	private static Logger log = Logger.getLogger(OutputCheckTest.class);
+	private String space = "                   ";
+
 	@Test
 	public void model_i_o() throws Exception {
 		File dir = new File("models-io");
@@ -31,15 +35,21 @@ public class OutputCheckTest {
 			if (test.isDirectory()) {
 				File body = new File(dir, test.getName() + ".vml");
 
+				log.debug("Test " + test.getName());
 				byte[] buffer_vml = new byte[(int) body.length()];
 				new FileInputStream(body).read(buffer_vml);
+				log.debug(space + "[parse]");
 
 				Module module = parser.parse(new String(buffer_vml));
 				assertNotNull(module);
 
 				File inputs = new File(test, "input");
 				File outputs = new File(test, "output");
+				int input_i = 0;
 				for (File input : inputs.listFiles()) {
+					log.debug(space + "[input] [" + (++input_i) + "] "
+							+ input.getName());
+
 					File output;
 					try {
 						output = new File(outputs, input.getName());
@@ -49,11 +59,6 @@ public class OutputCheckTest {
 
 						byte[] buffer_out = new byte[(int) body.length()];
 						new FileInputStream(output).read(buffer_out);
-
-						// System.out.println(new String(buffer_in));
-						// System.out.println(new String(buffer_out));
-						// System.out.println(new String(buffer_vml));
-
 					} catch (Exception e) {
 
 					}
