@@ -15,6 +15,7 @@ import org.junit.runner.RunWith;
 
 import com.google.inject.Inject;
 import com.visualligence.g.VMLInjectorProvider;
+import com.visualligence.g.generator.VMLGenerator;
 import com.visualligence.g.vML.Module;
 
 @InjectWith(VMLInjectorProvider.class)
@@ -25,7 +26,7 @@ public class OutputCheckTest {
 	ParseHelper<Module> parser;
 
 	private static Logger log = Logger.getLogger(OutputCheckTest.class);
-	private String space = "                   ";
+	private String space = "           ";
 
 	@Test
 	public void model_i_o() throws Exception {
@@ -42,6 +43,9 @@ public class OutputCheckTest {
 
 				Module module = parser.parse(new String(buffer_vml));
 				assertNotNull(module);
+				
+				VMLGenerator vml = new VMLGenerator();
+				// vml.doGenerate( module );
 
 				File inputs = new File(test, "input");
 				File outputs = new File(test, "output");
@@ -54,11 +58,15 @@ public class OutputCheckTest {
 					try {
 						output = new File(outputs, input.getName());
 
-						byte[] buffer_in = new byte[(int) body.length()];
+						byte[] buffer_in = new byte[(int) input.length()];
 						new FileInputStream(input).read(buffer_in);
 
-						byte[] buffer_out = new byte[(int) body.length()];
+						byte[] buffer_out = new byte[(int) output.length()];
 						new FileInputStream(output).read(buffer_out);
+						
+						System.out.println( new String( buffer_in ) );
+						System.out.println( new String( buffer_out ) );
+						
 					} catch (Exception e) {
 
 					}
