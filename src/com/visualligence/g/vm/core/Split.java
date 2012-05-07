@@ -39,7 +39,6 @@ public class Split<T> {
 			this.it = 0;
 		}
 
-		@Override
 		public E get() {
 			if (this.it == this.s.getIt())
 				this.s.pull();

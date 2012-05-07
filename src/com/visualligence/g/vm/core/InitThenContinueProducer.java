@@ -12,7 +12,6 @@ public class InitThenContinueProducer<T> implements Producer<T> {
 		this.n = 0;
 	}
 
-	@Override
 	public T get() {
 		n++;
 		if (this.cp == null)

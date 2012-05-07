@@ -15,7 +15,6 @@ import com.visualligence.g.vm.types.VTuple;
 public class VFactory<T extends VTuple> extends HashMap<VString, Producer<? extends VObject>>
 		implements Producer<T> {
 
-	@Override
 	public T get() {
 		VTuple vt = new VTuple();
 		int count = 0;

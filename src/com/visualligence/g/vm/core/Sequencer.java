@@ -9,7 +9,6 @@ public class Sequencer<T extends VObject> extends VSequence<T> implements
 	private Producer<? extends T> producer;
 	private boolean get = false;
 
-	@Override
 	public VSequence<T> get() {
 		if (get)
 			return null;
@@ -19,7 +18,6 @@ public class Sequencer<T extends VObject> extends VSequence<T> implements
 		}
 	}
 
-	@Override
 	public T next() {
 		return this.producer.get();
 	}

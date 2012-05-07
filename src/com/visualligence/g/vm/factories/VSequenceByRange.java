@@ -23,7 +23,6 @@ public class VSequenceByRange<T extends VObject> implements Producer<T> {
 		this.it = new VSequenceByRangeIterator<T>(this);
 	}
 
-	@Override
 	public T get() {
 		return ((T) this.it.next());
 	}
@@ -43,13 +42,11 @@ public class VSequenceByRange<T extends VObject> implements Producer<T> {
 			tentative = this.s.init;
 		}
 
-		@Override
 		public boolean hasNext() {
 			return !islast;
 		}
 
 		@SuppressWarnings("unchecked")
-		@Override
 		public IT next() {
 			if (islast)
 				return null;
@@ -63,7 +60,6 @@ public class VSequenceByRange<T extends VObject> implements Producer<T> {
 			return current;
 		}
 
-		@Override
 		public void remove() {
 			System.err
 					.println("It is impossible remove element " + pos + "th.");

@@ -19,7 +19,6 @@ public class Foldl implements Producer<VObject> {
 		return this;
 	}
 
-	@Override
 	public VObject get() {
 		VObject a = null;
 		for (Producer<VObject> p : al) {

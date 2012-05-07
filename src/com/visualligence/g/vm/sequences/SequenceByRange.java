@@ -26,7 +26,6 @@ public class SequenceByRange implements Producer<Number> {
 		this.it = new SequenceByRangeIterator(this);
 	}
 
-	@Override
 	public Number get() {
 		return this.it.next();
 	}
@@ -45,12 +44,10 @@ public class SequenceByRange implements Producer<Number> {
 			tentative = this.s.init.doubleValue();
 		}
 
-		@Override
 		public boolean hasNext() {
 			return !islast;
 		}
 
-		@Override
 		public Number next() {
 			if (islast)
 				return null;
@@ -64,8 +61,7 @@ public class SequenceByRange implements Producer<Number> {
 			pos++;
 			return current;
 		}
-
-		@Override
+		
 		public void remove() {
 			System.err
 					.println("It is impossible remove element " + pos + "th.");

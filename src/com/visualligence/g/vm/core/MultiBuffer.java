@@ -36,7 +36,6 @@ public class MultiBuffer<T> {
 			this.it = 0;
 		}
 
-		@Override
 		public E get() {
 			if (this.end)
 				return null;

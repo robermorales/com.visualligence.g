@@ -12,7 +12,6 @@ public class EqualTest implements Producer<Boolean> {
 		this.b = b;
 	}
 
-	@Override
 	public Boolean get() {
 		Number na = this.a.get();
 		Number nb = this.b.get();

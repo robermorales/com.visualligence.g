@@ -11,7 +11,6 @@ public class Conversor<TI extends VObject, TO extends VObject> implements Produc
 		this.producer = producer;
 	}
 
-	@Override
 	public TO get() {
 		return (TO) this.producer.get();
 	}

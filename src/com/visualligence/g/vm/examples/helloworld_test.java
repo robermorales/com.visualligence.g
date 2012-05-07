@@ -17,7 +17,6 @@ public class helloworld_test extends Node<VVoid,VString> {
 		System.gc();
 	}
 
-	@Override
 	protected void run(StreamInput<VVoid> sin,StreamOutput<VString> sout) {
 		Constant<VString> greeting = new Constant<VString>(new VString(
 				"Hello, World!"));

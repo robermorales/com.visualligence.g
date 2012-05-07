@@ -12,7 +12,6 @@ public class Max implements Producer<Number> {
 		this.b = b;
 	}
 
-	@Override
 	public Number get() {
 		Number oa = a.get();
 		Number ob = b.get();

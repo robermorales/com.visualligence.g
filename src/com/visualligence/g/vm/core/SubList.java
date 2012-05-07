@@ -17,7 +17,6 @@ public class SubList<T> implements Producer<T> {
 		this.p = p;
 	}
 
-	@Override
 	public T get() {
 		while (this.n < this.a) {
 			this.p.get();

@@ -12,7 +12,7 @@ public class Depending<T> implements Producer<T> {
 		this.b = b;
 	}
 
-	@Override
+
 	public T get() {
 		Boolean b = this.t.get();
 		if (b != null && b == true)

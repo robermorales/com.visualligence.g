@@ -8,7 +8,6 @@ public abstract class Filter<T> implements Producer<T> {
 		this.input = input;
 	}
 
-	@Override
 	public T get() {
 		T o = this.input.get();
 		if (o != null)

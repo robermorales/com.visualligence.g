@@ -9,7 +9,6 @@ public class Expression<T extends VObject> implements Producer<T> {
 		return null;
 	}
 
-	@Override
 	public T get() {
 		return eval();
 	}

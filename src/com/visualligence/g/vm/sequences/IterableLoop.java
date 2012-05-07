@@ -13,7 +13,6 @@ public class IterableLoop<T> extends HashMap<Integer, Couple<Producer<T>>>
 
 	private Producer<T> p;
 
-	@Override
 	public T get() {
 		return p.get();
 	}
