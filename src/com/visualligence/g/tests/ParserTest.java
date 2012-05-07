@@ -20,12 +20,12 @@ import com.visualligence.g.vML.Module;
 
 @InjectWith(VMLInjectorProvider.class)
 @RunWith(XtextRunner.class)
-public class OutputCheckTest {
+public class ParserTest {
 
 	@Inject
 	ParseHelper<Module> parser;
 
-	private static Logger log = Logger.getLogger(OutputCheckTest.class);
+	private static Logger log = Logger.getLogger(ParserTest.class);
 	private String space = "           ";
 
 	@Test
