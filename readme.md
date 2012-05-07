@@ -40,7 +40,7 @@ http://jenkins.visualligence.com:8080/job/visualligence/lastBuild
 
 http://jenkins.visualligence.com:8080/job/visualligence/lastBuild/testReport/
 
-<img src="http://jenkins.visualligence.com:8080/job/visualligence/test/trend"/>
+<img src="http://jenkins.visualligence.com:8080/job/visualligence/test/trend?width=800&height=150"/>
 
 #### Build status
 
