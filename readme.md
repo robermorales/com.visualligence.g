@@ -40,11 +40,11 @@ http://jenkins.visualligence.com:8080/job/visualligence/lastBuild
 
 http://jenkins.visualligence.com:8080/job/visualligence/lastBuild/testReport/
 
-<img src="http://jenkins.visualligence.com:8080/job/visualligence/test/trend?width=800&height=150"/>
+<img src="http://jenkins.visualligence.com:8080/job/visualligence/test/trend?width=800&height=150" alt="test automatic execution"/>
 
 #### Build status
 
 http://jenkins.visualligence.com:8080/job/visualligence/lastBuild/
 
-<img src="http://jenkins.visualligence.com:8080/job/visualligence/lastBuild/buildStatus"/>
+<img src="http://jenkins.visualligence.com:8080/job/visualligence/lastBuild/buildStatus" alt="build status"/>
 
