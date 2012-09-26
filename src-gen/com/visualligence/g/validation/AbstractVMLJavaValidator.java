@@ -13,7 +13,7 @@ public class AbstractVMLJavaValidator extends AbstractDeclarativeValidator {
 	@Override
 	protected List<EPackage> getEPackages() {
 	    List<EPackage> result = new ArrayList<EPackage>();
-	    result.add(com.visualligence.g.vML.VMLPackage.eINSTANCE);
+	    result.add(EPackage.Registry.INSTANCE.getEPackage("http://www.visualligence.com/vml"));
 		return result;
 	}
 

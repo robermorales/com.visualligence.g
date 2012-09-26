@@ -1,9 +1,10 @@
 grammar com.visualligence.g.VML with org.eclipse.xtext.common.Terminals
 
 import "http://www.eclipse.org/emf/2002/Ecore" as ecore
-//import "http://www.visualligence.com/vml" as visualligence
+//import "platform:/resource/com.visualligence.g/src/com/visualligence/g/model/visualligence.ecore" as visualligence
+import "http://www.visualligence.com/vml"
 
-generate vML "http://www.visualligence.com/g/VML"
+//generate vML "http://www.visualligence.com/g/VML"
 
 // @TODO syntax coloring for numeric terminals
 // @TODO revisar tuplas !!! tupla vacía??? (: a:a, a:b )
@@ -12,22 +13,52 @@ generate vML "http://www.visualligence.com/g/VML"
 
 Module:
 	{Module}
+	( 'types'     types += TypeDecl  )*
+	( 'input'     input += Input     )*
+	( 'output'   output += Output    )*
+	;
+
+TypeDecl:
+	'type'
+	Hash
+	name=STRING
+;
+
+Hash:
+	{Hash}
+	'{'
+	(items+=HashItem
+	(',' items+=HashItem)*)?
+	'}'
+	;
+
+HashItem:
+	{HashItem}
+	name=STRING ':' type=[TypeDecl]
+	;
+
+Input:
+	name=STRING ':' type=[TypeDecl]
+	;
+
+Output:
+	name=STRING ':' type=[TypeDecl]
+	;
+
+/*
+Module:
+	{Module}
 	( 'module'   name       = ID       )?
 	( 'input'    inputtype  = TypeRef  )?
 	( 'output'   outputtype = TypeRef  )?
 	( 'author'   author     = STRING   )?
 	( 'creation' creation   = STRING   )?
 	( 'more'     link       = STRING   )?
-//	( 'patterns' patterns   = VPDesc   )?
 	
 	imports   += Import*
 
 	sentences += Sentence*
 ;
-
-//VPDesc returns visualligence::VisualPattern:
-//	{visualligence::VisualPattern}
-//;
 
 Import:
 	'import'
@@ -588,6 +619,7 @@ Canvas:
 		( properties += Pair ';' )*
 	'}'
 ;
+ */
 
 //terminal ID: ('a'..'z'|'A'..'Z');
 
@@ -702,7 +734,7 @@ Canvas:
 //Par:
 //	value=STRING
 //;
-	
+
 //
 //Program :
 //		'main' name = VARNAME content = Block

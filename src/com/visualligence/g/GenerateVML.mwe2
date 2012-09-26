@@ -13,6 +13,10 @@ Workflow {
     bean = StandaloneSetup {
         scanClassPath = true
         platformUri = "${runtimeProject}/.."
+        
+        registerGenModelFile = "${runtimeProject}/src/com/visualligence/g/model/visualligence.genmodel"
+        registerEcoreFile    = "${runtimeProject}/src/com/visualligence/g/model/visualligence.ecore"
+//        registerGeneratedEPackage = "com.visualligence.g.model.visualligence"
     }
 
     component = DirectoryCleaner {

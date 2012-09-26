@@ -1,29 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="visualligence" nsURI="http://www.visualligence.com/vml" nsPrefix="vml">
-  <eClassifiers xsi:type="ecore:EClass" name="VisualPattern" eSuperTypes="#//ModuleDesc"/>
-  <eClassifiers xsi:type="ecore:EClass" name="ModuleDesc" eSuperTypes="#//NamedElement">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="inputs" upperBound="-1"
+  <eClassifiers xsi:type="ecore:EClass" name="Module" eSuperTypes="#//NamedElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="input" upperBound="-1"
         eType="#//Input" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="outputs" ordered="false"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="output" ordered="false"
         upperBound="-1" eType="#//Output" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="instances" ordered="false"
         upperBound="-1" eType="#//ModuleInstances" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="types" ordered="false"
-        eType="#//Type" containment="true"/>
+        upperBound="-1" eType="#//TypeDecl" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ModuleInstances" eSuperTypes="#//NamedElement">
     <eStructuralFeatures xsi:type="ecore:EReference" name="desc" ordered="false" lowerBound="1"
-        eType="#//ModuleDesc"/>
+        eType="#//Module"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="left" upperBound="-1" eType="#//Stream"
         containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Type" abstract="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="TypeDecl" abstract="true" eSuperTypes="#//NamedElement"/>
   <eClassifiers xsi:type="ecore:EClass" name="NamedElement">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" ordered="false" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="NativeType" eSuperTypes="#//Type">
+  <eClassifiers xsi:type="ecore:EClass" name="NativeType" eSuperTypes="#//TypeDecl">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" ordered="false" lowerBound="1"
         eType="#//NativeTypeOptions"/>
   </eClassifiers>
@@ -38,14 +37,14 @@
     <eLiterals name="texture"/>
     <eLiterals name="value"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="List" eSuperTypes="#//Type #//TypedElement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="List" eSuperTypes="#//TypeDecl #//TypedElement"/>
   <eClassifiers xsi:type="ecore:EClass" name="TypedElement">
     <eStructuralFeatures xsi:type="ecore:EReference" name="type" ordered="false" lowerBound="1"
-        eType="#//Type"/>
+        eType="#//TypeDecl"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Hash" eSuperTypes="#//Type">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="items" lowerBound="1" eType="#//HashItem"
-        containment="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Hash" eSuperTypes="#//TypeDecl">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="items" upperBound="-1"
+        eType="#//HashItem" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="HashItem" eSuperTypes="#//NamedElement #//TypedElement"/>
   <eClassifiers xsi:type="ecore:EClass" name="Stream" eSuperTypes="#//TypedElement #//NamedElement"/>

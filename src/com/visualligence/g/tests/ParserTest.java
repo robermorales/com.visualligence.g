@@ -16,7 +16,7 @@ import org.junit.runner.RunWith;
 import com.google.inject.Inject;
 import com.visualligence.g.VMLInjectorProvider;
 import com.visualligence.g.generator.VMLGenerator;
-import com.visualligence.g.vML.Module;
+import com.visualligence.g.model.visualligence.Module;
 
 @InjectWith(VMLInjectorProvider.class)
 @RunWith(XtextRunner.class)
@@ -92,7 +92,7 @@ public class ParserTest {
 			
 			Module module = parser.parse( s );
 			
-			String author = module.getAuthor();
+			String name = module.getName();
 			
 		} catch (Exception e) {
 			// TODO Auto-generated catch block

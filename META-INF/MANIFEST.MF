@@ -53,8 +53,5 @@ Export-Package: com.visualligence.g,
  com.visualligence.g.ui.contentassist,
  com.visualligence.g.ui.contentassist.antlr,
  com.visualligence.g.ui.internal,
- com.visualligence.g.vML,
- com.visualligence.g.vML.impl,
- com.visualligence.g.vML.util,
  com.visualligence.g.validation
 Bundle-Activator: com.visualligence.g.ui.internal.VMLActivator

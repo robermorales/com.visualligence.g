@@ -8,8 +8,6 @@ import org.eclipse.xtext.IGrammarAccess;
 import org.eclipse.xtext.RuleCall;
 import org.eclipse.xtext.nodemodel.INode;
 import org.eclipse.xtext.serializer.analysis.GrammarAlias.AbstractElementAlias;
-import org.eclipse.xtext.serializer.analysis.GrammarAlias.TokenAlias;
-import org.eclipse.xtext.serializer.analysis.ISyntacticSequencerPDAProvider.ISynNavigable;
 import org.eclipse.xtext.serializer.analysis.ISyntacticSequencerPDAProvider.ISynTransition;
 import org.eclipse.xtext.serializer.sequencer.AbstractSyntacticSequencer;
 
@@ -17,14 +15,10 @@ import org.eclipse.xtext.serializer.sequencer.AbstractSyntacticSequencer;
 public abstract class AbstractVMLSyntacticSequencer extends AbstractSyntacticSequencer {
 
 	protected VMLGrammarAccess grammarAccess;
-	protected AbstractElementAlias match_LiteralExpressionTerminal_LeftParenthesisKeyword_0_0_a;
-	protected AbstractElementAlias match_LiteralExpressionTerminal_LeftParenthesisKeyword_0_0_p;
 	
 	@Inject
 	protected void init(IGrammarAccess access) {
 		grammarAccess = (VMLGrammarAccess) access;
-		match_LiteralExpressionTerminal_LeftParenthesisKeyword_0_0_a = new TokenAlias(true, true, grammarAccess.getLiteralExpressionTerminalAccess().getLeftParenthesisKeyword_0_0());
-		match_LiteralExpressionTerminal_LeftParenthesisKeyword_0_0_p = new TokenAlias(true, false, grammarAccess.getLiteralExpressionTerminalAccess().getLeftParenthesisKeyword_0_0());
 	}
 	
 	@Override
@@ -39,28 +33,8 @@ public abstract class AbstractVMLSyntacticSequencer extends AbstractSyntacticSeq
 		List<INode> transitionNodes = collectNodes(fromNode, toNode);
 		for (AbstractElementAlias syntax : transition.getAmbiguousSyntaxes()) {
 			List<INode> syntaxNodes = getNodesFor(transitionNodes, syntax);
-			if(match_LiteralExpressionTerminal_LeftParenthesisKeyword_0_0_a.equals(syntax))
-				emit_LiteralExpressionTerminal_LeftParenthesisKeyword_0_0_a(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if(match_LiteralExpressionTerminal_LeftParenthesisKeyword_0_0_p.equals(syntax))
-				emit_LiteralExpressionTerminal_LeftParenthesisKeyword_0_0_p(semanticObject, getLastNavigableState(), syntaxNodes);
-			else acceptNodes(getLastNavigableState(), syntaxNodes);
+			acceptNodes(getLastNavigableState(), syntaxNodes);
 		}
 	}
 
-	/**
-	 * Syntax:
-	 *     '('*
-	 */
-	protected void emit_LiteralExpressionTerminal_LeftParenthesisKeyword_0_0_a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
-		acceptNodes(transition, nodes);
-	}
-	
-	/**
-	 * Syntax:
-	 *     '('+
-	 */
-	protected void emit_LiteralExpressionTerminal_LeftParenthesisKeyword_0_0_p(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
-		acceptNodes(transition, nodes);
-	}
-	
 }

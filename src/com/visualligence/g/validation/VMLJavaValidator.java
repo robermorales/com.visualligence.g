@@ -2,13 +2,16 @@ package com.visualligence.g.validation;
 
 import org.eclipse.xtext.validation.Check;
 
+/*
 import com.visualligence.g.vML.Module;
 import com.visualligence.g.vML.Stream;
 import com.visualligence.g.vML.TypeRef;
 import com.visualligence.g.vML.VMLPackage;
+*/
 
 public class VMLJavaValidator extends AbstractVMLJavaValidator {
 
+	/*
 	@Check
 	public void checkNameOfModule(Module m) {
 		String filename = m.eResource().getURI().lastSegment();
@@ -43,5 +46,5 @@ public class VMLJavaValidator extends AbstractVMLJavaValidator {
 		//
 		// return false;
 	}
-
+	*/
 }
