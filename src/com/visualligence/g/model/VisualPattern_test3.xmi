@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ASCII"?>
+<vml:VisualPattern
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:vml="http://www.visualligence.com/vml"
+    xsi:schemaLocation="http://www.visualligence.com/vml visualligence.ecore">
+  <inputs name="in"/>
+  <outputs name="out"
+      left="//@inputs.0"/>
+</vml:VisualPattern>

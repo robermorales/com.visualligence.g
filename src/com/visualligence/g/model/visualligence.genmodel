@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/com.visualligence.g/src" modelPluginID="com.visualligence.g"
+    modelName="Visualligence" importerID="org.eclipse.emf.importer.ecore" complianceLevel="6.0"
+    copyrightFields="false" usedGenPackages="platform:/plugin/org.eclipse.emf.ecore/model/Ecore.genmodel#//ecore">
+  <foreignModel>visualligence.ecore</foreignModel>
+  <genPackages prefix="Visualligence" basePackage="com.visualligence.g.model" disposableProviderFactory="true"
+      ecorePackage="visualligence.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="visualligence.ecore#//NativeTypeOptions">
+      <genEnumLiterals ecoreEnumLiteral="visualligence.ecore#//NativeTypeOptions/string"/>
+      <genEnumLiterals ecoreEnumLiteral="visualligence.ecore#//NativeTypeOptions/number"/>
+      <genEnumLiterals ecoreEnumLiteral="visualligence.ecore#//NativeTypeOptions/bool"/>
+      <genEnumLiterals ecoreEnumLiteral="visualligence.ecore#//NativeTypeOptions/color"/>
+      <genEnumLiterals ecoreEnumLiteral="visualligence.ecore#//NativeTypeOptions/position"/>
+      <genEnumLiterals ecoreEnumLiteral="visualligence.ecore#//NativeTypeOptions/angle"/>
+      <genEnumLiterals ecoreEnumLiteral="visualligence.ecore#//NativeTypeOptions/size"/>
+      <genEnumLiterals ecoreEnumLiteral="visualligence.ecore#//NativeTypeOptions/texture"/>
+      <genEnumLiterals ecoreEnumLiteral="visualligence.ecore#//NativeTypeOptions/value"/>
+    </genEnums>
+    <genClasses ecoreClass="visualligence.ecore#//Module">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference visualligence.ecore#//Module/input"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference visualligence.ecore#//Module/output"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference visualligence.ecore#//Module/instances"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference visualligence.ecore#//Module/types"/>
+    </genClasses>
+    <genClasses ecoreClass="visualligence.ecore#//ModuleInstances">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference visualligence.ecore#//ModuleInstances/desc"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference visualligence.ecore#//ModuleInstances/left"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="visualligence.ecore#//TypeDecl"/>
+    <genClasses ecoreClass="visualligence.ecore#//NamedElement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute visualligence.ecore#//NamedElement/name"/>
+    </genClasses>
+    <genClasses ecoreClass="visualligence.ecore#//NativeType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute visualligence.ecore#//NativeType/type"/>
+    </genClasses>
+    <genClasses ecoreClass="visualligence.ecore#//List"/>
+    <genClasses ecoreClass="visualligence.ecore#//TypedElement">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference visualligence.ecore#//TypedElement/type"/>
+    </genClasses>
+    <genClasses ecoreClass="visualligence.ecore#//Hash">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference visualligence.ecore#//Hash/items"/>
+    </genClasses>
+    <genClasses ecoreClass="visualligence.ecore#//HashItem"/>
+    <genClasses ecoreClass="visualligence.ecore#//Stream"/>
+    <genClasses ecoreClass="visualligence.ecore#//Literal">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute visualligence.ecore#//Literal/value"/>
+    </genClasses>
+    <genClasses ecoreClass="visualligence.ecore#//Input"/>
+    <genClasses ecoreClass="visualligence.ecore#//Output">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference visualligence.ecore#//Output/left"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
