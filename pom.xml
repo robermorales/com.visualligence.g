@@ -207,4 +207,13 @@
 
 	<!-- ch.qos.logback.core.joran.spi;resolution:=optional, org.slf4j;resolution:=optional, -->
 
+	<scm>
+		<url>git@github.com:robermorales/com.visualligence.g.git</url>
+	</scm>
+	<issueManagement>
+		<url>https://github.com/robermorales/com.visualligence.g/issues</url>
+	</issueManagement>
+	<ciManagement>
+		<url>http://jenkins.visualligence.com:8080/job/visualligence/</url>
+	</ciManagement>
 </project>

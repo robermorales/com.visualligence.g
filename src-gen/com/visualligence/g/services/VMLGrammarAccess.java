@@ -617,16 +617,15 @@ public class VMLGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cSingleLiteralParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
 		private final RuleCall cSequenceLiteralParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
 		private final RuleCall cTupleLiteralParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
-		private final RuleCall cSetLiteralParserRuleCall_3 = (RuleCall)cAlternatives.eContents().get(3);
-		private final RuleCall cConstantRefParserRuleCall_4 = (RuleCall)cAlternatives.eContents().get(4);
+		private final RuleCall cConstantRefParserRuleCall_3 = (RuleCall)cAlternatives.eContents().get(3);
 		
 		//RValue:
-		//	SingleLiteral | SequenceLiteral | TupleLiteral | SetLiteral | //	NodeRef         |
+		//	SingleLiteral | SequenceLiteral | TupleLiteral | //	NodeRef         |
 		//	//	MemberRef       |
 		//	ConstantRef;
 		public ParserRule getRule() { return rule; }
 
-		//SingleLiteral | SequenceLiteral | TupleLiteral | SetLiteral | //	NodeRef         |
+		//SingleLiteral | SequenceLiteral | TupleLiteral | //	NodeRef         |
 		////	MemberRef       |
 		//ConstantRef
 		public Alternatives getAlternatives() { return cAlternatives; }
@@ -640,13 +639,10 @@ public class VMLGrammarAccess extends AbstractGrammarElementFinder {
 		//TupleLiteral
 		public RuleCall getTupleLiteralParserRuleCall_2() { return cTupleLiteralParserRuleCall_2; }
 
-		//SetLiteral
-		public RuleCall getSetLiteralParserRuleCall_3() { return cSetLiteralParserRuleCall_3; }
-
 		////	NodeRef         |
 		////	MemberRef       |
 		//ConstantRef
-		public RuleCall getConstantRefParserRuleCall_4() { return cConstantRefParserRuleCall_4; }
+		public RuleCall getConstantRefParserRuleCall_3() { return cConstantRefParserRuleCall_3; }
 	}
 
 	public class NodeRefElements extends AbstractParserRuleElementFinder {
@@ -1218,58 +1214,6 @@ public class VMLGrammarAccess extends AbstractGrammarElementFinder {
 
 		//LiteralExpression
 		public RuleCall getValueLiteralExpressionParserRuleCall_2_0() { return cValueLiteralExpressionParserRuleCall_2_0; }
-	}
-
-	public class SetLiteralElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "SetLiteral");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Action cSetLiteralAction_0 = (Action)cGroup.eContents().get(0);
-		private final Keyword cLeftCurlyBracketKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Group cGroup_2 = (Group)cGroup.eContents().get(2);
-		private final Assignment cItemsAssignment_2_0 = (Assignment)cGroup_2.eContents().get(0);
-		private final RuleCall cItemsLiteralExpressionParserRuleCall_2_0_0 = (RuleCall)cItemsAssignment_2_0.eContents().get(0);
-		private final Group cGroup_2_1 = (Group)cGroup_2.eContents().get(1);
-		private final Keyword cCommaKeyword_2_1_0 = (Keyword)cGroup_2_1.eContents().get(0);
-		private final Assignment cItemsAssignment_2_1_1 = (Assignment)cGroup_2_1.eContents().get(1);
-		private final RuleCall cItemsLiteralExpressionParserRuleCall_2_1_1_0 = (RuleCall)cItemsAssignment_2_1_1.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_3 = (Keyword)cGroup.eContents().get(3);
-		
-		//SetLiteral:
-		//	{SetLiteral} "{" (items+=LiteralExpression ("," items+=LiteralExpression)*)? "}";
-		public ParserRule getRule() { return rule; }
-
-		//{SetLiteral} "{" (items+=LiteralExpression ("," items+=LiteralExpression)*)? "}"
-		public Group getGroup() { return cGroup; }
-
-		//{SetLiteral}
-		public Action getSetLiteralAction_0() { return cSetLiteralAction_0; }
-
-		//"{"
-		public Keyword getLeftCurlyBracketKeyword_1() { return cLeftCurlyBracketKeyword_1; }
-
-		//(items+=LiteralExpression ("," items+=LiteralExpression)*)?
-		public Group getGroup_2() { return cGroup_2; }
-
-		//items+=LiteralExpression
-		public Assignment getItemsAssignment_2_0() { return cItemsAssignment_2_0; }
-
-		//LiteralExpression
-		public RuleCall getItemsLiteralExpressionParserRuleCall_2_0_0() { return cItemsLiteralExpressionParserRuleCall_2_0_0; }
-
-		//("," items+=LiteralExpression)*
-		public Group getGroup_2_1() { return cGroup_2_1; }
-
-		//","
-		public Keyword getCommaKeyword_2_1_0() { return cCommaKeyword_2_1_0; }
-
-		//items+=LiteralExpression
-		public Assignment getItemsAssignment_2_1_1() { return cItemsAssignment_2_1_1; }
-
-		//LiteralExpression
-		public RuleCall getItemsLiteralExpressionParserRuleCall_2_1_1_0() { return cItemsLiteralExpressionParserRuleCall_2_1_1_0; }
-
-		//"}"
-		public Keyword getRightCurlyBracketKeyword_3() { return cRightCurlyBracketKeyword_3; }
 	}
 
 	public class BlockElements extends AbstractParserRuleElementFinder {
@@ -3218,7 +3162,6 @@ public class VMLGrammarAccess extends AbstractGrammarElementFinder {
 	private SequenceLiteralPlainElements pSequenceLiteralPlain;
 	private TupleLiteralElements pTupleLiteral;
 	private TupleItemElements pTupleItem;
-	private SetLiteralElements pSetLiteral;
 	private TerminalRule tOCT;
 	private TerminalRule tHEX;
 	private TerminalRule tBIN;
@@ -3486,7 +3429,7 @@ public class VMLGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//RValue:
-	//	SingleLiteral | SequenceLiteral | TupleLiteral | SetLiteral | //	NodeRef         |
+	//	SingleLiteral | SequenceLiteral | TupleLiteral | //	NodeRef         |
 	//	//	MemberRef       |
 	//	ConstantRef;
 	public RValueElements getRValueAccess() {
@@ -3698,16 +3641,6 @@ public class VMLGrammarAccess extends AbstractGrammarElementFinder {
 	
 	public ParserRule getTupleItemRule() {
 		return getTupleItemAccess().getRule();
-	}
-
-	//SetLiteral:
-	//	{SetLiteral} "{" (items+=LiteralExpression ("," items+=LiteralExpression)*)? "}";
-	public SetLiteralElements getSetLiteralAccess() {
-		return (pSetLiteral != null) ? pSetLiteral : (pSetLiteral = new SetLiteralElements());
-	}
-	
-	public ParserRule getSetLiteralRule() {
-		return getSetLiteralAccess().getRule();
 	}
 
 	////terminal DEC returns ecore::EInt:     ('0'..'9')                  +;

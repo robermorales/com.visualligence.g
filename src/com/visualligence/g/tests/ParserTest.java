@@ -74,4 +74,30 @@ public class ParserTest {
 			}
 		}
 	}
+	
+	public void sandbox(){
+		
+		String s = " module example                      \n"
+				+ "  input void                          \n"
+				+ "  output void                         \n"
+				+ "  author \"Rober Morales-Chaparro\"   \n"
+				+ "  creation \"2012/03/24\"             \n"
+				+ "  more \"http://visualligence.com/\"  \n"
+				
+				+ " <<<--->> asdf;; "
+				;
+
+
+		try {
+			
+			Module module = parser.parse( s );
+			
+			String author = module.getAuthor();
+			
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+	}
 }

@@ -102,9 +102,6 @@ public class VMLParser extends AbstractContentAssistParser {
 					put(grammarAccess.getTupleLiteralAccess().getGroup_2(), "rule__TupleLiteral__Group_2__0");
 					put(grammarAccess.getTupleLiteralAccess().getGroup_2_1(), "rule__TupleLiteral__Group_2_1__0");
 					put(grammarAccess.getTupleItemAccess().getGroup(), "rule__TupleItem__Group__0");
-					put(grammarAccess.getSetLiteralAccess().getGroup(), "rule__SetLiteral__Group__0");
-					put(grammarAccess.getSetLiteralAccess().getGroup_2(), "rule__SetLiteral__Group_2__0");
-					put(grammarAccess.getSetLiteralAccess().getGroup_2_1(), "rule__SetLiteral__Group_2_1__0");
 					put(grammarAccess.getBlockAccess().getGroup(), "rule__Block__Group__0");
 					put(grammarAccess.getBlockAccess().getGroup_2(), "rule__Block__Group_2__0");
 					put(grammarAccess.getNoopAccess().getGroup(), "rule__Noop__Group__0");
@@ -179,8 +176,6 @@ public class VMLParser extends AbstractContentAssistParser {
 					put(grammarAccess.getTupleLiteralAccess().getItemsAssignment_2_1_1(), "rule__TupleLiteral__ItemsAssignment_2_1_1");
 					put(grammarAccess.getTupleItemAccess().getNameAssignment_0(), "rule__TupleItem__NameAssignment_0");
 					put(grammarAccess.getTupleItemAccess().getValueAssignment_2(), "rule__TupleItem__ValueAssignment_2");
-					put(grammarAccess.getSetLiteralAccess().getItemsAssignment_2_0(), "rule__SetLiteral__ItemsAssignment_2_0");
-					put(grammarAccess.getSetLiteralAccess().getItemsAssignment_2_1_1(), "rule__SetLiteral__ItemsAssignment_2_1_1");
 					put(grammarAccess.getBlockAccess().getNameAssignment_2_1(), "rule__Block__NameAssignment_2_1");
 					put(grammarAccess.getBlockAccess().getSentencesAssignment_3(), "rule__Block__SentencesAssignment_3");
 					put(grammarAccess.getNoopAccess().getNameAssignment_1(), "rule__Noop__NameAssignment_1");

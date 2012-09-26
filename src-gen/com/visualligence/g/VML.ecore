@@ -86,10 +86,6 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="value" eType="#//LiteralExpression"
         containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="SetLiteral" eSuperTypes="#//RValue">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="items" upperBound="-1"
-        eType="#//LiteralExpression" containment="true"/>
-  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Block" eSuperTypes="#//Sentence">
     <eStructuralFeatures xsi:type="ecore:EReference" name="sentences" upperBound="-1"
         eType="#//Sentence" containment="true"/>

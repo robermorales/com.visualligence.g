@@ -51,7 +51,6 @@ import com.visualligence.g.vML.SequenceLiteral;
 import com.visualligence.g.vML.SequenceLiteralPlain;
 import com.visualligence.g.vML.SequenceLiteralSerie;
 import com.visualligence.g.vML.SequenceTypeRef;
-import com.visualligence.g.vML.SetLiteral;
 import com.visualligence.g.vML.SetTypeRef;
 import com.visualligence.g.vML.Shape;
 import com.visualligence.g.vML.ShapeRef;
@@ -201,13 +200,6 @@ public class VMLPackageImpl extends EPackageImpl implements VMLPackage
    * @generated
    */
   private EClass tupleItemEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass setLiteralEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -1013,26 +1005,6 @@ public class VMLPackageImpl extends EPackageImpl implements VMLPackage
   public EReference getTupleItem_Value()
   {
     return (EReference)tupleItemEClass.getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getSetLiteral()
-  {
-    return setLiteralEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getSetLiteral_Items()
-  {
-    return (EReference)setLiteralEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -2141,9 +2113,6 @@ public class VMLPackageImpl extends EPackageImpl implements VMLPackage
     createEAttribute(tupleItemEClass, TUPLE_ITEM__NAME);
     createEReference(tupleItemEClass, TUPLE_ITEM__VALUE);
 
-    setLiteralEClass = createEClass(SET_LITERAL);
-    createEReference(setLiteralEClass, SET_LITERAL__ITEMS);
-
     blockEClass = createEClass(BLOCK);
     createEReference(blockEClass, BLOCK__SENTENCES);
 
@@ -2333,7 +2302,6 @@ public class VMLPackageImpl extends EPackageImpl implements VMLPackage
     sequenceLiteralSerieEClass.getESuperTypes().add(this.getSequenceLiteral());
     sequenceLiteralPlainEClass.getESuperTypes().add(this.getSequenceLiteral());
     tupleLiteralEClass.getESuperTypes().add(this.getRValue());
-    setLiteralEClass.getESuperTypes().add(this.getRValue());
     blockEClass.getESuperTypes().add(this.getSentence());
     noopEClass.getESuperTypes().add(this.getSentence());
     constantEClass.getESuperTypes().add(this.getSentence());
@@ -2426,9 +2394,6 @@ public class VMLPackageImpl extends EPackageImpl implements VMLPackage
     initEClass(tupleItemEClass, TupleItem.class, "TupleItem", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getTupleItem_Name(), ecorePackage.getEString(), "name", null, 0, 1, TupleItem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getTupleItem_Value(), this.getLiteralExpression(), null, "value", null, 0, 1, TupleItem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(setLiteralEClass, SetLiteral.class, "SetLiteral", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getSetLiteral_Items(), this.getLiteralExpression(), null, "items", null, 0, -1, SetLiteral.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(blockEClass, Block.class, "Block", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getBlock_Sentences(), this.getSentence(), null, "sentences", null, 0, -1, Block.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

@@ -165,7 +165,6 @@ RValue:
 	SingleLiteral   |
 	SequenceLiteral |
 	TupleLiteral    |
-	SetLiteral      |
 
 //	NodeRef         |
 //	MemberRef       |
@@ -283,16 +282,6 @@ TupleItem:
 	name  = ID
 	':'
 	value = LiteralExpression
-;
-
-SetLiteral:
-	{SetLiteral}
-	'{'
-		(
-			items += LiteralExpression
-			( ',' items += LiteralExpression )*
-		)?
-	'}'
 ;
 
 //terminal DEC returns ecore::EInt:     ('0'..'9')                  +;

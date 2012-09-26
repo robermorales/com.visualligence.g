@@ -158,11 +158,6 @@ public class VMLAdapterFactory extends AdapterFactoryImpl
         return createTupleItemAdapter();
       }
       @Override
-      public Adapter caseSetLiteral(SetLiteral object)
-      {
-        return createSetLiteralAdapter();
-      }
-      @Override
       public Adapter caseBlock(Block object)
       {
         return createBlockAdapter();
@@ -640,21 +635,6 @@ public class VMLAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createTupleItemAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link com.visualligence.g.vML.SetLiteral <em>Set Literal</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see com.visualligence.g.vML.SetLiteral
-   * @generated
-   */
-  public Adapter createSetLiteralAdapter()
   {
     return null;
   }

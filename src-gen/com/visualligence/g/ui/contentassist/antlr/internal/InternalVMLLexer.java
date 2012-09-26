@@ -1797,10 +1797,10 @@ public class InternalVMLLexer extends Lexer {
         try {
             int _type = RULE_OCT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.visualligence.g/src-gen/com/visualligence/g/ui/contentassist/antlr/internal/InternalVML.g:12135:10: ( ( '0' .. '7' )+ 'o' )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/ui/contentassist/antlr/internal/InternalVML.g:12135:12: ( '0' .. '7' )+ 'o'
+            // ../com.visualligence.g/src-gen/com/visualligence/g/ui/contentassist/antlr/internal/InternalVML.g:11818:10: ( ( '0' .. '7' )+ 'o' )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/ui/contentassist/antlr/internal/InternalVML.g:11818:12: ( '0' .. '7' )+ 'o'
             {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/ui/contentassist/antlr/internal/InternalVML.g:12135:12: ( '0' .. '7' )+
+            // ../com.visualligence.g/src-gen/com/visualligence/g/ui/contentassist/antlr/internal/InternalVML.g:11818:12: ( '0' .. '7' )+
             int cnt1=0;
             loop1:
             do {
@@ -1814,7 +1814,7 @@ public class InternalVMLLexer extends Lexer {
 
                 switch (alt1) {
             	case 1 :
-            	    // ../com.visualligence.g/src-gen/com/visualligence/g/ui/contentassist/antlr/internal/InternalVML.g:12135:13: '0' .. '7'
+            	    // ../com.visualligence.g/src-gen/com/visualligence/g/ui/contentassist/antlr/internal/InternalVML.g:11818:13: '0' .. '7'
             	    {
             	    matchRange('0','7'); 
 
@@ -1847,12 +1847,12 @@ public class InternalVMLLexer extends Lexer {
         try {
             int _type = RULE_HEX;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.visualligence.g/src-gen/com/visualligence/g/ui/contentassist/antlr/internal/InternalVML.g:12137:10: ( '0x' ( '0' .. '9' | 'A' .. 'F' | 'a' .. 'f' )+ )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/ui/contentassist/antlr/internal/InternalVML.g:12137:12: '0x' ( '0' .. '9' | 'A' .. 'F' | 'a' .. 'f' )+
+            // ../com.visualligence.g/src-gen/com/visualligence/g/ui/contentassist/antlr/internal/InternalVML.g:11820:10: ( '0x' ( '0' .. '9' | 'A' .. 'F' | 'a' .. 'f' )+ )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/ui/contentassist/antlr/internal/InternalVML.g:11820:12: '0x' ( '0' .. '9' | 'A' .. 'F' | 'a' .. 'f' )+
             {
             match("0x"); 
 
-            // ../com.visualligence.g/src-gen/com/visualligence/g/ui/contentassist/antlr/internal/InternalVML.g:12137:17: ( '0' .. '9' | 'A' .. 'F' | 'a' .. 'f' )+
+            // ../com.visualligence.g/src-gen/com/visualligence/g/ui/contentassist/antlr/internal/InternalVML.g:11820:17: ( '0' .. '9' | 'A' .. 'F' | 'a' .. 'f' )+
             int cnt2=0;
             loop2:
             do {
@@ -1906,10 +1906,10 @@ public class InternalVMLLexer extends Lexer {
         try {
             int _type = RULE_BIN;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.visualligence.g/src-gen/com/visualligence/g/ui/contentassist/antlr/internal/InternalVML.g:12139:10: ( ( '0' .. '1' )+ 'b' )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/ui/contentassist/antlr/internal/InternalVML.g:12139:12: ( '0' .. '1' )+ 'b'
+            // ../com.visualligence.g/src-gen/com/visualligence/g/ui/contentassist/antlr/internal/InternalVML.g:11822:10: ( ( '0' .. '1' )+ 'b' )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/ui/contentassist/antlr/internal/InternalVML.g:11822:12: ( '0' .. '1' )+ 'b'
             {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/ui/contentassist/antlr/internal/InternalVML.g:12139:12: ( '0' .. '1' )+
+            // ../com.visualligence.g/src-gen/com/visualligence/g/ui/contentassist/antlr/internal/InternalVML.g:11822:12: ( '0' .. '1' )+
             int cnt3=0;
             loop3:
             do {
@@ -1923,7 +1923,7 @@ public class InternalVMLLexer extends Lexer {
 
                 switch (alt3) {
             	case 1 :
-            	    // ../com.visualligence.g/src-gen/com/visualligence/g/ui/contentassist/antlr/internal/InternalVML.g:12139:13: '0' .. '1'
+            	    // ../com.visualligence.g/src-gen/com/visualligence/g/ui/contentassist/antlr/internal/InternalVML.g:11822:13: '0' .. '1'
             	    {
             	    matchRange('0','1'); 
 
@@ -1956,10 +1956,10 @@ public class InternalVMLLexer extends Lexer {
         try {
             int _type = RULE_ID;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.visualligence.g/src-gen/com/visualligence/g/ui/contentassist/antlr/internal/InternalVML.g:12141:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/ui/contentassist/antlr/internal/InternalVML.g:12141:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // ../com.visualligence.g/src-gen/com/visualligence/g/ui/contentassist/antlr/internal/InternalVML.g:11824:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/ui/contentassist/antlr/internal/InternalVML.g:11824:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/ui/contentassist/antlr/internal/InternalVML.g:12141:11: ( '^' )?
+            // ../com.visualligence.g/src-gen/com/visualligence/g/ui/contentassist/antlr/internal/InternalVML.g:11824:11: ( '^' )?
             int alt4=2;
             int LA4_0 = input.LA(1);
 
@@ -1968,7 +1968,7 @@ public class InternalVMLLexer extends Lexer {
             }
             switch (alt4) {
                 case 1 :
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/ui/contentassist/antlr/internal/InternalVML.g:12141:11: '^'
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/ui/contentassist/antlr/internal/InternalVML.g:11824:11: '^'
                     {
                     match('^'); 
 
@@ -1986,7 +1986,7 @@ public class InternalVMLLexer extends Lexer {
                 recover(mse);
                 throw mse;}
 
-            // ../com.visualligence.g/src-gen/com/visualligence/g/ui/contentassist/antlr/internal/InternalVML.g:12141:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // ../com.visualligence.g/src-gen/com/visualligence/g/ui/contentassist/antlr/internal/InternalVML.g:11824:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             loop5:
             do {
                 int alt5=2;
@@ -2035,10 +2035,10 @@ public class InternalVMLLexer extends Lexer {
         try {
             int _type = RULE_INT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.visualligence.g/src-gen/com/visualligence/g/ui/contentassist/antlr/internal/InternalVML.g:12143:10: ( ( '0' .. '9' )+ )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/ui/contentassist/antlr/internal/InternalVML.g:12143:12: ( '0' .. '9' )+
+            // ../com.visualligence.g/src-gen/com/visualligence/g/ui/contentassist/antlr/internal/InternalVML.g:11826:10: ( ( '0' .. '9' )+ )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/ui/contentassist/antlr/internal/InternalVML.g:11826:12: ( '0' .. '9' )+
             {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/ui/contentassist/antlr/internal/InternalVML.g:12143:12: ( '0' .. '9' )+
+            // ../com.visualligence.g/src-gen/com/visualligence/g/ui/contentassist/antlr/internal/InternalVML.g:11826:12: ( '0' .. '9' )+
             int cnt6=0;
             loop6:
             do {
@@ -2052,7 +2052,7 @@ public class InternalVMLLexer extends Lexer {
 
                 switch (alt6) {
             	case 1 :
-            	    // ../com.visualligence.g/src-gen/com/visualligence/g/ui/contentassist/antlr/internal/InternalVML.g:12143:13: '0' .. '9'
+            	    // ../com.visualligence.g/src-gen/com/visualligence/g/ui/contentassist/antlr/internal/InternalVML.g:11826:13: '0' .. '9'
             	    {
             	    matchRange('0','9'); 
 
@@ -2084,10 +2084,10 @@ public class InternalVMLLexer extends Lexer {
         try {
             int _type = RULE_STRING;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.visualligence.g/src-gen/com/visualligence/g/ui/contentassist/antlr/internal/InternalVML.g:12145:13: ( ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/ui/contentassist/antlr/internal/InternalVML.g:12145:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/ui/contentassist/antlr/internal/InternalVML.g:11828:13: ( ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/ui/contentassist/antlr/internal/InternalVML.g:11828:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/ui/contentassist/antlr/internal/InternalVML.g:12145:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/ui/contentassist/antlr/internal/InternalVML.g:11828:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             int alt9=2;
             int LA9_0 = input.LA(1);
 
@@ -2105,10 +2105,10 @@ public class InternalVMLLexer extends Lexer {
             }
             switch (alt9) {
                 case 1 :
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/ui/contentassist/antlr/internal/InternalVML.g:12145:16: '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/ui/contentassist/antlr/internal/InternalVML.g:11828:16: '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
                     {
                     match('\"'); 
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/ui/contentassist/antlr/internal/InternalVML.g:12145:20: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )*
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/ui/contentassist/antlr/internal/InternalVML.g:11828:20: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )*
                     loop7:
                     do {
                         int alt7=3;
@@ -2124,7 +2124,7 @@ public class InternalVMLLexer extends Lexer {
 
                         switch (alt7) {
                     	case 1 :
-                    	    // ../com.visualligence.g/src-gen/com/visualligence/g/ui/contentassist/antlr/internal/InternalVML.g:12145:21: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
+                    	    // ../com.visualligence.g/src-gen/com/visualligence/g/ui/contentassist/antlr/internal/InternalVML.g:11828:21: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
                     	    {
                     	    match('\\'); 
                     	    if ( input.LA(1)=='\"'||input.LA(1)=='\''||input.LA(1)=='\\'||input.LA(1)=='b'||input.LA(1)=='f'||input.LA(1)=='n'||input.LA(1)=='r'||(input.LA(1)>='t' && input.LA(1)<='u') ) {
@@ -2140,7 +2140,7 @@ public class InternalVMLLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../com.visualligence.g/src-gen/com/visualligence/g/ui/contentassist/antlr/internal/InternalVML.g:12145:66: ~ ( ( '\\\\' | '\"' ) )
+                    	    // ../com.visualligence.g/src-gen/com/visualligence/g/ui/contentassist/antlr/internal/InternalVML.g:11828:66: ~ ( ( '\\\\' | '\"' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='!')||(input.LA(1)>='#' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -2165,10 +2165,10 @@ public class InternalVMLLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/ui/contentassist/antlr/internal/InternalVML.g:12145:86: '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/ui/contentassist/antlr/internal/InternalVML.g:11828:86: '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
                     {
                     match('\''); 
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/ui/contentassist/antlr/internal/InternalVML.g:12145:91: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )*
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/ui/contentassist/antlr/internal/InternalVML.g:11828:91: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )*
                     loop8:
                     do {
                         int alt8=3;
@@ -2184,7 +2184,7 @@ public class InternalVMLLexer extends Lexer {
 
                         switch (alt8) {
                     	case 1 :
-                    	    // ../com.visualligence.g/src-gen/com/visualligence/g/ui/contentassist/antlr/internal/InternalVML.g:12145:92: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
+                    	    // ../com.visualligence.g/src-gen/com/visualligence/g/ui/contentassist/antlr/internal/InternalVML.g:11828:92: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
                     	    {
                     	    match('\\'); 
                     	    if ( input.LA(1)=='\"'||input.LA(1)=='\''||input.LA(1)=='\\'||input.LA(1)=='b'||input.LA(1)=='f'||input.LA(1)=='n'||input.LA(1)=='r'||(input.LA(1)>='t' && input.LA(1)<='u') ) {
@@ -2200,7 +2200,7 @@ public class InternalVMLLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../com.visualligence.g/src-gen/com/visualligence/g/ui/contentassist/antlr/internal/InternalVML.g:12145:137: ~ ( ( '\\\\' | '\\'' ) )
+                    	    // ../com.visualligence.g/src-gen/com/visualligence/g/ui/contentassist/antlr/internal/InternalVML.g:11828:137: ~ ( ( '\\\\' | '\\'' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='&')||(input.LA(1)>='(' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -2243,12 +2243,12 @@ public class InternalVMLLexer extends Lexer {
         try {
             int _type = RULE_ML_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.visualligence.g/src-gen/com/visualligence/g/ui/contentassist/antlr/internal/InternalVML.g:12147:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/ui/contentassist/antlr/internal/InternalVML.g:12147:19: '/*' ( options {greedy=false; } : . )* '*/'
+            // ../com.visualligence.g/src-gen/com/visualligence/g/ui/contentassist/antlr/internal/InternalVML.g:11830:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/ui/contentassist/antlr/internal/InternalVML.g:11830:19: '/*' ( options {greedy=false; } : . )* '*/'
             {
             match("/*"); 
 
-            // ../com.visualligence.g/src-gen/com/visualligence/g/ui/contentassist/antlr/internal/InternalVML.g:12147:24: ( options {greedy=false; } : . )*
+            // ../com.visualligence.g/src-gen/com/visualligence/g/ui/contentassist/antlr/internal/InternalVML.g:11830:24: ( options {greedy=false; } : . )*
             loop10:
             do {
                 int alt10=2;
@@ -2273,7 +2273,7 @@ public class InternalVMLLexer extends Lexer {
 
                 switch (alt10) {
             	case 1 :
-            	    // ../com.visualligence.g/src-gen/com/visualligence/g/ui/contentassist/antlr/internal/InternalVML.g:12147:52: .
+            	    // ../com.visualligence.g/src-gen/com/visualligence/g/ui/contentassist/antlr/internal/InternalVML.g:11830:52: .
             	    {
             	    matchAny(); 
 
@@ -2303,12 +2303,12 @@ public class InternalVMLLexer extends Lexer {
         try {
             int _type = RULE_SL_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.visualligence.g/src-gen/com/visualligence/g/ui/contentassist/antlr/internal/InternalVML.g:12149:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/ui/contentassist/antlr/internal/InternalVML.g:12149:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
+            // ../com.visualligence.g/src-gen/com/visualligence/g/ui/contentassist/antlr/internal/InternalVML.g:11832:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/ui/contentassist/antlr/internal/InternalVML.g:11832:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
             {
             match("//"); 
 
-            // ../com.visualligence.g/src-gen/com/visualligence/g/ui/contentassist/antlr/internal/InternalVML.g:12149:24: (~ ( ( '\\n' | '\\r' ) ) )*
+            // ../com.visualligence.g/src-gen/com/visualligence/g/ui/contentassist/antlr/internal/InternalVML.g:11832:24: (~ ( ( '\\n' | '\\r' ) ) )*
             loop11:
             do {
                 int alt11=2;
@@ -2321,7 +2321,7 @@ public class InternalVMLLexer extends Lexer {
 
                 switch (alt11) {
             	case 1 :
-            	    // ../com.visualligence.g/src-gen/com/visualligence/g/ui/contentassist/antlr/internal/InternalVML.g:12149:24: ~ ( ( '\\n' | '\\r' ) )
+            	    // ../com.visualligence.g/src-gen/com/visualligence/g/ui/contentassist/antlr/internal/InternalVML.g:11832:24: ~ ( ( '\\n' | '\\r' ) )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='\t')||(input.LA(1)>='\u000B' && input.LA(1)<='\f')||(input.LA(1)>='\u000E' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -2341,7 +2341,7 @@ public class InternalVMLLexer extends Lexer {
                 }
             } while (true);
 
-            // ../com.visualligence.g/src-gen/com/visualligence/g/ui/contentassist/antlr/internal/InternalVML.g:12149:40: ( ( '\\r' )? '\\n' )?
+            // ../com.visualligence.g/src-gen/com/visualligence/g/ui/contentassist/antlr/internal/InternalVML.g:11832:40: ( ( '\\r' )? '\\n' )?
             int alt13=2;
             int LA13_0 = input.LA(1);
 
@@ -2350,9 +2350,9 @@ public class InternalVMLLexer extends Lexer {
             }
             switch (alt13) {
                 case 1 :
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/ui/contentassist/antlr/internal/InternalVML.g:12149:41: ( '\\r' )? '\\n'
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/ui/contentassist/antlr/internal/InternalVML.g:11832:41: ( '\\r' )? '\\n'
                     {
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/ui/contentassist/antlr/internal/InternalVML.g:12149:41: ( '\\r' )?
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/ui/contentassist/antlr/internal/InternalVML.g:11832:41: ( '\\r' )?
                     int alt12=2;
                     int LA12_0 = input.LA(1);
 
@@ -2361,7 +2361,7 @@ public class InternalVMLLexer extends Lexer {
                     }
                     switch (alt12) {
                         case 1 :
-                            // ../com.visualligence.g/src-gen/com/visualligence/g/ui/contentassist/antlr/internal/InternalVML.g:12149:41: '\\r'
+                            // ../com.visualligence.g/src-gen/com/visualligence/g/ui/contentassist/antlr/internal/InternalVML.g:11832:41: '\\r'
                             {
                             match('\r'); 
 
@@ -2393,10 +2393,10 @@ public class InternalVMLLexer extends Lexer {
         try {
             int _type = RULE_WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.visualligence.g/src-gen/com/visualligence/g/ui/contentassist/antlr/internal/InternalVML.g:12151:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/ui/contentassist/antlr/internal/InternalVML.g:12151:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // ../com.visualligence.g/src-gen/com/visualligence/g/ui/contentassist/antlr/internal/InternalVML.g:11834:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/ui/contentassist/antlr/internal/InternalVML.g:11834:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/ui/contentassist/antlr/internal/InternalVML.g:12151:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // ../com.visualligence.g/src-gen/com/visualligence/g/ui/contentassist/antlr/internal/InternalVML.g:11834:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             int cnt14=0;
             loop14:
             do {
@@ -2450,8 +2450,8 @@ public class InternalVMLLexer extends Lexer {
         try {
             int _type = RULE_ANY_OTHER;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.visualligence.g/src-gen/com/visualligence/g/ui/contentassist/antlr/internal/InternalVML.g:12153:16: ( . )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/ui/contentassist/antlr/internal/InternalVML.g:12153:18: .
+            // ../com.visualligence.g/src-gen/com/visualligence/g/ui/contentassist/antlr/internal/InternalVML.g:11836:16: ( . )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/ui/contentassist/antlr/internal/InternalVML.g:11836:18: .
             {
             matchAny(); 
 

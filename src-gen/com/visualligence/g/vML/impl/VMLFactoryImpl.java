@@ -84,7 +84,6 @@ public class VMLFactoryImpl extends EFactoryImpl implements VMLFactory
       case VMLPackage.SEQUENCE_LITERAL_PLAIN: return createSequenceLiteralPlain();
       case VMLPackage.TUPLE_LITERAL: return createTupleLiteral();
       case VMLPackage.TUPLE_ITEM: return createTupleItem();
-      case VMLPackage.SET_LITERAL: return createSetLiteral();
       case VMLPackage.BLOCK: return createBlock();
       case VMLPackage.NOOP: return createNoop();
       case VMLPackage.PAIR: return createPair();
@@ -358,17 +357,6 @@ public class VMLFactoryImpl extends EFactoryImpl implements VMLFactory
   {
     TupleItemImpl tupleItem = new TupleItemImpl();
     return tupleItem;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public SetLiteral createSetLiteral()
-  {
-    SetLiteralImpl setLiteral = new SetLiteralImpl();
-    return setLiteral;
   }
 
   /**

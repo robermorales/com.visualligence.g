@@ -35,7 +35,6 @@ import com.visualligence.g.vML.Pair;
 import com.visualligence.g.vML.SequenceLiteralPlain;
 import com.visualligence.g.vML.SequenceLiteralSerie;
 import com.visualligence.g.vML.SequenceTypeRef;
-import com.visualligence.g.vML.SetLiteral;
 import com.visualligence.g.vML.SetTypeRef;
 import com.visualligence.g.vML.Shape;
 import com.visualligence.g.vML.ShapeRef;
@@ -376,27 +375,6 @@ public class AbstractVMLSemanticSequencer extends AbstractSemanticSequencer {
 				   context == grammarAccess.getSequenceTypeRefRule() ||
 				   context == grammarAccess.getTypeRefRule()) {
 					sequence_SequenceTypeRef(context, (SequenceTypeRef) semanticObject); 
-					return; 
-				}
-				else break;
-			case VMLPackage.SET_LITERAL:
-				if(context == grammarAccess.getLiteralExpressionRule() ||
-				   context == grammarAccess.getLiteralExpressionAddRule() ||
-				   context == grammarAccess.getLiteralExpressionAddAccess().getOperationLeftAction_1_0() ||
-				   context == grammarAccess.getLiteralExpressionBinRule() ||
-				   context == grammarAccess.getLiteralExpressionBinAccess().getOperationLeftAction_1_0() ||
-				   context == grammarAccess.getLiteralExpressionCompRule() ||
-				   context == grammarAccess.getLiteralExpressionCompAccess().getOperationLeftAction_1_0() ||
-				   context == grammarAccess.getLiteralExpressionExpRule() ||
-				   context == grammarAccess.getLiteralExpressionExpAccess().getOperationLeftAction_1_0() ||
-				   context == grammarAccess.getLiteralExpressionMultiRule() ||
-				   context == grammarAccess.getLiteralExpressionMultiAccess().getOperationLeftAction_1_0() ||
-				   context == grammarAccess.getLiteralExpressionSignedRule() ||
-				   context == grammarAccess.getLiteralExpressionTerminalRule() ||
-				   context == grammarAccess.getRStreamValueRule() ||
-				   context == grammarAccess.getRValueRule() ||
-				   context == grammarAccess.getSetLiteralRule()) {
-					sequence_SetLiteral(context, (SetLiteral) semanticObject); 
 					return; 
 				}
 				else break;
@@ -998,15 +976,6 @@ public class AbstractVMLSemanticSequencer extends AbstractSemanticSequencer {
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
 		feeder.accept(grammarAccess.getSequenceTypeRefAccess().getTypeTypeRefParserRuleCall_2_0(), semanticObject.getType());
 		feeder.finish();
-	}
-	
-	
-	/**
-	 * Constraint:
-	 *     ((items+=LiteralExpression items+=LiteralExpression*)?)
-	 */
-	protected void sequence_SetLiteral(EObject context, SetLiteral semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	

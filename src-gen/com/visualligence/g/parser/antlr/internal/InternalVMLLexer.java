@@ -675,10 +675,10 @@ public class InternalVMLLexer extends Lexer {
         try {
             int _type = T__41;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:38:7: ( '}' )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:38:9: '}'
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:38:7: ( '~' )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:38:9: '~'
             {
-            match('}'); 
+            match('~'); 
 
             }
 
@@ -695,10 +695,10 @@ public class InternalVMLLexer extends Lexer {
         try {
             int _type = T__42;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:39:7: ( '~' )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:39:9: '~'
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:39:7: ( '}' )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:39:9: '}'
             {
-            match('~'); 
+            match('}'); 
 
             }
 
@@ -1797,10 +1797,10 @@ public class InternalVMLLexer extends Lexer {
         try {
             int _type = RULE_OCT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4921:10: ( ( '0' .. '7' )+ 'o' )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4921:12: ( '0' .. '7' )+ 'o'
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4836:10: ( ( '0' .. '7' )+ 'o' )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4836:12: ( '0' .. '7' )+ 'o'
             {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4921:12: ( '0' .. '7' )+
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4836:12: ( '0' .. '7' )+
             int cnt1=0;
             loop1:
             do {
@@ -1814,7 +1814,7 @@ public class InternalVMLLexer extends Lexer {
 
                 switch (alt1) {
             	case 1 :
-            	    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4921:13: '0' .. '7'
+            	    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4836:13: '0' .. '7'
             	    {
             	    matchRange('0','7'); 
 
@@ -1847,12 +1847,12 @@ public class InternalVMLLexer extends Lexer {
         try {
             int _type = RULE_HEX;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4923:10: ( '0x' ( '0' .. '9' | 'A' .. 'F' | 'a' .. 'f' )+ )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4923:12: '0x' ( '0' .. '9' | 'A' .. 'F' | 'a' .. 'f' )+
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4838:10: ( '0x' ( '0' .. '9' | 'A' .. 'F' | 'a' .. 'f' )+ )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4838:12: '0x' ( '0' .. '9' | 'A' .. 'F' | 'a' .. 'f' )+
             {
             match("0x"); 
 
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4923:17: ( '0' .. '9' | 'A' .. 'F' | 'a' .. 'f' )+
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4838:17: ( '0' .. '9' | 'A' .. 'F' | 'a' .. 'f' )+
             int cnt2=0;
             loop2:
             do {
@@ -1906,10 +1906,10 @@ public class InternalVMLLexer extends Lexer {
         try {
             int _type = RULE_BIN;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4925:10: ( ( '0' .. '1' )+ 'b' )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4925:12: ( '0' .. '1' )+ 'b'
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4840:10: ( ( '0' .. '1' )+ 'b' )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4840:12: ( '0' .. '1' )+ 'b'
             {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4925:12: ( '0' .. '1' )+
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4840:12: ( '0' .. '1' )+
             int cnt3=0;
             loop3:
             do {
@@ -1923,7 +1923,7 @@ public class InternalVMLLexer extends Lexer {
 
                 switch (alt3) {
             	case 1 :
-            	    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4925:13: '0' .. '1'
+            	    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4840:13: '0' .. '1'
             	    {
             	    matchRange('0','1'); 
 
@@ -1956,10 +1956,10 @@ public class InternalVMLLexer extends Lexer {
         try {
             int _type = RULE_ID;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4927:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4927:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4842:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4842:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4927:11: ( '^' )?
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4842:11: ( '^' )?
             int alt4=2;
             int LA4_0 = input.LA(1);
 
@@ -1968,7 +1968,7 @@ public class InternalVMLLexer extends Lexer {
             }
             switch (alt4) {
                 case 1 :
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4927:11: '^'
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4842:11: '^'
                     {
                     match('^'); 
 
@@ -1986,7 +1986,7 @@ public class InternalVMLLexer extends Lexer {
                 recover(mse);
                 throw mse;}
 
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4927:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4842:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             loop5:
             do {
                 int alt5=2;
@@ -2035,10 +2035,10 @@ public class InternalVMLLexer extends Lexer {
         try {
             int _type = RULE_INT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4929:10: ( ( '0' .. '9' )+ )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4929:12: ( '0' .. '9' )+
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4844:10: ( ( '0' .. '9' )+ )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4844:12: ( '0' .. '9' )+
             {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4929:12: ( '0' .. '9' )+
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4844:12: ( '0' .. '9' )+
             int cnt6=0;
             loop6:
             do {
@@ -2052,7 +2052,7 @@ public class InternalVMLLexer extends Lexer {
 
                 switch (alt6) {
             	case 1 :
-            	    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4929:13: '0' .. '9'
+            	    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4844:13: '0' .. '9'
             	    {
             	    matchRange('0','9'); 
 
@@ -2084,10 +2084,10 @@ public class InternalVMLLexer extends Lexer {
         try {
             int _type = RULE_STRING;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4931:13: ( ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4931:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4846:13: ( ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4846:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4931:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4846:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             int alt9=2;
             int LA9_0 = input.LA(1);
 
@@ -2105,10 +2105,10 @@ public class InternalVMLLexer extends Lexer {
             }
             switch (alt9) {
                 case 1 :
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4931:16: '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4846:16: '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
                     {
                     match('\"'); 
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4931:20: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )*
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4846:20: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )*
                     loop7:
                     do {
                         int alt7=3;
@@ -2124,7 +2124,7 @@ public class InternalVMLLexer extends Lexer {
 
                         switch (alt7) {
                     	case 1 :
-                    	    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4931:21: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
+                    	    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4846:21: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
                     	    {
                     	    match('\\'); 
                     	    if ( input.LA(1)=='\"'||input.LA(1)=='\''||input.LA(1)=='\\'||input.LA(1)=='b'||input.LA(1)=='f'||input.LA(1)=='n'||input.LA(1)=='r'||(input.LA(1)>='t' && input.LA(1)<='u') ) {
@@ -2140,7 +2140,7 @@ public class InternalVMLLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4931:66: ~ ( ( '\\\\' | '\"' ) )
+                    	    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4846:66: ~ ( ( '\\\\' | '\"' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='!')||(input.LA(1)>='#' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -2165,10 +2165,10 @@ public class InternalVMLLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4931:86: '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4846:86: '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
                     {
                     match('\''); 
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4931:91: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )*
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4846:91: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )*
                     loop8:
                     do {
                         int alt8=3;
@@ -2184,7 +2184,7 @@ public class InternalVMLLexer extends Lexer {
 
                         switch (alt8) {
                     	case 1 :
-                    	    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4931:92: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
+                    	    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4846:92: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
                     	    {
                     	    match('\\'); 
                     	    if ( input.LA(1)=='\"'||input.LA(1)=='\''||input.LA(1)=='\\'||input.LA(1)=='b'||input.LA(1)=='f'||input.LA(1)=='n'||input.LA(1)=='r'||(input.LA(1)>='t' && input.LA(1)<='u') ) {
@@ -2200,7 +2200,7 @@ public class InternalVMLLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4931:137: ~ ( ( '\\\\' | '\\'' ) )
+                    	    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4846:137: ~ ( ( '\\\\' | '\\'' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='&')||(input.LA(1)>='(' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -2243,12 +2243,12 @@ public class InternalVMLLexer extends Lexer {
         try {
             int _type = RULE_ML_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4933:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4933:19: '/*' ( options {greedy=false; } : . )* '*/'
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4848:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4848:19: '/*' ( options {greedy=false; } : . )* '*/'
             {
             match("/*"); 
 
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4933:24: ( options {greedy=false; } : . )*
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4848:24: ( options {greedy=false; } : . )*
             loop10:
             do {
                 int alt10=2;
@@ -2273,7 +2273,7 @@ public class InternalVMLLexer extends Lexer {
 
                 switch (alt10) {
             	case 1 :
-            	    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4933:52: .
+            	    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4848:52: .
             	    {
             	    matchAny(); 
 
@@ -2303,12 +2303,12 @@ public class InternalVMLLexer extends Lexer {
         try {
             int _type = RULE_SL_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4935:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4935:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4850:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4850:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
             {
             match("//"); 
 
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4935:24: (~ ( ( '\\n' | '\\r' ) ) )*
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4850:24: (~ ( ( '\\n' | '\\r' ) ) )*
             loop11:
             do {
                 int alt11=2;
@@ -2321,7 +2321,7 @@ public class InternalVMLLexer extends Lexer {
 
                 switch (alt11) {
             	case 1 :
-            	    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4935:24: ~ ( ( '\\n' | '\\r' ) )
+            	    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4850:24: ~ ( ( '\\n' | '\\r' ) )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='\t')||(input.LA(1)>='\u000B' && input.LA(1)<='\f')||(input.LA(1)>='\u000E' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -2341,7 +2341,7 @@ public class InternalVMLLexer extends Lexer {
                 }
             } while (true);
 
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4935:40: ( ( '\\r' )? '\\n' )?
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4850:40: ( ( '\\r' )? '\\n' )?
             int alt13=2;
             int LA13_0 = input.LA(1);
 
@@ -2350,9 +2350,9 @@ public class InternalVMLLexer extends Lexer {
             }
             switch (alt13) {
                 case 1 :
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4935:41: ( '\\r' )? '\\n'
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4850:41: ( '\\r' )? '\\n'
                     {
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4935:41: ( '\\r' )?
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4850:41: ( '\\r' )?
                     int alt12=2;
                     int LA12_0 = input.LA(1);
 
@@ -2361,7 +2361,7 @@ public class InternalVMLLexer extends Lexer {
                     }
                     switch (alt12) {
                         case 1 :
-                            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4935:41: '\\r'
+                            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4850:41: '\\r'
                             {
                             match('\r'); 
 
@@ -2393,10 +2393,10 @@ public class InternalVMLLexer extends Lexer {
         try {
             int _type = RULE_WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4937:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4937:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4852:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4852:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4937:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4852:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             int cnt14=0;
             loop14:
             do {
@@ -2450,8 +2450,8 @@ public class InternalVMLLexer extends Lexer {
         try {
             int _type = RULE_ANY_OTHER;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4939:16: ( . )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4939:18: .
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4854:16: ( . )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4854:18: .
             {
             matchAny(); 
 
@@ -3116,31 +3116,32 @@ public class InternalVMLLexer extends Lexer {
     protected DFA15 dfa15 = new DFA15(this);
     static final String DFA15_eotS =
         "\1\uffff\1\71\1\74\4\71\5\uffff\1\116\1\117\1\uffff\1\122\1\123"+
-        "\2\71\1\132\4\uffff\1\140\1\71\1\144\3\71\1\153\1\155\1\156\1\157"+
-        "\1\71\1\uffff\2\66\1\166\1\170\1\uffff\1\174\3\71\3\u0081\1\66\2"+
-        "\uffff\2\66\2\uffff\2\71\1\uffff\1\u008d\1\71\1\uffff\14\71\13\uffff"+
-        "\5\71\10\uffff\2\71\2\uffff\4\71\7\uffff\2\71\10\uffff\1\u00ac\2"+
-        "\uffff\3\71\2\uffff\1\u0081\2\uffff\1\u0081\2\uffff\5\71\1\uffff"+
-        "\16\71\1\u00c6\4\71\1\u00cb\4\71\1\u00d0\1\71\1\u00d2\3\71\2\uffff"+
-        "\4\71\1\u00da\6\71\1\u00e1\12\71\1\u00ec\1\71\1\uffff\1\u00ee\3"+
-        "\71\1\uffff\1\u00f2\1\u00f3\1\71\1\u00f5\1\uffff\1\u00f6\1\uffff"+
-        "\1\u00f7\1\u00f8\1\u00f9\4\71\1\uffff\1\u00fe\1\u00ff\4\71\1\uffff"+
-        "\1\u0104\1\u0105\2\71\1\u0108\2\71\1\u010b\2\71\1\uffff\1\71\1\uffff"+
-        "\1\71\1\u0110\1\71\2\uffff\1\71\5\uffff\2\71\1\u0115\1\u0116\2\uffff"+
-        "\1\71\1\u0118\1\u0119\1\u011a\2\uffff\2\71\1\uffff\1\u011d\1\u011e"+
-        "\1\uffff\1\u011f\1\u0120\1\u0121\1\71\1\uffff\4\71\2\uffff\1\u0128"+
-        "\3\uffff\2\71\5\uffff\1\u012b\1\u012c\1\u012d\3\71\1\uffff\1\u0131"+
-        "\1\u0132\3\uffff\1\u0133\1\u0134\1\u0135\5\uffff";
+        "\2\71\1\132\3\uffff\1\137\1\uffff\1\71\1\144\3\71\1\153\1\155\1"+
+        "\156\1\157\1\71\1\uffff\2\66\1\166\1\170\1\uffff\1\174\3\71\3\u0081"+
+        "\1\66\2\uffff\2\66\2\uffff\2\71\1\uffff\1\u008d\1\71\1\uffff\14"+
+        "\71\13\uffff\5\71\10\uffff\2\71\2\uffff\4\71\7\uffff\2\71\10\uffff"+
+        "\1\u00ac\2\uffff\3\71\2\uffff\1\u0081\2\uffff\1\u0081\2\uffff\5"+
+        "\71\1\uffff\16\71\1\u00c6\4\71\1\u00cb\4\71\1\u00d0\1\71\1\u00d2"+
+        "\3\71\2\uffff\4\71\1\u00da\6\71\1\u00e1\12\71\1\u00ec\1\71\1\uffff"+
+        "\1\u00ee\3\71\1\uffff\1\u00f2\1\u00f3\1\71\1\u00f5\1\uffff\1\u00f6"+
+        "\1\uffff\1\u00f7\1\u00f8\1\u00f9\4\71\1\uffff\1\u00fe\1\u00ff\4"+
+        "\71\1\uffff\1\u0104\1\u0105\2\71\1\u0108\2\71\1\u010b\2\71\1\uffff"+
+        "\1\71\1\uffff\1\71\1\u0110\1\71\2\uffff\1\71\5\uffff\2\71\1\u0115"+
+        "\1\u0116\2\uffff\1\71\1\u0118\1\u0119\1\u011a\2\uffff\2\71\1\uffff"+
+        "\1\u011d\1\u011e\1\uffff\1\u011f\1\u0120\1\u0121\1\71\1\uffff\4"+
+        "\71\2\uffff\1\u0128\3\uffff\2\71\5\uffff\1\u012b\1\u012c\1\u012d"+
+        "\3\71\1\uffff\1\u0131\1\u0132\3\uffff\1\u0133\1\u0134\1\u0135\5"+
+        "\uffff";
     static final String DFA15_eofS =
         "\u0136\uffff";
     static final String DFA15_minS =
         "\1\0\1\157\1\60\1\165\1\154\1\141\1\145\5\uffff\2\60\1\uffff\1\76"+
-        "\1\60\1\145\1\141\1\56\4\uffff\1\76\1\141\1\75\1\156\1\141\1\157"+
-        "\1\55\1\75\2\60\1\151\1\uffff\1\46\1\174\1\75\1\52\1\uffff\1\52"+
-        "\1\157\1\141\1\162\3\60\1\101\2\uffff\2\0\2\uffff\1\144\1\154\1"+
-        "\uffff\1\60\1\160\1\uffff\2\164\1\151\1\147\1\145\1\154\1\156\1"+
-        "\151\1\141\1\162\1\156\1\164\13\uffff\1\165\1\170\1\143\1\162\1"+
-        "\154\10\uffff\1\157\1\164\2\uffff\1\151\1\157\1\147\1\151\7\uffff"+
+        "\1\60\1\145\1\141\1\56\3\uffff\1\76\1\uffff\1\141\1\75\1\156\1\141"+
+        "\1\157\1\55\1\75\2\60\1\151\1\uffff\1\46\1\174\1\75\1\52\1\uffff"+
+        "\1\52\1\157\1\141\1\162\3\60\1\101\2\uffff\2\0\2\uffff\1\144\1\154"+
+        "\1\uffff\1\60\1\160\1\uffff\2\164\1\151\1\147\1\145\1\154\1\156"+
+        "\1\151\1\141\1\162\1\156\1\164\13\uffff\1\165\1\170\1\143\1\162"+
+        "\1\154\10\uffff\1\157\1\164\2\uffff\1\151\1\157\1\147\1\151\7\uffff"+
         "\1\157\1\163\10\uffff\1\0\2\uffff\1\163\1\164\1\141\2\uffff\1\60"+
         "\2\uffff\1\60\2\uffff\1\165\1\145\1\164\1\165\1\145\1\uffff\1\157"+
         "\1\160\1\150\1\141\1\154\1\141\1\163\1\157\1\166\1\164\1\160\2\145"+
@@ -3157,42 +3158,42 @@ public class InternalVMLLexer extends Lexer {
         "\5\uffff\3\60\1\145\1\156\1\154\1\uffff\2\60\3\uffff\3\60\5\uffff";
     static final String DFA15_maxS =
         "\1\uffff\1\165\1\172\2\165\1\162\1\167\5\uffff\2\172\1\uffff\1\76"+
-        "\1\172\1\162\1\157\1\56\4\uffff\1\76\1\157\1\75\1\156\2\157\2\75"+
-        "\2\172\1\157\1\uffff\1\46\1\174\1\75\1\52\1\uffff\1\57\1\157\1\141"+
-        "\1\162\1\170\2\157\1\172\2\uffff\2\uffff\2\uffff\1\162\1\154\1\uffff"+
-        "\1\172\1\160\1\uffff\2\164\1\151\1\147\1\145\2\156\1\151\1\141\1"+
-        "\162\1\172\1\164\13\uffff\1\165\1\170\1\154\1\162\1\154\10\uffff"+
-        "\1\157\1\164\2\uffff\1\151\1\170\1\147\1\151\7\uffff\1\157\1\163"+
-        "\10\uffff\1\uffff\2\uffff\1\163\1\164\1\141\2\uffff\1\157\2\uffff"+
-        "\1\157\2\uffff\1\165\1\145\1\164\1\165\1\145\1\uffff\1\157\1\160"+
-        "\1\157\1\141\1\154\1\141\1\163\1\157\1\166\1\164\1\160\1\151\1\145"+
-        "\1\147\1\172\1\145\1\164\1\163\1\164\1\172\1\145\1\160\1\165\1\164"+
-        "\1\172\1\154\1\172\1\144\1\160\1\164\2\uffff\2\151\1\160\1\154\1"+
-        "\172\1\151\1\164\1\147\1\162\1\165\1\157\1\172\1\163\1\145\2\164"+
-        "\1\162\1\141\1\143\1\145\1\141\1\156\1\172\1\154\1\uffff\1\172\1"+
-        "\165\1\145\1\157\1\uffff\2\172\1\162\1\172\1\uffff\1\172\1\uffff"+
-        "\3\172\1\164\1\157\1\150\1\145\1\uffff\2\172\1\145\2\164\1\162\1"+
-        "\uffff\2\172\1\151\1\141\1\172\1\163\1\150\1\172\1\155\1\147\1\uffff"+
-        "\1\145\1\uffff\1\162\1\172\1\162\2\uffff\1\141\5\uffff\1\151\1\156"+
-        "\2\172\2\uffff\1\162\3\172\2\uffff\1\157\1\156\1\uffff\2\172\1\uffff"+
-        "\3\172\1\145\1\uffff\1\171\1\154\1\166\1\141\2\uffff\1\172\3\uffff"+
-        "\1\156\1\164\5\uffff\3\172\1\145\1\156\1\154\1\uffff\2\172\3\uffff"+
-        "\3\172\5\uffff";
+        "\1\172\1\162\1\157\1\56\3\uffff\1\76\1\uffff\1\157\1\75\1\156\2"+
+        "\157\2\75\2\172\1\157\1\uffff\1\46\1\174\1\75\1\52\1\uffff\1\57"+
+        "\1\157\1\141\1\162\1\170\2\157\1\172\2\uffff\2\uffff\2\uffff\1\162"+
+        "\1\154\1\uffff\1\172\1\160\1\uffff\2\164\1\151\1\147\1\145\2\156"+
+        "\1\151\1\141\1\162\1\172\1\164\13\uffff\1\165\1\170\1\154\1\162"+
+        "\1\154\10\uffff\1\157\1\164\2\uffff\1\151\1\170\1\147\1\151\7\uffff"+
+        "\1\157\1\163\10\uffff\1\uffff\2\uffff\1\163\1\164\1\141\2\uffff"+
+        "\1\157\2\uffff\1\157\2\uffff\1\165\1\145\1\164\1\165\1\145\1\uffff"+
+        "\1\157\1\160\1\157\1\141\1\154\1\141\1\163\1\157\1\166\1\164\1\160"+
+        "\1\151\1\145\1\147\1\172\1\145\1\164\1\163\1\164\1\172\1\145\1\160"+
+        "\1\165\1\164\1\172\1\154\1\172\1\144\1\160\1\164\2\uffff\2\151\1"+
+        "\160\1\154\1\172\1\151\1\164\1\147\1\162\1\165\1\157\1\172\1\163"+
+        "\1\145\2\164\1\162\1\141\1\143\1\145\1\141\1\156\1\172\1\154\1\uffff"+
+        "\1\172\1\165\1\145\1\157\1\uffff\2\172\1\162\1\172\1\uffff\1\172"+
+        "\1\uffff\3\172\1\164\1\157\1\150\1\145\1\uffff\2\172\1\145\2\164"+
+        "\1\162\1\uffff\2\172\1\151\1\141\1\172\1\163\1\150\1\172\1\155\1"+
+        "\147\1\uffff\1\145\1\uffff\1\162\1\172\1\162\2\uffff\1\141\5\uffff"+
+        "\1\151\1\156\2\172\2\uffff\1\162\3\172\2\uffff\1\157\1\156\1\uffff"+
+        "\2\172\1\uffff\3\172\1\145\1\uffff\1\171\1\154\1\166\1\141\2\uffff"+
+        "\1\172\3\uffff\1\156\1\164\5\uffff\3\172\1\145\1\156\1\154\1\uffff"+
+        "\2\172\3\uffff\3\172\5\uffff";
     static final String DFA15_acceptS =
         "\7\uffff\1\11\1\12\1\13\1\14\1\15\2\uffff\1\20\5\uffff\1\30\1\31"+
-        "\1\33\1\34\13\uffff\1\65\4\uffff\1\76\10\uffff\1\125\1\126\2\uffff"+
-        "\1\132\1\133\2\uffff\1\125\2\uffff\1\22\14\uffff\1\11\1\12\1\13"+
-        "\1\14\1\15\1\16\1\17\1\20\1\27\1\21\1\23\5\uffff\1\26\1\32\1\30"+
-        "\1\31\1\33\1\34\1\52\1\35\2\uffff\1\71\1\37\4\uffff\1\55\1\73\1"+
-        "\47\1\74\1\50\1\56\1\57\2\uffff\1\65\1\66\1\67\1\72\1\70\1\101\1"+
-        "\75\1\76\1\uffff\1\130\1\100\3\uffff\1\123\1\126\1\uffff\1\122\1"+
-        "\124\1\uffff\1\127\1\132\5\uffff\1\51\36\uffff\1\77\1\131\30\uffff"+
-        "\1\115\4\uffff\1\61\4\uffff\1\43\1\uffff\1\116\7\uffff\1\6\6\uffff"+
-        "\1\46\12\uffff\1\110\1\uffff\1\24\3\uffff\1\63\1\36\1\uffff\1\42"+
-        "\1\114\1\45\1\60\1\117\4\uffff\1\41\1\2\4\uffff\1\53\1\107\2\uffff"+
-        "\1\106\2\uffff\1\44\4\uffff\1\25\4\uffff\1\120\1\1\1\uffff\1\7\1"+
-        "\3\1\4\2\uffff\1\64\1\10\1\54\1\113\1\121\6\uffff\1\104\2\uffff"+
-        "\1\112\1\62\1\103\3\uffff\1\5\1\40\1\102\1\111\1\105";
+        "\1\33\1\uffff\1\35\12\uffff\1\65\4\uffff\1\76\10\uffff\1\125\1\126"+
+        "\2\uffff\1\132\1\133\2\uffff\1\125\2\uffff\1\22\14\uffff\1\11\1"+
+        "\12\1\13\1\14\1\15\1\16\1\17\1\20\1\27\1\21\1\23\5\uffff\1\26\1"+
+        "\32\1\30\1\31\1\33\1\52\1\34\1\35\2\uffff\1\71\1\37\4\uffff\1\55"+
+        "\1\73\1\47\1\74\1\50\1\56\1\57\2\uffff\1\65\1\66\1\67\1\72\1\70"+
+        "\1\101\1\75\1\76\1\uffff\1\130\1\100\3\uffff\1\123\1\126\1\uffff"+
+        "\1\122\1\124\1\uffff\1\127\1\132\5\uffff\1\51\36\uffff\1\77\1\131"+
+        "\30\uffff\1\115\4\uffff\1\61\4\uffff\1\43\1\uffff\1\116\7\uffff"+
+        "\1\6\6\uffff\1\46\12\uffff\1\110\1\uffff\1\24\3\uffff\1\63\1\36"+
+        "\1\uffff\1\42\1\114\1\45\1\60\1\117\4\uffff\1\41\1\2\4\uffff\1\53"+
+        "\1\107\2\uffff\1\106\2\uffff\1\44\4\uffff\1\25\4\uffff\1\120\1\1"+
+        "\1\uffff\1\7\1\3\1\4\2\uffff\1\64\1\10\1\54\1\113\1\121\6\uffff"+
+        "\1\104\2\uffff\1\112\1\62\1\103\3\uffff\1\5\1\40\1\102\1\111\1\105";
     static final String DFA15_specialS =
         "\1\2\62\uffff\1\1\1\3\105\uffff\1\0\u00bb\uffff}>";
     static final String[] DFA15_transitionS = {
@@ -3201,7 +3202,7 @@ public class InternalVMLLexer extends Lexer {
             "\62\1\10\1\43\1\36\1\32\1\37\1\7\1\66\4\61\1\15\3\61\1\40\5"+
             "\61\1\41\13\61\1\23\1\66\1\25\1\60\1\61\1\66\1\4\1\34\1\5\1"+
             "\61\1\14\1\22\1\54\1\61\1\2\1\20\1\61\1\42\1\1\1\31\1\3\1\52"+
-            "\1\61\1\53\1\6\1\21\1\33\1\35\4\61\1\26\1\45\1\27\1\30\uff81"+
+            "\1\61\1\53\1\6\1\21\1\33\1\35\4\61\1\26\1\45\1\30\1\27\uff81"+
             "\66",
             "\1\67\5\uffff\1\70",
             "\12\71\7\uffff\32\71\4\uffff\1\71\1\uffff\14\71\1\73\1\72\14"+
@@ -3226,8 +3227,8 @@ public class InternalVMLLexer extends Lexer {
             "",
             "",
             "",
+            "\1\136",
             "",
-            "\1\137",
             "\1\142\15\uffff\1\141",
             "\1\143",
             "\1\145",
@@ -3621,9 +3622,9 @@ public class InternalVMLLexer extends Lexer {
 
                         else if ( (LA15_0=='{') ) {s = 22;}
 
-                        else if ( (LA15_0=='}') ) {s = 23;}
+                        else if ( (LA15_0=='~') ) {s = 23;}
 
-                        else if ( (LA15_0=='~') ) {s = 24;}
+                        else if ( (LA15_0=='}') ) {s = 24;}
 
                         else if ( (LA15_0=='n') ) {s = 25;}
 

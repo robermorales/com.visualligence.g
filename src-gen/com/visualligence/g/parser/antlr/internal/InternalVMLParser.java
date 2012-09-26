@@ -22,7 +22,7 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalVMLParser extends AbstractInternalAntlrParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_STRING", "RULE_INT", "RULE_OCT", "RULE_HEX", "RULE_BIN", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'module'", "'input'", "'output'", "'author'", "'creation'", "'more'", "'import'", "'switch'", "'?'", "':'", "'('", "')'", "'.'", "'e'", "'E'", "'+'", "'-'", "'i'", "'j'", "'true'", "'false'", "'[..'", "'->'", "','", "']'", "'['", "'{'", "'}'", "'~'", "'noop'", "'='", "'constant'", "'multi'", "'unit'", "'box'", "'shape'", "'void'", "'auto'", "'<'", "'>'", "'in'", "'~>'", "'alias'", "'stream'", "'<-'", "'I'", "'O'", "'loop'", "'for'", "'factory'", "'file'", "'canvas'", "';'", "'&&'", "'||'", "'!'", "'=='", "'!='", "'<='", "'>='", "'*'", "'%'", "'//'", "'/'", "'**'", "'positive'", "'natural'", "'integer'", "'rational'", "'color'", "'angle'", "'size'", "'position'", "'texture'", "'string'", "'bool'", "'set'", "'bag'", "'list'", "'graph'", "'single'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_STRING", "RULE_INT", "RULE_OCT", "RULE_HEX", "RULE_BIN", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'module'", "'input'", "'output'", "'author'", "'creation'", "'more'", "'import'", "'switch'", "'?'", "':'", "'('", "')'", "'.'", "'e'", "'E'", "'+'", "'-'", "'i'", "'j'", "'true'", "'false'", "'[..'", "'->'", "','", "']'", "'['", "'{'", "'~'", "'}'", "'noop'", "'='", "'constant'", "'multi'", "'unit'", "'box'", "'shape'", "'void'", "'auto'", "'<'", "'>'", "'in'", "'~>'", "'alias'", "'stream'", "'<-'", "'I'", "'O'", "'loop'", "'for'", "'factory'", "'file'", "'canvas'", "';'", "'&&'", "'||'", "'!'", "'=='", "'!='", "'<='", "'>='", "'*'", "'%'", "'//'", "'/'", "'**'", "'positive'", "'natural'", "'integer'", "'rational'", "'color'", "'angle'", "'size'", "'position'", "'texture'", "'string'", "'bool'", "'set'", "'bag'", "'list'", "'graph'", "'single'"
     };
     public static final int RULE_ID=4;
     public static final int T__29=29;
@@ -2560,7 +2560,7 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
             if ( ((LA17_0>=29 && LA17_0<=30)||LA17_0==69) ) {
                 alt17=1;
             }
-            else if ( ((LA17_0>=RULE_ID && LA17_0<=RULE_BIN)||LA17_0==24||LA17_0==26||(LA17_0>=31 && LA17_0<=35)||(LA17_0>=39 && LA17_0<=40)) ) {
+            else if ( ((LA17_0>=RULE_ID && LA17_0<=RULE_BIN)||LA17_0==24||LA17_0==26||(LA17_0>=31 && LA17_0<=35)||LA17_0==39) ) {
                 alt17=2;
             }
             else {
@@ -2804,6 +2804,29 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
             if ( (LA18_0==24) ) {
                 switch ( input.LA(2) ) {
+                case RULE_ID:
+                    {
+                    int LA18_3 = input.LA(3);
+
+                    if ( (LA18_3==23) ) {
+                        alt18=2;
+                    }
+                    else if ( (LA18_3==25||(LA18_3>=29 && LA18_3<=30)||(LA18_3>=52 && LA18_3<=53)||(LA18_3>=67 && LA18_3<=68)||(LA18_3>=70 && LA18_3<=78)) ) {
+                        alt18=1;
+                    }
+                    else {
+                        NoViableAltException nvae =
+                            new NoViableAltException("", 18, 3, input);
+
+                        throw nvae;
+                    }
+                    }
+                    break;
+                case 25:
+                    {
+                    alt18=2;
+                    }
+                    break;
                 case RULE_STRING:
                 case RULE_INT:
                 case RULE_OCT:
@@ -2819,33 +2842,9 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
                 case 34:
                 case 35:
                 case 39:
-                case 40:
                 case 69:
                     {
                     alt18=1;
-                    }
-                    break;
-                case RULE_ID:
-                    {
-                    int LA18_4 = input.LA(3);
-
-                    if ( (LA18_4==23) ) {
-                        alt18=2;
-                    }
-                    else if ( (LA18_4==25||(LA18_4>=29 && LA18_4<=30)||(LA18_4>=52 && LA18_4<=53)||(LA18_4>=67 && LA18_4<=68)||(LA18_4>=70 && LA18_4<=78)) ) {
-                        alt18=1;
-                    }
-                    else {
-                        NoViableAltException nvae =
-                            new NoViableAltException("", 18, 4, input);
-
-                        throw nvae;
-                    }
-                    }
-                    break;
-                case 25:
-                    {
-                    alt18=2;
                     }
                     break;
                 default:
@@ -2856,7 +2855,7 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
                 }
 
             }
-            else if ( ((LA18_0>=RULE_ID && LA18_0<=RULE_BIN)||LA18_0==26||(LA18_0>=31 && LA18_0<=35)||(LA18_0>=39 && LA18_0<=40)) ) {
+            else if ( ((LA18_0>=RULE_ID && LA18_0<=RULE_BIN)||LA18_0==26||(LA18_0>=31 && LA18_0<=35)||LA18_0==39) ) {
                 alt18=2;
             }
             else {
@@ -2973,7 +2972,7 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleRValue"
-    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1149:1: ruleRValue returns [EObject current=null] : (this_SingleLiteral_0= ruleSingleLiteral | this_SequenceLiteral_1= ruleSequenceLiteral | this_TupleLiteral_2= ruleTupleLiteral | this_SetLiteral_3= ruleSetLiteral | this_ConstantRef_4= ruleConstantRef ) ;
+    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1149:1: ruleRValue returns [EObject current=null] : (this_SingleLiteral_0= ruleSingleLiteral | this_SequenceLiteral_1= ruleSequenceLiteral | this_TupleLiteral_2= ruleTupleLiteral | this_ConstantRef_3= ruleConstantRef ) ;
     public final EObject ruleRValue() throws RecognitionException {
         EObject current = null;
 
@@ -2983,19 +2982,17 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
         EObject this_TupleLiteral_2 = null;
 
-        EObject this_SetLiteral_3 = null;
-
-        EObject this_ConstantRef_4 = null;
+        EObject this_ConstantRef_3 = null;
 
 
          enterRule(); 
             
         try {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1152:28: ( (this_SingleLiteral_0= ruleSingleLiteral | this_SequenceLiteral_1= ruleSequenceLiteral | this_TupleLiteral_2= ruleTupleLiteral | this_SetLiteral_3= ruleSetLiteral | this_ConstantRef_4= ruleConstantRef ) )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1153:1: (this_SingleLiteral_0= ruleSingleLiteral | this_SequenceLiteral_1= ruleSequenceLiteral | this_TupleLiteral_2= ruleTupleLiteral | this_SetLiteral_3= ruleSetLiteral | this_ConstantRef_4= ruleConstantRef )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1152:28: ( (this_SingleLiteral_0= ruleSingleLiteral | this_SequenceLiteral_1= ruleSequenceLiteral | this_TupleLiteral_2= ruleTupleLiteral | this_ConstantRef_3= ruleConstantRef ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1153:1: (this_SingleLiteral_0= ruleSingleLiteral | this_SequenceLiteral_1= ruleSequenceLiteral | this_TupleLiteral_2= ruleTupleLiteral | this_ConstantRef_3= ruleConstantRef )
             {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1153:1: (this_SingleLiteral_0= ruleSingleLiteral | this_SequenceLiteral_1= ruleSequenceLiteral | this_TupleLiteral_2= ruleTupleLiteral | this_SetLiteral_3= ruleSetLiteral | this_ConstantRef_4= ruleConstantRef )
-            int alt19=5;
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1153:1: (this_SingleLiteral_0= ruleSingleLiteral | this_SequenceLiteral_1= ruleSequenceLiteral | this_TupleLiteral_2= ruleTupleLiteral | this_ConstantRef_3= ruleConstantRef )
+            int alt19=4;
             switch ( input.LA(1) ) {
             case RULE_STRING:
             case RULE_INT:
@@ -3022,14 +3019,9 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
                 alt19=3;
                 }
                 break;
-            case 40:
-                {
-                alt19=4;
-                }
-                break;
             case RULE_ID:
                 {
-                alt19=5;
+                alt19=4;
                 }
                 break;
             default:
@@ -3095,36 +3087,18 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1184:5: this_SetLiteral_3= ruleSetLiteral
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1184:5: this_ConstantRef_3= ruleConstantRef
                     {
                      
-                            newCompositeNode(grammarAccess.getRValueAccess().getSetLiteralParserRuleCall_3()); 
+                            newCompositeNode(grammarAccess.getRValueAccess().getConstantRefParserRuleCall_3()); 
                         
-                    pushFollow(FOLLOW_ruleSetLiteral_in_ruleRValue2556);
-                    this_SetLiteral_3=ruleSetLiteral();
+                    pushFollow(FOLLOW_ruleConstantRef_in_ruleRValue2556);
+                    this_ConstantRef_3=ruleConstantRef();
 
                     state._fsp--;
 
                      
-                            current = this_SetLiteral_3; 
-                            afterParserOrEnumRuleCall();
-                        
-
-                    }
-                    break;
-                case 5 :
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1194:5: this_ConstantRef_4= ruleConstantRef
-                    {
-                     
-                            newCompositeNode(grammarAccess.getRValueAccess().getConstantRefParserRuleCall_4()); 
-                        
-                    pushFollow(FOLLOW_ruleConstantRef_in_ruleRValue2583);
-                    this_ConstantRef_4=ruleConstantRef();
-
-                    state._fsp--;
-
-                     
-                            current = this_ConstantRef_4; 
+                            current = this_ConstantRef_3; 
                             afterParserOrEnumRuleCall();
                         
 
@@ -3151,7 +3125,7 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleConstantRef"
-    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1214:1: entryRuleConstantRef returns [EObject current=null] : iv_ruleConstantRef= ruleConstantRef EOF ;
+    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1204:1: entryRuleConstantRef returns [EObject current=null] : iv_ruleConstantRef= ruleConstantRef EOF ;
     public final EObject entryRuleConstantRef() throws RecognitionException {
         EObject current = null;
 
@@ -3159,17 +3133,17 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1215:2: (iv_ruleConstantRef= ruleConstantRef EOF )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1216:2: iv_ruleConstantRef= ruleConstantRef EOF
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1205:2: (iv_ruleConstantRef= ruleConstantRef EOF )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1206:2: iv_ruleConstantRef= ruleConstantRef EOF
             {
              newCompositeNode(grammarAccess.getConstantRefRule()); 
-            pushFollow(FOLLOW_ruleConstantRef_in_entryRuleConstantRef2622);
+            pushFollow(FOLLOW_ruleConstantRef_in_entryRuleConstantRef2595);
             iv_ruleConstantRef=ruleConstantRef();
 
             state._fsp--;
 
              current =iv_ruleConstantRef; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleConstantRef2632); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleConstantRef2605); 
 
             }
 
@@ -3187,7 +3161,7 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleConstantRef"
-    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1223:1: ruleConstantRef returns [EObject current=null] : ( (otherlv_0= RULE_ID ) ) ;
+    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1213:1: ruleConstantRef returns [EObject current=null] : ( (otherlv_0= RULE_ID ) ) ;
     public final EObject ruleConstantRef() throws RecognitionException {
         EObject current = null;
 
@@ -3196,21 +3170,21 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1226:28: ( ( (otherlv_0= RULE_ID ) ) )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1227:1: ( (otherlv_0= RULE_ID ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1216:28: ( ( (otherlv_0= RULE_ID ) ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1217:1: ( (otherlv_0= RULE_ID ) )
             {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1227:1: ( (otherlv_0= RULE_ID ) )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1228:1: (otherlv_0= RULE_ID )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1217:1: ( (otherlv_0= RULE_ID ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1218:1: (otherlv_0= RULE_ID )
             {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1228:1: (otherlv_0= RULE_ID )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1229:3: otherlv_0= RULE_ID
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1218:1: (otherlv_0= RULE_ID )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1219:3: otherlv_0= RULE_ID
             {
 
             			if (current==null) {
             	            current = createModelElement(grammarAccess.getConstantRefRule());
             	        }
                     
-            otherlv_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleConstantRef2676); 
+            otherlv_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleConstantRef2649); 
 
             		newLeafNode(otherlv_0, grammarAccess.getConstantRefAccess().getConstantrefConstantCrossReference_0()); 
             	
@@ -3238,7 +3212,7 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleSingleLiteral"
-    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1248:1: entryRuleSingleLiteral returns [EObject current=null] : iv_ruleSingleLiteral= ruleSingleLiteral EOF ;
+    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1238:1: entryRuleSingleLiteral returns [EObject current=null] : iv_ruleSingleLiteral= ruleSingleLiteral EOF ;
     public final EObject entryRuleSingleLiteral() throws RecognitionException {
         EObject current = null;
 
@@ -3246,17 +3220,17 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1249:2: (iv_ruleSingleLiteral= ruleSingleLiteral EOF )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1250:2: iv_ruleSingleLiteral= ruleSingleLiteral EOF
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1239:2: (iv_ruleSingleLiteral= ruleSingleLiteral EOF )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1240:2: iv_ruleSingleLiteral= ruleSingleLiteral EOF
             {
              newCompositeNode(grammarAccess.getSingleLiteralRule()); 
-            pushFollow(FOLLOW_ruleSingleLiteral_in_entryRuleSingleLiteral2711);
+            pushFollow(FOLLOW_ruleSingleLiteral_in_entryRuleSingleLiteral2684);
             iv_ruleSingleLiteral=ruleSingleLiteral();
 
             state._fsp--;
 
              current =iv_ruleSingleLiteral; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleSingleLiteral2721); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleSingleLiteral2694); 
 
             }
 
@@ -3274,7 +3248,7 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleSingleLiteral"
-    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1257:1: ruleSingleLiteral returns [EObject current=null] : ( (lv_value_0_0= ruleSingleLiteralDT ) ) ;
+    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1247:1: ruleSingleLiteral returns [EObject current=null] : ( (lv_value_0_0= ruleSingleLiteralDT ) ) ;
     public final EObject ruleSingleLiteral() throws RecognitionException {
         EObject current = null;
 
@@ -3284,19 +3258,19 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1260:28: ( ( (lv_value_0_0= ruleSingleLiteralDT ) ) )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1261:1: ( (lv_value_0_0= ruleSingleLiteralDT ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1250:28: ( ( (lv_value_0_0= ruleSingleLiteralDT ) ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1251:1: ( (lv_value_0_0= ruleSingleLiteralDT ) )
             {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1261:1: ( (lv_value_0_0= ruleSingleLiteralDT ) )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1262:1: (lv_value_0_0= ruleSingleLiteralDT )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1251:1: ( (lv_value_0_0= ruleSingleLiteralDT ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1252:1: (lv_value_0_0= ruleSingleLiteralDT )
             {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1262:1: (lv_value_0_0= ruleSingleLiteralDT )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1263:3: lv_value_0_0= ruleSingleLiteralDT
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1252:1: (lv_value_0_0= ruleSingleLiteralDT )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1253:3: lv_value_0_0= ruleSingleLiteralDT
             {
              
             	        newCompositeNode(grammarAccess.getSingleLiteralAccess().getValueSingleLiteralDTParserRuleCall_0()); 
             	    
-            pushFollow(FOLLOW_ruleSingleLiteralDT_in_ruleSingleLiteral2766);
+            pushFollow(FOLLOW_ruleSingleLiteralDT_in_ruleSingleLiteral2739);
             lv_value_0_0=ruleSingleLiteralDT();
 
             state._fsp--;
@@ -3336,7 +3310,7 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleSingleLiteralDT"
-    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1287:1: entryRuleSingleLiteralDT returns [String current=null] : iv_ruleSingleLiteralDT= ruleSingleLiteralDT EOF ;
+    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1277:1: entryRuleSingleLiteralDT returns [String current=null] : iv_ruleSingleLiteralDT= ruleSingleLiteralDT EOF ;
     public final String entryRuleSingleLiteralDT() throws RecognitionException {
         String current = null;
 
@@ -3344,17 +3318,17 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1288:2: (iv_ruleSingleLiteralDT= ruleSingleLiteralDT EOF )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1289:2: iv_ruleSingleLiteralDT= ruleSingleLiteralDT EOF
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1278:2: (iv_ruleSingleLiteralDT= ruleSingleLiteralDT EOF )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1279:2: iv_ruleSingleLiteralDT= ruleSingleLiteralDT EOF
             {
              newCompositeNode(grammarAccess.getSingleLiteralDTRule()); 
-            pushFollow(FOLLOW_ruleSingleLiteralDT_in_entryRuleSingleLiteralDT2802);
+            pushFollow(FOLLOW_ruleSingleLiteralDT_in_entryRuleSingleLiteralDT2775);
             iv_ruleSingleLiteralDT=ruleSingleLiteralDT();
 
             state._fsp--;
 
              current =iv_ruleSingleLiteralDT.getText(); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleSingleLiteralDT2813); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleSingleLiteralDT2786); 
 
             }
 
@@ -3372,7 +3346,7 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleSingleLiteralDT"
-    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1296:1: ruleSingleLiteralDT returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_BoolLiteral_0= ruleBoolLiteral | this_NumberLiteral_1= ruleNumberLiteral | this_StringLiteral_2= ruleStringLiteral ) ;
+    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1286:1: ruleSingleLiteralDT returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_BoolLiteral_0= ruleBoolLiteral | this_NumberLiteral_1= ruleNumberLiteral | this_StringLiteral_2= ruleStringLiteral ) ;
     public final AntlrDatatypeRuleToken ruleSingleLiteralDT() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -3386,10 +3360,10 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1299:28: ( (this_BoolLiteral_0= ruleBoolLiteral | this_NumberLiteral_1= ruleNumberLiteral | this_StringLiteral_2= ruleStringLiteral ) )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1300:1: (this_BoolLiteral_0= ruleBoolLiteral | this_NumberLiteral_1= ruleNumberLiteral | this_StringLiteral_2= ruleStringLiteral )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1289:28: ( (this_BoolLiteral_0= ruleBoolLiteral | this_NumberLiteral_1= ruleNumberLiteral | this_StringLiteral_2= ruleStringLiteral ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1290:1: (this_BoolLiteral_0= ruleBoolLiteral | this_NumberLiteral_1= ruleNumberLiteral | this_StringLiteral_2= ruleStringLiteral )
             {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1300:1: (this_BoolLiteral_0= ruleBoolLiteral | this_NumberLiteral_1= ruleNumberLiteral | this_StringLiteral_2= ruleStringLiteral )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1290:1: (this_BoolLiteral_0= ruleBoolLiteral | this_NumberLiteral_1= ruleNumberLiteral | this_StringLiteral_2= ruleStringLiteral )
             int alt20=3;
             switch ( input.LA(1) ) {
             case 33:
@@ -3423,12 +3397,12 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
             switch (alt20) {
                 case 1 :
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1301:5: this_BoolLiteral_0= ruleBoolLiteral
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1291:5: this_BoolLiteral_0= ruleBoolLiteral
                     {
                      
                             newCompositeNode(grammarAccess.getSingleLiteralDTAccess().getBoolLiteralParserRuleCall_0()); 
                         
-                    pushFollow(FOLLOW_ruleBoolLiteral_in_ruleSingleLiteralDT2860);
+                    pushFollow(FOLLOW_ruleBoolLiteral_in_ruleSingleLiteralDT2833);
                     this_BoolLiteral_0=ruleBoolLiteral();
 
                     state._fsp--;
@@ -3443,12 +3417,12 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1313:5: this_NumberLiteral_1= ruleNumberLiteral
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1303:5: this_NumberLiteral_1= ruleNumberLiteral
                     {
                      
                             newCompositeNode(grammarAccess.getSingleLiteralDTAccess().getNumberLiteralParserRuleCall_1()); 
                         
-                    pushFollow(FOLLOW_ruleNumberLiteral_in_ruleSingleLiteralDT2893);
+                    pushFollow(FOLLOW_ruleNumberLiteral_in_ruleSingleLiteralDT2866);
                     this_NumberLiteral_1=ruleNumberLiteral();
 
                     state._fsp--;
@@ -3463,12 +3437,12 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1325:5: this_StringLiteral_2= ruleStringLiteral
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1315:5: this_StringLiteral_2= ruleStringLiteral
                     {
                      
                             newCompositeNode(grammarAccess.getSingleLiteralDTAccess().getStringLiteralParserRuleCall_2()); 
                         
-                    pushFollow(FOLLOW_ruleStringLiteral_in_ruleSingleLiteralDT2926);
+                    pushFollow(FOLLOW_ruleStringLiteral_in_ruleSingleLiteralDT2899);
                     this_StringLiteral_2=ruleStringLiteral();
 
                     state._fsp--;
@@ -3503,7 +3477,7 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleStringLiteral"
-    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1343:1: entryRuleStringLiteral returns [String current=null] : iv_ruleStringLiteral= ruleStringLiteral EOF ;
+    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1333:1: entryRuleStringLiteral returns [String current=null] : iv_ruleStringLiteral= ruleStringLiteral EOF ;
     public final String entryRuleStringLiteral() throws RecognitionException {
         String current = null;
 
@@ -3511,17 +3485,17 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1344:2: (iv_ruleStringLiteral= ruleStringLiteral EOF )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1345:2: iv_ruleStringLiteral= ruleStringLiteral EOF
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1334:2: (iv_ruleStringLiteral= ruleStringLiteral EOF )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1335:2: iv_ruleStringLiteral= ruleStringLiteral EOF
             {
              newCompositeNode(grammarAccess.getStringLiteralRule()); 
-            pushFollow(FOLLOW_ruleStringLiteral_in_entryRuleStringLiteral2972);
+            pushFollow(FOLLOW_ruleStringLiteral_in_entryRuleStringLiteral2945);
             iv_ruleStringLiteral=ruleStringLiteral();
 
             state._fsp--;
 
              current =iv_ruleStringLiteral.getText(); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleStringLiteral2983); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleStringLiteral2956); 
 
             }
 
@@ -3539,7 +3513,7 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleStringLiteral"
-    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1352:1: ruleStringLiteral returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : this_STRING_0= RULE_STRING ;
+    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1342:1: ruleStringLiteral returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : this_STRING_0= RULE_STRING ;
     public final AntlrDatatypeRuleToken ruleStringLiteral() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -3548,10 +3522,10 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1355:28: (this_STRING_0= RULE_STRING )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1356:5: this_STRING_0= RULE_STRING
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1345:28: (this_STRING_0= RULE_STRING )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1346:5: this_STRING_0= RULE_STRING
             {
-            this_STRING_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleStringLiteral3022); 
+            this_STRING_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleStringLiteral2995); 
 
             		current.merge(this_STRING_0);
                 
@@ -3576,7 +3550,7 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleNumberLiteral"
-    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1371:1: entryRuleNumberLiteral returns [String current=null] : iv_ruleNumberLiteral= ruleNumberLiteral EOF ;
+    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1361:1: entryRuleNumberLiteral returns [String current=null] : iv_ruleNumberLiteral= ruleNumberLiteral EOF ;
     public final String entryRuleNumberLiteral() throws RecognitionException {
         String current = null;
 
@@ -3584,17 +3558,17 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1372:2: (iv_ruleNumberLiteral= ruleNumberLiteral EOF )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1373:2: iv_ruleNumberLiteral= ruleNumberLiteral EOF
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1362:2: (iv_ruleNumberLiteral= ruleNumberLiteral EOF )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1363:2: iv_ruleNumberLiteral= ruleNumberLiteral EOF
             {
              newCompositeNode(grammarAccess.getNumberLiteralRule()); 
-            pushFollow(FOLLOW_ruleNumberLiteral_in_entryRuleNumberLiteral3067);
+            pushFollow(FOLLOW_ruleNumberLiteral_in_entryRuleNumberLiteral3040);
             iv_ruleNumberLiteral=ruleNumberLiteral();
 
             state._fsp--;
 
              current =iv_ruleNumberLiteral.getText(); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleNumberLiteral3078); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleNumberLiteral3051); 
 
             }
 
@@ -3612,7 +3586,7 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleNumberLiteral"
-    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1380:1: ruleNumberLiteral returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_Integer_0= ruleInteger | this_Float_1= ruleFloat | this_SNotation_2= ruleSNotation | this_Imaginary_3= ruleImaginary ) ;
+    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1370:1: ruleNumberLiteral returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_Integer_0= ruleInteger | this_Float_1= ruleFloat | this_SNotation_2= ruleSNotation | this_Imaginary_3= ruleImaginary ) ;
     public final AntlrDatatypeRuleToken ruleNumberLiteral() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -3628,20 +3602,20 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1383:28: ( (this_Integer_0= ruleInteger | this_Float_1= ruleFloat | this_SNotation_2= ruleSNotation | this_Imaginary_3= ruleImaginary ) )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1384:1: (this_Integer_0= ruleInteger | this_Float_1= ruleFloat | this_SNotation_2= ruleSNotation | this_Imaginary_3= ruleImaginary )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1373:28: ( (this_Integer_0= ruleInteger | this_Float_1= ruleFloat | this_SNotation_2= ruleSNotation | this_Imaginary_3= ruleImaginary ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1374:1: (this_Integer_0= ruleInteger | this_Float_1= ruleFloat | this_SNotation_2= ruleSNotation | this_Imaginary_3= ruleImaginary )
             {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1384:1: (this_Integer_0= ruleInteger | this_Float_1= ruleFloat | this_SNotation_2= ruleSNotation | this_Imaginary_3= ruleImaginary )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1374:1: (this_Integer_0= ruleInteger | this_Float_1= ruleFloat | this_SNotation_2= ruleSNotation | this_Imaginary_3= ruleImaginary )
             int alt21=4;
             alt21 = dfa21.predict(input);
             switch (alt21) {
                 case 1 :
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1385:5: this_Integer_0= ruleInteger
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1375:5: this_Integer_0= ruleInteger
                     {
                      
                             newCompositeNode(grammarAccess.getNumberLiteralAccess().getIntegerParserRuleCall_0()); 
                         
-                    pushFollow(FOLLOW_ruleInteger_in_ruleNumberLiteral3125);
+                    pushFollow(FOLLOW_ruleInteger_in_ruleNumberLiteral3098);
                     this_Integer_0=ruleInteger();
 
                     state._fsp--;
@@ -3656,12 +3630,12 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1397:5: this_Float_1= ruleFloat
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1387:5: this_Float_1= ruleFloat
                     {
                      
                             newCompositeNode(grammarAccess.getNumberLiteralAccess().getFloatParserRuleCall_1()); 
                         
-                    pushFollow(FOLLOW_ruleFloat_in_ruleNumberLiteral3158);
+                    pushFollow(FOLLOW_ruleFloat_in_ruleNumberLiteral3131);
                     this_Float_1=ruleFloat();
 
                     state._fsp--;
@@ -3676,12 +3650,12 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1409:5: this_SNotation_2= ruleSNotation
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1399:5: this_SNotation_2= ruleSNotation
                     {
                      
                             newCompositeNode(grammarAccess.getNumberLiteralAccess().getSNotationParserRuleCall_2()); 
                         
-                    pushFollow(FOLLOW_ruleSNotation_in_ruleNumberLiteral3191);
+                    pushFollow(FOLLOW_ruleSNotation_in_ruleNumberLiteral3164);
                     this_SNotation_2=ruleSNotation();
 
                     state._fsp--;
@@ -3696,12 +3670,12 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1421:5: this_Imaginary_3= ruleImaginary
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1411:5: this_Imaginary_3= ruleImaginary
                     {
                      
                             newCompositeNode(grammarAccess.getNumberLiteralAccess().getImaginaryParserRuleCall_3()); 
                         
-                    pushFollow(FOLLOW_ruleImaginary_in_ruleNumberLiteral3224);
+                    pushFollow(FOLLOW_ruleImaginary_in_ruleNumberLiteral3197);
                     this_Imaginary_3=ruleImaginary();
 
                     state._fsp--;
@@ -3736,7 +3710,7 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleInteger"
-    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1439:1: entryRuleInteger returns [String current=null] : iv_ruleInteger= ruleInteger EOF ;
+    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1429:1: entryRuleInteger returns [String current=null] : iv_ruleInteger= ruleInteger EOF ;
     public final String entryRuleInteger() throws RecognitionException {
         String current = null;
 
@@ -3744,17 +3718,17 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1440:2: (iv_ruleInteger= ruleInteger EOF )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1441:2: iv_ruleInteger= ruleInteger EOF
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1430:2: (iv_ruleInteger= ruleInteger EOF )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1431:2: iv_ruleInteger= ruleInteger EOF
             {
              newCompositeNode(grammarAccess.getIntegerRule()); 
-            pushFollow(FOLLOW_ruleInteger_in_entryRuleInteger3270);
+            pushFollow(FOLLOW_ruleInteger_in_entryRuleInteger3243);
             iv_ruleInteger=ruleInteger();
 
             state._fsp--;
 
              current =iv_ruleInteger.getText(); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleInteger3281); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleInteger3254); 
 
             }
 
@@ -3772,7 +3746,7 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleInteger"
-    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1448:1: ruleInteger returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_INT_0= RULE_INT | this_OCT_1= RULE_OCT | this_HEX_2= RULE_HEX | this_BIN_3= RULE_BIN ) ;
+    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1438:1: ruleInteger returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_INT_0= RULE_INT | this_OCT_1= RULE_OCT | this_HEX_2= RULE_HEX | this_BIN_3= RULE_BIN ) ;
     public final AntlrDatatypeRuleToken ruleInteger() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -3784,10 +3758,10 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1451:28: ( (this_INT_0= RULE_INT | this_OCT_1= RULE_OCT | this_HEX_2= RULE_HEX | this_BIN_3= RULE_BIN ) )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1452:1: (this_INT_0= RULE_INT | this_OCT_1= RULE_OCT | this_HEX_2= RULE_HEX | this_BIN_3= RULE_BIN )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1441:28: ( (this_INT_0= RULE_INT | this_OCT_1= RULE_OCT | this_HEX_2= RULE_HEX | this_BIN_3= RULE_BIN ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1442:1: (this_INT_0= RULE_INT | this_OCT_1= RULE_OCT | this_HEX_2= RULE_HEX | this_BIN_3= RULE_BIN )
             {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1452:1: (this_INT_0= RULE_INT | this_OCT_1= RULE_OCT | this_HEX_2= RULE_HEX | this_BIN_3= RULE_BIN )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1442:1: (this_INT_0= RULE_INT | this_OCT_1= RULE_OCT | this_HEX_2= RULE_HEX | this_BIN_3= RULE_BIN )
             int alt22=4;
             switch ( input.LA(1) ) {
             case RULE_INT:
@@ -3819,9 +3793,9 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
             switch (alt22) {
                 case 1 :
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1452:6: this_INT_0= RULE_INT
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1442:6: this_INT_0= RULE_INT
                     {
-                    this_INT_0=(Token)match(input,RULE_INT,FOLLOW_RULE_INT_in_ruleInteger3321); 
+                    this_INT_0=(Token)match(input,RULE_INT,FOLLOW_RULE_INT_in_ruleInteger3294); 
 
                     		current.merge(this_INT_0);
                         
@@ -3832,9 +3806,9 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1460:10: this_OCT_1= RULE_OCT
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1450:10: this_OCT_1= RULE_OCT
                     {
-                    this_OCT_1=(Token)match(input,RULE_OCT,FOLLOW_RULE_OCT_in_ruleInteger3347); 
+                    this_OCT_1=(Token)match(input,RULE_OCT,FOLLOW_RULE_OCT_in_ruleInteger3320); 
 
                     		current.merge(this_OCT_1);
                         
@@ -3845,9 +3819,9 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1468:10: this_HEX_2= RULE_HEX
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1458:10: this_HEX_2= RULE_HEX
                     {
-                    this_HEX_2=(Token)match(input,RULE_HEX,FOLLOW_RULE_HEX_in_ruleInteger3373); 
+                    this_HEX_2=(Token)match(input,RULE_HEX,FOLLOW_RULE_HEX_in_ruleInteger3346); 
 
                     		current.merge(this_HEX_2);
                         
@@ -3858,9 +3832,9 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1476:10: this_BIN_3= RULE_BIN
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1466:10: this_BIN_3= RULE_BIN
                     {
-                    this_BIN_3=(Token)match(input,RULE_BIN,FOLLOW_RULE_BIN_in_ruleInteger3399); 
+                    this_BIN_3=(Token)match(input,RULE_BIN,FOLLOW_RULE_BIN_in_ruleInteger3372); 
 
                     		current.merge(this_BIN_3);
                         
@@ -3891,7 +3865,7 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleFloat"
-    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1491:1: entryRuleFloat returns [String current=null] : iv_ruleFloat= ruleFloat EOF ;
+    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1481:1: entryRuleFloat returns [String current=null] : iv_ruleFloat= ruleFloat EOF ;
     public final String entryRuleFloat() throws RecognitionException {
         String current = null;
 
@@ -3899,17 +3873,17 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1492:2: (iv_ruleFloat= ruleFloat EOF )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1493:2: iv_ruleFloat= ruleFloat EOF
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1482:2: (iv_ruleFloat= ruleFloat EOF )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1483:2: iv_ruleFloat= ruleFloat EOF
             {
              newCompositeNode(grammarAccess.getFloatRule()); 
-            pushFollow(FOLLOW_ruleFloat_in_entryRuleFloat3445);
+            pushFollow(FOLLOW_ruleFloat_in_entryRuleFloat3418);
             iv_ruleFloat=ruleFloat();
 
             state._fsp--;
 
              current =iv_ruleFloat.getText(); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleFloat3456); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleFloat3429); 
 
             }
 
@@ -3927,7 +3901,7 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleFloat"
-    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1500:1: ruleFloat returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : ( (this_INT_0= RULE_INT kw= '.' (this_INT_2= RULE_INT )? ) | (kw= '.' this_INT_4= RULE_INT ) ) ;
+    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1490:1: ruleFloat returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : ( (this_INT_0= RULE_INT kw= '.' (this_INT_2= RULE_INT )? ) | (kw= '.' this_INT_4= RULE_INT ) ) ;
     public final AntlrDatatypeRuleToken ruleFloat() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -3939,10 +3913,10 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1503:28: ( ( (this_INT_0= RULE_INT kw= '.' (this_INT_2= RULE_INT )? ) | (kw= '.' this_INT_4= RULE_INT ) ) )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1504:1: ( (this_INT_0= RULE_INT kw= '.' (this_INT_2= RULE_INT )? ) | (kw= '.' this_INT_4= RULE_INT ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1493:28: ( ( (this_INT_0= RULE_INT kw= '.' (this_INT_2= RULE_INT )? ) | (kw= '.' this_INT_4= RULE_INT ) ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1494:1: ( (this_INT_0= RULE_INT kw= '.' (this_INT_2= RULE_INT )? ) | (kw= '.' this_INT_4= RULE_INT ) )
             {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1504:1: ( (this_INT_0= RULE_INT kw= '.' (this_INT_2= RULE_INT )? ) | (kw= '.' this_INT_4= RULE_INT ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1494:1: ( (this_INT_0= RULE_INT kw= '.' (this_INT_2= RULE_INT )? ) | (kw= '.' this_INT_4= RULE_INT ) )
             int alt24=2;
             int LA24_0 = input.LA(1);
 
@@ -3960,24 +3934,24 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
             }
             switch (alt24) {
                 case 1 :
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1504:2: (this_INT_0= RULE_INT kw= '.' (this_INT_2= RULE_INT )? )
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1494:2: (this_INT_0= RULE_INT kw= '.' (this_INT_2= RULE_INT )? )
                     {
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1504:2: (this_INT_0= RULE_INT kw= '.' (this_INT_2= RULE_INT )? )
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1504:7: this_INT_0= RULE_INT kw= '.' (this_INT_2= RULE_INT )?
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1494:2: (this_INT_0= RULE_INT kw= '.' (this_INT_2= RULE_INT )? )
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1494:7: this_INT_0= RULE_INT kw= '.' (this_INT_2= RULE_INT )?
                     {
-                    this_INT_0=(Token)match(input,RULE_INT,FOLLOW_RULE_INT_in_ruleFloat3497); 
+                    this_INT_0=(Token)match(input,RULE_INT,FOLLOW_RULE_INT_in_ruleFloat3470); 
 
                     		current.merge(this_INT_0);
                         
                      
                         newLeafNode(this_INT_0, grammarAccess.getFloatAccess().getINTTerminalRuleCall_0_0()); 
                         
-                    kw=(Token)match(input,26,FOLLOW_26_in_ruleFloat3515); 
+                    kw=(Token)match(input,26,FOLLOW_26_in_ruleFloat3488); 
 
                             current.merge(kw);
                             newLeafNode(kw, grammarAccess.getFloatAccess().getFullStopKeyword_0_1()); 
                         
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1517:1: (this_INT_2= RULE_INT )?
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1507:1: (this_INT_2= RULE_INT )?
                     int alt23=2;
                     int LA23_0 = input.LA(1);
 
@@ -3986,9 +3960,9 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
                     }
                     switch (alt23) {
                         case 1 :
-                            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1517:6: this_INT_2= RULE_INT
+                            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1507:6: this_INT_2= RULE_INT
                             {
-                            this_INT_2=(Token)match(input,RULE_INT,FOLLOW_RULE_INT_in_ruleFloat3531); 
+                            this_INT_2=(Token)match(input,RULE_INT,FOLLOW_RULE_INT_in_ruleFloat3504); 
 
                             		current.merge(this_INT_2);
                                 
@@ -4008,17 +3982,17 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1525:6: (kw= '.' this_INT_4= RULE_INT )
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1515:6: (kw= '.' this_INT_4= RULE_INT )
                     {
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1525:6: (kw= '.' this_INT_4= RULE_INT )
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1526:2: kw= '.' this_INT_4= RULE_INT
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1515:6: (kw= '.' this_INT_4= RULE_INT )
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1516:2: kw= '.' this_INT_4= RULE_INT
                     {
-                    kw=(Token)match(input,26,FOLLOW_26_in_ruleFloat3559); 
+                    kw=(Token)match(input,26,FOLLOW_26_in_ruleFloat3532); 
 
                             current.merge(kw);
                             newLeafNode(kw, grammarAccess.getFloatAccess().getFullStopKeyword_1_0()); 
                         
-                    this_INT_4=(Token)match(input,RULE_INT,FOLLOW_RULE_INT_in_ruleFloat3574); 
+                    this_INT_4=(Token)match(input,RULE_INT,FOLLOW_RULE_INT_in_ruleFloat3547); 
 
                     		current.merge(this_INT_4);
                         
@@ -4052,7 +4026,7 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleSNotation"
-    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1546:1: entryRuleSNotation returns [String current=null] : iv_ruleSNotation= ruleSNotation EOF ;
+    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1536:1: entryRuleSNotation returns [String current=null] : iv_ruleSNotation= ruleSNotation EOF ;
     public final String entryRuleSNotation() throws RecognitionException {
         String current = null;
 
@@ -4060,17 +4034,17 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1547:2: (iv_ruleSNotation= ruleSNotation EOF )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1548:2: iv_ruleSNotation= ruleSNotation EOF
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1537:2: (iv_ruleSNotation= ruleSNotation EOF )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1538:2: iv_ruleSNotation= ruleSNotation EOF
             {
              newCompositeNode(grammarAccess.getSNotationRule()); 
-            pushFollow(FOLLOW_ruleSNotation_in_entryRuleSNotation3621);
+            pushFollow(FOLLOW_ruleSNotation_in_entryRuleSNotation3594);
             iv_ruleSNotation=ruleSNotation();
 
             state._fsp--;
 
              current =iv_ruleSNotation.getText(); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleSNotation3632); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleSNotation3605); 
 
             }
 
@@ -4088,7 +4062,7 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleSNotation"
-    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1555:1: ruleSNotation returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : ( (this_INT_0= RULE_INT | this_Float_1= ruleFloat ) this_ExpConstant_2= ruleExpConstant (this_Sign_3= ruleSign )? this_INT_4= RULE_INT ) ;
+    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1545:1: ruleSNotation returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : ( (this_INT_0= RULE_INT | this_Float_1= ruleFloat ) this_ExpConstant_2= ruleExpConstant (this_Sign_3= ruleSign )? this_INT_4= RULE_INT ) ;
     public final AntlrDatatypeRuleToken ruleSNotation() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -4104,13 +4078,13 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1558:28: ( ( (this_INT_0= RULE_INT | this_Float_1= ruleFloat ) this_ExpConstant_2= ruleExpConstant (this_Sign_3= ruleSign )? this_INT_4= RULE_INT ) )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1559:1: ( (this_INT_0= RULE_INT | this_Float_1= ruleFloat ) this_ExpConstant_2= ruleExpConstant (this_Sign_3= ruleSign )? this_INT_4= RULE_INT )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1548:28: ( ( (this_INT_0= RULE_INT | this_Float_1= ruleFloat ) this_ExpConstant_2= ruleExpConstant (this_Sign_3= ruleSign )? this_INT_4= RULE_INT ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1549:1: ( (this_INT_0= RULE_INT | this_Float_1= ruleFloat ) this_ExpConstant_2= ruleExpConstant (this_Sign_3= ruleSign )? this_INT_4= RULE_INT )
             {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1559:1: ( (this_INT_0= RULE_INT | this_Float_1= ruleFloat ) this_ExpConstant_2= ruleExpConstant (this_Sign_3= ruleSign )? this_INT_4= RULE_INT )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1559:2: (this_INT_0= RULE_INT | this_Float_1= ruleFloat ) this_ExpConstant_2= ruleExpConstant (this_Sign_3= ruleSign )? this_INT_4= RULE_INT
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1549:1: ( (this_INT_0= RULE_INT | this_Float_1= ruleFloat ) this_ExpConstant_2= ruleExpConstant (this_Sign_3= ruleSign )? this_INT_4= RULE_INT )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1549:2: (this_INT_0= RULE_INT | this_Float_1= ruleFloat ) this_ExpConstant_2= ruleExpConstant (this_Sign_3= ruleSign )? this_INT_4= RULE_INT
             {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1559:2: (this_INT_0= RULE_INT | this_Float_1= ruleFloat )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1549:2: (this_INT_0= RULE_INT | this_Float_1= ruleFloat )
             int alt25=2;
             int LA25_0 = input.LA(1);
 
@@ -4141,9 +4115,9 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
             }
             switch (alt25) {
                 case 1 :
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1559:7: this_INT_0= RULE_INT
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1549:7: this_INT_0= RULE_INT
                     {
-                    this_INT_0=(Token)match(input,RULE_INT,FOLLOW_RULE_INT_in_ruleSNotation3673); 
+                    this_INT_0=(Token)match(input,RULE_INT,FOLLOW_RULE_INT_in_ruleSNotation3646); 
 
                     		current.merge(this_INT_0);
                         
@@ -4154,12 +4128,12 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1568:5: this_Float_1= ruleFloat
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1558:5: this_Float_1= ruleFloat
                     {
                      
                             newCompositeNode(grammarAccess.getSNotationAccess().getFloatParserRuleCall_0_1()); 
                         
-                    pushFollow(FOLLOW_ruleFloat_in_ruleSNotation3706);
+                    pushFollow(FOLLOW_ruleFloat_in_ruleSNotation3679);
                     this_Float_1=ruleFloat();
 
                     state._fsp--;
@@ -4179,7 +4153,7 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
              
                     newCompositeNode(grammarAccess.getSNotationAccess().getExpConstantParserRuleCall_1()); 
                 
-            pushFollow(FOLLOW_ruleExpConstant_in_ruleSNotation3734);
+            pushFollow(FOLLOW_ruleExpConstant_in_ruleSNotation3707);
             this_ExpConstant_2=ruleExpConstant();
 
             state._fsp--;
@@ -4190,7 +4164,7 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
              
                     afterParserOrEnumRuleCall();
                 
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1589:1: (this_Sign_3= ruleSign )?
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1579:1: (this_Sign_3= ruleSign )?
             int alt26=2;
             int LA26_0 = input.LA(1);
 
@@ -4199,12 +4173,12 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
             }
             switch (alt26) {
                 case 1 :
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1590:5: this_Sign_3= ruleSign
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1580:5: this_Sign_3= ruleSign
                     {
                      
                             newCompositeNode(grammarAccess.getSNotationAccess().getSignParserRuleCall_2()); 
                         
-                    pushFollow(FOLLOW_ruleSign_in_ruleSNotation3762);
+                    pushFollow(FOLLOW_ruleSign_in_ruleSNotation3735);
                     this_Sign_3=ruleSign();
 
                     state._fsp--;
@@ -4221,7 +4195,7 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
             }
 
-            this_INT_4=(Token)match(input,RULE_INT,FOLLOW_RULE_INT_in_ruleSNotation3784); 
+            this_INT_4=(Token)match(input,RULE_INT,FOLLOW_RULE_INT_in_ruleSNotation3757); 
 
             		current.merge(this_INT_4);
                 
@@ -4249,7 +4223,7 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleExpConstant"
-    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1615:1: entryRuleExpConstant returns [String current=null] : iv_ruleExpConstant= ruleExpConstant EOF ;
+    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1605:1: entryRuleExpConstant returns [String current=null] : iv_ruleExpConstant= ruleExpConstant EOF ;
     public final String entryRuleExpConstant() throws RecognitionException {
         String current = null;
 
@@ -4257,17 +4231,17 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1616:2: (iv_ruleExpConstant= ruleExpConstant EOF )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1617:2: iv_ruleExpConstant= ruleExpConstant EOF
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1606:2: (iv_ruleExpConstant= ruleExpConstant EOF )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1607:2: iv_ruleExpConstant= ruleExpConstant EOF
             {
              newCompositeNode(grammarAccess.getExpConstantRule()); 
-            pushFollow(FOLLOW_ruleExpConstant_in_entryRuleExpConstant3830);
+            pushFollow(FOLLOW_ruleExpConstant_in_entryRuleExpConstant3803);
             iv_ruleExpConstant=ruleExpConstant();
 
             state._fsp--;
 
              current =iv_ruleExpConstant.getText(); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleExpConstant3841); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleExpConstant3814); 
 
             }
 
@@ -4285,7 +4259,7 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleExpConstant"
-    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1624:1: ruleExpConstant returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (kw= 'e' | kw= 'E' ) ;
+    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1614:1: ruleExpConstant returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (kw= 'e' | kw= 'E' ) ;
     public final AntlrDatatypeRuleToken ruleExpConstant() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -4294,10 +4268,10 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1627:28: ( (kw= 'e' | kw= 'E' ) )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1628:1: (kw= 'e' | kw= 'E' )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1617:28: ( (kw= 'e' | kw= 'E' ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1618:1: (kw= 'e' | kw= 'E' )
             {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1628:1: (kw= 'e' | kw= 'E' )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1618:1: (kw= 'e' | kw= 'E' )
             int alt27=2;
             int LA27_0 = input.LA(1);
 
@@ -4315,9 +4289,9 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
             }
             switch (alt27) {
                 case 1 :
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1629:2: kw= 'e'
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1619:2: kw= 'e'
                     {
-                    kw=(Token)match(input,27,FOLLOW_27_in_ruleExpConstant3879); 
+                    kw=(Token)match(input,27,FOLLOW_27_in_ruleExpConstant3852); 
 
                             current.merge(kw);
                             newLeafNode(kw, grammarAccess.getExpConstantAccess().getEKeyword_0()); 
@@ -4326,9 +4300,9 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1636:2: kw= 'E'
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1626:2: kw= 'E'
                     {
-                    kw=(Token)match(input,28,FOLLOW_28_in_ruleExpConstant3898); 
+                    kw=(Token)match(input,28,FOLLOW_28_in_ruleExpConstant3871); 
 
                             current.merge(kw);
                             newLeafNode(kw, grammarAccess.getExpConstantAccess().getEKeyword_1()); 
@@ -4357,7 +4331,7 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleSign"
-    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1649:1: entryRuleSign returns [String current=null] : iv_ruleSign= ruleSign EOF ;
+    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1639:1: entryRuleSign returns [String current=null] : iv_ruleSign= ruleSign EOF ;
     public final String entryRuleSign() throws RecognitionException {
         String current = null;
 
@@ -4365,17 +4339,17 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1650:2: (iv_ruleSign= ruleSign EOF )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1651:2: iv_ruleSign= ruleSign EOF
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1640:2: (iv_ruleSign= ruleSign EOF )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1641:2: iv_ruleSign= ruleSign EOF
             {
              newCompositeNode(grammarAccess.getSignRule()); 
-            pushFollow(FOLLOW_ruleSign_in_entryRuleSign3939);
+            pushFollow(FOLLOW_ruleSign_in_entryRuleSign3912);
             iv_ruleSign=ruleSign();
 
             state._fsp--;
 
              current =iv_ruleSign.getText(); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleSign3950); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleSign3923); 
 
             }
 
@@ -4393,7 +4367,7 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleSign"
-    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1658:1: ruleSign returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (kw= '+' | kw= '-' ) ;
+    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1648:1: ruleSign returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (kw= '+' | kw= '-' ) ;
     public final AntlrDatatypeRuleToken ruleSign() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -4402,10 +4376,10 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1661:28: ( (kw= '+' | kw= '-' ) )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1662:1: (kw= '+' | kw= '-' )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1651:28: ( (kw= '+' | kw= '-' ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1652:1: (kw= '+' | kw= '-' )
             {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1662:1: (kw= '+' | kw= '-' )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1652:1: (kw= '+' | kw= '-' )
             int alt28=2;
             int LA28_0 = input.LA(1);
 
@@ -4423,9 +4397,9 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
             }
             switch (alt28) {
                 case 1 :
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1663:2: kw= '+'
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1653:2: kw= '+'
                     {
-                    kw=(Token)match(input,29,FOLLOW_29_in_ruleSign3988); 
+                    kw=(Token)match(input,29,FOLLOW_29_in_ruleSign3961); 
 
                             current.merge(kw);
                             newLeafNode(kw, grammarAccess.getSignAccess().getPlusSignKeyword_0()); 
@@ -4434,9 +4408,9 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1670:2: kw= '-'
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1660:2: kw= '-'
                     {
-                    kw=(Token)match(input,30,FOLLOW_30_in_ruleSign4007); 
+                    kw=(Token)match(input,30,FOLLOW_30_in_ruleSign3980); 
 
                             current.merge(kw);
                             newLeafNode(kw, grammarAccess.getSignAccess().getHyphenMinusKeyword_1()); 
@@ -4465,7 +4439,7 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleImaginary"
-    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1683:1: entryRuleImaginary returns [String current=null] : iv_ruleImaginary= ruleImaginary EOF ;
+    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1673:1: entryRuleImaginary returns [String current=null] : iv_ruleImaginary= ruleImaginary EOF ;
     public final String entryRuleImaginary() throws RecognitionException {
         String current = null;
 
@@ -4473,17 +4447,17 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1684:2: (iv_ruleImaginary= ruleImaginary EOF )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1685:2: iv_ruleImaginary= ruleImaginary EOF
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1674:2: (iv_ruleImaginary= ruleImaginary EOF )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1675:2: iv_ruleImaginary= ruleImaginary EOF
             {
              newCompositeNode(grammarAccess.getImaginaryRule()); 
-            pushFollow(FOLLOW_ruleImaginary_in_entryRuleImaginary4048);
+            pushFollow(FOLLOW_ruleImaginary_in_entryRuleImaginary4021);
             iv_ruleImaginary=ruleImaginary();
 
             state._fsp--;
 
              current =iv_ruleImaginary.getText(); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleImaginary4059); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleImaginary4032); 
 
             }
 
@@ -4501,7 +4475,7 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleImaginary"
-    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1692:1: ruleImaginary returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : ( (this_INT_0= RULE_INT | this_Float_1= ruleFloat )? this_ImaginaryConstant_2= ruleImaginaryConstant ) ;
+    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1682:1: ruleImaginary returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : ( (this_INT_0= RULE_INT | this_Float_1= ruleFloat )? this_ImaginaryConstant_2= ruleImaginaryConstant ) ;
     public final AntlrDatatypeRuleToken ruleImaginary() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -4514,13 +4488,13 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1695:28: ( ( (this_INT_0= RULE_INT | this_Float_1= ruleFloat )? this_ImaginaryConstant_2= ruleImaginaryConstant ) )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1696:1: ( (this_INT_0= RULE_INT | this_Float_1= ruleFloat )? this_ImaginaryConstant_2= ruleImaginaryConstant )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1685:28: ( ( (this_INT_0= RULE_INT | this_Float_1= ruleFloat )? this_ImaginaryConstant_2= ruleImaginaryConstant ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1686:1: ( (this_INT_0= RULE_INT | this_Float_1= ruleFloat )? this_ImaginaryConstant_2= ruleImaginaryConstant )
             {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1696:1: ( (this_INT_0= RULE_INT | this_Float_1= ruleFloat )? this_ImaginaryConstant_2= ruleImaginaryConstant )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1696:2: (this_INT_0= RULE_INT | this_Float_1= ruleFloat )? this_ImaginaryConstant_2= ruleImaginaryConstant
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1686:1: ( (this_INT_0= RULE_INT | this_Float_1= ruleFloat )? this_ImaginaryConstant_2= ruleImaginaryConstant )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1686:2: (this_INT_0= RULE_INT | this_Float_1= ruleFloat )? this_ImaginaryConstant_2= ruleImaginaryConstant
             {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1696:2: (this_INT_0= RULE_INT | this_Float_1= ruleFloat )?
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1686:2: (this_INT_0= RULE_INT | this_Float_1= ruleFloat )?
             int alt29=3;
             int LA29_0 = input.LA(1);
 
@@ -4539,9 +4513,9 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
             }
             switch (alt29) {
                 case 1 :
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1696:7: this_INT_0= RULE_INT
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1686:7: this_INT_0= RULE_INT
                     {
-                    this_INT_0=(Token)match(input,RULE_INT,FOLLOW_RULE_INT_in_ruleImaginary4100); 
+                    this_INT_0=(Token)match(input,RULE_INT,FOLLOW_RULE_INT_in_ruleImaginary4073); 
 
                     		current.merge(this_INT_0);
                         
@@ -4552,12 +4526,12 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1705:5: this_Float_1= ruleFloat
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1695:5: this_Float_1= ruleFloat
                     {
                      
                             newCompositeNode(grammarAccess.getImaginaryAccess().getFloatParserRuleCall_0_1()); 
                         
-                    pushFollow(FOLLOW_ruleFloat_in_ruleImaginary4133);
+                    pushFollow(FOLLOW_ruleFloat_in_ruleImaginary4106);
                     this_Float_1=ruleFloat();
 
                     state._fsp--;
@@ -4577,7 +4551,7 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
              
                     newCompositeNode(grammarAccess.getImaginaryAccess().getImaginaryConstantParserRuleCall_1()); 
                 
-            pushFollow(FOLLOW_ruleImaginaryConstant_in_ruleImaginary4162);
+            pushFollow(FOLLOW_ruleImaginaryConstant_in_ruleImaginary4135);
             this_ImaginaryConstant_2=ruleImaginaryConstant();
 
             state._fsp--;
@@ -4609,7 +4583,7 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleImaginaryConstant"
-    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1734:1: entryRuleImaginaryConstant returns [String current=null] : iv_ruleImaginaryConstant= ruleImaginaryConstant EOF ;
+    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1724:1: entryRuleImaginaryConstant returns [String current=null] : iv_ruleImaginaryConstant= ruleImaginaryConstant EOF ;
     public final String entryRuleImaginaryConstant() throws RecognitionException {
         String current = null;
 
@@ -4617,17 +4591,17 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1735:2: (iv_ruleImaginaryConstant= ruleImaginaryConstant EOF )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1736:2: iv_ruleImaginaryConstant= ruleImaginaryConstant EOF
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1725:2: (iv_ruleImaginaryConstant= ruleImaginaryConstant EOF )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1726:2: iv_ruleImaginaryConstant= ruleImaginaryConstant EOF
             {
              newCompositeNode(grammarAccess.getImaginaryConstantRule()); 
-            pushFollow(FOLLOW_ruleImaginaryConstant_in_entryRuleImaginaryConstant4208);
+            pushFollow(FOLLOW_ruleImaginaryConstant_in_entryRuleImaginaryConstant4181);
             iv_ruleImaginaryConstant=ruleImaginaryConstant();
 
             state._fsp--;
 
              current =iv_ruleImaginaryConstant.getText(); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleImaginaryConstant4219); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleImaginaryConstant4192); 
 
             }
 
@@ -4645,7 +4619,7 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleImaginaryConstant"
-    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1743:1: ruleImaginaryConstant returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (kw= 'i' | kw= 'j' ) ;
+    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1733:1: ruleImaginaryConstant returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (kw= 'i' | kw= 'j' ) ;
     public final AntlrDatatypeRuleToken ruleImaginaryConstant() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -4654,10 +4628,10 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1746:28: ( (kw= 'i' | kw= 'j' ) )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1747:1: (kw= 'i' | kw= 'j' )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1736:28: ( (kw= 'i' | kw= 'j' ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1737:1: (kw= 'i' | kw= 'j' )
             {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1747:1: (kw= 'i' | kw= 'j' )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1737:1: (kw= 'i' | kw= 'j' )
             int alt30=2;
             int LA30_0 = input.LA(1);
 
@@ -4675,9 +4649,9 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
             }
             switch (alt30) {
                 case 1 :
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1748:2: kw= 'i'
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1738:2: kw= 'i'
                     {
-                    kw=(Token)match(input,31,FOLLOW_31_in_ruleImaginaryConstant4257); 
+                    kw=(Token)match(input,31,FOLLOW_31_in_ruleImaginaryConstant4230); 
 
                             current.merge(kw);
                             newLeafNode(kw, grammarAccess.getImaginaryConstantAccess().getIKeyword_0()); 
@@ -4686,9 +4660,9 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1755:2: kw= 'j'
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1745:2: kw= 'j'
                     {
-                    kw=(Token)match(input,32,FOLLOW_32_in_ruleImaginaryConstant4276); 
+                    kw=(Token)match(input,32,FOLLOW_32_in_ruleImaginaryConstant4249); 
 
                             current.merge(kw);
                             newLeafNode(kw, grammarAccess.getImaginaryConstantAccess().getJKeyword_1()); 
@@ -4717,7 +4691,7 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleBoolLiteral"
-    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1768:1: entryRuleBoolLiteral returns [String current=null] : iv_ruleBoolLiteral= ruleBoolLiteral EOF ;
+    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1758:1: entryRuleBoolLiteral returns [String current=null] : iv_ruleBoolLiteral= ruleBoolLiteral EOF ;
     public final String entryRuleBoolLiteral() throws RecognitionException {
         String current = null;
 
@@ -4725,17 +4699,17 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1769:2: (iv_ruleBoolLiteral= ruleBoolLiteral EOF )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1770:2: iv_ruleBoolLiteral= ruleBoolLiteral EOF
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1759:2: (iv_ruleBoolLiteral= ruleBoolLiteral EOF )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1760:2: iv_ruleBoolLiteral= ruleBoolLiteral EOF
             {
              newCompositeNode(grammarAccess.getBoolLiteralRule()); 
-            pushFollow(FOLLOW_ruleBoolLiteral_in_entryRuleBoolLiteral4317);
+            pushFollow(FOLLOW_ruleBoolLiteral_in_entryRuleBoolLiteral4290);
             iv_ruleBoolLiteral=ruleBoolLiteral();
 
             state._fsp--;
 
              current =iv_ruleBoolLiteral.getText(); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleBoolLiteral4328); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleBoolLiteral4301); 
 
             }
 
@@ -4753,7 +4727,7 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleBoolLiteral"
-    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1777:1: ruleBoolLiteral returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (kw= 'true' | kw= 'false' ) ;
+    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1767:1: ruleBoolLiteral returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (kw= 'true' | kw= 'false' ) ;
     public final AntlrDatatypeRuleToken ruleBoolLiteral() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -4762,10 +4736,10 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1780:28: ( (kw= 'true' | kw= 'false' ) )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1781:1: (kw= 'true' | kw= 'false' )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1770:28: ( (kw= 'true' | kw= 'false' ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1771:1: (kw= 'true' | kw= 'false' )
             {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1781:1: (kw= 'true' | kw= 'false' )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1771:1: (kw= 'true' | kw= 'false' )
             int alt31=2;
             int LA31_0 = input.LA(1);
 
@@ -4783,9 +4757,9 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
             }
             switch (alt31) {
                 case 1 :
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1782:2: kw= 'true'
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1772:2: kw= 'true'
                     {
-                    kw=(Token)match(input,33,FOLLOW_33_in_ruleBoolLiteral4366); 
+                    kw=(Token)match(input,33,FOLLOW_33_in_ruleBoolLiteral4339); 
 
                             current.merge(kw);
                             newLeafNode(kw, grammarAccess.getBoolLiteralAccess().getTrueKeyword_0()); 
@@ -4794,9 +4768,9 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1789:2: kw= 'false'
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1779:2: kw= 'false'
                     {
-                    kw=(Token)match(input,34,FOLLOW_34_in_ruleBoolLiteral4385); 
+                    kw=(Token)match(input,34,FOLLOW_34_in_ruleBoolLiteral4358); 
 
                             current.merge(kw);
                             newLeafNode(kw, grammarAccess.getBoolLiteralAccess().getFalseKeyword_1()); 
@@ -4825,7 +4799,7 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleSequenceLiteral"
-    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1802:1: entryRuleSequenceLiteral returns [EObject current=null] : iv_ruleSequenceLiteral= ruleSequenceLiteral EOF ;
+    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1792:1: entryRuleSequenceLiteral returns [EObject current=null] : iv_ruleSequenceLiteral= ruleSequenceLiteral EOF ;
     public final EObject entryRuleSequenceLiteral() throws RecognitionException {
         EObject current = null;
 
@@ -4833,17 +4807,17 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1803:2: (iv_ruleSequenceLiteral= ruleSequenceLiteral EOF )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1804:2: iv_ruleSequenceLiteral= ruleSequenceLiteral EOF
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1793:2: (iv_ruleSequenceLiteral= ruleSequenceLiteral EOF )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1794:2: iv_ruleSequenceLiteral= ruleSequenceLiteral EOF
             {
              newCompositeNode(grammarAccess.getSequenceLiteralRule()); 
-            pushFollow(FOLLOW_ruleSequenceLiteral_in_entryRuleSequenceLiteral4425);
+            pushFollow(FOLLOW_ruleSequenceLiteral_in_entryRuleSequenceLiteral4398);
             iv_ruleSequenceLiteral=ruleSequenceLiteral();
 
             state._fsp--;
 
              current =iv_ruleSequenceLiteral; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleSequenceLiteral4435); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleSequenceLiteral4408); 
 
             }
 
@@ -4861,7 +4835,7 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleSequenceLiteral"
-    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1811:1: ruleSequenceLiteral returns [EObject current=null] : (this_SequenceLiteralPlain_0= ruleSequenceLiteralPlain | this_SequenceLiteralSerie_1= ruleSequenceLiteralSerie ) ;
+    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1801:1: ruleSequenceLiteral returns [EObject current=null] : (this_SequenceLiteralPlain_0= ruleSequenceLiteralPlain | this_SequenceLiteralSerie_1= ruleSequenceLiteralSerie ) ;
     public final EObject ruleSequenceLiteral() throws RecognitionException {
         EObject current = null;
 
@@ -4873,10 +4847,10 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1814:28: ( (this_SequenceLiteralPlain_0= ruleSequenceLiteralPlain | this_SequenceLiteralSerie_1= ruleSequenceLiteralSerie ) )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1815:1: (this_SequenceLiteralPlain_0= ruleSequenceLiteralPlain | this_SequenceLiteralSerie_1= ruleSequenceLiteralSerie )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1804:28: ( (this_SequenceLiteralPlain_0= ruleSequenceLiteralPlain | this_SequenceLiteralSerie_1= ruleSequenceLiteralSerie ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1805:1: (this_SequenceLiteralPlain_0= ruleSequenceLiteralPlain | this_SequenceLiteralSerie_1= ruleSequenceLiteralSerie )
             {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1815:1: (this_SequenceLiteralPlain_0= ruleSequenceLiteralPlain | this_SequenceLiteralSerie_1= ruleSequenceLiteralSerie )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1805:1: (this_SequenceLiteralPlain_0= ruleSequenceLiteralPlain | this_SequenceLiteralSerie_1= ruleSequenceLiteralSerie )
             int alt32=2;
             int LA32_0 = input.LA(1);
 
@@ -4894,12 +4868,12 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
             }
             switch (alt32) {
                 case 1 :
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1816:5: this_SequenceLiteralPlain_0= ruleSequenceLiteralPlain
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1806:5: this_SequenceLiteralPlain_0= ruleSequenceLiteralPlain
                     {
                      
                             newCompositeNode(grammarAccess.getSequenceLiteralAccess().getSequenceLiteralPlainParserRuleCall_0()); 
                         
-                    pushFollow(FOLLOW_ruleSequenceLiteralPlain_in_ruleSequenceLiteral4482);
+                    pushFollow(FOLLOW_ruleSequenceLiteralPlain_in_ruleSequenceLiteral4455);
                     this_SequenceLiteralPlain_0=ruleSequenceLiteralPlain();
 
                     state._fsp--;
@@ -4912,12 +4886,12 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1826:5: this_SequenceLiteralSerie_1= ruleSequenceLiteralSerie
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1816:5: this_SequenceLiteralSerie_1= ruleSequenceLiteralSerie
                     {
                      
                             newCompositeNode(grammarAccess.getSequenceLiteralAccess().getSequenceLiteralSerieParserRuleCall_1()); 
                         
-                    pushFollow(FOLLOW_ruleSequenceLiteralSerie_in_ruleSequenceLiteral4509);
+                    pushFollow(FOLLOW_ruleSequenceLiteralSerie_in_ruleSequenceLiteral4482);
                     this_SequenceLiteralSerie_1=ruleSequenceLiteralSerie();
 
                     state._fsp--;
@@ -4950,7 +4924,7 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleSequenceLiteralSerie"
-    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1842:1: entryRuleSequenceLiteralSerie returns [EObject current=null] : iv_ruleSequenceLiteralSerie= ruleSequenceLiteralSerie EOF ;
+    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1832:1: entryRuleSequenceLiteralSerie returns [EObject current=null] : iv_ruleSequenceLiteralSerie= ruleSequenceLiteralSerie EOF ;
     public final EObject entryRuleSequenceLiteralSerie() throws RecognitionException {
         EObject current = null;
 
@@ -4958,17 +4932,17 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1843:2: (iv_ruleSequenceLiteralSerie= ruleSequenceLiteralSerie EOF )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1844:2: iv_ruleSequenceLiteralSerie= ruleSequenceLiteralSerie EOF
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1833:2: (iv_ruleSequenceLiteralSerie= ruleSequenceLiteralSerie EOF )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1834:2: iv_ruleSequenceLiteralSerie= ruleSequenceLiteralSerie EOF
             {
              newCompositeNode(grammarAccess.getSequenceLiteralSerieRule()); 
-            pushFollow(FOLLOW_ruleSequenceLiteralSerie_in_entryRuleSequenceLiteralSerie4544);
+            pushFollow(FOLLOW_ruleSequenceLiteralSerie_in_entryRuleSequenceLiteralSerie4517);
             iv_ruleSequenceLiteralSerie=ruleSequenceLiteralSerie();
 
             state._fsp--;
 
              current =iv_ruleSequenceLiteralSerie; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleSequenceLiteralSerie4554); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleSequenceLiteralSerie4527); 
 
             }
 
@@ -4986,7 +4960,7 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleSequenceLiteralSerie"
-    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1851:1: ruleSequenceLiteralSerie returns [EObject current=null] : (otherlv_0= '[..' ( (lv_init_1_0= ruleLiteralExpression ) ) otherlv_2= '->' ( (lv_end_3_0= ruleLiteralExpression ) ) (otherlv_4= ',' ( (lv_inc_5_0= ruleLiteralExpression ) ) )? otherlv_6= ']' ) ;
+    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1841:1: ruleSequenceLiteralSerie returns [EObject current=null] : (otherlv_0= '[..' ( (lv_init_1_0= ruleLiteralExpression ) ) otherlv_2= '->' ( (lv_end_3_0= ruleLiteralExpression ) ) (otherlv_4= ',' ( (lv_inc_5_0= ruleLiteralExpression ) ) )? otherlv_6= ']' ) ;
     public final EObject ruleSequenceLiteralSerie() throws RecognitionException {
         EObject current = null;
 
@@ -5004,26 +4978,26 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1854:28: ( (otherlv_0= '[..' ( (lv_init_1_0= ruleLiteralExpression ) ) otherlv_2= '->' ( (lv_end_3_0= ruleLiteralExpression ) ) (otherlv_4= ',' ( (lv_inc_5_0= ruleLiteralExpression ) ) )? otherlv_6= ']' ) )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1855:1: (otherlv_0= '[..' ( (lv_init_1_0= ruleLiteralExpression ) ) otherlv_2= '->' ( (lv_end_3_0= ruleLiteralExpression ) ) (otherlv_4= ',' ( (lv_inc_5_0= ruleLiteralExpression ) ) )? otherlv_6= ']' )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1844:28: ( (otherlv_0= '[..' ( (lv_init_1_0= ruleLiteralExpression ) ) otherlv_2= '->' ( (lv_end_3_0= ruleLiteralExpression ) ) (otherlv_4= ',' ( (lv_inc_5_0= ruleLiteralExpression ) ) )? otherlv_6= ']' ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1845:1: (otherlv_0= '[..' ( (lv_init_1_0= ruleLiteralExpression ) ) otherlv_2= '->' ( (lv_end_3_0= ruleLiteralExpression ) ) (otherlv_4= ',' ( (lv_inc_5_0= ruleLiteralExpression ) ) )? otherlv_6= ']' )
             {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1855:1: (otherlv_0= '[..' ( (lv_init_1_0= ruleLiteralExpression ) ) otherlv_2= '->' ( (lv_end_3_0= ruleLiteralExpression ) ) (otherlv_4= ',' ( (lv_inc_5_0= ruleLiteralExpression ) ) )? otherlv_6= ']' )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1855:3: otherlv_0= '[..' ( (lv_init_1_0= ruleLiteralExpression ) ) otherlv_2= '->' ( (lv_end_3_0= ruleLiteralExpression ) ) (otherlv_4= ',' ( (lv_inc_5_0= ruleLiteralExpression ) ) )? otherlv_6= ']'
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1845:1: (otherlv_0= '[..' ( (lv_init_1_0= ruleLiteralExpression ) ) otherlv_2= '->' ( (lv_end_3_0= ruleLiteralExpression ) ) (otherlv_4= ',' ( (lv_inc_5_0= ruleLiteralExpression ) ) )? otherlv_6= ']' )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1845:3: otherlv_0= '[..' ( (lv_init_1_0= ruleLiteralExpression ) ) otherlv_2= '->' ( (lv_end_3_0= ruleLiteralExpression ) ) (otherlv_4= ',' ( (lv_inc_5_0= ruleLiteralExpression ) ) )? otherlv_6= ']'
             {
-            otherlv_0=(Token)match(input,35,FOLLOW_35_in_ruleSequenceLiteralSerie4591); 
+            otherlv_0=(Token)match(input,35,FOLLOW_35_in_ruleSequenceLiteralSerie4564); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getSequenceLiteralSerieAccess().getLeftSquareBracketFullStopFullStopKeyword_0());
                 
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1859:1: ( (lv_init_1_0= ruleLiteralExpression ) )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1860:1: (lv_init_1_0= ruleLiteralExpression )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1849:1: ( (lv_init_1_0= ruleLiteralExpression ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1850:1: (lv_init_1_0= ruleLiteralExpression )
             {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1860:1: (lv_init_1_0= ruleLiteralExpression )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1861:3: lv_init_1_0= ruleLiteralExpression
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1850:1: (lv_init_1_0= ruleLiteralExpression )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1851:3: lv_init_1_0= ruleLiteralExpression
             {
              
             	        newCompositeNode(grammarAccess.getSequenceLiteralSerieAccess().getInitLiteralExpressionParserRuleCall_1_0()); 
             	    
-            pushFollow(FOLLOW_ruleLiteralExpression_in_ruleSequenceLiteralSerie4612);
+            pushFollow(FOLLOW_ruleLiteralExpression_in_ruleSequenceLiteralSerie4585);
             lv_init_1_0=ruleLiteralExpression();
 
             state._fsp--;
@@ -5045,20 +5019,20 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_2=(Token)match(input,36,FOLLOW_36_in_ruleSequenceLiteralSerie4624); 
+            otherlv_2=(Token)match(input,36,FOLLOW_36_in_ruleSequenceLiteralSerie4597); 
 
                 	newLeafNode(otherlv_2, grammarAccess.getSequenceLiteralSerieAccess().getHyphenMinusGreaterThanSignKeyword_2());
                 
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1881:1: ( (lv_end_3_0= ruleLiteralExpression ) )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1882:1: (lv_end_3_0= ruleLiteralExpression )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1871:1: ( (lv_end_3_0= ruleLiteralExpression ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1872:1: (lv_end_3_0= ruleLiteralExpression )
             {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1882:1: (lv_end_3_0= ruleLiteralExpression )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1883:3: lv_end_3_0= ruleLiteralExpression
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1872:1: (lv_end_3_0= ruleLiteralExpression )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1873:3: lv_end_3_0= ruleLiteralExpression
             {
              
             	        newCompositeNode(grammarAccess.getSequenceLiteralSerieAccess().getEndLiteralExpressionParserRuleCall_3_0()); 
             	    
-            pushFollow(FOLLOW_ruleLiteralExpression_in_ruleSequenceLiteralSerie4645);
+            pushFollow(FOLLOW_ruleLiteralExpression_in_ruleSequenceLiteralSerie4618);
             lv_end_3_0=ruleLiteralExpression();
 
             state._fsp--;
@@ -5080,7 +5054,7 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1899:2: (otherlv_4= ',' ( (lv_inc_5_0= ruleLiteralExpression ) ) )?
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1889:2: (otherlv_4= ',' ( (lv_inc_5_0= ruleLiteralExpression ) ) )?
             int alt33=2;
             int LA33_0 = input.LA(1);
 
@@ -5089,22 +5063,22 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
             }
             switch (alt33) {
                 case 1 :
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1899:4: otherlv_4= ',' ( (lv_inc_5_0= ruleLiteralExpression ) )
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1889:4: otherlv_4= ',' ( (lv_inc_5_0= ruleLiteralExpression ) )
                     {
-                    otherlv_4=(Token)match(input,37,FOLLOW_37_in_ruleSequenceLiteralSerie4658); 
+                    otherlv_4=(Token)match(input,37,FOLLOW_37_in_ruleSequenceLiteralSerie4631); 
 
                         	newLeafNode(otherlv_4, grammarAccess.getSequenceLiteralSerieAccess().getCommaKeyword_4_0());
                         
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1903:1: ( (lv_inc_5_0= ruleLiteralExpression ) )
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1904:1: (lv_inc_5_0= ruleLiteralExpression )
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1893:1: ( (lv_inc_5_0= ruleLiteralExpression ) )
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1894:1: (lv_inc_5_0= ruleLiteralExpression )
                     {
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1904:1: (lv_inc_5_0= ruleLiteralExpression )
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1905:3: lv_inc_5_0= ruleLiteralExpression
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1894:1: (lv_inc_5_0= ruleLiteralExpression )
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1895:3: lv_inc_5_0= ruleLiteralExpression
                     {
                      
                     	        newCompositeNode(grammarAccess.getSequenceLiteralSerieAccess().getIncLiteralExpressionParserRuleCall_4_1_0()); 
                     	    
-                    pushFollow(FOLLOW_ruleLiteralExpression_in_ruleSequenceLiteralSerie4679);
+                    pushFollow(FOLLOW_ruleLiteralExpression_in_ruleSequenceLiteralSerie4652);
                     lv_inc_5_0=ruleLiteralExpression();
 
                     state._fsp--;
@@ -5132,7 +5106,7 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_6=(Token)match(input,38,FOLLOW_38_in_ruleSequenceLiteralSerie4693); 
+            otherlv_6=(Token)match(input,38,FOLLOW_38_in_ruleSequenceLiteralSerie4666); 
 
                 	newLeafNode(otherlv_6, grammarAccess.getSequenceLiteralSerieAccess().getRightSquareBracketKeyword_5());
                 
@@ -5157,7 +5131,7 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleSequenceLiteralPlain"
-    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1933:1: entryRuleSequenceLiteralPlain returns [EObject current=null] : iv_ruleSequenceLiteralPlain= ruleSequenceLiteralPlain EOF ;
+    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1923:1: entryRuleSequenceLiteralPlain returns [EObject current=null] : iv_ruleSequenceLiteralPlain= ruleSequenceLiteralPlain EOF ;
     public final EObject entryRuleSequenceLiteralPlain() throws RecognitionException {
         EObject current = null;
 
@@ -5165,17 +5139,17 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1934:2: (iv_ruleSequenceLiteralPlain= ruleSequenceLiteralPlain EOF )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1935:2: iv_ruleSequenceLiteralPlain= ruleSequenceLiteralPlain EOF
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1924:2: (iv_ruleSequenceLiteralPlain= ruleSequenceLiteralPlain EOF )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1925:2: iv_ruleSequenceLiteralPlain= ruleSequenceLiteralPlain EOF
             {
              newCompositeNode(grammarAccess.getSequenceLiteralPlainRule()); 
-            pushFollow(FOLLOW_ruleSequenceLiteralPlain_in_entryRuleSequenceLiteralPlain4729);
+            pushFollow(FOLLOW_ruleSequenceLiteralPlain_in_entryRuleSequenceLiteralPlain4702);
             iv_ruleSequenceLiteralPlain=ruleSequenceLiteralPlain();
 
             state._fsp--;
 
              current =iv_ruleSequenceLiteralPlain; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleSequenceLiteralPlain4739); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleSequenceLiteralPlain4712); 
 
             }
 
@@ -5193,7 +5167,7 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleSequenceLiteralPlain"
-    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1942:1: ruleSequenceLiteralPlain returns [EObject current=null] : ( () otherlv_1= '[' ( ( (lv_items_2_0= ruleLiteralExpression ) ) (otherlv_3= ',' ( (lv_items_4_0= ruleLiteralExpression ) ) )* )? otherlv_5= ']' ) ;
+    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1932:1: ruleSequenceLiteralPlain returns [EObject current=null] : ( () otherlv_1= '[' ( ( (lv_items_2_0= ruleLiteralExpression ) ) (otherlv_3= ',' ( (lv_items_4_0= ruleLiteralExpression ) ) )* )? otherlv_5= ']' ) ;
     public final EObject ruleSequenceLiteralPlain() throws RecognitionException {
         EObject current = null;
 
@@ -5208,14 +5182,14 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1945:28: ( ( () otherlv_1= '[' ( ( (lv_items_2_0= ruleLiteralExpression ) ) (otherlv_3= ',' ( (lv_items_4_0= ruleLiteralExpression ) ) )* )? otherlv_5= ']' ) )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1946:1: ( () otherlv_1= '[' ( ( (lv_items_2_0= ruleLiteralExpression ) ) (otherlv_3= ',' ( (lv_items_4_0= ruleLiteralExpression ) ) )* )? otherlv_5= ']' )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1935:28: ( ( () otherlv_1= '[' ( ( (lv_items_2_0= ruleLiteralExpression ) ) (otherlv_3= ',' ( (lv_items_4_0= ruleLiteralExpression ) ) )* )? otherlv_5= ']' ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1936:1: ( () otherlv_1= '[' ( ( (lv_items_2_0= ruleLiteralExpression ) ) (otherlv_3= ',' ( (lv_items_4_0= ruleLiteralExpression ) ) )* )? otherlv_5= ']' )
             {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1946:1: ( () otherlv_1= '[' ( ( (lv_items_2_0= ruleLiteralExpression ) ) (otherlv_3= ',' ( (lv_items_4_0= ruleLiteralExpression ) ) )* )? otherlv_5= ']' )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1946:2: () otherlv_1= '[' ( ( (lv_items_2_0= ruleLiteralExpression ) ) (otherlv_3= ',' ( (lv_items_4_0= ruleLiteralExpression ) ) )* )? otherlv_5= ']'
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1936:1: ( () otherlv_1= '[' ( ( (lv_items_2_0= ruleLiteralExpression ) ) (otherlv_3= ',' ( (lv_items_4_0= ruleLiteralExpression ) ) )* )? otherlv_5= ']' )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1936:2: () otherlv_1= '[' ( ( (lv_items_2_0= ruleLiteralExpression ) ) (otherlv_3= ',' ( (lv_items_4_0= ruleLiteralExpression ) ) )* )? otherlv_5= ']'
             {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1946:2: ()
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1947:5: 
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1936:2: ()
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1937:5: 
             {
 
                     current = forceCreateModelElement(
@@ -5225,31 +5199,31 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,39,FOLLOW_39_in_ruleSequenceLiteralPlain4785); 
+            otherlv_1=(Token)match(input,39,FOLLOW_39_in_ruleSequenceLiteralPlain4758); 
 
                 	newLeafNode(otherlv_1, grammarAccess.getSequenceLiteralPlainAccess().getLeftSquareBracketKeyword_1());
                 
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1956:1: ( ( (lv_items_2_0= ruleLiteralExpression ) ) (otherlv_3= ',' ( (lv_items_4_0= ruleLiteralExpression ) ) )* )?
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1946:1: ( ( (lv_items_2_0= ruleLiteralExpression ) ) (otherlv_3= ',' ( (lv_items_4_0= ruleLiteralExpression ) ) )* )?
             int alt35=2;
             int LA35_0 = input.LA(1);
 
-            if ( ((LA35_0>=RULE_ID && LA35_0<=RULE_BIN)||LA35_0==24||LA35_0==26||(LA35_0>=29 && LA35_0<=35)||(LA35_0>=39 && LA35_0<=40)||LA35_0==69) ) {
+            if ( ((LA35_0>=RULE_ID && LA35_0<=RULE_BIN)||LA35_0==24||LA35_0==26||(LA35_0>=29 && LA35_0<=35)||LA35_0==39||LA35_0==69) ) {
                 alt35=1;
             }
             switch (alt35) {
                 case 1 :
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1956:2: ( (lv_items_2_0= ruleLiteralExpression ) ) (otherlv_3= ',' ( (lv_items_4_0= ruleLiteralExpression ) ) )*
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1946:2: ( (lv_items_2_0= ruleLiteralExpression ) ) (otherlv_3= ',' ( (lv_items_4_0= ruleLiteralExpression ) ) )*
                     {
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1956:2: ( (lv_items_2_0= ruleLiteralExpression ) )
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1957:1: (lv_items_2_0= ruleLiteralExpression )
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1946:2: ( (lv_items_2_0= ruleLiteralExpression ) )
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1947:1: (lv_items_2_0= ruleLiteralExpression )
                     {
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1957:1: (lv_items_2_0= ruleLiteralExpression )
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1958:3: lv_items_2_0= ruleLiteralExpression
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1947:1: (lv_items_2_0= ruleLiteralExpression )
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1948:3: lv_items_2_0= ruleLiteralExpression
                     {
                      
                     	        newCompositeNode(grammarAccess.getSequenceLiteralPlainAccess().getItemsLiteralExpressionParserRuleCall_2_0_0()); 
                     	    
-                    pushFollow(FOLLOW_ruleLiteralExpression_in_ruleSequenceLiteralPlain4807);
+                    pushFollow(FOLLOW_ruleLiteralExpression_in_ruleSequenceLiteralPlain4780);
                     lv_items_2_0=ruleLiteralExpression();
 
                     state._fsp--;
@@ -5271,7 +5245,7 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1974:2: (otherlv_3= ',' ( (lv_items_4_0= ruleLiteralExpression ) ) )*
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1964:2: (otherlv_3= ',' ( (lv_items_4_0= ruleLiteralExpression ) ) )*
                     loop34:
                     do {
                         int alt34=2;
@@ -5284,22 +5258,22 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
                         switch (alt34) {
                     	case 1 :
-                    	    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1974:4: otherlv_3= ',' ( (lv_items_4_0= ruleLiteralExpression ) )
+                    	    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1964:4: otherlv_3= ',' ( (lv_items_4_0= ruleLiteralExpression ) )
                     	    {
-                    	    otherlv_3=(Token)match(input,37,FOLLOW_37_in_ruleSequenceLiteralPlain4820); 
+                    	    otherlv_3=(Token)match(input,37,FOLLOW_37_in_ruleSequenceLiteralPlain4793); 
 
                     	        	newLeafNode(otherlv_3, grammarAccess.getSequenceLiteralPlainAccess().getCommaKeyword_2_1_0());
                     	        
-                    	    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1978:1: ( (lv_items_4_0= ruleLiteralExpression ) )
-                    	    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1979:1: (lv_items_4_0= ruleLiteralExpression )
+                    	    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1968:1: ( (lv_items_4_0= ruleLiteralExpression ) )
+                    	    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1969:1: (lv_items_4_0= ruleLiteralExpression )
                     	    {
-                    	    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1979:1: (lv_items_4_0= ruleLiteralExpression )
-                    	    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1980:3: lv_items_4_0= ruleLiteralExpression
+                    	    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1969:1: (lv_items_4_0= ruleLiteralExpression )
+                    	    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1970:3: lv_items_4_0= ruleLiteralExpression
                     	    {
                     	     
                     	    	        newCompositeNode(grammarAccess.getSequenceLiteralPlainAccess().getItemsLiteralExpressionParserRuleCall_2_1_1_0()); 
                     	    	    
-                    	    pushFollow(FOLLOW_ruleLiteralExpression_in_ruleSequenceLiteralPlain4841);
+                    	    pushFollow(FOLLOW_ruleLiteralExpression_in_ruleSequenceLiteralPlain4814);
                     	    lv_items_4_0=ruleLiteralExpression();
 
                     	    state._fsp--;
@@ -5336,7 +5310,7 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_5=(Token)match(input,38,FOLLOW_38_in_ruleSequenceLiteralPlain4857); 
+            otherlv_5=(Token)match(input,38,FOLLOW_38_in_ruleSequenceLiteralPlain4830); 
 
                 	newLeafNode(otherlv_5, grammarAccess.getSequenceLiteralPlainAccess().getRightSquareBracketKeyword_3());
                 
@@ -5361,7 +5335,7 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleTupleLiteral"
-    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2008:1: entryRuleTupleLiteral returns [EObject current=null] : iv_ruleTupleLiteral= ruleTupleLiteral EOF ;
+    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1998:1: entryRuleTupleLiteral returns [EObject current=null] : iv_ruleTupleLiteral= ruleTupleLiteral EOF ;
     public final EObject entryRuleTupleLiteral() throws RecognitionException {
         EObject current = null;
 
@@ -5369,17 +5343,17 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2009:2: (iv_ruleTupleLiteral= ruleTupleLiteral EOF )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2010:2: iv_ruleTupleLiteral= ruleTupleLiteral EOF
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:1999:2: (iv_ruleTupleLiteral= ruleTupleLiteral EOF )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2000:2: iv_ruleTupleLiteral= ruleTupleLiteral EOF
             {
              newCompositeNode(grammarAccess.getTupleLiteralRule()); 
-            pushFollow(FOLLOW_ruleTupleLiteral_in_entryRuleTupleLiteral4893);
+            pushFollow(FOLLOW_ruleTupleLiteral_in_entryRuleTupleLiteral4866);
             iv_ruleTupleLiteral=ruleTupleLiteral();
 
             state._fsp--;
 
              current =iv_ruleTupleLiteral; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleTupleLiteral4903); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleTupleLiteral4876); 
 
             }
 
@@ -5397,7 +5371,7 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleTupleLiteral"
-    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2017:1: ruleTupleLiteral returns [EObject current=null] : ( () otherlv_1= '(' ( ( (lv_items_2_0= ruleTupleItem ) ) (otherlv_3= ',' ( (lv_items_4_0= ruleTupleItem ) ) )* )? otherlv_5= ')' ) ;
+    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2007:1: ruleTupleLiteral returns [EObject current=null] : ( () otherlv_1= '(' ( ( (lv_items_2_0= ruleTupleItem ) ) (otherlv_3= ',' ( (lv_items_4_0= ruleTupleItem ) ) )* )? otherlv_5= ')' ) ;
     public final EObject ruleTupleLiteral() throws RecognitionException {
         EObject current = null;
 
@@ -5412,14 +5386,14 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2020:28: ( ( () otherlv_1= '(' ( ( (lv_items_2_0= ruleTupleItem ) ) (otherlv_3= ',' ( (lv_items_4_0= ruleTupleItem ) ) )* )? otherlv_5= ')' ) )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2021:1: ( () otherlv_1= '(' ( ( (lv_items_2_0= ruleTupleItem ) ) (otherlv_3= ',' ( (lv_items_4_0= ruleTupleItem ) ) )* )? otherlv_5= ')' )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2010:28: ( ( () otherlv_1= '(' ( ( (lv_items_2_0= ruleTupleItem ) ) (otherlv_3= ',' ( (lv_items_4_0= ruleTupleItem ) ) )* )? otherlv_5= ')' ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2011:1: ( () otherlv_1= '(' ( ( (lv_items_2_0= ruleTupleItem ) ) (otherlv_3= ',' ( (lv_items_4_0= ruleTupleItem ) ) )* )? otherlv_5= ')' )
             {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2021:1: ( () otherlv_1= '(' ( ( (lv_items_2_0= ruleTupleItem ) ) (otherlv_3= ',' ( (lv_items_4_0= ruleTupleItem ) ) )* )? otherlv_5= ')' )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2021:2: () otherlv_1= '(' ( ( (lv_items_2_0= ruleTupleItem ) ) (otherlv_3= ',' ( (lv_items_4_0= ruleTupleItem ) ) )* )? otherlv_5= ')'
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2011:1: ( () otherlv_1= '(' ( ( (lv_items_2_0= ruleTupleItem ) ) (otherlv_3= ',' ( (lv_items_4_0= ruleTupleItem ) ) )* )? otherlv_5= ')' )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2011:2: () otherlv_1= '(' ( ( (lv_items_2_0= ruleTupleItem ) ) (otherlv_3= ',' ( (lv_items_4_0= ruleTupleItem ) ) )* )? otherlv_5= ')'
             {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2021:2: ()
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2022:5: 
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2011:2: ()
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2012:5: 
             {
 
                     current = forceCreateModelElement(
@@ -5429,11 +5403,11 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,24,FOLLOW_24_in_ruleTupleLiteral4949); 
+            otherlv_1=(Token)match(input,24,FOLLOW_24_in_ruleTupleLiteral4922); 
 
                 	newLeafNode(otherlv_1, grammarAccess.getTupleLiteralAccess().getLeftParenthesisKeyword_1());
                 
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2031:1: ( ( (lv_items_2_0= ruleTupleItem ) ) (otherlv_3= ',' ( (lv_items_4_0= ruleTupleItem ) ) )* )?
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2021:1: ( ( (lv_items_2_0= ruleTupleItem ) ) (otherlv_3= ',' ( (lv_items_4_0= ruleTupleItem ) ) )* )?
             int alt37=2;
             int LA37_0 = input.LA(1);
 
@@ -5442,18 +5416,18 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
             }
             switch (alt37) {
                 case 1 :
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2031:2: ( (lv_items_2_0= ruleTupleItem ) ) (otherlv_3= ',' ( (lv_items_4_0= ruleTupleItem ) ) )*
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2021:2: ( (lv_items_2_0= ruleTupleItem ) ) (otherlv_3= ',' ( (lv_items_4_0= ruleTupleItem ) ) )*
                     {
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2031:2: ( (lv_items_2_0= ruleTupleItem ) )
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2032:1: (lv_items_2_0= ruleTupleItem )
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2021:2: ( (lv_items_2_0= ruleTupleItem ) )
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2022:1: (lv_items_2_0= ruleTupleItem )
                     {
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2032:1: (lv_items_2_0= ruleTupleItem )
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2033:3: lv_items_2_0= ruleTupleItem
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2022:1: (lv_items_2_0= ruleTupleItem )
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2023:3: lv_items_2_0= ruleTupleItem
                     {
                      
                     	        newCompositeNode(grammarAccess.getTupleLiteralAccess().getItemsTupleItemParserRuleCall_2_0_0()); 
                     	    
-                    pushFollow(FOLLOW_ruleTupleItem_in_ruleTupleLiteral4971);
+                    pushFollow(FOLLOW_ruleTupleItem_in_ruleTupleLiteral4944);
                     lv_items_2_0=ruleTupleItem();
 
                     state._fsp--;
@@ -5475,7 +5449,7 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2049:2: (otherlv_3= ',' ( (lv_items_4_0= ruleTupleItem ) ) )*
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2039:2: (otherlv_3= ',' ( (lv_items_4_0= ruleTupleItem ) ) )*
                     loop36:
                     do {
                         int alt36=2;
@@ -5488,22 +5462,22 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
                         switch (alt36) {
                     	case 1 :
-                    	    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2049:4: otherlv_3= ',' ( (lv_items_4_0= ruleTupleItem ) )
+                    	    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2039:4: otherlv_3= ',' ( (lv_items_4_0= ruleTupleItem ) )
                     	    {
-                    	    otherlv_3=(Token)match(input,37,FOLLOW_37_in_ruleTupleLiteral4984); 
+                    	    otherlv_3=(Token)match(input,37,FOLLOW_37_in_ruleTupleLiteral4957); 
 
                     	        	newLeafNode(otherlv_3, grammarAccess.getTupleLiteralAccess().getCommaKeyword_2_1_0());
                     	        
-                    	    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2053:1: ( (lv_items_4_0= ruleTupleItem ) )
-                    	    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2054:1: (lv_items_4_0= ruleTupleItem )
+                    	    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2043:1: ( (lv_items_4_0= ruleTupleItem ) )
+                    	    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2044:1: (lv_items_4_0= ruleTupleItem )
                     	    {
-                    	    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2054:1: (lv_items_4_0= ruleTupleItem )
-                    	    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2055:3: lv_items_4_0= ruleTupleItem
+                    	    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2044:1: (lv_items_4_0= ruleTupleItem )
+                    	    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2045:3: lv_items_4_0= ruleTupleItem
                     	    {
                     	     
                     	    	        newCompositeNode(grammarAccess.getTupleLiteralAccess().getItemsTupleItemParserRuleCall_2_1_1_0()); 
                     	    	    
-                    	    pushFollow(FOLLOW_ruleTupleItem_in_ruleTupleLiteral5005);
+                    	    pushFollow(FOLLOW_ruleTupleItem_in_ruleTupleLiteral4978);
                     	    lv_items_4_0=ruleTupleItem();
 
                     	    state._fsp--;
@@ -5540,7 +5514,7 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_5=(Token)match(input,25,FOLLOW_25_in_ruleTupleLiteral5021); 
+            otherlv_5=(Token)match(input,25,FOLLOW_25_in_ruleTupleLiteral4994); 
 
                 	newLeafNode(otherlv_5, grammarAccess.getTupleLiteralAccess().getRightParenthesisKeyword_3());
                 
@@ -5565,7 +5539,7 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleTupleItem"
-    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2083:1: entryRuleTupleItem returns [EObject current=null] : iv_ruleTupleItem= ruleTupleItem EOF ;
+    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2073:1: entryRuleTupleItem returns [EObject current=null] : iv_ruleTupleItem= ruleTupleItem EOF ;
     public final EObject entryRuleTupleItem() throws RecognitionException {
         EObject current = null;
 
@@ -5573,17 +5547,17 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2084:2: (iv_ruleTupleItem= ruleTupleItem EOF )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2085:2: iv_ruleTupleItem= ruleTupleItem EOF
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2074:2: (iv_ruleTupleItem= ruleTupleItem EOF )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2075:2: iv_ruleTupleItem= ruleTupleItem EOF
             {
              newCompositeNode(grammarAccess.getTupleItemRule()); 
-            pushFollow(FOLLOW_ruleTupleItem_in_entryRuleTupleItem5057);
+            pushFollow(FOLLOW_ruleTupleItem_in_entryRuleTupleItem5030);
             iv_ruleTupleItem=ruleTupleItem();
 
             state._fsp--;
 
              current =iv_ruleTupleItem; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleTupleItem5067); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleTupleItem5040); 
 
             }
 
@@ -5601,7 +5575,7 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleTupleItem"
-    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2092:1: ruleTupleItem returns [EObject current=null] : ( ( (lv_name_0_0= RULE_ID ) ) otherlv_1= ':' ( (lv_value_2_0= ruleLiteralExpression ) ) ) ;
+    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2082:1: ruleTupleItem returns [EObject current=null] : ( ( (lv_name_0_0= RULE_ID ) ) otherlv_1= ':' ( (lv_value_2_0= ruleLiteralExpression ) ) ) ;
     public final EObject ruleTupleItem() throws RecognitionException {
         EObject current = null;
 
@@ -5613,19 +5587,19 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2095:28: ( ( ( (lv_name_0_0= RULE_ID ) ) otherlv_1= ':' ( (lv_value_2_0= ruleLiteralExpression ) ) ) )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2096:1: ( ( (lv_name_0_0= RULE_ID ) ) otherlv_1= ':' ( (lv_value_2_0= ruleLiteralExpression ) ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2085:28: ( ( ( (lv_name_0_0= RULE_ID ) ) otherlv_1= ':' ( (lv_value_2_0= ruleLiteralExpression ) ) ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2086:1: ( ( (lv_name_0_0= RULE_ID ) ) otherlv_1= ':' ( (lv_value_2_0= ruleLiteralExpression ) ) )
             {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2096:1: ( ( (lv_name_0_0= RULE_ID ) ) otherlv_1= ':' ( (lv_value_2_0= ruleLiteralExpression ) ) )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2096:2: ( (lv_name_0_0= RULE_ID ) ) otherlv_1= ':' ( (lv_value_2_0= ruleLiteralExpression ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2086:1: ( ( (lv_name_0_0= RULE_ID ) ) otherlv_1= ':' ( (lv_value_2_0= ruleLiteralExpression ) ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2086:2: ( (lv_name_0_0= RULE_ID ) ) otherlv_1= ':' ( (lv_value_2_0= ruleLiteralExpression ) )
             {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2096:2: ( (lv_name_0_0= RULE_ID ) )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2097:1: (lv_name_0_0= RULE_ID )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2086:2: ( (lv_name_0_0= RULE_ID ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2087:1: (lv_name_0_0= RULE_ID )
             {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2097:1: (lv_name_0_0= RULE_ID )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2098:3: lv_name_0_0= RULE_ID
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2087:1: (lv_name_0_0= RULE_ID )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2088:3: lv_name_0_0= RULE_ID
             {
-            lv_name_0_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleTupleItem5109); 
+            lv_name_0_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleTupleItem5082); 
 
             			newLeafNode(lv_name_0_0, grammarAccess.getTupleItemAccess().getNameIDTerminalRuleCall_0_0()); 
             		
@@ -5645,20 +5619,20 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,23,FOLLOW_23_in_ruleTupleItem5126); 
+            otherlv_1=(Token)match(input,23,FOLLOW_23_in_ruleTupleItem5099); 
 
                 	newLeafNode(otherlv_1, grammarAccess.getTupleItemAccess().getColonKeyword_1());
                 
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2118:1: ( (lv_value_2_0= ruleLiteralExpression ) )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2119:1: (lv_value_2_0= ruleLiteralExpression )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2108:1: ( (lv_value_2_0= ruleLiteralExpression ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2109:1: (lv_value_2_0= ruleLiteralExpression )
             {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2119:1: (lv_value_2_0= ruleLiteralExpression )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2120:3: lv_value_2_0= ruleLiteralExpression
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2109:1: (lv_value_2_0= ruleLiteralExpression )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2110:3: lv_value_2_0= ruleLiteralExpression
             {
              
             	        newCompositeNode(grammarAccess.getTupleItemAccess().getValueLiteralExpressionParserRuleCall_2_0()); 
             	    
-            pushFollow(FOLLOW_ruleLiteralExpression_in_ruleTupleItem5147);
+            pushFollow(FOLLOW_ruleLiteralExpression_in_ruleTupleItem5120);
             lv_value_2_0=ruleLiteralExpression();
 
             state._fsp--;
@@ -5700,212 +5674,8 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
     // $ANTLR end "ruleTupleItem"
 
 
-    // $ANTLR start "entryRuleSetLiteral"
-    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2144:1: entryRuleSetLiteral returns [EObject current=null] : iv_ruleSetLiteral= ruleSetLiteral EOF ;
-    public final EObject entryRuleSetLiteral() throws RecognitionException {
-        EObject current = null;
-
-        EObject iv_ruleSetLiteral = null;
-
-
-        try {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2145:2: (iv_ruleSetLiteral= ruleSetLiteral EOF )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2146:2: iv_ruleSetLiteral= ruleSetLiteral EOF
-            {
-             newCompositeNode(grammarAccess.getSetLiteralRule()); 
-            pushFollow(FOLLOW_ruleSetLiteral_in_entryRuleSetLiteral5183);
-            iv_ruleSetLiteral=ruleSetLiteral();
-
-            state._fsp--;
-
-             current =iv_ruleSetLiteral; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleSetLiteral5193); 
-
-            }
-
-        }
-         
-            catch (RecognitionException re) { 
-                recover(input,re); 
-                appendSkippedTokens();
-            } 
-        finally {
-        }
-        return current;
-    }
-    // $ANTLR end "entryRuleSetLiteral"
-
-
-    // $ANTLR start "ruleSetLiteral"
-    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2153:1: ruleSetLiteral returns [EObject current=null] : ( () otherlv_1= '{' ( ( (lv_items_2_0= ruleLiteralExpression ) ) (otherlv_3= ',' ( (lv_items_4_0= ruleLiteralExpression ) ) )* )? otherlv_5= '}' ) ;
-    public final EObject ruleSetLiteral() throws RecognitionException {
-        EObject current = null;
-
-        Token otherlv_1=null;
-        Token otherlv_3=null;
-        Token otherlv_5=null;
-        EObject lv_items_2_0 = null;
-
-        EObject lv_items_4_0 = null;
-
-
-         enterRule(); 
-            
-        try {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2156:28: ( ( () otherlv_1= '{' ( ( (lv_items_2_0= ruleLiteralExpression ) ) (otherlv_3= ',' ( (lv_items_4_0= ruleLiteralExpression ) ) )* )? otherlv_5= '}' ) )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2157:1: ( () otherlv_1= '{' ( ( (lv_items_2_0= ruleLiteralExpression ) ) (otherlv_3= ',' ( (lv_items_4_0= ruleLiteralExpression ) ) )* )? otherlv_5= '}' )
-            {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2157:1: ( () otherlv_1= '{' ( ( (lv_items_2_0= ruleLiteralExpression ) ) (otherlv_3= ',' ( (lv_items_4_0= ruleLiteralExpression ) ) )* )? otherlv_5= '}' )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2157:2: () otherlv_1= '{' ( ( (lv_items_2_0= ruleLiteralExpression ) ) (otherlv_3= ',' ( (lv_items_4_0= ruleLiteralExpression ) ) )* )? otherlv_5= '}'
-            {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2157:2: ()
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2158:5: 
-            {
-
-                    current = forceCreateModelElement(
-                        grammarAccess.getSetLiteralAccess().getSetLiteralAction_0(),
-                        current);
-                
-
-            }
-
-            otherlv_1=(Token)match(input,40,FOLLOW_40_in_ruleSetLiteral5239); 
-
-                	newLeafNode(otherlv_1, grammarAccess.getSetLiteralAccess().getLeftCurlyBracketKeyword_1());
-                
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2167:1: ( ( (lv_items_2_0= ruleLiteralExpression ) ) (otherlv_3= ',' ( (lv_items_4_0= ruleLiteralExpression ) ) )* )?
-            int alt39=2;
-            int LA39_0 = input.LA(1);
-
-            if ( ((LA39_0>=RULE_ID && LA39_0<=RULE_BIN)||LA39_0==24||LA39_0==26||(LA39_0>=29 && LA39_0<=35)||(LA39_0>=39 && LA39_0<=40)||LA39_0==69) ) {
-                alt39=1;
-            }
-            switch (alt39) {
-                case 1 :
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2167:2: ( (lv_items_2_0= ruleLiteralExpression ) ) (otherlv_3= ',' ( (lv_items_4_0= ruleLiteralExpression ) ) )*
-                    {
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2167:2: ( (lv_items_2_0= ruleLiteralExpression ) )
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2168:1: (lv_items_2_0= ruleLiteralExpression )
-                    {
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2168:1: (lv_items_2_0= ruleLiteralExpression )
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2169:3: lv_items_2_0= ruleLiteralExpression
-                    {
-                     
-                    	        newCompositeNode(grammarAccess.getSetLiteralAccess().getItemsLiteralExpressionParserRuleCall_2_0_0()); 
-                    	    
-                    pushFollow(FOLLOW_ruleLiteralExpression_in_ruleSetLiteral5261);
-                    lv_items_2_0=ruleLiteralExpression();
-
-                    state._fsp--;
-
-
-                    	        if (current==null) {
-                    	            current = createModelElementForParent(grammarAccess.getSetLiteralRule());
-                    	        }
-                           		add(
-                           			current, 
-                           			"items",
-                            		lv_items_2_0, 
-                            		"LiteralExpression");
-                    	        afterParserOrEnumRuleCall();
-                    	    
-
-                    }
-
-
-                    }
-
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2185:2: (otherlv_3= ',' ( (lv_items_4_0= ruleLiteralExpression ) ) )*
-                    loop38:
-                    do {
-                        int alt38=2;
-                        int LA38_0 = input.LA(1);
-
-                        if ( (LA38_0==37) ) {
-                            alt38=1;
-                        }
-
-
-                        switch (alt38) {
-                    	case 1 :
-                    	    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2185:4: otherlv_3= ',' ( (lv_items_4_0= ruleLiteralExpression ) )
-                    	    {
-                    	    otherlv_3=(Token)match(input,37,FOLLOW_37_in_ruleSetLiteral5274); 
-
-                    	        	newLeafNode(otherlv_3, grammarAccess.getSetLiteralAccess().getCommaKeyword_2_1_0());
-                    	        
-                    	    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2189:1: ( (lv_items_4_0= ruleLiteralExpression ) )
-                    	    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2190:1: (lv_items_4_0= ruleLiteralExpression )
-                    	    {
-                    	    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2190:1: (lv_items_4_0= ruleLiteralExpression )
-                    	    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2191:3: lv_items_4_0= ruleLiteralExpression
-                    	    {
-                    	     
-                    	    	        newCompositeNode(grammarAccess.getSetLiteralAccess().getItemsLiteralExpressionParserRuleCall_2_1_1_0()); 
-                    	    	    
-                    	    pushFollow(FOLLOW_ruleLiteralExpression_in_ruleSetLiteral5295);
-                    	    lv_items_4_0=ruleLiteralExpression();
-
-                    	    state._fsp--;
-
-
-                    	    	        if (current==null) {
-                    	    	            current = createModelElementForParent(grammarAccess.getSetLiteralRule());
-                    	    	        }
-                    	           		add(
-                    	           			current, 
-                    	           			"items",
-                    	            		lv_items_4_0, 
-                    	            		"LiteralExpression");
-                    	    	        afterParserOrEnumRuleCall();
-                    	    	    
-
-                    	    }
-
-
-                    	    }
-
-
-                    	    }
-                    	    break;
-
-                    	default :
-                    	    break loop38;
-                        }
-                    } while (true);
-
-
-                    }
-                    break;
-
-            }
-
-            otherlv_5=(Token)match(input,41,FOLLOW_41_in_ruleSetLiteral5311); 
-
-                	newLeafNode(otherlv_5, grammarAccess.getSetLiteralAccess().getRightCurlyBracketKeyword_3());
-                
-
-            }
-
-
-            }
-
-             leaveRule(); 
-        }
-         
-            catch (RecognitionException re) { 
-                recover(input,re); 
-                appendSkippedTokens();
-            } 
-        finally {
-        }
-        return current;
-    }
-    // $ANTLR end "ruleSetLiteral"
-
-
     // $ANTLR start "entryRuleBlock"
-    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2219:1: entryRuleBlock returns [EObject current=null] : iv_ruleBlock= ruleBlock EOF ;
+    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2134:1: entryRuleBlock returns [EObject current=null] : iv_ruleBlock= ruleBlock EOF ;
     public final EObject entryRuleBlock() throws RecognitionException {
         EObject current = null;
 
@@ -5913,17 +5683,17 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2220:2: (iv_ruleBlock= ruleBlock EOF )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2221:2: iv_ruleBlock= ruleBlock EOF
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2135:2: (iv_ruleBlock= ruleBlock EOF )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2136:2: iv_ruleBlock= ruleBlock EOF
             {
              newCompositeNode(grammarAccess.getBlockRule()); 
-            pushFollow(FOLLOW_ruleBlock_in_entryRuleBlock5347);
+            pushFollow(FOLLOW_ruleBlock_in_entryRuleBlock5156);
             iv_ruleBlock=ruleBlock();
 
             state._fsp--;
 
              current =iv_ruleBlock; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleBlock5357); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleBlock5166); 
 
             }
 
@@ -5941,7 +5711,7 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleBlock"
-    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2228:1: ruleBlock returns [EObject current=null] : ( () otherlv_1= '{' (otherlv_2= '~' ( (lv_name_3_0= RULE_ID ) ) )? ( (lv_sentences_4_0= ruleSentence ) )* otherlv_5= '}' ) ;
+    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2143:1: ruleBlock returns [EObject current=null] : ( () otherlv_1= '{' (otherlv_2= '~' ( (lv_name_3_0= RULE_ID ) ) )? ( (lv_sentences_4_0= ruleSentence ) )* otherlv_5= '}' ) ;
     public final EObject ruleBlock() throws RecognitionException {
         EObject current = null;
 
@@ -5955,14 +5725,14 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2231:28: ( ( () otherlv_1= '{' (otherlv_2= '~' ( (lv_name_3_0= RULE_ID ) ) )? ( (lv_sentences_4_0= ruleSentence ) )* otherlv_5= '}' ) )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2232:1: ( () otherlv_1= '{' (otherlv_2= '~' ( (lv_name_3_0= RULE_ID ) ) )? ( (lv_sentences_4_0= ruleSentence ) )* otherlv_5= '}' )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2146:28: ( ( () otherlv_1= '{' (otherlv_2= '~' ( (lv_name_3_0= RULE_ID ) ) )? ( (lv_sentences_4_0= ruleSentence ) )* otherlv_5= '}' ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2147:1: ( () otherlv_1= '{' (otherlv_2= '~' ( (lv_name_3_0= RULE_ID ) ) )? ( (lv_sentences_4_0= ruleSentence ) )* otherlv_5= '}' )
             {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2232:1: ( () otherlv_1= '{' (otherlv_2= '~' ( (lv_name_3_0= RULE_ID ) ) )? ( (lv_sentences_4_0= ruleSentence ) )* otherlv_5= '}' )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2232:2: () otherlv_1= '{' (otherlv_2= '~' ( (lv_name_3_0= RULE_ID ) ) )? ( (lv_sentences_4_0= ruleSentence ) )* otherlv_5= '}'
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2147:1: ( () otherlv_1= '{' (otherlv_2= '~' ( (lv_name_3_0= RULE_ID ) ) )? ( (lv_sentences_4_0= ruleSentence ) )* otherlv_5= '}' )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2147:2: () otherlv_1= '{' (otherlv_2= '~' ( (lv_name_3_0= RULE_ID ) ) )? ( (lv_sentences_4_0= ruleSentence ) )* otherlv_5= '}'
             {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2232:2: ()
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2233:5: 
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2147:2: ()
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2148:5: 
             {
 
                     current = forceCreateModelElement(
@@ -5972,32 +5742,32 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,40,FOLLOW_40_in_ruleBlock5403); 
+            otherlv_1=(Token)match(input,40,FOLLOW_40_in_ruleBlock5212); 
 
                 	newLeafNode(otherlv_1, grammarAccess.getBlockAccess().getLeftCurlyBracketKeyword_1());
                 
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2242:1: (otherlv_2= '~' ( (lv_name_3_0= RULE_ID ) ) )?
-            int alt40=2;
-            int LA40_0 = input.LA(1);
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2157:1: (otherlv_2= '~' ( (lv_name_3_0= RULE_ID ) ) )?
+            int alt38=2;
+            int LA38_0 = input.LA(1);
 
-            if ( (LA40_0==42) ) {
-                alt40=1;
+            if ( (LA38_0==41) ) {
+                alt38=1;
             }
-            switch (alt40) {
+            switch (alt38) {
                 case 1 :
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2242:3: otherlv_2= '~' ( (lv_name_3_0= RULE_ID ) )
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2157:3: otherlv_2= '~' ( (lv_name_3_0= RULE_ID ) )
                     {
-                    otherlv_2=(Token)match(input,42,FOLLOW_42_in_ruleBlock5416); 
+                    otherlv_2=(Token)match(input,41,FOLLOW_41_in_ruleBlock5225); 
 
                         	newLeafNode(otherlv_2, grammarAccess.getBlockAccess().getTildeKeyword_2_0());
                         
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2246:1: ( (lv_name_3_0= RULE_ID ) )
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2247:1: (lv_name_3_0= RULE_ID )
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2161:1: ( (lv_name_3_0= RULE_ID ) )
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2162:1: (lv_name_3_0= RULE_ID )
                     {
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2247:1: (lv_name_3_0= RULE_ID )
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2248:3: lv_name_3_0= RULE_ID
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2162:1: (lv_name_3_0= RULE_ID )
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2163:3: lv_name_3_0= RULE_ID
                     {
-                    lv_name_3_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleBlock5433); 
+                    lv_name_3_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleBlock5242); 
 
                     			newLeafNode(lv_name_3_0, grammarAccess.getBlockAccess().getNameIDTerminalRuleCall_2_1_0()); 
                     		
@@ -6023,28 +5793,28 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2264:4: ( (lv_sentences_4_0= ruleSentence ) )*
-            loop41:
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2179:4: ( (lv_sentences_4_0= ruleSentence ) )*
+            loop39:
             do {
-                int alt41=2;
-                int LA41_0 = input.LA(1);
+                int alt39=2;
+                int LA39_0 = input.LA(1);
 
-                if ( (LA41_0==RULE_ID||LA41_0==21||LA41_0==40||LA41_0==43||(LA41_0>=45 && LA41_0<=49)||(LA41_0>=56 && LA41_0<=57)||(LA41_0>=60 && LA41_0<=61)||(LA41_0>=63 && LA41_0<=65)) ) {
-                    alt41=1;
+                if ( (LA39_0==RULE_ID||LA39_0==21||LA39_0==40||LA39_0==43||(LA39_0>=45 && LA39_0<=49)||(LA39_0>=56 && LA39_0<=57)||(LA39_0>=60 && LA39_0<=61)||(LA39_0>=63 && LA39_0<=65)) ) {
+                    alt39=1;
                 }
 
 
-                switch (alt41) {
+                switch (alt39) {
             	case 1 :
-            	    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2265:1: (lv_sentences_4_0= ruleSentence )
+            	    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2180:1: (lv_sentences_4_0= ruleSentence )
             	    {
-            	    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2265:1: (lv_sentences_4_0= ruleSentence )
-            	    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2266:3: lv_sentences_4_0= ruleSentence
+            	    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2180:1: (lv_sentences_4_0= ruleSentence )
+            	    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2181:3: lv_sentences_4_0= ruleSentence
             	    {
             	     
             	    	        newCompositeNode(grammarAccess.getBlockAccess().getSentencesSentenceParserRuleCall_3_0()); 
             	    	    
-            	    pushFollow(FOLLOW_ruleSentence_in_ruleBlock5461);
+            	    pushFollow(FOLLOW_ruleSentence_in_ruleBlock5270);
             	    lv_sentences_4_0=ruleSentence();
 
             	    state._fsp--;
@@ -6068,11 +5838,11 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    break loop41;
+            	    break loop39;
                 }
             } while (true);
 
-            otherlv_5=(Token)match(input,41,FOLLOW_41_in_ruleBlock5474); 
+            otherlv_5=(Token)match(input,42,FOLLOW_42_in_ruleBlock5283); 
 
                 	newLeafNode(otherlv_5, grammarAccess.getBlockAccess().getRightCurlyBracketKeyword_4());
                 
@@ -6097,7 +5867,7 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleNoop"
-    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2294:1: entryRuleNoop returns [EObject current=null] : iv_ruleNoop= ruleNoop EOF ;
+    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2209:1: entryRuleNoop returns [EObject current=null] : iv_ruleNoop= ruleNoop EOF ;
     public final EObject entryRuleNoop() throws RecognitionException {
         EObject current = null;
 
@@ -6105,17 +5875,17 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2295:2: (iv_ruleNoop= ruleNoop EOF )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2296:2: iv_ruleNoop= ruleNoop EOF
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2210:2: (iv_ruleNoop= ruleNoop EOF )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2211:2: iv_ruleNoop= ruleNoop EOF
             {
              newCompositeNode(grammarAccess.getNoopRule()); 
-            pushFollow(FOLLOW_ruleNoop_in_entryRuleNoop5510);
+            pushFollow(FOLLOW_ruleNoop_in_entryRuleNoop5319);
             iv_ruleNoop=ruleNoop();
 
             state._fsp--;
 
              current =iv_ruleNoop; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleNoop5520); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleNoop5329); 
 
             }
 
@@ -6133,7 +5903,7 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleNoop"
-    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2303:1: ruleNoop returns [EObject current=null] : ( () ( (lv_name_1_0= 'noop' ) ) ) ;
+    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2218:1: ruleNoop returns [EObject current=null] : ( () ( (lv_name_1_0= 'noop' ) ) ) ;
     public final EObject ruleNoop() throws RecognitionException {
         EObject current = null;
 
@@ -6142,14 +5912,14 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2306:28: ( ( () ( (lv_name_1_0= 'noop' ) ) ) )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2307:1: ( () ( (lv_name_1_0= 'noop' ) ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2221:28: ( ( () ( (lv_name_1_0= 'noop' ) ) ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2222:1: ( () ( (lv_name_1_0= 'noop' ) ) )
             {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2307:1: ( () ( (lv_name_1_0= 'noop' ) ) )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2307:2: () ( (lv_name_1_0= 'noop' ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2222:1: ( () ( (lv_name_1_0= 'noop' ) ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2222:2: () ( (lv_name_1_0= 'noop' ) )
             {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2307:2: ()
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2308:5: 
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2222:2: ()
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2223:5: 
             {
 
                     current = forceCreateModelElement(
@@ -6159,13 +5929,13 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2313:2: ( (lv_name_1_0= 'noop' ) )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2314:1: (lv_name_1_0= 'noop' )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2228:2: ( (lv_name_1_0= 'noop' ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2229:1: (lv_name_1_0= 'noop' )
             {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2314:1: (lv_name_1_0= 'noop' )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2315:3: lv_name_1_0= 'noop'
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2229:1: (lv_name_1_0= 'noop' )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2230:3: lv_name_1_0= 'noop'
             {
-            lv_name_1_0=(Token)match(input,43,FOLLOW_43_in_ruleNoop5572); 
+            lv_name_1_0=(Token)match(input,43,FOLLOW_43_in_ruleNoop5381); 
 
                     newLeafNode(lv_name_1_0, grammarAccess.getNoopAccess().getNameNoopKeyword_1_0());
                 
@@ -6202,7 +5972,7 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRulePair"
-    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2336:1: entryRulePair returns [EObject current=null] : iv_rulePair= rulePair EOF ;
+    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2251:1: entryRulePair returns [EObject current=null] : iv_rulePair= rulePair EOF ;
     public final EObject entryRulePair() throws RecognitionException {
         EObject current = null;
 
@@ -6210,17 +5980,17 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2337:2: (iv_rulePair= rulePair EOF )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2338:2: iv_rulePair= rulePair EOF
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2252:2: (iv_rulePair= rulePair EOF )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2253:2: iv_rulePair= rulePair EOF
             {
              newCompositeNode(grammarAccess.getPairRule()); 
-            pushFollow(FOLLOW_rulePair_in_entryRulePair5621);
+            pushFollow(FOLLOW_rulePair_in_entryRulePair5430);
             iv_rulePair=rulePair();
 
             state._fsp--;
 
              current =iv_rulePair; 
-            match(input,EOF,FOLLOW_EOF_in_entryRulePair5631); 
+            match(input,EOF,FOLLOW_EOF_in_entryRulePair5440); 
 
             }
 
@@ -6238,7 +6008,7 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "rulePair"
-    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2345:1: rulePair returns [EObject current=null] : ( ( (lv_name_0_0= RULE_ID ) ) otherlv_1= '=' ( (lv_value_2_0= RULE_STRING ) ) ) ;
+    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2260:1: rulePair returns [EObject current=null] : ( ( (lv_name_0_0= RULE_ID ) ) otherlv_1= '=' ( (lv_value_2_0= RULE_STRING ) ) ) ;
     public final EObject rulePair() throws RecognitionException {
         EObject current = null;
 
@@ -6249,19 +6019,19 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2348:28: ( ( ( (lv_name_0_0= RULE_ID ) ) otherlv_1= '=' ( (lv_value_2_0= RULE_STRING ) ) ) )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2349:1: ( ( (lv_name_0_0= RULE_ID ) ) otherlv_1= '=' ( (lv_value_2_0= RULE_STRING ) ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2263:28: ( ( ( (lv_name_0_0= RULE_ID ) ) otherlv_1= '=' ( (lv_value_2_0= RULE_STRING ) ) ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2264:1: ( ( (lv_name_0_0= RULE_ID ) ) otherlv_1= '=' ( (lv_value_2_0= RULE_STRING ) ) )
             {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2349:1: ( ( (lv_name_0_0= RULE_ID ) ) otherlv_1= '=' ( (lv_value_2_0= RULE_STRING ) ) )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2349:2: ( (lv_name_0_0= RULE_ID ) ) otherlv_1= '=' ( (lv_value_2_0= RULE_STRING ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2264:1: ( ( (lv_name_0_0= RULE_ID ) ) otherlv_1= '=' ( (lv_value_2_0= RULE_STRING ) ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2264:2: ( (lv_name_0_0= RULE_ID ) ) otherlv_1= '=' ( (lv_value_2_0= RULE_STRING ) )
             {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2349:2: ( (lv_name_0_0= RULE_ID ) )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2350:1: (lv_name_0_0= RULE_ID )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2264:2: ( (lv_name_0_0= RULE_ID ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2265:1: (lv_name_0_0= RULE_ID )
             {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2350:1: (lv_name_0_0= RULE_ID )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2351:3: lv_name_0_0= RULE_ID
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2265:1: (lv_name_0_0= RULE_ID )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2266:3: lv_name_0_0= RULE_ID
             {
-            lv_name_0_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_rulePair5673); 
+            lv_name_0_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_rulePair5482); 
 
             			newLeafNode(lv_name_0_0, grammarAccess.getPairAccess().getNameIDTerminalRuleCall_0_0()); 
             		
@@ -6281,17 +6051,17 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,44,FOLLOW_44_in_rulePair5690); 
+            otherlv_1=(Token)match(input,44,FOLLOW_44_in_rulePair5499); 
 
                 	newLeafNode(otherlv_1, grammarAccess.getPairAccess().getEqualsSignKeyword_1());
                 
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2371:1: ( (lv_value_2_0= RULE_STRING ) )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2372:1: (lv_value_2_0= RULE_STRING )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2286:1: ( (lv_value_2_0= RULE_STRING ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2287:1: (lv_value_2_0= RULE_STRING )
             {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2372:1: (lv_value_2_0= RULE_STRING )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2373:3: lv_value_2_0= RULE_STRING
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2287:1: (lv_value_2_0= RULE_STRING )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2288:3: lv_value_2_0= RULE_STRING
             {
-            lv_value_2_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rulePair5707); 
+            lv_value_2_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rulePair5516); 
 
             			newLeafNode(lv_value_2_0, grammarAccess.getPairAccess().getValueSTRINGTerminalRuleCall_2_0()); 
             		
@@ -6332,7 +6102,7 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleConstant"
-    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2397:1: entryRuleConstant returns [EObject current=null] : iv_ruleConstant= ruleConstant EOF ;
+    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2312:1: entryRuleConstant returns [EObject current=null] : iv_ruleConstant= ruleConstant EOF ;
     public final EObject entryRuleConstant() throws RecognitionException {
         EObject current = null;
 
@@ -6340,17 +6110,17 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2398:2: (iv_ruleConstant= ruleConstant EOF )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2399:2: iv_ruleConstant= ruleConstant EOF
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2313:2: (iv_ruleConstant= ruleConstant EOF )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2314:2: iv_ruleConstant= ruleConstant EOF
             {
              newCompositeNode(grammarAccess.getConstantRule()); 
-            pushFollow(FOLLOW_ruleConstant_in_entryRuleConstant5748);
+            pushFollow(FOLLOW_ruleConstant_in_entryRuleConstant5557);
             iv_ruleConstant=ruleConstant();
 
             state._fsp--;
 
              current =iv_ruleConstant; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleConstant5758); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleConstant5567); 
 
             }
 
@@ -6368,7 +6138,7 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleConstant"
-    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2406:1: ruleConstant returns [EObject current=null] : (otherlv_0= 'constant' ( (lv_name_1_0= RULE_ID ) ) ( (lv_type_2_0= ruleTypeRef ) ) otherlv_3= '=' ( (lv_value_4_0= ruleLiteralExpression ) ) ) ;
+    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2321:1: ruleConstant returns [EObject current=null] : (otherlv_0= 'constant' ( (lv_name_1_0= RULE_ID ) ) ( (lv_type_2_0= ruleTypeRef ) ) otherlv_3= '=' ( (lv_value_4_0= ruleLiteralExpression ) ) ) ;
     public final EObject ruleConstant() throws RecognitionException {
         EObject current = null;
 
@@ -6383,23 +6153,23 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2409:28: ( (otherlv_0= 'constant' ( (lv_name_1_0= RULE_ID ) ) ( (lv_type_2_0= ruleTypeRef ) ) otherlv_3= '=' ( (lv_value_4_0= ruleLiteralExpression ) ) ) )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2410:1: (otherlv_0= 'constant' ( (lv_name_1_0= RULE_ID ) ) ( (lv_type_2_0= ruleTypeRef ) ) otherlv_3= '=' ( (lv_value_4_0= ruleLiteralExpression ) ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2324:28: ( (otherlv_0= 'constant' ( (lv_name_1_0= RULE_ID ) ) ( (lv_type_2_0= ruleTypeRef ) ) otherlv_3= '=' ( (lv_value_4_0= ruleLiteralExpression ) ) ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2325:1: (otherlv_0= 'constant' ( (lv_name_1_0= RULE_ID ) ) ( (lv_type_2_0= ruleTypeRef ) ) otherlv_3= '=' ( (lv_value_4_0= ruleLiteralExpression ) ) )
             {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2410:1: (otherlv_0= 'constant' ( (lv_name_1_0= RULE_ID ) ) ( (lv_type_2_0= ruleTypeRef ) ) otherlv_3= '=' ( (lv_value_4_0= ruleLiteralExpression ) ) )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2410:3: otherlv_0= 'constant' ( (lv_name_1_0= RULE_ID ) ) ( (lv_type_2_0= ruleTypeRef ) ) otherlv_3= '=' ( (lv_value_4_0= ruleLiteralExpression ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2325:1: (otherlv_0= 'constant' ( (lv_name_1_0= RULE_ID ) ) ( (lv_type_2_0= ruleTypeRef ) ) otherlv_3= '=' ( (lv_value_4_0= ruleLiteralExpression ) ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2325:3: otherlv_0= 'constant' ( (lv_name_1_0= RULE_ID ) ) ( (lv_type_2_0= ruleTypeRef ) ) otherlv_3= '=' ( (lv_value_4_0= ruleLiteralExpression ) )
             {
-            otherlv_0=(Token)match(input,45,FOLLOW_45_in_ruleConstant5795); 
+            otherlv_0=(Token)match(input,45,FOLLOW_45_in_ruleConstant5604); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getConstantAccess().getConstantKeyword_0());
                 
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2414:1: ( (lv_name_1_0= RULE_ID ) )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2415:1: (lv_name_1_0= RULE_ID )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2329:1: ( (lv_name_1_0= RULE_ID ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2330:1: (lv_name_1_0= RULE_ID )
             {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2415:1: (lv_name_1_0= RULE_ID )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2416:3: lv_name_1_0= RULE_ID
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2330:1: (lv_name_1_0= RULE_ID )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2331:3: lv_name_1_0= RULE_ID
             {
-            lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleConstant5812); 
+            lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleConstant5621); 
 
             			newLeafNode(lv_name_1_0, grammarAccess.getConstantAccess().getNameIDTerminalRuleCall_1_0()); 
             		
@@ -6419,16 +6189,16 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2432:2: ( (lv_type_2_0= ruleTypeRef ) )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2433:1: (lv_type_2_0= ruleTypeRef )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2347:2: ( (lv_type_2_0= ruleTypeRef ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2348:1: (lv_type_2_0= ruleTypeRef )
             {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2433:1: (lv_type_2_0= ruleTypeRef )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2434:3: lv_type_2_0= ruleTypeRef
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2348:1: (lv_type_2_0= ruleTypeRef )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2349:3: lv_type_2_0= ruleTypeRef
             {
              
             	        newCompositeNode(grammarAccess.getConstantAccess().getTypeTypeRefParserRuleCall_2_0()); 
             	    
-            pushFollow(FOLLOW_ruleTypeRef_in_ruleConstant5838);
+            pushFollow(FOLLOW_ruleTypeRef_in_ruleConstant5647);
             lv_type_2_0=ruleTypeRef();
 
             state._fsp--;
@@ -6450,20 +6220,20 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_3=(Token)match(input,44,FOLLOW_44_in_ruleConstant5850); 
+            otherlv_3=(Token)match(input,44,FOLLOW_44_in_ruleConstant5659); 
 
                 	newLeafNode(otherlv_3, grammarAccess.getConstantAccess().getEqualsSignKeyword_3());
                 
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2454:1: ( (lv_value_4_0= ruleLiteralExpression ) )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2455:1: (lv_value_4_0= ruleLiteralExpression )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2369:1: ( (lv_value_4_0= ruleLiteralExpression ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2370:1: (lv_value_4_0= ruleLiteralExpression )
             {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2455:1: (lv_value_4_0= ruleLiteralExpression )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2456:3: lv_value_4_0= ruleLiteralExpression
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2370:1: (lv_value_4_0= ruleLiteralExpression )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2371:3: lv_value_4_0= ruleLiteralExpression
             {
              
             	        newCompositeNode(grammarAccess.getConstantAccess().getValueLiteralExpressionParserRuleCall_4_0()); 
             	    
-            pushFollow(FOLLOW_ruleLiteralExpression_in_ruleConstant5871);
+            pushFollow(FOLLOW_ruleLiteralExpression_in_ruleConstant5680);
             lv_value_4_0=ruleLiteralExpression();
 
             state._fsp--;
@@ -6506,7 +6276,7 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleMulti"
-    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2480:1: entryRuleMulti returns [EObject current=null] : iv_ruleMulti= ruleMulti EOF ;
+    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2395:1: entryRuleMulti returns [EObject current=null] : iv_ruleMulti= ruleMulti EOF ;
     public final EObject entryRuleMulti() throws RecognitionException {
         EObject current = null;
 
@@ -6514,17 +6284,17 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2481:2: (iv_ruleMulti= ruleMulti EOF )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2482:2: iv_ruleMulti= ruleMulti EOF
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2396:2: (iv_ruleMulti= ruleMulti EOF )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2397:2: iv_ruleMulti= ruleMulti EOF
             {
              newCompositeNode(grammarAccess.getMultiRule()); 
-            pushFollow(FOLLOW_ruleMulti_in_entryRuleMulti5907);
+            pushFollow(FOLLOW_ruleMulti_in_entryRuleMulti5716);
             iv_ruleMulti=ruleMulti();
 
             state._fsp--;
 
              current =iv_ruleMulti; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleMulti5917); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleMulti5726); 
 
             }
 
@@ -6542,7 +6312,7 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleMulti"
-    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2489:1: ruleMulti returns [EObject current=null] : (otherlv_0= 'multi' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '=' ( (lv_op_3_0= ruleMultiOp ) )? ( (lv_factor_4_0= RULE_INT ) ) ( (otherlv_5= RULE_ID ) )? ) ;
+    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2404:1: ruleMulti returns [EObject current=null] : (otherlv_0= 'multi' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '=' ( (lv_op_3_0= ruleMultiOp ) )? ( (lv_factor_4_0= RULE_INT ) ) ( (otherlv_5= RULE_ID ) )? ) ;
     public final EObject ruleMulti() throws RecognitionException {
         EObject current = null;
 
@@ -6557,23 +6327,23 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2492:28: ( (otherlv_0= 'multi' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '=' ( (lv_op_3_0= ruleMultiOp ) )? ( (lv_factor_4_0= RULE_INT ) ) ( (otherlv_5= RULE_ID ) )? ) )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2493:1: (otherlv_0= 'multi' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '=' ( (lv_op_3_0= ruleMultiOp ) )? ( (lv_factor_4_0= RULE_INT ) ) ( (otherlv_5= RULE_ID ) )? )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2407:28: ( (otherlv_0= 'multi' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '=' ( (lv_op_3_0= ruleMultiOp ) )? ( (lv_factor_4_0= RULE_INT ) ) ( (otherlv_5= RULE_ID ) )? ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2408:1: (otherlv_0= 'multi' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '=' ( (lv_op_3_0= ruleMultiOp ) )? ( (lv_factor_4_0= RULE_INT ) ) ( (otherlv_5= RULE_ID ) )? )
             {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2493:1: (otherlv_0= 'multi' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '=' ( (lv_op_3_0= ruleMultiOp ) )? ( (lv_factor_4_0= RULE_INT ) ) ( (otherlv_5= RULE_ID ) )? )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2493:3: otherlv_0= 'multi' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '=' ( (lv_op_3_0= ruleMultiOp ) )? ( (lv_factor_4_0= RULE_INT ) ) ( (otherlv_5= RULE_ID ) )?
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2408:1: (otherlv_0= 'multi' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '=' ( (lv_op_3_0= ruleMultiOp ) )? ( (lv_factor_4_0= RULE_INT ) ) ( (otherlv_5= RULE_ID ) )? )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2408:3: otherlv_0= 'multi' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '=' ( (lv_op_3_0= ruleMultiOp ) )? ( (lv_factor_4_0= RULE_INT ) ) ( (otherlv_5= RULE_ID ) )?
             {
-            otherlv_0=(Token)match(input,46,FOLLOW_46_in_ruleMulti5954); 
+            otherlv_0=(Token)match(input,46,FOLLOW_46_in_ruleMulti5763); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getMultiAccess().getMultiKeyword_0());
                 
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2497:1: ( (lv_name_1_0= RULE_ID ) )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2498:1: (lv_name_1_0= RULE_ID )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2412:1: ( (lv_name_1_0= RULE_ID ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2413:1: (lv_name_1_0= RULE_ID )
             {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2498:1: (lv_name_1_0= RULE_ID )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2499:3: lv_name_1_0= RULE_ID
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2413:1: (lv_name_1_0= RULE_ID )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2414:3: lv_name_1_0= RULE_ID
             {
-            lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleMulti5971); 
+            lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleMulti5780); 
 
             			newLeafNode(lv_name_1_0, grammarAccess.getMultiAccess().getNameIDTerminalRuleCall_1_0()); 
             		
@@ -6593,28 +6363,28 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_2=(Token)match(input,44,FOLLOW_44_in_ruleMulti5988); 
+            otherlv_2=(Token)match(input,44,FOLLOW_44_in_ruleMulti5797); 
 
                 	newLeafNode(otherlv_2, grammarAccess.getMultiAccess().getEqualsSignKeyword_2());
                 
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2519:1: ( (lv_op_3_0= ruleMultiOp ) )?
-            int alt42=2;
-            int LA42_0 = input.LA(1);
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2434:1: ( (lv_op_3_0= ruleMultiOp ) )?
+            int alt40=2;
+            int LA40_0 = input.LA(1);
 
-            if ( ((LA42_0>=74 && LA42_0<=77)) ) {
-                alt42=1;
+            if ( ((LA40_0>=74 && LA40_0<=77)) ) {
+                alt40=1;
             }
-            switch (alt42) {
+            switch (alt40) {
                 case 1 :
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2520:1: (lv_op_3_0= ruleMultiOp )
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2435:1: (lv_op_3_0= ruleMultiOp )
                     {
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2520:1: (lv_op_3_0= ruleMultiOp )
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2521:3: lv_op_3_0= ruleMultiOp
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2435:1: (lv_op_3_0= ruleMultiOp )
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2436:3: lv_op_3_0= ruleMultiOp
                     {
                      
                     	        newCompositeNode(grammarAccess.getMultiAccess().getOpMultiOpEnumRuleCall_3_0()); 
                     	    
-                    pushFollow(FOLLOW_ruleMultiOp_in_ruleMulti6009);
+                    pushFollow(FOLLOW_ruleMultiOp_in_ruleMulti5818);
                     lv_op_3_0=ruleMultiOp();
 
                     state._fsp--;
@@ -6639,13 +6409,13 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2537:3: ( (lv_factor_4_0= RULE_INT ) )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2538:1: (lv_factor_4_0= RULE_INT )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2452:3: ( (lv_factor_4_0= RULE_INT ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2453:1: (lv_factor_4_0= RULE_INT )
             {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2538:1: (lv_factor_4_0= RULE_INT )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2539:3: lv_factor_4_0= RULE_INT
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2453:1: (lv_factor_4_0= RULE_INT )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2454:3: lv_factor_4_0= RULE_INT
             {
-            lv_factor_4_0=(Token)match(input,RULE_INT,FOLLOW_RULE_INT_in_ruleMulti6027); 
+            lv_factor_4_0=(Token)match(input,RULE_INT,FOLLOW_RULE_INT_in_ruleMulti5836); 
 
             			newLeafNode(lv_factor_4_0, grammarAccess.getMultiAccess().getFactorINTTerminalRuleCall_4_0()); 
             		
@@ -6665,37 +6435,37 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2555:2: ( (otherlv_5= RULE_ID ) )?
-            int alt43=2;
-            int LA43_0 = input.LA(1);
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2470:2: ( (otherlv_5= RULE_ID ) )?
+            int alt41=2;
+            int LA41_0 = input.LA(1);
 
-            if ( (LA43_0==RULE_ID) ) {
-                int LA43_1 = input.LA(2);
+            if ( (LA41_0==RULE_ID) ) {
+                int LA41_1 = input.LA(2);
 
-                if ( (LA43_1==RULE_ID) ) {
-                    int LA43_3 = input.LA(3);
+                if ( (LA41_1==RULE_ID) ) {
+                    int LA41_3 = input.LA(3);
 
-                    if ( (LA43_3==RULE_ID) ) {
-                        alt43=1;
+                    if ( (LA41_3==RULE_ID) ) {
+                        alt41=1;
                     }
                 }
-                else if ( (LA43_1==EOF||LA43_1==21||(LA43_1>=40 && LA43_1<=41)||LA43_1==43||(LA43_1>=45 && LA43_1<=49)||(LA43_1>=56 && LA43_1<=57)||(LA43_1>=60 && LA43_1<=61)||(LA43_1>=63 && LA43_1<=65)) ) {
-                    alt43=1;
+                else if ( (LA41_1==EOF||LA41_1==21||LA41_1==40||(LA41_1>=42 && LA41_1<=43)||(LA41_1>=45 && LA41_1<=49)||(LA41_1>=56 && LA41_1<=57)||(LA41_1>=60 && LA41_1<=61)||(LA41_1>=63 && LA41_1<=65)) ) {
+                    alt41=1;
                 }
             }
-            switch (alt43) {
+            switch (alt41) {
                 case 1 :
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2556:1: (otherlv_5= RULE_ID )
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2471:1: (otherlv_5= RULE_ID )
                     {
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2556:1: (otherlv_5= RULE_ID )
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2557:3: otherlv_5= RULE_ID
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2471:1: (otherlv_5= RULE_ID )
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2472:3: otherlv_5= RULE_ID
                     {
 
                     			if (current==null) {
                     	            current = createModelElement(grammarAccess.getMultiRule());
                     	        }
                             
-                    otherlv_5=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleMulti6052); 
+                    otherlv_5=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleMulti5861); 
 
                     		newLeafNode(otherlv_5, grammarAccess.getMultiAccess().getParentMultiCrossReference_5_0()); 
                     	
@@ -6729,7 +6499,7 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleUnit"
-    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2576:1: entryRuleUnit returns [EObject current=null] : iv_ruleUnit= ruleUnit EOF ;
+    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2491:1: entryRuleUnit returns [EObject current=null] : iv_ruleUnit= ruleUnit EOF ;
     public final EObject entryRuleUnit() throws RecognitionException {
         EObject current = null;
 
@@ -6737,17 +6507,17 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2577:2: (iv_ruleUnit= ruleUnit EOF )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2578:2: iv_ruleUnit= ruleUnit EOF
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2492:2: (iv_ruleUnit= ruleUnit EOF )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2493:2: iv_ruleUnit= ruleUnit EOF
             {
              newCompositeNode(grammarAccess.getUnitRule()); 
-            pushFollow(FOLLOW_ruleUnit_in_entryRuleUnit6089);
+            pushFollow(FOLLOW_ruleUnit_in_entryRuleUnit5898);
             iv_ruleUnit=ruleUnit();
 
             state._fsp--;
 
              current =iv_ruleUnit; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleUnit6099); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleUnit5908); 
 
             }
 
@@ -6765,7 +6535,7 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleUnit"
-    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2585:1: ruleUnit returns [EObject current=null] : (this_DUnit_0= ruleDUnit | this_NUnit_1= ruleNUnit ) ;
+    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2500:1: ruleUnit returns [EObject current=null] : (this_DUnit_0= ruleDUnit | this_NUnit_1= ruleNUnit ) ;
     public final EObject ruleUnit() throws RecognitionException {
         EObject current = null;
 
@@ -6777,53 +6547,53 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2588:28: ( (this_DUnit_0= ruleDUnit | this_NUnit_1= ruleNUnit ) )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2589:1: (this_DUnit_0= ruleDUnit | this_NUnit_1= ruleNUnit )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2503:28: ( (this_DUnit_0= ruleDUnit | this_NUnit_1= ruleNUnit ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2504:1: (this_DUnit_0= ruleDUnit | this_NUnit_1= ruleNUnit )
             {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2589:1: (this_DUnit_0= ruleDUnit | this_NUnit_1= ruleNUnit )
-            int alt44=2;
-            int LA44_0 = input.LA(1);
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2504:1: (this_DUnit_0= ruleDUnit | this_NUnit_1= ruleNUnit )
+            int alt42=2;
+            int LA42_0 = input.LA(1);
 
-            if ( (LA44_0==47) ) {
-                int LA44_1 = input.LA(2);
+            if ( (LA42_0==47) ) {
+                int LA42_1 = input.LA(2);
 
-                if ( (LA44_1==RULE_ID) ) {
-                    int LA44_2 = input.LA(3);
+                if ( (LA42_1==RULE_ID) ) {
+                    int LA42_2 = input.LA(3);
 
-                    if ( (LA44_2==44) ) {
-                        alt44=1;
+                    if ( (LA42_2==44) ) {
+                        alt42=1;
                     }
-                    else if ( ((LA44_2>=79 && LA44_2<=82)) ) {
-                        alt44=2;
+                    else if ( ((LA42_2>=79 && LA42_2<=82)) ) {
+                        alt42=2;
                     }
                     else {
                         NoViableAltException nvae =
-                            new NoViableAltException("", 44, 2, input);
+                            new NoViableAltException("", 42, 2, input);
 
                         throw nvae;
                     }
                 }
                 else {
                     NoViableAltException nvae =
-                        new NoViableAltException("", 44, 1, input);
+                        new NoViableAltException("", 42, 1, input);
 
                     throw nvae;
                 }
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 44, 0, input);
+                    new NoViableAltException("", 42, 0, input);
 
                 throw nvae;
             }
-            switch (alt44) {
+            switch (alt42) {
                 case 1 :
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2590:5: this_DUnit_0= ruleDUnit
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2505:5: this_DUnit_0= ruleDUnit
                     {
                      
                             newCompositeNode(grammarAccess.getUnitAccess().getDUnitParserRuleCall_0()); 
                         
-                    pushFollow(FOLLOW_ruleDUnit_in_ruleUnit6146);
+                    pushFollow(FOLLOW_ruleDUnit_in_ruleUnit5955);
                     this_DUnit_0=ruleDUnit();
 
                     state._fsp--;
@@ -6836,12 +6606,12 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2600:5: this_NUnit_1= ruleNUnit
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2515:5: this_NUnit_1= ruleNUnit
                     {
                      
                             newCompositeNode(grammarAccess.getUnitAccess().getNUnitParserRuleCall_1()); 
                         
-                    pushFollow(FOLLOW_ruleNUnit_in_ruleUnit6173);
+                    pushFollow(FOLLOW_ruleNUnit_in_ruleUnit5982);
                     this_NUnit_1=ruleNUnit();
 
                     state._fsp--;
@@ -6874,7 +6644,7 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleDUnit"
-    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2616:1: entryRuleDUnit returns [EObject current=null] : iv_ruleDUnit= ruleDUnit EOF ;
+    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2531:1: entryRuleDUnit returns [EObject current=null] : iv_ruleDUnit= ruleDUnit EOF ;
     public final EObject entryRuleDUnit() throws RecognitionException {
         EObject current = null;
 
@@ -6882,17 +6652,17 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2617:2: (iv_ruleDUnit= ruleDUnit EOF )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2618:2: iv_ruleDUnit= ruleDUnit EOF
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2532:2: (iv_ruleDUnit= ruleDUnit EOF )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2533:2: iv_ruleDUnit= ruleDUnit EOF
             {
              newCompositeNode(grammarAccess.getDUnitRule()); 
-            pushFollow(FOLLOW_ruleDUnit_in_entryRuleDUnit6208);
+            pushFollow(FOLLOW_ruleDUnit_in_entryRuleDUnit6017);
             iv_ruleDUnit=ruleDUnit();
 
             state._fsp--;
 
              current =iv_ruleDUnit; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleDUnit6218); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleDUnit6027); 
 
             }
 
@@ -6910,7 +6680,7 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleDUnit"
-    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2625:1: ruleDUnit returns [EObject current=null] : (otherlv_0= 'unit' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '=' ( (lv_op_3_0= ruleMultiOp ) )? ( (lv_factor_4_0= RULE_INT ) ) ( (otherlv_5= RULE_ID ) )? ( (otherlv_6= RULE_ID ) ) ) ;
+    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2540:1: ruleDUnit returns [EObject current=null] : (otherlv_0= 'unit' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '=' ( (lv_op_3_0= ruleMultiOp ) )? ( (lv_factor_4_0= RULE_INT ) ) ( (otherlv_5= RULE_ID ) )? ( (otherlv_6= RULE_ID ) ) ) ;
     public final EObject ruleDUnit() throws RecognitionException {
         EObject current = null;
 
@@ -6926,23 +6696,23 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2628:28: ( (otherlv_0= 'unit' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '=' ( (lv_op_3_0= ruleMultiOp ) )? ( (lv_factor_4_0= RULE_INT ) ) ( (otherlv_5= RULE_ID ) )? ( (otherlv_6= RULE_ID ) ) ) )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2629:1: (otherlv_0= 'unit' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '=' ( (lv_op_3_0= ruleMultiOp ) )? ( (lv_factor_4_0= RULE_INT ) ) ( (otherlv_5= RULE_ID ) )? ( (otherlv_6= RULE_ID ) ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2543:28: ( (otherlv_0= 'unit' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '=' ( (lv_op_3_0= ruleMultiOp ) )? ( (lv_factor_4_0= RULE_INT ) ) ( (otherlv_5= RULE_ID ) )? ( (otherlv_6= RULE_ID ) ) ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2544:1: (otherlv_0= 'unit' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '=' ( (lv_op_3_0= ruleMultiOp ) )? ( (lv_factor_4_0= RULE_INT ) ) ( (otherlv_5= RULE_ID ) )? ( (otherlv_6= RULE_ID ) ) )
             {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2629:1: (otherlv_0= 'unit' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '=' ( (lv_op_3_0= ruleMultiOp ) )? ( (lv_factor_4_0= RULE_INT ) ) ( (otherlv_5= RULE_ID ) )? ( (otherlv_6= RULE_ID ) ) )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2629:3: otherlv_0= 'unit' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '=' ( (lv_op_3_0= ruleMultiOp ) )? ( (lv_factor_4_0= RULE_INT ) ) ( (otherlv_5= RULE_ID ) )? ( (otherlv_6= RULE_ID ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2544:1: (otherlv_0= 'unit' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '=' ( (lv_op_3_0= ruleMultiOp ) )? ( (lv_factor_4_0= RULE_INT ) ) ( (otherlv_5= RULE_ID ) )? ( (otherlv_6= RULE_ID ) ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2544:3: otherlv_0= 'unit' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '=' ( (lv_op_3_0= ruleMultiOp ) )? ( (lv_factor_4_0= RULE_INT ) ) ( (otherlv_5= RULE_ID ) )? ( (otherlv_6= RULE_ID ) )
             {
-            otherlv_0=(Token)match(input,47,FOLLOW_47_in_ruleDUnit6255); 
+            otherlv_0=(Token)match(input,47,FOLLOW_47_in_ruleDUnit6064); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getDUnitAccess().getUnitKeyword_0());
                 
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2633:1: ( (lv_name_1_0= RULE_ID ) )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2634:1: (lv_name_1_0= RULE_ID )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2548:1: ( (lv_name_1_0= RULE_ID ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2549:1: (lv_name_1_0= RULE_ID )
             {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2634:1: (lv_name_1_0= RULE_ID )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2635:3: lv_name_1_0= RULE_ID
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2549:1: (lv_name_1_0= RULE_ID )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2550:3: lv_name_1_0= RULE_ID
             {
-            lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleDUnit6272); 
+            lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleDUnit6081); 
 
             			newLeafNode(lv_name_1_0, grammarAccess.getDUnitAccess().getNameIDTerminalRuleCall_1_0()); 
             		
@@ -6962,28 +6732,28 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_2=(Token)match(input,44,FOLLOW_44_in_ruleDUnit6289); 
+            otherlv_2=(Token)match(input,44,FOLLOW_44_in_ruleDUnit6098); 
 
                 	newLeafNode(otherlv_2, grammarAccess.getDUnitAccess().getEqualsSignKeyword_2());
                 
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2655:1: ( (lv_op_3_0= ruleMultiOp ) )?
-            int alt45=2;
-            int LA45_0 = input.LA(1);
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2570:1: ( (lv_op_3_0= ruleMultiOp ) )?
+            int alt43=2;
+            int LA43_0 = input.LA(1);
 
-            if ( ((LA45_0>=74 && LA45_0<=77)) ) {
-                alt45=1;
+            if ( ((LA43_0>=74 && LA43_0<=77)) ) {
+                alt43=1;
             }
-            switch (alt45) {
+            switch (alt43) {
                 case 1 :
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2656:1: (lv_op_3_0= ruleMultiOp )
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2571:1: (lv_op_3_0= ruleMultiOp )
                     {
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2656:1: (lv_op_3_0= ruleMultiOp )
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2657:3: lv_op_3_0= ruleMultiOp
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2571:1: (lv_op_3_0= ruleMultiOp )
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2572:3: lv_op_3_0= ruleMultiOp
                     {
                      
                     	        newCompositeNode(grammarAccess.getDUnitAccess().getOpMultiOpEnumRuleCall_3_0()); 
                     	    
-                    pushFollow(FOLLOW_ruleMultiOp_in_ruleDUnit6310);
+                    pushFollow(FOLLOW_ruleMultiOp_in_ruleDUnit6119);
                     lv_op_3_0=ruleMultiOp();
 
                     state._fsp--;
@@ -7008,13 +6778,13 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2673:3: ( (lv_factor_4_0= RULE_INT ) )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2674:1: (lv_factor_4_0= RULE_INT )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2588:3: ( (lv_factor_4_0= RULE_INT ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2589:1: (lv_factor_4_0= RULE_INT )
             {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2674:1: (lv_factor_4_0= RULE_INT )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2675:3: lv_factor_4_0= RULE_INT
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2589:1: (lv_factor_4_0= RULE_INT )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2590:3: lv_factor_4_0= RULE_INT
             {
-            lv_factor_4_0=(Token)match(input,RULE_INT,FOLLOW_RULE_INT_in_ruleDUnit6328); 
+            lv_factor_4_0=(Token)match(input,RULE_INT,FOLLOW_RULE_INT_in_ruleDUnit6137); 
 
             			newLeafNode(lv_factor_4_0, grammarAccess.getDUnitAccess().getFactorINTTerminalRuleCall_4_0()); 
             		
@@ -7034,41 +6804,41 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2691:2: ( (otherlv_5= RULE_ID ) )?
-            int alt46=2;
-            int LA46_0 = input.LA(1);
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2606:2: ( (otherlv_5= RULE_ID ) )?
+            int alt44=2;
+            int LA44_0 = input.LA(1);
 
-            if ( (LA46_0==RULE_ID) ) {
-                int LA46_1 = input.LA(2);
+            if ( (LA44_0==RULE_ID) ) {
+                int LA44_1 = input.LA(2);
 
-                if ( (LA46_1==RULE_ID) ) {
-                    int LA46_2 = input.LA(3);
+                if ( (LA44_1==RULE_ID) ) {
+                    int LA44_2 = input.LA(3);
 
-                    if ( (LA46_2==RULE_ID) ) {
-                        int LA46_4 = input.LA(4);
+                    if ( (LA44_2==RULE_ID) ) {
+                        int LA44_4 = input.LA(4);
 
-                        if ( (LA46_4==RULE_ID) ) {
-                            alt46=1;
+                        if ( (LA44_4==RULE_ID) ) {
+                            alt44=1;
                         }
                     }
-                    else if ( (LA46_2==EOF||LA46_2==21||(LA46_2>=40 && LA46_2<=41)||LA46_2==43||(LA46_2>=45 && LA46_2<=49)||(LA46_2>=56 && LA46_2<=57)||(LA46_2>=60 && LA46_2<=61)||(LA46_2>=63 && LA46_2<=65)) ) {
-                        alt46=1;
+                    else if ( (LA44_2==EOF||LA44_2==21||LA44_2==40||(LA44_2>=42 && LA44_2<=43)||(LA44_2>=45 && LA44_2<=49)||(LA44_2>=56 && LA44_2<=57)||(LA44_2>=60 && LA44_2<=61)||(LA44_2>=63 && LA44_2<=65)) ) {
+                        alt44=1;
                     }
                 }
             }
-            switch (alt46) {
+            switch (alt44) {
                 case 1 :
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2692:1: (otherlv_5= RULE_ID )
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2607:1: (otherlv_5= RULE_ID )
                     {
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2692:1: (otherlv_5= RULE_ID )
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2693:3: otherlv_5= RULE_ID
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2607:1: (otherlv_5= RULE_ID )
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2608:3: otherlv_5= RULE_ID
                     {
 
                     			if (current==null) {
                     	            current = createModelElement(grammarAccess.getDUnitRule());
                     	        }
                             
-                    otherlv_5=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleDUnit6353); 
+                    otherlv_5=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleDUnit6162); 
 
                     		newLeafNode(otherlv_5, grammarAccess.getDUnitAccess().getMultiMultiCrossReference_5_0()); 
                     	
@@ -7081,18 +6851,18 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2704:3: ( (otherlv_6= RULE_ID ) )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2705:1: (otherlv_6= RULE_ID )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2619:3: ( (otherlv_6= RULE_ID ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2620:1: (otherlv_6= RULE_ID )
             {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2705:1: (otherlv_6= RULE_ID )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2706:3: otherlv_6= RULE_ID
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2620:1: (otherlv_6= RULE_ID )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2621:3: otherlv_6= RULE_ID
             {
 
             			if (current==null) {
             	            current = createModelElement(grammarAccess.getDUnitRule());
             	        }
                     
-            otherlv_6=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleDUnit6374); 
+            otherlv_6=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleDUnit6183); 
 
             		newLeafNode(otherlv_6, grammarAccess.getDUnitAccess().getParentUnitCrossReference_6_0()); 
             	
@@ -7123,7 +6893,7 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleNUnit"
-    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2725:1: entryRuleNUnit returns [EObject current=null] : iv_ruleNUnit= ruleNUnit EOF ;
+    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2640:1: entryRuleNUnit returns [EObject current=null] : iv_ruleNUnit= ruleNUnit EOF ;
     public final EObject entryRuleNUnit() throws RecognitionException {
         EObject current = null;
 
@@ -7131,17 +6901,17 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2726:2: (iv_ruleNUnit= ruleNUnit EOF )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2727:2: iv_ruleNUnit= ruleNUnit EOF
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2641:2: (iv_ruleNUnit= ruleNUnit EOF )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2642:2: iv_ruleNUnit= ruleNUnit EOF
             {
              newCompositeNode(grammarAccess.getNUnitRule()); 
-            pushFollow(FOLLOW_ruleNUnit_in_entryRuleNUnit6410);
+            pushFollow(FOLLOW_ruleNUnit_in_entryRuleNUnit6219);
             iv_ruleNUnit=ruleNUnit();
 
             state._fsp--;
 
              current =iv_ruleNUnit; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleNUnit6420); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleNUnit6229); 
 
             }
 
@@ -7159,7 +6929,7 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleNUnit"
-    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2734:1: ruleNUnit returns [EObject current=null] : (otherlv_0= 'unit' ( (lv_name_1_0= RULE_ID ) ) ( (lv_numbertype_2_0= ruleNumberType ) ) ) ;
+    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2649:1: ruleNUnit returns [EObject current=null] : (otherlv_0= 'unit' ( (lv_name_1_0= RULE_ID ) ) ( (lv_numbertype_2_0= ruleNumberType ) ) ) ;
     public final EObject ruleNUnit() throws RecognitionException {
         EObject current = null;
 
@@ -7171,23 +6941,23 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2737:28: ( (otherlv_0= 'unit' ( (lv_name_1_0= RULE_ID ) ) ( (lv_numbertype_2_0= ruleNumberType ) ) ) )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2738:1: (otherlv_0= 'unit' ( (lv_name_1_0= RULE_ID ) ) ( (lv_numbertype_2_0= ruleNumberType ) ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2652:28: ( (otherlv_0= 'unit' ( (lv_name_1_0= RULE_ID ) ) ( (lv_numbertype_2_0= ruleNumberType ) ) ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2653:1: (otherlv_0= 'unit' ( (lv_name_1_0= RULE_ID ) ) ( (lv_numbertype_2_0= ruleNumberType ) ) )
             {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2738:1: (otherlv_0= 'unit' ( (lv_name_1_0= RULE_ID ) ) ( (lv_numbertype_2_0= ruleNumberType ) ) )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2738:3: otherlv_0= 'unit' ( (lv_name_1_0= RULE_ID ) ) ( (lv_numbertype_2_0= ruleNumberType ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2653:1: (otherlv_0= 'unit' ( (lv_name_1_0= RULE_ID ) ) ( (lv_numbertype_2_0= ruleNumberType ) ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2653:3: otherlv_0= 'unit' ( (lv_name_1_0= RULE_ID ) ) ( (lv_numbertype_2_0= ruleNumberType ) )
             {
-            otherlv_0=(Token)match(input,47,FOLLOW_47_in_ruleNUnit6457); 
+            otherlv_0=(Token)match(input,47,FOLLOW_47_in_ruleNUnit6266); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getNUnitAccess().getUnitKeyword_0());
                 
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2742:1: ( (lv_name_1_0= RULE_ID ) )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2743:1: (lv_name_1_0= RULE_ID )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2657:1: ( (lv_name_1_0= RULE_ID ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2658:1: (lv_name_1_0= RULE_ID )
             {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2743:1: (lv_name_1_0= RULE_ID )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2744:3: lv_name_1_0= RULE_ID
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2658:1: (lv_name_1_0= RULE_ID )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2659:3: lv_name_1_0= RULE_ID
             {
-            lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleNUnit6474); 
+            lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleNUnit6283); 
 
             			newLeafNode(lv_name_1_0, grammarAccess.getNUnitAccess().getNameIDTerminalRuleCall_1_0()); 
             		
@@ -7207,16 +6977,16 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2760:2: ( (lv_numbertype_2_0= ruleNumberType ) )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2761:1: (lv_numbertype_2_0= ruleNumberType )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2675:2: ( (lv_numbertype_2_0= ruleNumberType ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2676:1: (lv_numbertype_2_0= ruleNumberType )
             {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2761:1: (lv_numbertype_2_0= ruleNumberType )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2762:3: lv_numbertype_2_0= ruleNumberType
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2676:1: (lv_numbertype_2_0= ruleNumberType )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2677:3: lv_numbertype_2_0= ruleNumberType
             {
              
             	        newCompositeNode(grammarAccess.getNUnitAccess().getNumbertypeNumberTypeEnumRuleCall_2_0()); 
             	    
-            pushFollow(FOLLOW_ruleNumberType_in_ruleNUnit6500);
+            pushFollow(FOLLOW_ruleNumberType_in_ruleNUnit6309);
             lv_numbertype_2_0=ruleNumberType();
 
             state._fsp--;
@@ -7259,7 +7029,7 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleBox"
-    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2786:1: entryRuleBox returns [EObject current=null] : iv_ruleBox= ruleBox EOF ;
+    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2701:1: entryRuleBox returns [EObject current=null] : iv_ruleBox= ruleBox EOF ;
     public final EObject entryRuleBox() throws RecognitionException {
         EObject current = null;
 
@@ -7267,17 +7037,17 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2787:2: (iv_ruleBox= ruleBox EOF )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2788:2: iv_ruleBox= ruleBox EOF
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2702:2: (iv_ruleBox= ruleBox EOF )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2703:2: iv_ruleBox= ruleBox EOF
             {
              newCompositeNode(grammarAccess.getBoxRule()); 
-            pushFollow(FOLLOW_ruleBox_in_entryRuleBox6536);
+            pushFollow(FOLLOW_ruleBox_in_entryRuleBox6345);
             iv_ruleBox=ruleBox();
 
             state._fsp--;
 
              current =iv_ruleBox; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleBox6546); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleBox6355); 
 
             }
 
@@ -7295,7 +7065,7 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleBox"
-    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2795:1: ruleBox returns [EObject current=null] : (otherlv_0= 'box' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( (lv_members_3_0= ruleMember ) )* otherlv_4= '}' ) ;
+    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2710:1: ruleBox returns [EObject current=null] : (otherlv_0= 'box' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( (lv_members_3_0= ruleMember ) )* otherlv_4= '}' ) ;
     public final EObject ruleBox() throws RecognitionException {
         EObject current = null;
 
@@ -7309,23 +7079,23 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2798:28: ( (otherlv_0= 'box' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( (lv_members_3_0= ruleMember ) )* otherlv_4= '}' ) )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2799:1: (otherlv_0= 'box' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( (lv_members_3_0= ruleMember ) )* otherlv_4= '}' )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2713:28: ( (otherlv_0= 'box' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( (lv_members_3_0= ruleMember ) )* otherlv_4= '}' ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2714:1: (otherlv_0= 'box' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( (lv_members_3_0= ruleMember ) )* otherlv_4= '}' )
             {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2799:1: (otherlv_0= 'box' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( (lv_members_3_0= ruleMember ) )* otherlv_4= '}' )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2799:3: otherlv_0= 'box' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( (lv_members_3_0= ruleMember ) )* otherlv_4= '}'
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2714:1: (otherlv_0= 'box' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( (lv_members_3_0= ruleMember ) )* otherlv_4= '}' )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2714:3: otherlv_0= 'box' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( (lv_members_3_0= ruleMember ) )* otherlv_4= '}'
             {
-            otherlv_0=(Token)match(input,48,FOLLOW_48_in_ruleBox6583); 
+            otherlv_0=(Token)match(input,48,FOLLOW_48_in_ruleBox6392); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getBoxAccess().getBoxKeyword_0());
                 
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2803:1: ( (lv_name_1_0= RULE_ID ) )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2804:1: (lv_name_1_0= RULE_ID )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2718:1: ( (lv_name_1_0= RULE_ID ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2719:1: (lv_name_1_0= RULE_ID )
             {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2804:1: (lv_name_1_0= RULE_ID )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2805:3: lv_name_1_0= RULE_ID
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2719:1: (lv_name_1_0= RULE_ID )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2720:3: lv_name_1_0= RULE_ID
             {
-            lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleBox6600); 
+            lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleBox6409); 
 
             			newLeafNode(lv_name_1_0, grammarAccess.getBoxAccess().getNameIDTerminalRuleCall_1_0()); 
             		
@@ -7345,32 +7115,32 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_2=(Token)match(input,40,FOLLOW_40_in_ruleBox6617); 
+            otherlv_2=(Token)match(input,40,FOLLOW_40_in_ruleBox6426); 
 
                 	newLeafNode(otherlv_2, grammarAccess.getBoxAccess().getLeftCurlyBracketKeyword_2());
                 
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2825:1: ( (lv_members_3_0= ruleMember ) )*
-            loop47:
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2740:1: ( (lv_members_3_0= ruleMember ) )*
+            loop45:
             do {
-                int alt47=2;
-                int LA47_0 = input.LA(1);
+                int alt45=2;
+                int LA45_0 = input.LA(1);
 
-                if ( (LA47_0==RULE_ID) ) {
-                    alt47=1;
+                if ( (LA45_0==RULE_ID) ) {
+                    alt45=1;
                 }
 
 
-                switch (alt47) {
+                switch (alt45) {
             	case 1 :
-            	    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2826:1: (lv_members_3_0= ruleMember )
+            	    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2741:1: (lv_members_3_0= ruleMember )
             	    {
-            	    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2826:1: (lv_members_3_0= ruleMember )
-            	    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2827:3: lv_members_3_0= ruleMember
+            	    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2741:1: (lv_members_3_0= ruleMember )
+            	    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2742:3: lv_members_3_0= ruleMember
             	    {
             	     
             	    	        newCompositeNode(grammarAccess.getBoxAccess().getMembersMemberParserRuleCall_3_0()); 
             	    	    
-            	    pushFollow(FOLLOW_ruleMember_in_ruleBox6638);
+            	    pushFollow(FOLLOW_ruleMember_in_ruleBox6447);
             	    lv_members_3_0=ruleMember();
 
             	    state._fsp--;
@@ -7394,11 +7164,11 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    break loop47;
+            	    break loop45;
                 }
             } while (true);
 
-            otherlv_4=(Token)match(input,41,FOLLOW_41_in_ruleBox6651); 
+            otherlv_4=(Token)match(input,42,FOLLOW_42_in_ruleBox6460); 
 
                 	newLeafNode(otherlv_4, grammarAccess.getBoxAccess().getRightCurlyBracketKeyword_4());
                 
@@ -7423,7 +7193,7 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleShape"
-    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2855:1: entryRuleShape returns [EObject current=null] : iv_ruleShape= ruleShape EOF ;
+    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2770:1: entryRuleShape returns [EObject current=null] : iv_ruleShape= ruleShape EOF ;
     public final EObject entryRuleShape() throws RecognitionException {
         EObject current = null;
 
@@ -7431,17 +7201,17 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2856:2: (iv_ruleShape= ruleShape EOF )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2857:2: iv_ruleShape= ruleShape EOF
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2771:2: (iv_ruleShape= ruleShape EOF )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2772:2: iv_ruleShape= ruleShape EOF
             {
              newCompositeNode(grammarAccess.getShapeRule()); 
-            pushFollow(FOLLOW_ruleShape_in_entryRuleShape6687);
+            pushFollow(FOLLOW_ruleShape_in_entryRuleShape6496);
             iv_ruleShape=ruleShape();
 
             state._fsp--;
 
              current =iv_ruleShape; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleShape6697); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleShape6506); 
 
             }
 
@@ -7459,7 +7229,7 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleShape"
-    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2864:1: ruleShape returns [EObject current=null] : (otherlv_0= 'shape' ( (lv_name_1_0= RULE_ID ) ) ) ;
+    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2779:1: ruleShape returns [EObject current=null] : (otherlv_0= 'shape' ( (lv_name_1_0= RULE_ID ) ) ) ;
     public final EObject ruleShape() throws RecognitionException {
         EObject current = null;
 
@@ -7469,23 +7239,23 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2867:28: ( (otherlv_0= 'shape' ( (lv_name_1_0= RULE_ID ) ) ) )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2868:1: (otherlv_0= 'shape' ( (lv_name_1_0= RULE_ID ) ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2782:28: ( (otherlv_0= 'shape' ( (lv_name_1_0= RULE_ID ) ) ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2783:1: (otherlv_0= 'shape' ( (lv_name_1_0= RULE_ID ) ) )
             {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2868:1: (otherlv_0= 'shape' ( (lv_name_1_0= RULE_ID ) ) )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2868:3: otherlv_0= 'shape' ( (lv_name_1_0= RULE_ID ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2783:1: (otherlv_0= 'shape' ( (lv_name_1_0= RULE_ID ) ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2783:3: otherlv_0= 'shape' ( (lv_name_1_0= RULE_ID ) )
             {
-            otherlv_0=(Token)match(input,49,FOLLOW_49_in_ruleShape6734); 
+            otherlv_0=(Token)match(input,49,FOLLOW_49_in_ruleShape6543); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getShapeAccess().getShapeKeyword_0());
                 
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2872:1: ( (lv_name_1_0= RULE_ID ) )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2873:1: (lv_name_1_0= RULE_ID )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2787:1: ( (lv_name_1_0= RULE_ID ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2788:1: (lv_name_1_0= RULE_ID )
             {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2873:1: (lv_name_1_0= RULE_ID )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2874:3: lv_name_1_0= RULE_ID
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2788:1: (lv_name_1_0= RULE_ID )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2789:3: lv_name_1_0= RULE_ID
             {
-            lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleShape6751); 
+            lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleShape6560); 
 
             			newLeafNode(lv_name_1_0, grammarAccess.getShapeAccess().getNameIDTerminalRuleCall_1_0()); 
             		
@@ -7526,7 +7296,7 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleMember"
-    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2898:1: entryRuleMember returns [EObject current=null] : iv_ruleMember= ruleMember EOF ;
+    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2813:1: entryRuleMember returns [EObject current=null] : iv_ruleMember= ruleMember EOF ;
     public final EObject entryRuleMember() throws RecognitionException {
         EObject current = null;
 
@@ -7534,17 +7304,17 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2899:2: (iv_ruleMember= ruleMember EOF )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2900:2: iv_ruleMember= ruleMember EOF
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2814:2: (iv_ruleMember= ruleMember EOF )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2815:2: iv_ruleMember= ruleMember EOF
             {
              newCompositeNode(grammarAccess.getMemberRule()); 
-            pushFollow(FOLLOW_ruleMember_in_entryRuleMember6792);
+            pushFollow(FOLLOW_ruleMember_in_entryRuleMember6601);
             iv_ruleMember=ruleMember();
 
             state._fsp--;
 
              current =iv_ruleMember; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleMember6802); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleMember6611); 
 
             }
 
@@ -7562,7 +7332,7 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleMember"
-    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2907:1: ruleMember returns [EObject current=null] : ( ( (lv_name_0_0= RULE_ID ) ) ( (lv_type_1_0= ruleTypeRef ) ) ) ;
+    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2822:1: ruleMember returns [EObject current=null] : ( ( (lv_name_0_0= RULE_ID ) ) ( (lv_type_1_0= ruleTypeRef ) ) ) ;
     public final EObject ruleMember() throws RecognitionException {
         EObject current = null;
 
@@ -7573,19 +7343,19 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2910:28: ( ( ( (lv_name_0_0= RULE_ID ) ) ( (lv_type_1_0= ruleTypeRef ) ) ) )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2911:1: ( ( (lv_name_0_0= RULE_ID ) ) ( (lv_type_1_0= ruleTypeRef ) ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2825:28: ( ( ( (lv_name_0_0= RULE_ID ) ) ( (lv_type_1_0= ruleTypeRef ) ) ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2826:1: ( ( (lv_name_0_0= RULE_ID ) ) ( (lv_type_1_0= ruleTypeRef ) ) )
             {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2911:1: ( ( (lv_name_0_0= RULE_ID ) ) ( (lv_type_1_0= ruleTypeRef ) ) )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2911:2: ( (lv_name_0_0= RULE_ID ) ) ( (lv_type_1_0= ruleTypeRef ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2826:1: ( ( (lv_name_0_0= RULE_ID ) ) ( (lv_type_1_0= ruleTypeRef ) ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2826:2: ( (lv_name_0_0= RULE_ID ) ) ( (lv_type_1_0= ruleTypeRef ) )
             {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2911:2: ( (lv_name_0_0= RULE_ID ) )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2912:1: (lv_name_0_0= RULE_ID )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2826:2: ( (lv_name_0_0= RULE_ID ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2827:1: (lv_name_0_0= RULE_ID )
             {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2912:1: (lv_name_0_0= RULE_ID )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2913:3: lv_name_0_0= RULE_ID
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2827:1: (lv_name_0_0= RULE_ID )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2828:3: lv_name_0_0= RULE_ID
             {
-            lv_name_0_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleMember6844); 
+            lv_name_0_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleMember6653); 
 
             			newLeafNode(lv_name_0_0, grammarAccess.getMemberAccess().getNameIDTerminalRuleCall_0_0()); 
             		
@@ -7605,16 +7375,16 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2929:2: ( (lv_type_1_0= ruleTypeRef ) )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2930:1: (lv_type_1_0= ruleTypeRef )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2844:2: ( (lv_type_1_0= ruleTypeRef ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2845:1: (lv_type_1_0= ruleTypeRef )
             {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2930:1: (lv_type_1_0= ruleTypeRef )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2931:3: lv_type_1_0= ruleTypeRef
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2845:1: (lv_type_1_0= ruleTypeRef )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2846:3: lv_type_1_0= ruleTypeRef
             {
              
             	        newCompositeNode(grammarAccess.getMemberAccess().getTypeTypeRefParserRuleCall_1_0()); 
             	    
-            pushFollow(FOLLOW_ruleTypeRef_in_ruleMember6870);
+            pushFollow(FOLLOW_ruleTypeRef_in_ruleMember6679);
             lv_type_1_0=ruleTypeRef();
 
             state._fsp--;
@@ -7657,7 +7427,7 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleTypeRef"
-    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2955:1: entryRuleTypeRef returns [EObject current=null] : iv_ruleTypeRef= ruleTypeRef EOF ;
+    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2870:1: entryRuleTypeRef returns [EObject current=null] : iv_ruleTypeRef= ruleTypeRef EOF ;
     public final EObject entryRuleTypeRef() throws RecognitionException {
         EObject current = null;
 
@@ -7665,17 +7435,17 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2956:2: (iv_ruleTypeRef= ruleTypeRef EOF )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2957:2: iv_ruleTypeRef= ruleTypeRef EOF
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2871:2: (iv_ruleTypeRef= ruleTypeRef EOF )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2872:2: iv_ruleTypeRef= ruleTypeRef EOF
             {
              newCompositeNode(grammarAccess.getTypeRefRule()); 
-            pushFollow(FOLLOW_ruleTypeRef_in_entryRuleTypeRef6906);
+            pushFollow(FOLLOW_ruleTypeRef_in_entryRuleTypeRef6715);
             iv_ruleTypeRef=ruleTypeRef();
 
             state._fsp--;
 
              current =iv_ruleTypeRef; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleTypeRef6916); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleTypeRef6725); 
 
             }
 
@@ -7693,7 +7463,7 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleTypeRef"
-    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2964:1: ruleTypeRef returns [EObject current=null] : (this_PlainTypeRef_0= rulePlainTypeRef | this_CompositeTypeRef_1= ruleCompositeTypeRef ) ;
+    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2879:1: ruleTypeRef returns [EObject current=null] : (this_PlainTypeRef_0= rulePlainTypeRef | this_CompositeTypeRef_1= ruleCompositeTypeRef ) ;
     public final EObject ruleTypeRef() throws RecognitionException {
         EObject current = null;
 
@@ -7705,33 +7475,33 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2967:28: ( (this_PlainTypeRef_0= rulePlainTypeRef | this_CompositeTypeRef_1= ruleCompositeTypeRef ) )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2968:1: (this_PlainTypeRef_0= rulePlainTypeRef | this_CompositeTypeRef_1= ruleCompositeTypeRef )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2882:28: ( (this_PlainTypeRef_0= rulePlainTypeRef | this_CompositeTypeRef_1= ruleCompositeTypeRef ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2883:1: (this_PlainTypeRef_0= rulePlainTypeRef | this_CompositeTypeRef_1= ruleCompositeTypeRef )
             {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2968:1: (this_PlainTypeRef_0= rulePlainTypeRef | this_CompositeTypeRef_1= ruleCompositeTypeRef )
-            int alt48=2;
-            int LA48_0 = input.LA(1);
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2883:1: (this_PlainTypeRef_0= rulePlainTypeRef | this_CompositeTypeRef_1= ruleCompositeTypeRef )
+            int alt46=2;
+            int LA46_0 = input.LA(1);
 
-            if ( (LA48_0==RULE_ID||LA48_0==36||(LA48_0>=49 && LA48_0<=51)||(LA48_0>=54 && LA48_0<=55)||(LA48_0>=79 && LA48_0<=94)) ) {
-                alt48=1;
+            if ( (LA46_0==RULE_ID||LA46_0==36||(LA46_0>=49 && LA46_0<=51)||(LA46_0>=54 && LA46_0<=55)||(LA46_0>=79 && LA46_0<=94)) ) {
+                alt46=1;
             }
-            else if ( (LA48_0==24||(LA48_0>=39 && LA48_0<=40)) ) {
-                alt48=2;
+            else if ( (LA46_0==24||(LA46_0>=39 && LA46_0<=40)) ) {
+                alt46=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 48, 0, input);
+                    new NoViableAltException("", 46, 0, input);
 
                 throw nvae;
             }
-            switch (alt48) {
+            switch (alt46) {
                 case 1 :
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2969:5: this_PlainTypeRef_0= rulePlainTypeRef
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2884:5: this_PlainTypeRef_0= rulePlainTypeRef
                     {
                      
                             newCompositeNode(grammarAccess.getTypeRefAccess().getPlainTypeRefParserRuleCall_0()); 
                         
-                    pushFollow(FOLLOW_rulePlainTypeRef_in_ruleTypeRef6963);
+                    pushFollow(FOLLOW_rulePlainTypeRef_in_ruleTypeRef6772);
                     this_PlainTypeRef_0=rulePlainTypeRef();
 
                     state._fsp--;
@@ -7744,12 +7514,12 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2979:5: this_CompositeTypeRef_1= ruleCompositeTypeRef
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2894:5: this_CompositeTypeRef_1= ruleCompositeTypeRef
                     {
                      
                             newCompositeNode(grammarAccess.getTypeRefAccess().getCompositeTypeRefParserRuleCall_1()); 
                         
-                    pushFollow(FOLLOW_ruleCompositeTypeRef_in_ruleTypeRef6990);
+                    pushFollow(FOLLOW_ruleCompositeTypeRef_in_ruleTypeRef6799);
                     this_CompositeTypeRef_1=ruleCompositeTypeRef();
 
                     state._fsp--;
@@ -7782,7 +7552,7 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRulePlainTypeRef"
-    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2995:1: entryRulePlainTypeRef returns [EObject current=null] : iv_rulePlainTypeRef= rulePlainTypeRef EOF ;
+    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2910:1: entryRulePlainTypeRef returns [EObject current=null] : iv_rulePlainTypeRef= rulePlainTypeRef EOF ;
     public final EObject entryRulePlainTypeRef() throws RecognitionException {
         EObject current = null;
 
@@ -7790,17 +7560,17 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2996:2: (iv_rulePlainTypeRef= rulePlainTypeRef EOF )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2997:2: iv_rulePlainTypeRef= rulePlainTypeRef EOF
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2911:2: (iv_rulePlainTypeRef= rulePlainTypeRef EOF )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2912:2: iv_rulePlainTypeRef= rulePlainTypeRef EOF
             {
              newCompositeNode(grammarAccess.getPlainTypeRefRule()); 
-            pushFollow(FOLLOW_rulePlainTypeRef_in_entryRulePlainTypeRef7025);
+            pushFollow(FOLLOW_rulePlainTypeRef_in_entryRulePlainTypeRef6834);
             iv_rulePlainTypeRef=rulePlainTypeRef();
 
             state._fsp--;
 
              current =iv_rulePlainTypeRef; 
-            match(input,EOF,FOLLOW_EOF_in_entryRulePlainTypeRef7035); 
+            match(input,EOF,FOLLOW_EOF_in_entryRulePlainTypeRef6844); 
 
             }
 
@@ -7818,7 +7588,7 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "rulePlainTypeRef"
-    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3004:1: rulePlainTypeRef returns [EObject current=null] : (this_VoidTypeRef_0= ruleVoidTypeRef | this_AutoTypeRef_1= ruleAutoTypeRef | this_NumberTypeRef_2= ruleNumberTypeRef | this_VisualTypeRef_3= ruleVisualTypeRef | this_AuxTypeRef_4= ruleAuxTypeRef | this_TypeAliasRef_5= ruleTypeAliasRef | this_ShapeRef_6= ruleShapeRef | this_BoxRef_7= ruleBoxRef | this_UnitRef_8= ruleUnitRef | this_CollectionRef_9= ruleCollectionRef ) ;
+    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2919:1: rulePlainTypeRef returns [EObject current=null] : (this_VoidTypeRef_0= ruleVoidTypeRef | this_AutoTypeRef_1= ruleAutoTypeRef | this_NumberTypeRef_2= ruleNumberTypeRef | this_VisualTypeRef_3= ruleVisualTypeRef | this_AuxTypeRef_4= ruleAuxTypeRef | this_TypeAliasRef_5= ruleTypeAliasRef | this_ShapeRef_6= ruleShapeRef | this_BoxRef_7= ruleBoxRef | this_UnitRef_8= ruleUnitRef | this_CollectionRef_9= ruleCollectionRef ) ;
     public final EObject rulePlainTypeRef() throws RecognitionException {
         EObject current = null;
 
@@ -7846,20 +7616,20 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3007:28: ( (this_VoidTypeRef_0= ruleVoidTypeRef | this_AutoTypeRef_1= ruleAutoTypeRef | this_NumberTypeRef_2= ruleNumberTypeRef | this_VisualTypeRef_3= ruleVisualTypeRef | this_AuxTypeRef_4= ruleAuxTypeRef | this_TypeAliasRef_5= ruleTypeAliasRef | this_ShapeRef_6= ruleShapeRef | this_BoxRef_7= ruleBoxRef | this_UnitRef_8= ruleUnitRef | this_CollectionRef_9= ruleCollectionRef ) )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3008:1: (this_VoidTypeRef_0= ruleVoidTypeRef | this_AutoTypeRef_1= ruleAutoTypeRef | this_NumberTypeRef_2= ruleNumberTypeRef | this_VisualTypeRef_3= ruleVisualTypeRef | this_AuxTypeRef_4= ruleAuxTypeRef | this_TypeAliasRef_5= ruleTypeAliasRef | this_ShapeRef_6= ruleShapeRef | this_BoxRef_7= ruleBoxRef | this_UnitRef_8= ruleUnitRef | this_CollectionRef_9= ruleCollectionRef )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2922:28: ( (this_VoidTypeRef_0= ruleVoidTypeRef | this_AutoTypeRef_1= ruleAutoTypeRef | this_NumberTypeRef_2= ruleNumberTypeRef | this_VisualTypeRef_3= ruleVisualTypeRef | this_AuxTypeRef_4= ruleAuxTypeRef | this_TypeAliasRef_5= ruleTypeAliasRef | this_ShapeRef_6= ruleShapeRef | this_BoxRef_7= ruleBoxRef | this_UnitRef_8= ruleUnitRef | this_CollectionRef_9= ruleCollectionRef ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2923:1: (this_VoidTypeRef_0= ruleVoidTypeRef | this_AutoTypeRef_1= ruleAutoTypeRef | this_NumberTypeRef_2= ruleNumberTypeRef | this_VisualTypeRef_3= ruleVisualTypeRef | this_AuxTypeRef_4= ruleAuxTypeRef | this_TypeAliasRef_5= ruleTypeAliasRef | this_ShapeRef_6= ruleShapeRef | this_BoxRef_7= ruleBoxRef | this_UnitRef_8= ruleUnitRef | this_CollectionRef_9= ruleCollectionRef )
             {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3008:1: (this_VoidTypeRef_0= ruleVoidTypeRef | this_AutoTypeRef_1= ruleAutoTypeRef | this_NumberTypeRef_2= ruleNumberTypeRef | this_VisualTypeRef_3= ruleVisualTypeRef | this_AuxTypeRef_4= ruleAuxTypeRef | this_TypeAliasRef_5= ruleTypeAliasRef | this_ShapeRef_6= ruleShapeRef | this_BoxRef_7= ruleBoxRef | this_UnitRef_8= ruleUnitRef | this_CollectionRef_9= ruleCollectionRef )
-            int alt49=10;
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2923:1: (this_VoidTypeRef_0= ruleVoidTypeRef | this_AutoTypeRef_1= ruleAutoTypeRef | this_NumberTypeRef_2= ruleNumberTypeRef | this_VisualTypeRef_3= ruleVisualTypeRef | this_AuxTypeRef_4= ruleAuxTypeRef | this_TypeAliasRef_5= ruleTypeAliasRef | this_ShapeRef_6= ruleShapeRef | this_BoxRef_7= ruleBoxRef | this_UnitRef_8= ruleUnitRef | this_CollectionRef_9= ruleCollectionRef )
+            int alt47=10;
             switch ( input.LA(1) ) {
             case 50:
                 {
-                alt49=1;
+                alt47=1;
                 }
                 break;
             case 51:
                 {
-                alt49=2;
+                alt47=2;
                 }
                 break;
             case 79:
@@ -7867,7 +7637,7 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
             case 81:
             case 82:
                 {
-                alt49=3;
+                alt47=3;
                 }
                 break;
             case 49:
@@ -7877,33 +7647,33 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
             case 86:
             case 87:
                 {
-                alt49=4;
+                alt47=4;
                 }
                 break;
             case 88:
             case 89:
                 {
-                alt49=5;
+                alt47=5;
                 }
                 break;
             case RULE_ID:
                 {
-                alt49=6;
+                alt47=6;
                 }
                 break;
             case 55:
                 {
-                alt49=7;
+                alt47=7;
                 }
                 break;
             case 36:
                 {
-                alt49=8;
+                alt47=8;
                 }
                 break;
             case 54:
                 {
-                alt49=9;
+                alt47=9;
                 }
                 break;
             case 90:
@@ -7912,24 +7682,24 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
             case 93:
             case 94:
                 {
-                alt49=10;
+                alt47=10;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 49, 0, input);
+                    new NoViableAltException("", 47, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt49) {
+            switch (alt47) {
                 case 1 :
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3009:5: this_VoidTypeRef_0= ruleVoidTypeRef
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2924:5: this_VoidTypeRef_0= ruleVoidTypeRef
                     {
                      
                             newCompositeNode(grammarAccess.getPlainTypeRefAccess().getVoidTypeRefParserRuleCall_0()); 
                         
-                    pushFollow(FOLLOW_ruleVoidTypeRef_in_rulePlainTypeRef7082);
+                    pushFollow(FOLLOW_ruleVoidTypeRef_in_rulePlainTypeRef6891);
                     this_VoidTypeRef_0=ruleVoidTypeRef();
 
                     state._fsp--;
@@ -7942,12 +7712,12 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3019:5: this_AutoTypeRef_1= ruleAutoTypeRef
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2934:5: this_AutoTypeRef_1= ruleAutoTypeRef
                     {
                      
                             newCompositeNode(grammarAccess.getPlainTypeRefAccess().getAutoTypeRefParserRuleCall_1()); 
                         
-                    pushFollow(FOLLOW_ruleAutoTypeRef_in_rulePlainTypeRef7109);
+                    pushFollow(FOLLOW_ruleAutoTypeRef_in_rulePlainTypeRef6918);
                     this_AutoTypeRef_1=ruleAutoTypeRef();
 
                     state._fsp--;
@@ -7960,12 +7730,12 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3029:5: this_NumberTypeRef_2= ruleNumberTypeRef
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2944:5: this_NumberTypeRef_2= ruleNumberTypeRef
                     {
                      
                             newCompositeNode(grammarAccess.getPlainTypeRefAccess().getNumberTypeRefParserRuleCall_2()); 
                         
-                    pushFollow(FOLLOW_ruleNumberTypeRef_in_rulePlainTypeRef7136);
+                    pushFollow(FOLLOW_ruleNumberTypeRef_in_rulePlainTypeRef6945);
                     this_NumberTypeRef_2=ruleNumberTypeRef();
 
                     state._fsp--;
@@ -7978,12 +7748,12 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3039:5: this_VisualTypeRef_3= ruleVisualTypeRef
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2954:5: this_VisualTypeRef_3= ruleVisualTypeRef
                     {
                      
                             newCompositeNode(grammarAccess.getPlainTypeRefAccess().getVisualTypeRefParserRuleCall_3()); 
                         
-                    pushFollow(FOLLOW_ruleVisualTypeRef_in_rulePlainTypeRef7163);
+                    pushFollow(FOLLOW_ruleVisualTypeRef_in_rulePlainTypeRef6972);
                     this_VisualTypeRef_3=ruleVisualTypeRef();
 
                     state._fsp--;
@@ -7996,12 +7766,12 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 5 :
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3049:5: this_AuxTypeRef_4= ruleAuxTypeRef
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2964:5: this_AuxTypeRef_4= ruleAuxTypeRef
                     {
                      
                             newCompositeNode(grammarAccess.getPlainTypeRefAccess().getAuxTypeRefParserRuleCall_4()); 
                         
-                    pushFollow(FOLLOW_ruleAuxTypeRef_in_rulePlainTypeRef7190);
+                    pushFollow(FOLLOW_ruleAuxTypeRef_in_rulePlainTypeRef6999);
                     this_AuxTypeRef_4=ruleAuxTypeRef();
 
                     state._fsp--;
@@ -8014,12 +7784,12 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 6 :
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3059:5: this_TypeAliasRef_5= ruleTypeAliasRef
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2974:5: this_TypeAliasRef_5= ruleTypeAliasRef
                     {
                      
                             newCompositeNode(grammarAccess.getPlainTypeRefAccess().getTypeAliasRefParserRuleCall_5()); 
                         
-                    pushFollow(FOLLOW_ruleTypeAliasRef_in_rulePlainTypeRef7217);
+                    pushFollow(FOLLOW_ruleTypeAliasRef_in_rulePlainTypeRef7026);
                     this_TypeAliasRef_5=ruleTypeAliasRef();
 
                     state._fsp--;
@@ -8032,12 +7802,12 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 7 :
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3069:5: this_ShapeRef_6= ruleShapeRef
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2984:5: this_ShapeRef_6= ruleShapeRef
                     {
                      
                             newCompositeNode(grammarAccess.getPlainTypeRefAccess().getShapeRefParserRuleCall_6()); 
                         
-                    pushFollow(FOLLOW_ruleShapeRef_in_rulePlainTypeRef7244);
+                    pushFollow(FOLLOW_ruleShapeRef_in_rulePlainTypeRef7053);
                     this_ShapeRef_6=ruleShapeRef();
 
                     state._fsp--;
@@ -8050,12 +7820,12 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 8 :
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3079:5: this_BoxRef_7= ruleBoxRef
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:2994:5: this_BoxRef_7= ruleBoxRef
                     {
                      
                             newCompositeNode(grammarAccess.getPlainTypeRefAccess().getBoxRefParserRuleCall_7()); 
                         
-                    pushFollow(FOLLOW_ruleBoxRef_in_rulePlainTypeRef7271);
+                    pushFollow(FOLLOW_ruleBoxRef_in_rulePlainTypeRef7080);
                     this_BoxRef_7=ruleBoxRef();
 
                     state._fsp--;
@@ -8068,12 +7838,12 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 9 :
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3089:5: this_UnitRef_8= ruleUnitRef
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3004:5: this_UnitRef_8= ruleUnitRef
                     {
                      
                             newCompositeNode(grammarAccess.getPlainTypeRefAccess().getUnitRefParserRuleCall_8()); 
                         
-                    pushFollow(FOLLOW_ruleUnitRef_in_rulePlainTypeRef7298);
+                    pushFollow(FOLLOW_ruleUnitRef_in_rulePlainTypeRef7107);
                     this_UnitRef_8=ruleUnitRef();
 
                     state._fsp--;
@@ -8086,12 +7856,12 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 10 :
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3099:5: this_CollectionRef_9= ruleCollectionRef
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3014:5: this_CollectionRef_9= ruleCollectionRef
                     {
                      
                             newCompositeNode(grammarAccess.getPlainTypeRefAccess().getCollectionRefParserRuleCall_9()); 
                         
-                    pushFollow(FOLLOW_ruleCollectionRef_in_rulePlainTypeRef7325);
+                    pushFollow(FOLLOW_ruleCollectionRef_in_rulePlainTypeRef7134);
                     this_CollectionRef_9=ruleCollectionRef();
 
                     state._fsp--;
@@ -8124,7 +7894,7 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleCompositeTypeRef"
-    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3115:1: entryRuleCompositeTypeRef returns [EObject current=null] : iv_ruleCompositeTypeRef= ruleCompositeTypeRef EOF ;
+    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3030:1: entryRuleCompositeTypeRef returns [EObject current=null] : iv_ruleCompositeTypeRef= ruleCompositeTypeRef EOF ;
     public final EObject entryRuleCompositeTypeRef() throws RecognitionException {
         EObject current = null;
 
@@ -8132,17 +7902,17 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3116:2: (iv_ruleCompositeTypeRef= ruleCompositeTypeRef EOF )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3117:2: iv_ruleCompositeTypeRef= ruleCompositeTypeRef EOF
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3031:2: (iv_ruleCompositeTypeRef= ruleCompositeTypeRef EOF )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3032:2: iv_ruleCompositeTypeRef= ruleCompositeTypeRef EOF
             {
              newCompositeNode(grammarAccess.getCompositeTypeRefRule()); 
-            pushFollow(FOLLOW_ruleCompositeTypeRef_in_entryRuleCompositeTypeRef7360);
+            pushFollow(FOLLOW_ruleCompositeTypeRef_in_entryRuleCompositeTypeRef7169);
             iv_ruleCompositeTypeRef=ruleCompositeTypeRef();
 
             state._fsp--;
 
              current =iv_ruleCompositeTypeRef; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleCompositeTypeRef7370); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleCompositeTypeRef7179); 
 
             }
 
@@ -8160,7 +7930,7 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleCompositeTypeRef"
-    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3124:1: ruleCompositeTypeRef returns [EObject current=null] : (this_SequenceTypeRef_0= ruleSequenceTypeRef | this_TupleTypeRef_1= ruleTupleTypeRef | this_SetTypeRef_2= ruleSetTypeRef ) ;
+    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3039:1: ruleCompositeTypeRef returns [EObject current=null] : (this_SequenceTypeRef_0= ruleSequenceTypeRef | this_TupleTypeRef_1= ruleTupleTypeRef | this_SetTypeRef_2= ruleSetTypeRef ) ;
     public final EObject ruleCompositeTypeRef() throws RecognitionException {
         EObject current = null;
 
@@ -8174,42 +7944,42 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3127:28: ( (this_SequenceTypeRef_0= ruleSequenceTypeRef | this_TupleTypeRef_1= ruleTupleTypeRef | this_SetTypeRef_2= ruleSetTypeRef ) )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3128:1: (this_SequenceTypeRef_0= ruleSequenceTypeRef | this_TupleTypeRef_1= ruleTupleTypeRef | this_SetTypeRef_2= ruleSetTypeRef )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3042:28: ( (this_SequenceTypeRef_0= ruleSequenceTypeRef | this_TupleTypeRef_1= ruleTupleTypeRef | this_SetTypeRef_2= ruleSetTypeRef ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3043:1: (this_SequenceTypeRef_0= ruleSequenceTypeRef | this_TupleTypeRef_1= ruleTupleTypeRef | this_SetTypeRef_2= ruleSetTypeRef )
             {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3128:1: (this_SequenceTypeRef_0= ruleSequenceTypeRef | this_TupleTypeRef_1= ruleTupleTypeRef | this_SetTypeRef_2= ruleSetTypeRef )
-            int alt50=3;
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3043:1: (this_SequenceTypeRef_0= ruleSequenceTypeRef | this_TupleTypeRef_1= ruleTupleTypeRef | this_SetTypeRef_2= ruleSetTypeRef )
+            int alt48=3;
             switch ( input.LA(1) ) {
             case 39:
                 {
-                alt50=1;
+                alt48=1;
                 }
                 break;
             case 24:
                 {
-                alt50=2;
+                alt48=2;
                 }
                 break;
             case 40:
                 {
-                alt50=3;
+                alt48=3;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 50, 0, input);
+                    new NoViableAltException("", 48, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt50) {
+            switch (alt48) {
                 case 1 :
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3129:5: this_SequenceTypeRef_0= ruleSequenceTypeRef
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3044:5: this_SequenceTypeRef_0= ruleSequenceTypeRef
                     {
                      
                             newCompositeNode(grammarAccess.getCompositeTypeRefAccess().getSequenceTypeRefParserRuleCall_0()); 
                         
-                    pushFollow(FOLLOW_ruleSequenceTypeRef_in_ruleCompositeTypeRef7417);
+                    pushFollow(FOLLOW_ruleSequenceTypeRef_in_ruleCompositeTypeRef7226);
                     this_SequenceTypeRef_0=ruleSequenceTypeRef();
 
                     state._fsp--;
@@ -8222,12 +7992,12 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3139:5: this_TupleTypeRef_1= ruleTupleTypeRef
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3054:5: this_TupleTypeRef_1= ruleTupleTypeRef
                     {
                      
                             newCompositeNode(grammarAccess.getCompositeTypeRefAccess().getTupleTypeRefParserRuleCall_1()); 
                         
-                    pushFollow(FOLLOW_ruleTupleTypeRef_in_ruleCompositeTypeRef7444);
+                    pushFollow(FOLLOW_ruleTupleTypeRef_in_ruleCompositeTypeRef7253);
                     this_TupleTypeRef_1=ruleTupleTypeRef();
 
                     state._fsp--;
@@ -8240,12 +8010,12 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3149:5: this_SetTypeRef_2= ruleSetTypeRef
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3064:5: this_SetTypeRef_2= ruleSetTypeRef
                     {
                      
                             newCompositeNode(grammarAccess.getCompositeTypeRefAccess().getSetTypeRefParserRuleCall_2()); 
                         
-                    pushFollow(FOLLOW_ruleSetTypeRef_in_ruleCompositeTypeRef7471);
+                    pushFollow(FOLLOW_ruleSetTypeRef_in_ruleCompositeTypeRef7280);
                     this_SetTypeRef_2=ruleSetTypeRef();
 
                     state._fsp--;
@@ -8278,7 +8048,7 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleSequenceTypeRef"
-    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3165:1: entryRuleSequenceTypeRef returns [EObject current=null] : iv_ruleSequenceTypeRef= ruleSequenceTypeRef EOF ;
+    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3080:1: entryRuleSequenceTypeRef returns [EObject current=null] : iv_ruleSequenceTypeRef= ruleSequenceTypeRef EOF ;
     public final EObject entryRuleSequenceTypeRef() throws RecognitionException {
         EObject current = null;
 
@@ -8286,17 +8056,17 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3166:2: (iv_ruleSequenceTypeRef= ruleSequenceTypeRef EOF )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3167:2: iv_ruleSequenceTypeRef= ruleSequenceTypeRef EOF
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3081:2: (iv_ruleSequenceTypeRef= ruleSequenceTypeRef EOF )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3082:2: iv_ruleSequenceTypeRef= ruleSequenceTypeRef EOF
             {
              newCompositeNode(grammarAccess.getSequenceTypeRefRule()); 
-            pushFollow(FOLLOW_ruleSequenceTypeRef_in_entryRuleSequenceTypeRef7506);
+            pushFollow(FOLLOW_ruleSequenceTypeRef_in_entryRuleSequenceTypeRef7315);
             iv_ruleSequenceTypeRef=ruleSequenceTypeRef();
 
             state._fsp--;
 
              current =iv_ruleSequenceTypeRef; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleSequenceTypeRef7516); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleSequenceTypeRef7325); 
 
             }
 
@@ -8314,7 +8084,7 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleSequenceTypeRef"
-    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3174:1: ruleSequenceTypeRef returns [EObject current=null] : ( () otherlv_1= '[' ( (lv_type_2_0= ruleTypeRef ) ) otherlv_3= ']' ) ;
+    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3089:1: ruleSequenceTypeRef returns [EObject current=null] : ( () otherlv_1= '[' ( (lv_type_2_0= ruleTypeRef ) ) otherlv_3= ']' ) ;
     public final EObject ruleSequenceTypeRef() throws RecognitionException {
         EObject current = null;
 
@@ -8326,14 +8096,14 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3177:28: ( ( () otherlv_1= '[' ( (lv_type_2_0= ruleTypeRef ) ) otherlv_3= ']' ) )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3178:1: ( () otherlv_1= '[' ( (lv_type_2_0= ruleTypeRef ) ) otherlv_3= ']' )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3092:28: ( ( () otherlv_1= '[' ( (lv_type_2_0= ruleTypeRef ) ) otherlv_3= ']' ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3093:1: ( () otherlv_1= '[' ( (lv_type_2_0= ruleTypeRef ) ) otherlv_3= ']' )
             {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3178:1: ( () otherlv_1= '[' ( (lv_type_2_0= ruleTypeRef ) ) otherlv_3= ']' )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3178:2: () otherlv_1= '[' ( (lv_type_2_0= ruleTypeRef ) ) otherlv_3= ']'
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3093:1: ( () otherlv_1= '[' ( (lv_type_2_0= ruleTypeRef ) ) otherlv_3= ']' )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3093:2: () otherlv_1= '[' ( (lv_type_2_0= ruleTypeRef ) ) otherlv_3= ']'
             {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3178:2: ()
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3179:5: 
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3093:2: ()
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3094:5: 
             {
 
                     current = forceCreateModelElement(
@@ -8343,20 +8113,20 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,39,FOLLOW_39_in_ruleSequenceTypeRef7562); 
+            otherlv_1=(Token)match(input,39,FOLLOW_39_in_ruleSequenceTypeRef7371); 
 
                 	newLeafNode(otherlv_1, grammarAccess.getSequenceTypeRefAccess().getLeftSquareBracketKeyword_1());
                 
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3188:1: ( (lv_type_2_0= ruleTypeRef ) )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3189:1: (lv_type_2_0= ruleTypeRef )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3103:1: ( (lv_type_2_0= ruleTypeRef ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3104:1: (lv_type_2_0= ruleTypeRef )
             {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3189:1: (lv_type_2_0= ruleTypeRef )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3190:3: lv_type_2_0= ruleTypeRef
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3104:1: (lv_type_2_0= ruleTypeRef )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3105:3: lv_type_2_0= ruleTypeRef
             {
              
             	        newCompositeNode(grammarAccess.getSequenceTypeRefAccess().getTypeTypeRefParserRuleCall_2_0()); 
             	    
-            pushFollow(FOLLOW_ruleTypeRef_in_ruleSequenceTypeRef7583);
+            pushFollow(FOLLOW_ruleTypeRef_in_ruleSequenceTypeRef7392);
             lv_type_2_0=ruleTypeRef();
 
             state._fsp--;
@@ -8378,7 +8148,7 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_3=(Token)match(input,38,FOLLOW_38_in_ruleSequenceTypeRef7595); 
+            otherlv_3=(Token)match(input,38,FOLLOW_38_in_ruleSequenceTypeRef7404); 
 
                 	newLeafNode(otherlv_3, grammarAccess.getSequenceTypeRefAccess().getRightSquareBracketKeyword_3());
                 
@@ -8403,7 +8173,7 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleTupleTypeRef"
-    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3218:1: entryRuleTupleTypeRef returns [EObject current=null] : iv_ruleTupleTypeRef= ruleTupleTypeRef EOF ;
+    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3133:1: entryRuleTupleTypeRef returns [EObject current=null] : iv_ruleTupleTypeRef= ruleTupleTypeRef EOF ;
     public final EObject entryRuleTupleTypeRef() throws RecognitionException {
         EObject current = null;
 
@@ -8411,17 +8181,17 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3219:2: (iv_ruleTupleTypeRef= ruleTupleTypeRef EOF )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3220:2: iv_ruleTupleTypeRef= ruleTupleTypeRef EOF
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3134:2: (iv_ruleTupleTypeRef= ruleTupleTypeRef EOF )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3135:2: iv_ruleTupleTypeRef= ruleTupleTypeRef EOF
             {
              newCompositeNode(grammarAccess.getTupleTypeRefRule()); 
-            pushFollow(FOLLOW_ruleTupleTypeRef_in_entryRuleTupleTypeRef7631);
+            pushFollow(FOLLOW_ruleTupleTypeRef_in_entryRuleTupleTypeRef7440);
             iv_ruleTupleTypeRef=ruleTupleTypeRef();
 
             state._fsp--;
 
              current =iv_ruleTupleTypeRef; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleTupleTypeRef7641); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleTupleTypeRef7450); 
 
             }
 
@@ -8439,7 +8209,7 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleTupleTypeRef"
-    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3227:1: ruleTupleTypeRef returns [EObject current=null] : ( () otherlv_1= '(' ( ( (lv_items_2_0= ruleTupleTypeRefItem ) ) (otherlv_3= ',' ( (lv_items_4_0= ruleTupleTypeRefItem ) ) )* )? otherlv_5= ')' ) ;
+    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3142:1: ruleTupleTypeRef returns [EObject current=null] : ( () otherlv_1= '(' ( ( (lv_items_2_0= ruleTupleTypeRefItem ) ) (otherlv_3= ',' ( (lv_items_4_0= ruleTupleTypeRefItem ) ) )* )? otherlv_5= ')' ) ;
     public final EObject ruleTupleTypeRef() throws RecognitionException {
         EObject current = null;
 
@@ -8454,14 +8224,14 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3230:28: ( ( () otherlv_1= '(' ( ( (lv_items_2_0= ruleTupleTypeRefItem ) ) (otherlv_3= ',' ( (lv_items_4_0= ruleTupleTypeRefItem ) ) )* )? otherlv_5= ')' ) )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3231:1: ( () otherlv_1= '(' ( ( (lv_items_2_0= ruleTupleTypeRefItem ) ) (otherlv_3= ',' ( (lv_items_4_0= ruleTupleTypeRefItem ) ) )* )? otherlv_5= ')' )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3145:28: ( ( () otherlv_1= '(' ( ( (lv_items_2_0= ruleTupleTypeRefItem ) ) (otherlv_3= ',' ( (lv_items_4_0= ruleTupleTypeRefItem ) ) )* )? otherlv_5= ')' ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3146:1: ( () otherlv_1= '(' ( ( (lv_items_2_0= ruleTupleTypeRefItem ) ) (otherlv_3= ',' ( (lv_items_4_0= ruleTupleTypeRefItem ) ) )* )? otherlv_5= ')' )
             {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3231:1: ( () otherlv_1= '(' ( ( (lv_items_2_0= ruleTupleTypeRefItem ) ) (otherlv_3= ',' ( (lv_items_4_0= ruleTupleTypeRefItem ) ) )* )? otherlv_5= ')' )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3231:2: () otherlv_1= '(' ( ( (lv_items_2_0= ruleTupleTypeRefItem ) ) (otherlv_3= ',' ( (lv_items_4_0= ruleTupleTypeRefItem ) ) )* )? otherlv_5= ')'
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3146:1: ( () otherlv_1= '(' ( ( (lv_items_2_0= ruleTupleTypeRefItem ) ) (otherlv_3= ',' ( (lv_items_4_0= ruleTupleTypeRefItem ) ) )* )? otherlv_5= ')' )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3146:2: () otherlv_1= '(' ( ( (lv_items_2_0= ruleTupleTypeRefItem ) ) (otherlv_3= ',' ( (lv_items_4_0= ruleTupleTypeRefItem ) ) )* )? otherlv_5= ')'
             {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3231:2: ()
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3232:5: 
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3146:2: ()
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3147:5: 
             {
 
                     current = forceCreateModelElement(
@@ -8471,31 +8241,31 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,24,FOLLOW_24_in_ruleTupleTypeRef7687); 
+            otherlv_1=(Token)match(input,24,FOLLOW_24_in_ruleTupleTypeRef7496); 
 
                 	newLeafNode(otherlv_1, grammarAccess.getTupleTypeRefAccess().getLeftParenthesisKeyword_1());
                 
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3241:1: ( ( (lv_items_2_0= ruleTupleTypeRefItem ) ) (otherlv_3= ',' ( (lv_items_4_0= ruleTupleTypeRefItem ) ) )* )?
-            int alt52=2;
-            int LA52_0 = input.LA(1);
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3156:1: ( ( (lv_items_2_0= ruleTupleTypeRefItem ) ) (otherlv_3= ',' ( (lv_items_4_0= ruleTupleTypeRefItem ) ) )* )?
+            int alt50=2;
+            int LA50_0 = input.LA(1);
 
-            if ( (LA52_0==RULE_ID) ) {
-                alt52=1;
+            if ( (LA50_0==RULE_ID) ) {
+                alt50=1;
             }
-            switch (alt52) {
+            switch (alt50) {
                 case 1 :
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3241:2: ( (lv_items_2_0= ruleTupleTypeRefItem ) ) (otherlv_3= ',' ( (lv_items_4_0= ruleTupleTypeRefItem ) ) )*
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3156:2: ( (lv_items_2_0= ruleTupleTypeRefItem ) ) (otherlv_3= ',' ( (lv_items_4_0= ruleTupleTypeRefItem ) ) )*
                     {
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3241:2: ( (lv_items_2_0= ruleTupleTypeRefItem ) )
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3242:1: (lv_items_2_0= ruleTupleTypeRefItem )
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3156:2: ( (lv_items_2_0= ruleTupleTypeRefItem ) )
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3157:1: (lv_items_2_0= ruleTupleTypeRefItem )
                     {
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3242:1: (lv_items_2_0= ruleTupleTypeRefItem )
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3243:3: lv_items_2_0= ruleTupleTypeRefItem
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3157:1: (lv_items_2_0= ruleTupleTypeRefItem )
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3158:3: lv_items_2_0= ruleTupleTypeRefItem
                     {
                      
                     	        newCompositeNode(grammarAccess.getTupleTypeRefAccess().getItemsTupleTypeRefItemParserRuleCall_2_0_0()); 
                     	    
-                    pushFollow(FOLLOW_ruleTupleTypeRefItem_in_ruleTupleTypeRef7709);
+                    pushFollow(FOLLOW_ruleTupleTypeRefItem_in_ruleTupleTypeRef7518);
                     lv_items_2_0=ruleTupleTypeRefItem();
 
                     state._fsp--;
@@ -8517,35 +8287,35 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3259:2: (otherlv_3= ',' ( (lv_items_4_0= ruleTupleTypeRefItem ) ) )*
-                    loop51:
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3174:2: (otherlv_3= ',' ( (lv_items_4_0= ruleTupleTypeRefItem ) ) )*
+                    loop49:
                     do {
-                        int alt51=2;
-                        int LA51_0 = input.LA(1);
+                        int alt49=2;
+                        int LA49_0 = input.LA(1);
 
-                        if ( (LA51_0==37) ) {
-                            alt51=1;
+                        if ( (LA49_0==37) ) {
+                            alt49=1;
                         }
 
 
-                        switch (alt51) {
+                        switch (alt49) {
                     	case 1 :
-                    	    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3259:4: otherlv_3= ',' ( (lv_items_4_0= ruleTupleTypeRefItem ) )
+                    	    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3174:4: otherlv_3= ',' ( (lv_items_4_0= ruleTupleTypeRefItem ) )
                     	    {
-                    	    otherlv_3=(Token)match(input,37,FOLLOW_37_in_ruleTupleTypeRef7722); 
+                    	    otherlv_3=(Token)match(input,37,FOLLOW_37_in_ruleTupleTypeRef7531); 
 
                     	        	newLeafNode(otherlv_3, grammarAccess.getTupleTypeRefAccess().getCommaKeyword_2_1_0());
                     	        
-                    	    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3263:1: ( (lv_items_4_0= ruleTupleTypeRefItem ) )
-                    	    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3264:1: (lv_items_4_0= ruleTupleTypeRefItem )
+                    	    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3178:1: ( (lv_items_4_0= ruleTupleTypeRefItem ) )
+                    	    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3179:1: (lv_items_4_0= ruleTupleTypeRefItem )
                     	    {
-                    	    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3264:1: (lv_items_4_0= ruleTupleTypeRefItem )
-                    	    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3265:3: lv_items_4_0= ruleTupleTypeRefItem
+                    	    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3179:1: (lv_items_4_0= ruleTupleTypeRefItem )
+                    	    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3180:3: lv_items_4_0= ruleTupleTypeRefItem
                     	    {
                     	     
                     	    	        newCompositeNode(grammarAccess.getTupleTypeRefAccess().getItemsTupleTypeRefItemParserRuleCall_2_1_1_0()); 
                     	    	    
-                    	    pushFollow(FOLLOW_ruleTupleTypeRefItem_in_ruleTupleTypeRef7743);
+                    	    pushFollow(FOLLOW_ruleTupleTypeRefItem_in_ruleTupleTypeRef7552);
                     	    lv_items_4_0=ruleTupleTypeRefItem();
 
                     	    state._fsp--;
@@ -8572,7 +8342,7 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
                     	    break;
 
                     	default :
-                    	    break loop51;
+                    	    break loop49;
                         }
                     } while (true);
 
@@ -8582,7 +8352,7 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_5=(Token)match(input,25,FOLLOW_25_in_ruleTupleTypeRef7759); 
+            otherlv_5=(Token)match(input,25,FOLLOW_25_in_ruleTupleTypeRef7568); 
 
                 	newLeafNode(otherlv_5, grammarAccess.getTupleTypeRefAccess().getRightParenthesisKeyword_3());
                 
@@ -8607,7 +8377,7 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleTupleTypeRefItem"
-    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3293:1: entryRuleTupleTypeRefItem returns [EObject current=null] : iv_ruleTupleTypeRefItem= ruleTupleTypeRefItem EOF ;
+    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3208:1: entryRuleTupleTypeRefItem returns [EObject current=null] : iv_ruleTupleTypeRefItem= ruleTupleTypeRefItem EOF ;
     public final EObject entryRuleTupleTypeRefItem() throws RecognitionException {
         EObject current = null;
 
@@ -8615,17 +8385,17 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3294:2: (iv_ruleTupleTypeRefItem= ruleTupleTypeRefItem EOF )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3295:2: iv_ruleTupleTypeRefItem= ruleTupleTypeRefItem EOF
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3209:2: (iv_ruleTupleTypeRefItem= ruleTupleTypeRefItem EOF )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3210:2: iv_ruleTupleTypeRefItem= ruleTupleTypeRefItem EOF
             {
              newCompositeNode(grammarAccess.getTupleTypeRefItemRule()); 
-            pushFollow(FOLLOW_ruleTupleTypeRefItem_in_entryRuleTupleTypeRefItem7795);
+            pushFollow(FOLLOW_ruleTupleTypeRefItem_in_entryRuleTupleTypeRefItem7604);
             iv_ruleTupleTypeRefItem=ruleTupleTypeRefItem();
 
             state._fsp--;
 
              current =iv_ruleTupleTypeRefItem; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleTupleTypeRefItem7805); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleTupleTypeRefItem7614); 
 
             }
 
@@ -8643,7 +8413,7 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleTupleTypeRefItem"
-    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3302:1: ruleTupleTypeRefItem returns [EObject current=null] : ( ( (lv_name_0_0= RULE_ID ) ) otherlv_1= ':' ( (lv_type_2_0= ruleTypeRef ) ) ) ;
+    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3217:1: ruleTupleTypeRefItem returns [EObject current=null] : ( ( (lv_name_0_0= RULE_ID ) ) otherlv_1= ':' ( (lv_type_2_0= ruleTypeRef ) ) ) ;
     public final EObject ruleTupleTypeRefItem() throws RecognitionException {
         EObject current = null;
 
@@ -8655,19 +8425,19 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3305:28: ( ( ( (lv_name_0_0= RULE_ID ) ) otherlv_1= ':' ( (lv_type_2_0= ruleTypeRef ) ) ) )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3306:1: ( ( (lv_name_0_0= RULE_ID ) ) otherlv_1= ':' ( (lv_type_2_0= ruleTypeRef ) ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3220:28: ( ( ( (lv_name_0_0= RULE_ID ) ) otherlv_1= ':' ( (lv_type_2_0= ruleTypeRef ) ) ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3221:1: ( ( (lv_name_0_0= RULE_ID ) ) otherlv_1= ':' ( (lv_type_2_0= ruleTypeRef ) ) )
             {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3306:1: ( ( (lv_name_0_0= RULE_ID ) ) otherlv_1= ':' ( (lv_type_2_0= ruleTypeRef ) ) )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3306:2: ( (lv_name_0_0= RULE_ID ) ) otherlv_1= ':' ( (lv_type_2_0= ruleTypeRef ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3221:1: ( ( (lv_name_0_0= RULE_ID ) ) otherlv_1= ':' ( (lv_type_2_0= ruleTypeRef ) ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3221:2: ( (lv_name_0_0= RULE_ID ) ) otherlv_1= ':' ( (lv_type_2_0= ruleTypeRef ) )
             {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3306:2: ( (lv_name_0_0= RULE_ID ) )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3307:1: (lv_name_0_0= RULE_ID )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3221:2: ( (lv_name_0_0= RULE_ID ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3222:1: (lv_name_0_0= RULE_ID )
             {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3307:1: (lv_name_0_0= RULE_ID )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3308:3: lv_name_0_0= RULE_ID
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3222:1: (lv_name_0_0= RULE_ID )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3223:3: lv_name_0_0= RULE_ID
             {
-            lv_name_0_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleTupleTypeRefItem7847); 
+            lv_name_0_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleTupleTypeRefItem7656); 
 
             			newLeafNode(lv_name_0_0, grammarAccess.getTupleTypeRefItemAccess().getNameIDTerminalRuleCall_0_0()); 
             		
@@ -8687,20 +8457,20 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,23,FOLLOW_23_in_ruleTupleTypeRefItem7864); 
+            otherlv_1=(Token)match(input,23,FOLLOW_23_in_ruleTupleTypeRefItem7673); 
 
                 	newLeafNode(otherlv_1, grammarAccess.getTupleTypeRefItemAccess().getColonKeyword_1());
                 
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3328:1: ( (lv_type_2_0= ruleTypeRef ) )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3329:1: (lv_type_2_0= ruleTypeRef )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3243:1: ( (lv_type_2_0= ruleTypeRef ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3244:1: (lv_type_2_0= ruleTypeRef )
             {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3329:1: (lv_type_2_0= ruleTypeRef )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3330:3: lv_type_2_0= ruleTypeRef
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3244:1: (lv_type_2_0= ruleTypeRef )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3245:3: lv_type_2_0= ruleTypeRef
             {
              
             	        newCompositeNode(grammarAccess.getTupleTypeRefItemAccess().getTypeTypeRefParserRuleCall_2_0()); 
             	    
-            pushFollow(FOLLOW_ruleTypeRef_in_ruleTupleTypeRefItem7885);
+            pushFollow(FOLLOW_ruleTypeRef_in_ruleTupleTypeRefItem7694);
             lv_type_2_0=ruleTypeRef();
 
             state._fsp--;
@@ -8743,7 +8513,7 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleSetTypeRef"
-    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3354:1: entryRuleSetTypeRef returns [EObject current=null] : iv_ruleSetTypeRef= ruleSetTypeRef EOF ;
+    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3269:1: entryRuleSetTypeRef returns [EObject current=null] : iv_ruleSetTypeRef= ruleSetTypeRef EOF ;
     public final EObject entryRuleSetTypeRef() throws RecognitionException {
         EObject current = null;
 
@@ -8751,17 +8521,17 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3355:2: (iv_ruleSetTypeRef= ruleSetTypeRef EOF )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3356:2: iv_ruleSetTypeRef= ruleSetTypeRef EOF
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3270:2: (iv_ruleSetTypeRef= ruleSetTypeRef EOF )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3271:2: iv_ruleSetTypeRef= ruleSetTypeRef EOF
             {
              newCompositeNode(grammarAccess.getSetTypeRefRule()); 
-            pushFollow(FOLLOW_ruleSetTypeRef_in_entryRuleSetTypeRef7921);
+            pushFollow(FOLLOW_ruleSetTypeRef_in_entryRuleSetTypeRef7730);
             iv_ruleSetTypeRef=ruleSetTypeRef();
 
             state._fsp--;
 
              current =iv_ruleSetTypeRef; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleSetTypeRef7931); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleSetTypeRef7740); 
 
             }
 
@@ -8779,7 +8549,7 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleSetTypeRef"
-    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3363:1: ruleSetTypeRef returns [EObject current=null] : ( () otherlv_1= '{' ( (lv_type_2_0= ruleTypeRef ) ) otherlv_3= '}' ) ;
+    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3278:1: ruleSetTypeRef returns [EObject current=null] : ( () otherlv_1= '{' ( (lv_type_2_0= ruleTypeRef ) ) otherlv_3= '}' ) ;
     public final EObject ruleSetTypeRef() throws RecognitionException {
         EObject current = null;
 
@@ -8791,14 +8561,14 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3366:28: ( ( () otherlv_1= '{' ( (lv_type_2_0= ruleTypeRef ) ) otherlv_3= '}' ) )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3367:1: ( () otherlv_1= '{' ( (lv_type_2_0= ruleTypeRef ) ) otherlv_3= '}' )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3281:28: ( ( () otherlv_1= '{' ( (lv_type_2_0= ruleTypeRef ) ) otherlv_3= '}' ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3282:1: ( () otherlv_1= '{' ( (lv_type_2_0= ruleTypeRef ) ) otherlv_3= '}' )
             {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3367:1: ( () otherlv_1= '{' ( (lv_type_2_0= ruleTypeRef ) ) otherlv_3= '}' )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3367:2: () otherlv_1= '{' ( (lv_type_2_0= ruleTypeRef ) ) otherlv_3= '}'
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3282:1: ( () otherlv_1= '{' ( (lv_type_2_0= ruleTypeRef ) ) otherlv_3= '}' )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3282:2: () otherlv_1= '{' ( (lv_type_2_0= ruleTypeRef ) ) otherlv_3= '}'
             {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3367:2: ()
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3368:5: 
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3282:2: ()
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3283:5: 
             {
 
                     current = forceCreateModelElement(
@@ -8808,20 +8578,20 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,40,FOLLOW_40_in_ruleSetTypeRef7977); 
+            otherlv_1=(Token)match(input,40,FOLLOW_40_in_ruleSetTypeRef7786); 
 
                 	newLeafNode(otherlv_1, grammarAccess.getSetTypeRefAccess().getLeftCurlyBracketKeyword_1());
                 
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3377:1: ( (lv_type_2_0= ruleTypeRef ) )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3378:1: (lv_type_2_0= ruleTypeRef )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3292:1: ( (lv_type_2_0= ruleTypeRef ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3293:1: (lv_type_2_0= ruleTypeRef )
             {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3378:1: (lv_type_2_0= ruleTypeRef )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3379:3: lv_type_2_0= ruleTypeRef
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3293:1: (lv_type_2_0= ruleTypeRef )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3294:3: lv_type_2_0= ruleTypeRef
             {
              
             	        newCompositeNode(grammarAccess.getSetTypeRefAccess().getTypeTypeRefParserRuleCall_2_0()); 
             	    
-            pushFollow(FOLLOW_ruleTypeRef_in_ruleSetTypeRef7998);
+            pushFollow(FOLLOW_ruleTypeRef_in_ruleSetTypeRef7807);
             lv_type_2_0=ruleTypeRef();
 
             state._fsp--;
@@ -8843,7 +8613,7 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_3=(Token)match(input,41,FOLLOW_41_in_ruleSetTypeRef8010); 
+            otherlv_3=(Token)match(input,42,FOLLOW_42_in_ruleSetTypeRef7819); 
 
                 	newLeafNode(otherlv_3, grammarAccess.getSetTypeRefAccess().getRightCurlyBracketKeyword_3());
                 
@@ -8868,7 +8638,7 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleVoidTypeRef"
-    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3407:1: entryRuleVoidTypeRef returns [EObject current=null] : iv_ruleVoidTypeRef= ruleVoidTypeRef EOF ;
+    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3322:1: entryRuleVoidTypeRef returns [EObject current=null] : iv_ruleVoidTypeRef= ruleVoidTypeRef EOF ;
     public final EObject entryRuleVoidTypeRef() throws RecognitionException {
         EObject current = null;
 
@@ -8876,17 +8646,17 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3408:2: (iv_ruleVoidTypeRef= ruleVoidTypeRef EOF )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3409:2: iv_ruleVoidTypeRef= ruleVoidTypeRef EOF
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3323:2: (iv_ruleVoidTypeRef= ruleVoidTypeRef EOF )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3324:2: iv_ruleVoidTypeRef= ruleVoidTypeRef EOF
             {
              newCompositeNode(grammarAccess.getVoidTypeRefRule()); 
-            pushFollow(FOLLOW_ruleVoidTypeRef_in_entryRuleVoidTypeRef8046);
+            pushFollow(FOLLOW_ruleVoidTypeRef_in_entryRuleVoidTypeRef7855);
             iv_ruleVoidTypeRef=ruleVoidTypeRef();
 
             state._fsp--;
 
              current =iv_ruleVoidTypeRef; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleVoidTypeRef8056); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleVoidTypeRef7865); 
 
             }
 
@@ -8904,7 +8674,7 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleVoidTypeRef"
-    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3416:1: ruleVoidTypeRef returns [EObject current=null] : ( (lv_name_0_0= 'void' ) ) ;
+    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3331:1: ruleVoidTypeRef returns [EObject current=null] : ( (lv_name_0_0= 'void' ) ) ;
     public final EObject ruleVoidTypeRef() throws RecognitionException {
         EObject current = null;
 
@@ -8913,16 +8683,16 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3419:28: ( ( (lv_name_0_0= 'void' ) ) )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3420:1: ( (lv_name_0_0= 'void' ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3334:28: ( ( (lv_name_0_0= 'void' ) ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3335:1: ( (lv_name_0_0= 'void' ) )
             {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3420:1: ( (lv_name_0_0= 'void' ) )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3421:1: (lv_name_0_0= 'void' )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3335:1: ( (lv_name_0_0= 'void' ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3336:1: (lv_name_0_0= 'void' )
             {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3421:1: (lv_name_0_0= 'void' )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3422:3: lv_name_0_0= 'void'
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3336:1: (lv_name_0_0= 'void' )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3337:3: lv_name_0_0= 'void'
             {
-            lv_name_0_0=(Token)match(input,50,FOLLOW_50_in_ruleVoidTypeRef8098); 
+            lv_name_0_0=(Token)match(input,50,FOLLOW_50_in_ruleVoidTypeRef7907); 
 
                     newLeafNode(lv_name_0_0, grammarAccess.getVoidTypeRefAccess().getNameVoidKeyword_0());
                 
@@ -8956,7 +8726,7 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleAutoTypeRef"
-    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3443:1: entryRuleAutoTypeRef returns [EObject current=null] : iv_ruleAutoTypeRef= ruleAutoTypeRef EOF ;
+    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3358:1: entryRuleAutoTypeRef returns [EObject current=null] : iv_ruleAutoTypeRef= ruleAutoTypeRef EOF ;
     public final EObject entryRuleAutoTypeRef() throws RecognitionException {
         EObject current = null;
 
@@ -8964,17 +8734,17 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3444:2: (iv_ruleAutoTypeRef= ruleAutoTypeRef EOF )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3445:2: iv_ruleAutoTypeRef= ruleAutoTypeRef EOF
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3359:2: (iv_ruleAutoTypeRef= ruleAutoTypeRef EOF )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3360:2: iv_ruleAutoTypeRef= ruleAutoTypeRef EOF
             {
              newCompositeNode(grammarAccess.getAutoTypeRefRule()); 
-            pushFollow(FOLLOW_ruleAutoTypeRef_in_entryRuleAutoTypeRef8146);
+            pushFollow(FOLLOW_ruleAutoTypeRef_in_entryRuleAutoTypeRef7955);
             iv_ruleAutoTypeRef=ruleAutoTypeRef();
 
             state._fsp--;
 
              current =iv_ruleAutoTypeRef; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleAutoTypeRef8156); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleAutoTypeRef7965); 
 
             }
 
@@ -8992,7 +8762,7 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleAutoTypeRef"
-    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3452:1: ruleAutoTypeRef returns [EObject current=null] : ( () otherlv_1= 'auto' ) ;
+    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3367:1: ruleAutoTypeRef returns [EObject current=null] : ( () otherlv_1= 'auto' ) ;
     public final EObject ruleAutoTypeRef() throws RecognitionException {
         EObject current = null;
 
@@ -9001,14 +8771,14 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3455:28: ( ( () otherlv_1= 'auto' ) )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3456:1: ( () otherlv_1= 'auto' )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3370:28: ( ( () otherlv_1= 'auto' ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3371:1: ( () otherlv_1= 'auto' )
             {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3456:1: ( () otherlv_1= 'auto' )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3456:2: () otherlv_1= 'auto'
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3371:1: ( () otherlv_1= 'auto' )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3371:2: () otherlv_1= 'auto'
             {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3456:2: ()
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3457:5: 
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3371:2: ()
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3372:5: 
             {
 
                     current = forceCreateModelElement(
@@ -9018,7 +8788,7 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,51,FOLLOW_51_in_ruleAutoTypeRef8202); 
+            otherlv_1=(Token)match(input,51,FOLLOW_51_in_ruleAutoTypeRef8011); 
 
                 	newLeafNode(otherlv_1, grammarAccess.getAutoTypeRefAccess().getAutoKeyword_1());
                 
@@ -9043,7 +8813,7 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleCollectionRef"
-    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3474:1: entryRuleCollectionRef returns [EObject current=null] : iv_ruleCollectionRef= ruleCollectionRef EOF ;
+    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3389:1: entryRuleCollectionRef returns [EObject current=null] : iv_ruleCollectionRef= ruleCollectionRef EOF ;
     public final EObject entryRuleCollectionRef() throws RecognitionException {
         EObject current = null;
 
@@ -9051,17 +8821,17 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3475:2: (iv_ruleCollectionRef= ruleCollectionRef EOF )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3476:2: iv_ruleCollectionRef= ruleCollectionRef EOF
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3390:2: (iv_ruleCollectionRef= ruleCollectionRef EOF )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3391:2: iv_ruleCollectionRef= ruleCollectionRef EOF
             {
              newCompositeNode(grammarAccess.getCollectionRefRule()); 
-            pushFollow(FOLLOW_ruleCollectionRef_in_entryRuleCollectionRef8238);
+            pushFollow(FOLLOW_ruleCollectionRef_in_entryRuleCollectionRef8047);
             iv_ruleCollectionRef=ruleCollectionRef();
 
             state._fsp--;
 
              current =iv_ruleCollectionRef; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleCollectionRef8248); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleCollectionRef8057); 
 
             }
 
@@ -9079,7 +8849,7 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleCollectionRef"
-    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3483:1: ruleCollectionRef returns [EObject current=null] : ( ( (lv_collection_0_0= ruleCollectionType ) ) otherlv_1= '<' ( (lv_typeref_2_0= ruleTypeRef ) ) otherlv_3= '>' ) ;
+    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3398:1: ruleCollectionRef returns [EObject current=null] : ( ( (lv_collection_0_0= ruleCollectionType ) ) otherlv_1= '<' ( (lv_typeref_2_0= ruleTypeRef ) ) otherlv_3= '>' ) ;
     public final EObject ruleCollectionRef() throws RecognitionException {
         EObject current = null;
 
@@ -9093,22 +8863,22 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3486:28: ( ( ( (lv_collection_0_0= ruleCollectionType ) ) otherlv_1= '<' ( (lv_typeref_2_0= ruleTypeRef ) ) otherlv_3= '>' ) )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3487:1: ( ( (lv_collection_0_0= ruleCollectionType ) ) otherlv_1= '<' ( (lv_typeref_2_0= ruleTypeRef ) ) otherlv_3= '>' )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3401:28: ( ( ( (lv_collection_0_0= ruleCollectionType ) ) otherlv_1= '<' ( (lv_typeref_2_0= ruleTypeRef ) ) otherlv_3= '>' ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3402:1: ( ( (lv_collection_0_0= ruleCollectionType ) ) otherlv_1= '<' ( (lv_typeref_2_0= ruleTypeRef ) ) otherlv_3= '>' )
             {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3487:1: ( ( (lv_collection_0_0= ruleCollectionType ) ) otherlv_1= '<' ( (lv_typeref_2_0= ruleTypeRef ) ) otherlv_3= '>' )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3487:2: ( (lv_collection_0_0= ruleCollectionType ) ) otherlv_1= '<' ( (lv_typeref_2_0= ruleTypeRef ) ) otherlv_3= '>'
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3402:1: ( ( (lv_collection_0_0= ruleCollectionType ) ) otherlv_1= '<' ( (lv_typeref_2_0= ruleTypeRef ) ) otherlv_3= '>' )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3402:2: ( (lv_collection_0_0= ruleCollectionType ) ) otherlv_1= '<' ( (lv_typeref_2_0= ruleTypeRef ) ) otherlv_3= '>'
             {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3487:2: ( (lv_collection_0_0= ruleCollectionType ) )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3488:1: (lv_collection_0_0= ruleCollectionType )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3402:2: ( (lv_collection_0_0= ruleCollectionType ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3403:1: (lv_collection_0_0= ruleCollectionType )
             {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3488:1: (lv_collection_0_0= ruleCollectionType )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3489:3: lv_collection_0_0= ruleCollectionType
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3403:1: (lv_collection_0_0= ruleCollectionType )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3404:3: lv_collection_0_0= ruleCollectionType
             {
              
             	        newCompositeNode(grammarAccess.getCollectionRefAccess().getCollectionCollectionTypeEnumRuleCall_0_0()); 
             	    
-            pushFollow(FOLLOW_ruleCollectionType_in_ruleCollectionRef8294);
+            pushFollow(FOLLOW_ruleCollectionType_in_ruleCollectionRef8103);
             lv_collection_0_0=ruleCollectionType();
 
             state._fsp--;
@@ -9130,20 +8900,20 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,52,FOLLOW_52_in_ruleCollectionRef8306); 
+            otherlv_1=(Token)match(input,52,FOLLOW_52_in_ruleCollectionRef8115); 
 
                 	newLeafNode(otherlv_1, grammarAccess.getCollectionRefAccess().getLessThanSignKeyword_1());
                 
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3509:1: ( (lv_typeref_2_0= ruleTypeRef ) )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3510:1: (lv_typeref_2_0= ruleTypeRef )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3424:1: ( (lv_typeref_2_0= ruleTypeRef ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3425:1: (lv_typeref_2_0= ruleTypeRef )
             {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3510:1: (lv_typeref_2_0= ruleTypeRef )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3511:3: lv_typeref_2_0= ruleTypeRef
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3425:1: (lv_typeref_2_0= ruleTypeRef )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3426:3: lv_typeref_2_0= ruleTypeRef
             {
              
             	        newCompositeNode(grammarAccess.getCollectionRefAccess().getTyperefTypeRefParserRuleCall_2_0()); 
             	    
-            pushFollow(FOLLOW_ruleTypeRef_in_ruleCollectionRef8327);
+            pushFollow(FOLLOW_ruleTypeRef_in_ruleCollectionRef8136);
             lv_typeref_2_0=ruleTypeRef();
 
             state._fsp--;
@@ -9165,7 +8935,7 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_3=(Token)match(input,53,FOLLOW_53_in_ruleCollectionRef8339); 
+            otherlv_3=(Token)match(input,53,FOLLOW_53_in_ruleCollectionRef8148); 
 
                 	newLeafNode(otherlv_3, grammarAccess.getCollectionRefAccess().getGreaterThanSignKeyword_3());
                 
@@ -9190,7 +8960,7 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleUnitRef"
-    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3539:1: entryRuleUnitRef returns [EObject current=null] : iv_ruleUnitRef= ruleUnitRef EOF ;
+    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3454:1: entryRuleUnitRef returns [EObject current=null] : iv_ruleUnitRef= ruleUnitRef EOF ;
     public final EObject entryRuleUnitRef() throws RecognitionException {
         EObject current = null;
 
@@ -9198,17 +8968,17 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3540:2: (iv_ruleUnitRef= ruleUnitRef EOF )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3541:2: iv_ruleUnitRef= ruleUnitRef EOF
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3455:2: (iv_ruleUnitRef= ruleUnitRef EOF )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3456:2: iv_ruleUnitRef= ruleUnitRef EOF
             {
              newCompositeNode(grammarAccess.getUnitRefRule()); 
-            pushFollow(FOLLOW_ruleUnitRef_in_entryRuleUnitRef8375);
+            pushFollow(FOLLOW_ruleUnitRef_in_entryRuleUnitRef8184);
             iv_ruleUnitRef=ruleUnitRef();
 
             state._fsp--;
 
              current =iv_ruleUnitRef; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleUnitRef8385); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleUnitRef8194); 
 
             }
 
@@ -9226,7 +8996,7 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleUnitRef"
-    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3548:1: ruleUnitRef returns [EObject current=null] : (otherlv_0= 'in' ( (otherlv_1= RULE_ID ) ) ) ;
+    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3463:1: ruleUnitRef returns [EObject current=null] : (otherlv_0= 'in' ( (otherlv_1= RULE_ID ) ) ) ;
     public final EObject ruleUnitRef() throws RecognitionException {
         EObject current = null;
 
@@ -9236,28 +9006,28 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3551:28: ( (otherlv_0= 'in' ( (otherlv_1= RULE_ID ) ) ) )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3552:1: (otherlv_0= 'in' ( (otherlv_1= RULE_ID ) ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3466:28: ( (otherlv_0= 'in' ( (otherlv_1= RULE_ID ) ) ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3467:1: (otherlv_0= 'in' ( (otherlv_1= RULE_ID ) ) )
             {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3552:1: (otherlv_0= 'in' ( (otherlv_1= RULE_ID ) ) )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3552:3: otherlv_0= 'in' ( (otherlv_1= RULE_ID ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3467:1: (otherlv_0= 'in' ( (otherlv_1= RULE_ID ) ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3467:3: otherlv_0= 'in' ( (otherlv_1= RULE_ID ) )
             {
-            otherlv_0=(Token)match(input,54,FOLLOW_54_in_ruleUnitRef8422); 
+            otherlv_0=(Token)match(input,54,FOLLOW_54_in_ruleUnitRef8231); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getUnitRefAccess().getInKeyword_0());
                 
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3556:1: ( (otherlv_1= RULE_ID ) )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3557:1: (otherlv_1= RULE_ID )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3471:1: ( (otherlv_1= RULE_ID ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3472:1: (otherlv_1= RULE_ID )
             {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3557:1: (otherlv_1= RULE_ID )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3558:3: otherlv_1= RULE_ID
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3472:1: (otherlv_1= RULE_ID )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3473:3: otherlv_1= RULE_ID
             {
 
             			if (current==null) {
             	            current = createModelElement(grammarAccess.getUnitRefRule());
             	        }
                     
-            otherlv_1=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleUnitRef8442); 
+            otherlv_1=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleUnitRef8251); 
 
             		newLeafNode(otherlv_1, grammarAccess.getUnitRefAccess().getUnittypeUnitCrossReference_1_0()); 
             	
@@ -9288,7 +9058,7 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleBoxRef"
-    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3577:1: entryRuleBoxRef returns [EObject current=null] : iv_ruleBoxRef= ruleBoxRef EOF ;
+    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3492:1: entryRuleBoxRef returns [EObject current=null] : iv_ruleBoxRef= ruleBoxRef EOF ;
     public final EObject entryRuleBoxRef() throws RecognitionException {
         EObject current = null;
 
@@ -9296,17 +9066,17 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3578:2: (iv_ruleBoxRef= ruleBoxRef EOF )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3579:2: iv_ruleBoxRef= ruleBoxRef EOF
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3493:2: (iv_ruleBoxRef= ruleBoxRef EOF )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3494:2: iv_ruleBoxRef= ruleBoxRef EOF
             {
              newCompositeNode(grammarAccess.getBoxRefRule()); 
-            pushFollow(FOLLOW_ruleBoxRef_in_entryRuleBoxRef8478);
+            pushFollow(FOLLOW_ruleBoxRef_in_entryRuleBoxRef8287);
             iv_ruleBoxRef=ruleBoxRef();
 
             state._fsp--;
 
              current =iv_ruleBoxRef; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleBoxRef8488); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleBoxRef8297); 
 
             }
 
@@ -9324,7 +9094,7 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleBoxRef"
-    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3586:1: ruleBoxRef returns [EObject current=null] : (otherlv_0= '->' ( (otherlv_1= RULE_ID ) ) ) ;
+    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3501:1: ruleBoxRef returns [EObject current=null] : (otherlv_0= '->' ( (otherlv_1= RULE_ID ) ) ) ;
     public final EObject ruleBoxRef() throws RecognitionException {
         EObject current = null;
 
@@ -9334,28 +9104,28 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3589:28: ( (otherlv_0= '->' ( (otherlv_1= RULE_ID ) ) ) )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3590:1: (otherlv_0= '->' ( (otherlv_1= RULE_ID ) ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3504:28: ( (otherlv_0= '->' ( (otherlv_1= RULE_ID ) ) ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3505:1: (otherlv_0= '->' ( (otherlv_1= RULE_ID ) ) )
             {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3590:1: (otherlv_0= '->' ( (otherlv_1= RULE_ID ) ) )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3590:3: otherlv_0= '->' ( (otherlv_1= RULE_ID ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3505:1: (otherlv_0= '->' ( (otherlv_1= RULE_ID ) ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3505:3: otherlv_0= '->' ( (otherlv_1= RULE_ID ) )
             {
-            otherlv_0=(Token)match(input,36,FOLLOW_36_in_ruleBoxRef8525); 
+            otherlv_0=(Token)match(input,36,FOLLOW_36_in_ruleBoxRef8334); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getBoxRefAccess().getHyphenMinusGreaterThanSignKeyword_0());
                 
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3594:1: ( (otherlv_1= RULE_ID ) )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3595:1: (otherlv_1= RULE_ID )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3509:1: ( (otherlv_1= RULE_ID ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3510:1: (otherlv_1= RULE_ID )
             {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3595:1: (otherlv_1= RULE_ID )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3596:3: otherlv_1= RULE_ID
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3510:1: (otherlv_1= RULE_ID )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3511:3: otherlv_1= RULE_ID
             {
 
             			if (current==null) {
             	            current = createModelElement(grammarAccess.getBoxRefRule());
             	        }
                     
-            otherlv_1=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleBoxRef8545); 
+            otherlv_1=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleBoxRef8354); 
 
             		newLeafNode(otherlv_1, grammarAccess.getBoxRefAccess().getRefBoxCrossReference_1_0()); 
             	
@@ -9386,7 +9156,7 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleTypeAliasRef"
-    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3615:1: entryRuleTypeAliasRef returns [EObject current=null] : iv_ruleTypeAliasRef= ruleTypeAliasRef EOF ;
+    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3530:1: entryRuleTypeAliasRef returns [EObject current=null] : iv_ruleTypeAliasRef= ruleTypeAliasRef EOF ;
     public final EObject entryRuleTypeAliasRef() throws RecognitionException {
         EObject current = null;
 
@@ -9394,17 +9164,17 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3616:2: (iv_ruleTypeAliasRef= ruleTypeAliasRef EOF )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3617:2: iv_ruleTypeAliasRef= ruleTypeAliasRef EOF
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3531:2: (iv_ruleTypeAliasRef= ruleTypeAliasRef EOF )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3532:2: iv_ruleTypeAliasRef= ruleTypeAliasRef EOF
             {
              newCompositeNode(grammarAccess.getTypeAliasRefRule()); 
-            pushFollow(FOLLOW_ruleTypeAliasRef_in_entryRuleTypeAliasRef8581);
+            pushFollow(FOLLOW_ruleTypeAliasRef_in_entryRuleTypeAliasRef8390);
             iv_ruleTypeAliasRef=ruleTypeAliasRef();
 
             state._fsp--;
 
              current =iv_ruleTypeAliasRef; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleTypeAliasRef8591); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleTypeAliasRef8400); 
 
             }
 
@@ -9422,7 +9192,7 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleTypeAliasRef"
-    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3624:1: ruleTypeAliasRef returns [EObject current=null] : ( (otherlv_0= RULE_ID ) ) ;
+    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3539:1: ruleTypeAliasRef returns [EObject current=null] : ( (otherlv_0= RULE_ID ) ) ;
     public final EObject ruleTypeAliasRef() throws RecognitionException {
         EObject current = null;
 
@@ -9431,21 +9201,21 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3627:28: ( ( (otherlv_0= RULE_ID ) ) )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3628:1: ( (otherlv_0= RULE_ID ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3542:28: ( ( (otherlv_0= RULE_ID ) ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3543:1: ( (otherlv_0= RULE_ID ) )
             {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3628:1: ( (otherlv_0= RULE_ID ) )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3629:1: (otherlv_0= RULE_ID )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3543:1: ( (otherlv_0= RULE_ID ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3544:1: (otherlv_0= RULE_ID )
             {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3629:1: (otherlv_0= RULE_ID )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3630:3: otherlv_0= RULE_ID
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3544:1: (otherlv_0= RULE_ID )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3545:3: otherlv_0= RULE_ID
             {
 
             			if (current==null) {
             	            current = createModelElement(grammarAccess.getTypeAliasRefRule());
             	        }
                     
-            otherlv_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleTypeAliasRef8635); 
+            otherlv_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleTypeAliasRef8444); 
 
             		newLeafNode(otherlv_0, grammarAccess.getTypeAliasRefAccess().getRefTypeAliasCrossReference_0()); 
             	
@@ -9473,7 +9243,7 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleAuxTypeRef"
-    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3649:1: entryRuleAuxTypeRef returns [EObject current=null] : iv_ruleAuxTypeRef= ruleAuxTypeRef EOF ;
+    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3564:1: entryRuleAuxTypeRef returns [EObject current=null] : iv_ruleAuxTypeRef= ruleAuxTypeRef EOF ;
     public final EObject entryRuleAuxTypeRef() throws RecognitionException {
         EObject current = null;
 
@@ -9481,17 +9251,17 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3650:2: (iv_ruleAuxTypeRef= ruleAuxTypeRef EOF )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3651:2: iv_ruleAuxTypeRef= ruleAuxTypeRef EOF
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3565:2: (iv_ruleAuxTypeRef= ruleAuxTypeRef EOF )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3566:2: iv_ruleAuxTypeRef= ruleAuxTypeRef EOF
             {
              newCompositeNode(grammarAccess.getAuxTypeRefRule()); 
-            pushFollow(FOLLOW_ruleAuxTypeRef_in_entryRuleAuxTypeRef8670);
+            pushFollow(FOLLOW_ruleAuxTypeRef_in_entryRuleAuxTypeRef8479);
             iv_ruleAuxTypeRef=ruleAuxTypeRef();
 
             state._fsp--;
 
              current =iv_ruleAuxTypeRef; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleAuxTypeRef8680); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleAuxTypeRef8489); 
 
             }
 
@@ -9509,7 +9279,7 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleAuxTypeRef"
-    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3658:1: ruleAuxTypeRef returns [EObject current=null] : ( (lv_ref_0_0= ruleAuxType ) ) ;
+    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3573:1: ruleAuxTypeRef returns [EObject current=null] : ( (lv_ref_0_0= ruleAuxType ) ) ;
     public final EObject ruleAuxTypeRef() throws RecognitionException {
         EObject current = null;
 
@@ -9519,19 +9289,19 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3661:28: ( ( (lv_ref_0_0= ruleAuxType ) ) )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3662:1: ( (lv_ref_0_0= ruleAuxType ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3576:28: ( ( (lv_ref_0_0= ruleAuxType ) ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3577:1: ( (lv_ref_0_0= ruleAuxType ) )
             {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3662:1: ( (lv_ref_0_0= ruleAuxType ) )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3663:1: (lv_ref_0_0= ruleAuxType )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3577:1: ( (lv_ref_0_0= ruleAuxType ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3578:1: (lv_ref_0_0= ruleAuxType )
             {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3663:1: (lv_ref_0_0= ruleAuxType )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3664:3: lv_ref_0_0= ruleAuxType
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3578:1: (lv_ref_0_0= ruleAuxType )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3579:3: lv_ref_0_0= ruleAuxType
             {
              
             	        newCompositeNode(grammarAccess.getAuxTypeRefAccess().getRefAuxTypeEnumRuleCall_0()); 
             	    
-            pushFollow(FOLLOW_ruleAuxType_in_ruleAuxTypeRef8725);
+            pushFollow(FOLLOW_ruleAuxType_in_ruleAuxTypeRef8534);
             lv_ref_0_0=ruleAuxType();
 
             state._fsp--;
@@ -9571,7 +9341,7 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleShapeRef"
-    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3688:1: entryRuleShapeRef returns [EObject current=null] : iv_ruleShapeRef= ruleShapeRef EOF ;
+    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3603:1: entryRuleShapeRef returns [EObject current=null] : iv_ruleShapeRef= ruleShapeRef EOF ;
     public final EObject entryRuleShapeRef() throws RecognitionException {
         EObject current = null;
 
@@ -9579,17 +9349,17 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3689:2: (iv_ruleShapeRef= ruleShapeRef EOF )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3690:2: iv_ruleShapeRef= ruleShapeRef EOF
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3604:2: (iv_ruleShapeRef= ruleShapeRef EOF )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3605:2: iv_ruleShapeRef= ruleShapeRef EOF
             {
              newCompositeNode(grammarAccess.getShapeRefRule()); 
-            pushFollow(FOLLOW_ruleShapeRef_in_entryRuleShapeRef8760);
+            pushFollow(FOLLOW_ruleShapeRef_in_entryRuleShapeRef8569);
             iv_ruleShapeRef=ruleShapeRef();
 
             state._fsp--;
 
              current =iv_ruleShapeRef; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleShapeRef8770); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleShapeRef8579); 
 
             }
 
@@ -9607,7 +9377,7 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleShapeRef"
-    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3697:1: ruleShapeRef returns [EObject current=null] : (otherlv_0= '~>' ( (otherlv_1= RULE_ID ) ) ) ;
+    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3612:1: ruleShapeRef returns [EObject current=null] : (otherlv_0= '~>' ( (otherlv_1= RULE_ID ) ) ) ;
     public final EObject ruleShapeRef() throws RecognitionException {
         EObject current = null;
 
@@ -9617,28 +9387,28 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3700:28: ( (otherlv_0= '~>' ( (otherlv_1= RULE_ID ) ) ) )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3701:1: (otherlv_0= '~>' ( (otherlv_1= RULE_ID ) ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3615:28: ( (otherlv_0= '~>' ( (otherlv_1= RULE_ID ) ) ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3616:1: (otherlv_0= '~>' ( (otherlv_1= RULE_ID ) ) )
             {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3701:1: (otherlv_0= '~>' ( (otherlv_1= RULE_ID ) ) )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3701:3: otherlv_0= '~>' ( (otherlv_1= RULE_ID ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3616:1: (otherlv_0= '~>' ( (otherlv_1= RULE_ID ) ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3616:3: otherlv_0= '~>' ( (otherlv_1= RULE_ID ) )
             {
-            otherlv_0=(Token)match(input,55,FOLLOW_55_in_ruleShapeRef8807); 
+            otherlv_0=(Token)match(input,55,FOLLOW_55_in_ruleShapeRef8616); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getShapeRefAccess().getTildeGreaterThanSignKeyword_0());
                 
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3705:1: ( (otherlv_1= RULE_ID ) )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3706:1: (otherlv_1= RULE_ID )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3620:1: ( (otherlv_1= RULE_ID ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3621:1: (otherlv_1= RULE_ID )
             {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3706:1: (otherlv_1= RULE_ID )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3707:3: otherlv_1= RULE_ID
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3621:1: (otherlv_1= RULE_ID )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3622:3: otherlv_1= RULE_ID
             {
 
             			if (current==null) {
             	            current = createModelElement(grammarAccess.getShapeRefRule());
             	        }
                     
-            otherlv_1=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleShapeRef8827); 
+            otherlv_1=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleShapeRef8636); 
 
             		newLeafNode(otherlv_1, grammarAccess.getShapeRefAccess().getRefShapeCrossReference_1_0()); 
             	
@@ -9669,7 +9439,7 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleNumberTypeRef"
-    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3726:1: entryRuleNumberTypeRef returns [EObject current=null] : iv_ruleNumberTypeRef= ruleNumberTypeRef EOF ;
+    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3641:1: entryRuleNumberTypeRef returns [EObject current=null] : iv_ruleNumberTypeRef= ruleNumberTypeRef EOF ;
     public final EObject entryRuleNumberTypeRef() throws RecognitionException {
         EObject current = null;
 
@@ -9677,17 +9447,17 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3727:2: (iv_ruleNumberTypeRef= ruleNumberTypeRef EOF )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3728:2: iv_ruleNumberTypeRef= ruleNumberTypeRef EOF
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3642:2: (iv_ruleNumberTypeRef= ruleNumberTypeRef EOF )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3643:2: iv_ruleNumberTypeRef= ruleNumberTypeRef EOF
             {
              newCompositeNode(grammarAccess.getNumberTypeRefRule()); 
-            pushFollow(FOLLOW_ruleNumberTypeRef_in_entryRuleNumberTypeRef8863);
+            pushFollow(FOLLOW_ruleNumberTypeRef_in_entryRuleNumberTypeRef8672);
             iv_ruleNumberTypeRef=ruleNumberTypeRef();
 
             state._fsp--;
 
              current =iv_ruleNumberTypeRef; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleNumberTypeRef8873); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleNumberTypeRef8682); 
 
             }
 
@@ -9705,7 +9475,7 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleNumberTypeRef"
-    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3735:1: ruleNumberTypeRef returns [EObject current=null] : ( (lv_ref_0_0= ruleNumberType ) ) ;
+    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3650:1: ruleNumberTypeRef returns [EObject current=null] : ( (lv_ref_0_0= ruleNumberType ) ) ;
     public final EObject ruleNumberTypeRef() throws RecognitionException {
         EObject current = null;
 
@@ -9715,19 +9485,19 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3738:28: ( ( (lv_ref_0_0= ruleNumberType ) ) )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3739:1: ( (lv_ref_0_0= ruleNumberType ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3653:28: ( ( (lv_ref_0_0= ruleNumberType ) ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3654:1: ( (lv_ref_0_0= ruleNumberType ) )
             {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3739:1: ( (lv_ref_0_0= ruleNumberType ) )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3740:1: (lv_ref_0_0= ruleNumberType )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3654:1: ( (lv_ref_0_0= ruleNumberType ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3655:1: (lv_ref_0_0= ruleNumberType )
             {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3740:1: (lv_ref_0_0= ruleNumberType )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3741:3: lv_ref_0_0= ruleNumberType
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3655:1: (lv_ref_0_0= ruleNumberType )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3656:3: lv_ref_0_0= ruleNumberType
             {
              
             	        newCompositeNode(grammarAccess.getNumberTypeRefAccess().getRefNumberTypeEnumRuleCall_0()); 
             	    
-            pushFollow(FOLLOW_ruleNumberType_in_ruleNumberTypeRef8918);
+            pushFollow(FOLLOW_ruleNumberType_in_ruleNumberTypeRef8727);
             lv_ref_0_0=ruleNumberType();
 
             state._fsp--;
@@ -9767,7 +9537,7 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleVisualTypeRef"
-    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3765:1: entryRuleVisualTypeRef returns [EObject current=null] : iv_ruleVisualTypeRef= ruleVisualTypeRef EOF ;
+    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3680:1: entryRuleVisualTypeRef returns [EObject current=null] : iv_ruleVisualTypeRef= ruleVisualTypeRef EOF ;
     public final EObject entryRuleVisualTypeRef() throws RecognitionException {
         EObject current = null;
 
@@ -9775,17 +9545,17 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3766:2: (iv_ruleVisualTypeRef= ruleVisualTypeRef EOF )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3767:2: iv_ruleVisualTypeRef= ruleVisualTypeRef EOF
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3681:2: (iv_ruleVisualTypeRef= ruleVisualTypeRef EOF )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3682:2: iv_ruleVisualTypeRef= ruleVisualTypeRef EOF
             {
              newCompositeNode(grammarAccess.getVisualTypeRefRule()); 
-            pushFollow(FOLLOW_ruleVisualTypeRef_in_entryRuleVisualTypeRef8953);
+            pushFollow(FOLLOW_ruleVisualTypeRef_in_entryRuleVisualTypeRef8762);
             iv_ruleVisualTypeRef=ruleVisualTypeRef();
 
             state._fsp--;
 
              current =iv_ruleVisualTypeRef; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleVisualTypeRef8963); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleVisualTypeRef8772); 
 
             }
 
@@ -9803,7 +9573,7 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleVisualTypeRef"
-    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3774:1: ruleVisualTypeRef returns [EObject current=null] : ( (lv_ref_0_0= ruleVisualType ) ) ;
+    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3689:1: ruleVisualTypeRef returns [EObject current=null] : ( (lv_ref_0_0= ruleVisualType ) ) ;
     public final EObject ruleVisualTypeRef() throws RecognitionException {
         EObject current = null;
 
@@ -9813,19 +9583,19 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3777:28: ( ( (lv_ref_0_0= ruleVisualType ) ) )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3778:1: ( (lv_ref_0_0= ruleVisualType ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3692:28: ( ( (lv_ref_0_0= ruleVisualType ) ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3693:1: ( (lv_ref_0_0= ruleVisualType ) )
             {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3778:1: ( (lv_ref_0_0= ruleVisualType ) )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3779:1: (lv_ref_0_0= ruleVisualType )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3693:1: ( (lv_ref_0_0= ruleVisualType ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3694:1: (lv_ref_0_0= ruleVisualType )
             {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3779:1: (lv_ref_0_0= ruleVisualType )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3780:3: lv_ref_0_0= ruleVisualType
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3694:1: (lv_ref_0_0= ruleVisualType )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3695:3: lv_ref_0_0= ruleVisualType
             {
              
             	        newCompositeNode(grammarAccess.getVisualTypeRefAccess().getRefVisualTypeEnumRuleCall_0()); 
             	    
-            pushFollow(FOLLOW_ruleVisualType_in_ruleVisualTypeRef9008);
+            pushFollow(FOLLOW_ruleVisualType_in_ruleVisualTypeRef8817);
             lv_ref_0_0=ruleVisualType();
 
             state._fsp--;
@@ -9865,7 +9635,7 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleTypeAlias"
-    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3804:1: entryRuleTypeAlias returns [EObject current=null] : iv_ruleTypeAlias= ruleTypeAlias EOF ;
+    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3719:1: entryRuleTypeAlias returns [EObject current=null] : iv_ruleTypeAlias= ruleTypeAlias EOF ;
     public final EObject entryRuleTypeAlias() throws RecognitionException {
         EObject current = null;
 
@@ -9873,17 +9643,17 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3805:2: (iv_ruleTypeAlias= ruleTypeAlias EOF )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3806:2: iv_ruleTypeAlias= ruleTypeAlias EOF
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3720:2: (iv_ruleTypeAlias= ruleTypeAlias EOF )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3721:2: iv_ruleTypeAlias= ruleTypeAlias EOF
             {
              newCompositeNode(grammarAccess.getTypeAliasRule()); 
-            pushFollow(FOLLOW_ruleTypeAlias_in_entryRuleTypeAlias9043);
+            pushFollow(FOLLOW_ruleTypeAlias_in_entryRuleTypeAlias8852);
             iv_ruleTypeAlias=ruleTypeAlias();
 
             state._fsp--;
 
              current =iv_ruleTypeAlias; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleTypeAlias9053); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleTypeAlias8862); 
 
             }
 
@@ -9901,7 +9671,7 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleTypeAlias"
-    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3813:1: ruleTypeAlias returns [EObject current=null] : (otherlv_0= 'alias' ( (lv_name_1_0= RULE_ID ) ) ( (lv_type_2_0= ruleTypeRef ) ) ) ;
+    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3728:1: ruleTypeAlias returns [EObject current=null] : (otherlv_0= 'alias' ( (lv_name_1_0= RULE_ID ) ) ( (lv_type_2_0= ruleTypeRef ) ) ) ;
     public final EObject ruleTypeAlias() throws RecognitionException {
         EObject current = null;
 
@@ -9913,23 +9683,23 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3816:28: ( (otherlv_0= 'alias' ( (lv_name_1_0= RULE_ID ) ) ( (lv_type_2_0= ruleTypeRef ) ) ) )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3817:1: (otherlv_0= 'alias' ( (lv_name_1_0= RULE_ID ) ) ( (lv_type_2_0= ruleTypeRef ) ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3731:28: ( (otherlv_0= 'alias' ( (lv_name_1_0= RULE_ID ) ) ( (lv_type_2_0= ruleTypeRef ) ) ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3732:1: (otherlv_0= 'alias' ( (lv_name_1_0= RULE_ID ) ) ( (lv_type_2_0= ruleTypeRef ) ) )
             {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3817:1: (otherlv_0= 'alias' ( (lv_name_1_0= RULE_ID ) ) ( (lv_type_2_0= ruleTypeRef ) ) )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3817:3: otherlv_0= 'alias' ( (lv_name_1_0= RULE_ID ) ) ( (lv_type_2_0= ruleTypeRef ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3732:1: (otherlv_0= 'alias' ( (lv_name_1_0= RULE_ID ) ) ( (lv_type_2_0= ruleTypeRef ) ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3732:3: otherlv_0= 'alias' ( (lv_name_1_0= RULE_ID ) ) ( (lv_type_2_0= ruleTypeRef ) )
             {
-            otherlv_0=(Token)match(input,56,FOLLOW_56_in_ruleTypeAlias9090); 
+            otherlv_0=(Token)match(input,56,FOLLOW_56_in_ruleTypeAlias8899); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getTypeAliasAccess().getAliasKeyword_0());
                 
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3821:1: ( (lv_name_1_0= RULE_ID ) )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3822:1: (lv_name_1_0= RULE_ID )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3736:1: ( (lv_name_1_0= RULE_ID ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3737:1: (lv_name_1_0= RULE_ID )
             {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3822:1: (lv_name_1_0= RULE_ID )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3823:3: lv_name_1_0= RULE_ID
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3737:1: (lv_name_1_0= RULE_ID )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3738:3: lv_name_1_0= RULE_ID
             {
-            lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleTypeAlias9107); 
+            lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleTypeAlias8916); 
 
             			newLeafNode(lv_name_1_0, grammarAccess.getTypeAliasAccess().getNameIDTerminalRuleCall_1_0()); 
             		
@@ -9949,16 +9719,16 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3839:2: ( (lv_type_2_0= ruleTypeRef ) )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3840:1: (lv_type_2_0= ruleTypeRef )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3754:2: ( (lv_type_2_0= ruleTypeRef ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3755:1: (lv_type_2_0= ruleTypeRef )
             {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3840:1: (lv_type_2_0= ruleTypeRef )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3841:3: lv_type_2_0= ruleTypeRef
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3755:1: (lv_type_2_0= ruleTypeRef )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3756:3: lv_type_2_0= ruleTypeRef
             {
              
             	        newCompositeNode(grammarAccess.getTypeAliasAccess().getTypeTypeRefParserRuleCall_2_0()); 
             	    
-            pushFollow(FOLLOW_ruleTypeRef_in_ruleTypeAlias9133);
+            pushFollow(FOLLOW_ruleTypeRef_in_ruleTypeAlias8942);
             lv_type_2_0=ruleTypeRef();
 
             state._fsp--;
@@ -10001,7 +9771,7 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleStream"
-    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3865:1: entryRuleStream returns [EObject current=null] : iv_ruleStream= ruleStream EOF ;
+    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3780:1: entryRuleStream returns [EObject current=null] : iv_ruleStream= ruleStream EOF ;
     public final EObject entryRuleStream() throws RecognitionException {
         EObject current = null;
 
@@ -10009,17 +9779,17 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3866:2: (iv_ruleStream= ruleStream EOF )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3867:2: iv_ruleStream= ruleStream EOF
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3781:2: (iv_ruleStream= ruleStream EOF )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3782:2: iv_ruleStream= ruleStream EOF
             {
              newCompositeNode(grammarAccess.getStreamRule()); 
-            pushFollow(FOLLOW_ruleStream_in_entryRuleStream9169);
+            pushFollow(FOLLOW_ruleStream_in_entryRuleStream8978);
             iv_ruleStream=ruleStream();
 
             state._fsp--;
 
              current =iv_ruleStream; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleStream9179); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleStream8988); 
 
             }
 
@@ -10037,7 +9807,7 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleStream"
-    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3874:1: ruleStream returns [EObject current=null] : ( ( (lv_name_0_0= 'stream' ) )? ( (lv_left_1_0= ruleLStreamValue ) ) otherlv_2= '<-' ( (lv_right_3_0= ruleRStreamValue ) ) ) ;
+    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3789:1: ruleStream returns [EObject current=null] : ( ( (lv_name_0_0= 'stream' ) )? ( (lv_left_1_0= ruleLStreamValue ) ) otherlv_2= '<-' ( (lv_right_3_0= ruleRStreamValue ) ) ) ;
     public final EObject ruleStream() throws RecognitionException {
         EObject current = null;
 
@@ -10051,27 +9821,27 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3877:28: ( ( ( (lv_name_0_0= 'stream' ) )? ( (lv_left_1_0= ruleLStreamValue ) ) otherlv_2= '<-' ( (lv_right_3_0= ruleRStreamValue ) ) ) )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3878:1: ( ( (lv_name_0_0= 'stream' ) )? ( (lv_left_1_0= ruleLStreamValue ) ) otherlv_2= '<-' ( (lv_right_3_0= ruleRStreamValue ) ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3792:28: ( ( ( (lv_name_0_0= 'stream' ) )? ( (lv_left_1_0= ruleLStreamValue ) ) otherlv_2= '<-' ( (lv_right_3_0= ruleRStreamValue ) ) ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3793:1: ( ( (lv_name_0_0= 'stream' ) )? ( (lv_left_1_0= ruleLStreamValue ) ) otherlv_2= '<-' ( (lv_right_3_0= ruleRStreamValue ) ) )
             {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3878:1: ( ( (lv_name_0_0= 'stream' ) )? ( (lv_left_1_0= ruleLStreamValue ) ) otherlv_2= '<-' ( (lv_right_3_0= ruleRStreamValue ) ) )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3878:2: ( (lv_name_0_0= 'stream' ) )? ( (lv_left_1_0= ruleLStreamValue ) ) otherlv_2= '<-' ( (lv_right_3_0= ruleRStreamValue ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3793:1: ( ( (lv_name_0_0= 'stream' ) )? ( (lv_left_1_0= ruleLStreamValue ) ) otherlv_2= '<-' ( (lv_right_3_0= ruleRStreamValue ) ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3793:2: ( (lv_name_0_0= 'stream' ) )? ( (lv_left_1_0= ruleLStreamValue ) ) otherlv_2= '<-' ( (lv_right_3_0= ruleRStreamValue ) )
             {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3878:2: ( (lv_name_0_0= 'stream' ) )?
-            int alt53=2;
-            int LA53_0 = input.LA(1);
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3793:2: ( (lv_name_0_0= 'stream' ) )?
+            int alt51=2;
+            int LA51_0 = input.LA(1);
 
-            if ( (LA53_0==57) ) {
-                alt53=1;
+            if ( (LA51_0==57) ) {
+                alt51=1;
             }
-            switch (alt53) {
+            switch (alt51) {
                 case 1 :
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3879:1: (lv_name_0_0= 'stream' )
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3794:1: (lv_name_0_0= 'stream' )
                     {
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3879:1: (lv_name_0_0= 'stream' )
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3880:3: lv_name_0_0= 'stream'
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3794:1: (lv_name_0_0= 'stream' )
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3795:3: lv_name_0_0= 'stream'
                     {
-                    lv_name_0_0=(Token)match(input,57,FOLLOW_57_in_ruleStream9222); 
+                    lv_name_0_0=(Token)match(input,57,FOLLOW_57_in_ruleStream9031); 
 
                             newLeafNode(lv_name_0_0, grammarAccess.getStreamAccess().getNameStreamKeyword_0_0());
                         
@@ -10090,16 +9860,16 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3893:3: ( (lv_left_1_0= ruleLStreamValue ) )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3894:1: (lv_left_1_0= ruleLStreamValue )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3808:3: ( (lv_left_1_0= ruleLStreamValue ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3809:1: (lv_left_1_0= ruleLStreamValue )
             {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3894:1: (lv_left_1_0= ruleLStreamValue )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3895:3: lv_left_1_0= ruleLStreamValue
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3809:1: (lv_left_1_0= ruleLStreamValue )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3810:3: lv_left_1_0= ruleLStreamValue
             {
              
             	        newCompositeNode(grammarAccess.getStreamAccess().getLeftLStreamValueParserRuleCall_1_0()); 
             	    
-            pushFollow(FOLLOW_ruleLStreamValue_in_ruleStream9257);
+            pushFollow(FOLLOW_ruleLStreamValue_in_ruleStream9066);
             lv_left_1_0=ruleLStreamValue();
 
             state._fsp--;
@@ -10121,20 +9891,20 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_2=(Token)match(input,58,FOLLOW_58_in_ruleStream9269); 
+            otherlv_2=(Token)match(input,58,FOLLOW_58_in_ruleStream9078); 
 
                 	newLeafNode(otherlv_2, grammarAccess.getStreamAccess().getLessThanSignHyphenMinusKeyword_2());
                 
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3915:1: ( (lv_right_3_0= ruleRStreamValue ) )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3916:1: (lv_right_3_0= ruleRStreamValue )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3830:1: ( (lv_right_3_0= ruleRStreamValue ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3831:1: (lv_right_3_0= ruleRStreamValue )
             {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3916:1: (lv_right_3_0= ruleRStreamValue )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3917:3: lv_right_3_0= ruleRStreamValue
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3831:1: (lv_right_3_0= ruleRStreamValue )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3832:3: lv_right_3_0= ruleRStreamValue
             {
              
             	        newCompositeNode(grammarAccess.getStreamAccess().getRightRStreamValueParserRuleCall_3_0()); 
             	    
-            pushFollow(FOLLOW_ruleRStreamValue_in_ruleStream9290);
+            pushFollow(FOLLOW_ruleRStreamValue_in_ruleStream9099);
             lv_right_3_0=ruleRStreamValue();
 
             state._fsp--;
@@ -10177,7 +9947,7 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleLStreamValue"
-    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3941:1: entryRuleLStreamValue returns [EObject current=null] : iv_ruleLStreamValue= ruleLStreamValue EOF ;
+    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3856:1: entryRuleLStreamValue returns [EObject current=null] : iv_ruleLStreamValue= ruleLStreamValue EOF ;
     public final EObject entryRuleLStreamValue() throws RecognitionException {
         EObject current = null;
 
@@ -10185,17 +9955,17 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3942:2: (iv_ruleLStreamValue= ruleLStreamValue EOF )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3943:2: iv_ruleLStreamValue= ruleLStreamValue EOF
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3857:2: (iv_ruleLStreamValue= ruleLStreamValue EOF )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3858:2: iv_ruleLStreamValue= ruleLStreamValue EOF
             {
              newCompositeNode(grammarAccess.getLStreamValueRule()); 
-            pushFollow(FOLLOW_ruleLStreamValue_in_entryRuleLStreamValue9326);
+            pushFollow(FOLLOW_ruleLStreamValue_in_entryRuleLStreamValue9135);
             iv_ruleLStreamValue=ruleLStreamValue();
 
             state._fsp--;
 
              current =iv_ruleLStreamValue; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleLStreamValue9336); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleLStreamValue9145); 
 
             }
 
@@ -10213,7 +9983,7 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleLStreamValue"
-    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3950:1: ruleLStreamValue returns [EObject current=null] : this_OutputRef_0= ruleOutputRef ;
+    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3865:1: ruleLStreamValue returns [EObject current=null] : this_OutputRef_0= ruleOutputRef ;
     public final EObject ruleLStreamValue() throws RecognitionException {
         EObject current = null;
 
@@ -10223,13 +9993,13 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3953:28: (this_OutputRef_0= ruleOutputRef )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3955:5: this_OutputRef_0= ruleOutputRef
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3868:28: (this_OutputRef_0= ruleOutputRef )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3870:5: this_OutputRef_0= ruleOutputRef
             {
              
                     newCompositeNode(grammarAccess.getLStreamValueAccess().getOutputRefParserRuleCall()); 
                 
-            pushFollow(FOLLOW_ruleOutputRef_in_ruleLStreamValue9382);
+            pushFollow(FOLLOW_ruleOutputRef_in_ruleLStreamValue9191);
             this_OutputRef_0=ruleOutputRef();
 
             state._fsp--;
@@ -10256,7 +10026,7 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleRStreamValue"
-    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3971:1: entryRuleRStreamValue returns [EObject current=null] : iv_ruleRStreamValue= ruleRStreamValue EOF ;
+    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3886:1: entryRuleRStreamValue returns [EObject current=null] : iv_ruleRStreamValue= ruleRStreamValue EOF ;
     public final EObject entryRuleRStreamValue() throws RecognitionException {
         EObject current = null;
 
@@ -10264,17 +10034,17 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3972:2: (iv_ruleRStreamValue= ruleRStreamValue EOF )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3973:2: iv_ruleRStreamValue= ruleRStreamValue EOF
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3887:2: (iv_ruleRStreamValue= ruleRStreamValue EOF )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3888:2: iv_ruleRStreamValue= ruleRStreamValue EOF
             {
              newCompositeNode(grammarAccess.getRStreamValueRule()); 
-            pushFollow(FOLLOW_ruleRStreamValue_in_entryRuleRStreamValue9416);
+            pushFollow(FOLLOW_ruleRStreamValue_in_entryRuleRStreamValue9225);
             iv_ruleRStreamValue=ruleRStreamValue();
 
             state._fsp--;
 
              current =iv_ruleRStreamValue; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleRStreamValue9426); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleRStreamValue9235); 
 
             }
 
@@ -10292,7 +10062,7 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleRStreamValue"
-    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3980:1: ruleRStreamValue returns [EObject current=null] : (this_InputRef_0= ruleInputRef | this_LiteralExpression_1= ruleLiteralExpression ) ;
+    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3895:1: ruleRStreamValue returns [EObject current=null] : (this_InputRef_0= ruleInputRef | this_LiteralExpression_1= ruleLiteralExpression ) ;
     public final EObject ruleRStreamValue() throws RecognitionException {
         EObject current = null;
 
@@ -10304,33 +10074,33 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3983:28: ( (this_InputRef_0= ruleInputRef | this_LiteralExpression_1= ruleLiteralExpression ) )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3984:1: (this_InputRef_0= ruleInputRef | this_LiteralExpression_1= ruleLiteralExpression )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3898:28: ( (this_InputRef_0= ruleInputRef | this_LiteralExpression_1= ruleLiteralExpression ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3899:1: (this_InputRef_0= ruleInputRef | this_LiteralExpression_1= ruleLiteralExpression )
             {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3984:1: (this_InputRef_0= ruleInputRef | this_LiteralExpression_1= ruleLiteralExpression )
-            int alt54=2;
-            int LA54_0 = input.LA(1);
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3899:1: (this_InputRef_0= ruleInputRef | this_LiteralExpression_1= ruleLiteralExpression )
+            int alt52=2;
+            int LA52_0 = input.LA(1);
 
-            if ( (LA54_0==59) ) {
-                alt54=1;
+            if ( (LA52_0==59) ) {
+                alt52=1;
             }
-            else if ( ((LA54_0>=RULE_ID && LA54_0<=RULE_BIN)||LA54_0==24||LA54_0==26||(LA54_0>=29 && LA54_0<=35)||(LA54_0>=39 && LA54_0<=40)||LA54_0==69) ) {
-                alt54=2;
+            else if ( ((LA52_0>=RULE_ID && LA52_0<=RULE_BIN)||LA52_0==24||LA52_0==26||(LA52_0>=29 && LA52_0<=35)||LA52_0==39||LA52_0==69) ) {
+                alt52=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 54, 0, input);
+                    new NoViableAltException("", 52, 0, input);
 
                 throw nvae;
             }
-            switch (alt54) {
+            switch (alt52) {
                 case 1 :
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3985:5: this_InputRef_0= ruleInputRef
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3900:5: this_InputRef_0= ruleInputRef
                     {
                      
                             newCompositeNode(grammarAccess.getRStreamValueAccess().getInputRefParserRuleCall_0()); 
                         
-                    pushFollow(FOLLOW_ruleInputRef_in_ruleRStreamValue9473);
+                    pushFollow(FOLLOW_ruleInputRef_in_ruleRStreamValue9282);
                     this_InputRef_0=ruleInputRef();
 
                     state._fsp--;
@@ -10343,12 +10113,12 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3995:5: this_LiteralExpression_1= ruleLiteralExpression
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3910:5: this_LiteralExpression_1= ruleLiteralExpression
                     {
                      
                             newCompositeNode(grammarAccess.getRStreamValueAccess().getLiteralExpressionParserRuleCall_1()); 
                         
-                    pushFollow(FOLLOW_ruleLiteralExpression_in_ruleRStreamValue9500);
+                    pushFollow(FOLLOW_ruleLiteralExpression_in_ruleRStreamValue9309);
                     this_LiteralExpression_1=ruleLiteralExpression();
 
                     state._fsp--;
@@ -10381,7 +10151,7 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleInputRef"
-    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4011:1: entryRuleInputRef returns [EObject current=null] : iv_ruleInputRef= ruleInputRef EOF ;
+    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3926:1: entryRuleInputRef returns [EObject current=null] : iv_ruleInputRef= ruleInputRef EOF ;
     public final EObject entryRuleInputRef() throws RecognitionException {
         EObject current = null;
 
@@ -10389,17 +10159,17 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4012:2: (iv_ruleInputRef= ruleInputRef EOF )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4013:2: iv_ruleInputRef= ruleInputRef EOF
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3927:2: (iv_ruleInputRef= ruleInputRef EOF )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3928:2: iv_ruleInputRef= ruleInputRef EOF
             {
              newCompositeNode(grammarAccess.getInputRefRule()); 
-            pushFollow(FOLLOW_ruleInputRef_in_entryRuleInputRef9535);
+            pushFollow(FOLLOW_ruleInputRef_in_entryRuleInputRef9344);
             iv_ruleInputRef=ruleInputRef();
 
             state._fsp--;
 
              current =iv_ruleInputRef; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleInputRef9545); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleInputRef9354); 
 
             }
 
@@ -10417,7 +10187,7 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleInputRef"
-    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4020:1: ruleInputRef returns [EObject current=null] : ( () otherlv_1= 'I' ) ;
+    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3935:1: ruleInputRef returns [EObject current=null] : ( () otherlv_1= 'I' ) ;
     public final EObject ruleInputRef() throws RecognitionException {
         EObject current = null;
 
@@ -10426,14 +10196,14 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4023:28: ( ( () otherlv_1= 'I' ) )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4024:1: ( () otherlv_1= 'I' )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3938:28: ( ( () otherlv_1= 'I' ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3939:1: ( () otherlv_1= 'I' )
             {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4024:1: ( () otherlv_1= 'I' )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4024:2: () otherlv_1= 'I'
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3939:1: ( () otherlv_1= 'I' )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3939:2: () otherlv_1= 'I'
             {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4024:2: ()
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4025:5: 
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3939:2: ()
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3940:5: 
             {
 
                     current = forceCreateModelElement(
@@ -10443,7 +10213,7 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,59,FOLLOW_59_in_ruleInputRef9591); 
+            otherlv_1=(Token)match(input,59,FOLLOW_59_in_ruleInputRef9400); 
 
                 	newLeafNode(otherlv_1, grammarAccess.getInputRefAccess().getIKeyword_1());
                 
@@ -10468,7 +10238,7 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleOutputRef"
-    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4042:1: entryRuleOutputRef returns [EObject current=null] : iv_ruleOutputRef= ruleOutputRef EOF ;
+    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3957:1: entryRuleOutputRef returns [EObject current=null] : iv_ruleOutputRef= ruleOutputRef EOF ;
     public final EObject entryRuleOutputRef() throws RecognitionException {
         EObject current = null;
 
@@ -10476,17 +10246,17 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4043:2: (iv_ruleOutputRef= ruleOutputRef EOF )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4044:2: iv_ruleOutputRef= ruleOutputRef EOF
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3958:2: (iv_ruleOutputRef= ruleOutputRef EOF )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3959:2: iv_ruleOutputRef= ruleOutputRef EOF
             {
              newCompositeNode(grammarAccess.getOutputRefRule()); 
-            pushFollow(FOLLOW_ruleOutputRef_in_entryRuleOutputRef9627);
+            pushFollow(FOLLOW_ruleOutputRef_in_entryRuleOutputRef9436);
             iv_ruleOutputRef=ruleOutputRef();
 
             state._fsp--;
 
              current =iv_ruleOutputRef; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleOutputRef9637); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleOutputRef9446); 
 
             }
 
@@ -10504,7 +10274,7 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleOutputRef"
-    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4051:1: ruleOutputRef returns [EObject current=null] : ( () otherlv_1= 'O' ) ;
+    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3966:1: ruleOutputRef returns [EObject current=null] : ( () otherlv_1= 'O' ) ;
     public final EObject ruleOutputRef() throws RecognitionException {
         EObject current = null;
 
@@ -10513,14 +10283,14 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4054:28: ( ( () otherlv_1= 'O' ) )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4055:1: ( () otherlv_1= 'O' )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3969:28: ( ( () otherlv_1= 'O' ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3970:1: ( () otherlv_1= 'O' )
             {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4055:1: ( () otherlv_1= 'O' )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4055:2: () otherlv_1= 'O'
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3970:1: ( () otherlv_1= 'O' )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3970:2: () otherlv_1= 'O'
             {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4055:2: ()
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4056:5: 
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3970:2: ()
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3971:5: 
             {
 
                     current = forceCreateModelElement(
@@ -10530,7 +10300,7 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,60,FOLLOW_60_in_ruleOutputRef9683); 
+            otherlv_1=(Token)match(input,60,FOLLOW_60_in_ruleOutputRef9492); 
 
                 	newLeafNode(otherlv_1, grammarAccess.getOutputRefAccess().getOKeyword_1());
                 
@@ -10555,7 +10325,7 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleInvokation"
-    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4073:1: entryRuleInvokation returns [EObject current=null] : iv_ruleInvokation= ruleInvokation EOF ;
+    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3988:1: entryRuleInvokation returns [EObject current=null] : iv_ruleInvokation= ruleInvokation EOF ;
     public final EObject entryRuleInvokation() throws RecognitionException {
         EObject current = null;
 
@@ -10563,17 +10333,17 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4074:2: (iv_ruleInvokation= ruleInvokation EOF )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4075:2: iv_ruleInvokation= ruleInvokation EOF
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3989:2: (iv_ruleInvokation= ruleInvokation EOF )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3990:2: iv_ruleInvokation= ruleInvokation EOF
             {
              newCompositeNode(grammarAccess.getInvokationRule()); 
-            pushFollow(FOLLOW_ruleInvokation_in_entryRuleInvokation9719);
+            pushFollow(FOLLOW_ruleInvokation_in_entryRuleInvokation9528);
             iv_ruleInvokation=ruleInvokation();
 
             state._fsp--;
 
              current =iv_ruleInvokation; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleInvokation9729); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleInvokation9538); 
 
             }
 
@@ -10591,7 +10361,7 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleInvokation"
-    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4082:1: ruleInvokation returns [EObject current=null] : ( ( (lv_module_0_0= RULE_ID ) ) ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( (lv_sentences_3_0= ruleInvokationParam ) )* otherlv_4= '}' ) ;
+    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:3997:1: ruleInvokation returns [EObject current=null] : ( ( (lv_module_0_0= RULE_ID ) ) ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( (lv_sentences_3_0= ruleInvokationParam ) )* otherlv_4= '}' ) ;
     public final EObject ruleInvokation() throws RecognitionException {
         EObject current = null;
 
@@ -10605,19 +10375,19 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4085:28: ( ( ( (lv_module_0_0= RULE_ID ) ) ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( (lv_sentences_3_0= ruleInvokationParam ) )* otherlv_4= '}' ) )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4086:1: ( ( (lv_module_0_0= RULE_ID ) ) ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( (lv_sentences_3_0= ruleInvokationParam ) )* otherlv_4= '}' )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4000:28: ( ( ( (lv_module_0_0= RULE_ID ) ) ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( (lv_sentences_3_0= ruleInvokationParam ) )* otherlv_4= '}' ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4001:1: ( ( (lv_module_0_0= RULE_ID ) ) ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( (lv_sentences_3_0= ruleInvokationParam ) )* otherlv_4= '}' )
             {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4086:1: ( ( (lv_module_0_0= RULE_ID ) ) ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( (lv_sentences_3_0= ruleInvokationParam ) )* otherlv_4= '}' )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4086:2: ( (lv_module_0_0= RULE_ID ) ) ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( (lv_sentences_3_0= ruleInvokationParam ) )* otherlv_4= '}'
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4001:1: ( ( (lv_module_0_0= RULE_ID ) ) ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( (lv_sentences_3_0= ruleInvokationParam ) )* otherlv_4= '}' )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4001:2: ( (lv_module_0_0= RULE_ID ) ) ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( (lv_sentences_3_0= ruleInvokationParam ) )* otherlv_4= '}'
             {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4086:2: ( (lv_module_0_0= RULE_ID ) )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4087:1: (lv_module_0_0= RULE_ID )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4001:2: ( (lv_module_0_0= RULE_ID ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4002:1: (lv_module_0_0= RULE_ID )
             {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4087:1: (lv_module_0_0= RULE_ID )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4088:3: lv_module_0_0= RULE_ID
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4002:1: (lv_module_0_0= RULE_ID )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4003:3: lv_module_0_0= RULE_ID
             {
-            lv_module_0_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleInvokation9771); 
+            lv_module_0_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleInvokation9580); 
 
             			newLeafNode(lv_module_0_0, grammarAccess.getInvokationAccess().getModuleIDTerminalRuleCall_0_0()); 
             		
@@ -10637,13 +10407,13 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4104:2: ( (lv_name_1_0= RULE_ID ) )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4105:1: (lv_name_1_0= RULE_ID )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4019:2: ( (lv_name_1_0= RULE_ID ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4020:1: (lv_name_1_0= RULE_ID )
             {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4105:1: (lv_name_1_0= RULE_ID )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4106:3: lv_name_1_0= RULE_ID
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4020:1: (lv_name_1_0= RULE_ID )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4021:3: lv_name_1_0= RULE_ID
             {
-            lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleInvokation9793); 
+            lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleInvokation9602); 
 
             			newLeafNode(lv_name_1_0, grammarAccess.getInvokationAccess().getNameIDTerminalRuleCall_1_0()); 
             		
@@ -10663,32 +10433,32 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_2=(Token)match(input,40,FOLLOW_40_in_ruleInvokation9810); 
+            otherlv_2=(Token)match(input,40,FOLLOW_40_in_ruleInvokation9619); 
 
                 	newLeafNode(otherlv_2, grammarAccess.getInvokationAccess().getLeftCurlyBracketKeyword_2());
                 
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4126:1: ( (lv_sentences_3_0= ruleInvokationParam ) )*
-            loop55:
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4041:1: ( (lv_sentences_3_0= ruleInvokationParam ) )*
+            loop53:
             do {
-                int alt55=2;
-                int LA55_0 = input.LA(1);
+                int alt53=2;
+                int LA53_0 = input.LA(1);
 
-                if ( (LA55_0==RULE_ID) ) {
-                    alt55=1;
+                if ( (LA53_0==RULE_ID) ) {
+                    alt53=1;
                 }
 
 
-                switch (alt55) {
+                switch (alt53) {
             	case 1 :
-            	    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4127:1: (lv_sentences_3_0= ruleInvokationParam )
+            	    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4042:1: (lv_sentences_3_0= ruleInvokationParam )
             	    {
-            	    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4127:1: (lv_sentences_3_0= ruleInvokationParam )
-            	    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4128:3: lv_sentences_3_0= ruleInvokationParam
+            	    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4042:1: (lv_sentences_3_0= ruleInvokationParam )
+            	    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4043:3: lv_sentences_3_0= ruleInvokationParam
             	    {
             	     
             	    	        newCompositeNode(grammarAccess.getInvokationAccess().getSentencesInvokationParamParserRuleCall_3_0()); 
             	    	    
-            	    pushFollow(FOLLOW_ruleInvokationParam_in_ruleInvokation9831);
+            	    pushFollow(FOLLOW_ruleInvokationParam_in_ruleInvokation9640);
             	    lv_sentences_3_0=ruleInvokationParam();
 
             	    state._fsp--;
@@ -10712,11 +10482,11 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    break loop55;
+            	    break loop53;
                 }
             } while (true);
 
-            otherlv_4=(Token)match(input,41,FOLLOW_41_in_ruleInvokation9844); 
+            otherlv_4=(Token)match(input,42,FOLLOW_42_in_ruleInvokation9653); 
 
                 	newLeafNode(otherlv_4, grammarAccess.getInvokationAccess().getRightCurlyBracketKeyword_4());
                 
@@ -10741,7 +10511,7 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleInvokationParam"
-    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4156:1: entryRuleInvokationParam returns [EObject current=null] : iv_ruleInvokationParam= ruleInvokationParam EOF ;
+    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4071:1: entryRuleInvokationParam returns [EObject current=null] : iv_ruleInvokationParam= ruleInvokationParam EOF ;
     public final EObject entryRuleInvokationParam() throws RecognitionException {
         EObject current = null;
 
@@ -10749,17 +10519,17 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4157:2: (iv_ruleInvokationParam= ruleInvokationParam EOF )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4158:2: iv_ruleInvokationParam= ruleInvokationParam EOF
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4072:2: (iv_ruleInvokationParam= ruleInvokationParam EOF )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4073:2: iv_ruleInvokationParam= ruleInvokationParam EOF
             {
              newCompositeNode(grammarAccess.getInvokationParamRule()); 
-            pushFollow(FOLLOW_ruleInvokationParam_in_entryRuleInvokationParam9880);
+            pushFollow(FOLLOW_ruleInvokationParam_in_entryRuleInvokationParam9689);
             iv_ruleInvokationParam=ruleInvokationParam();
 
             state._fsp--;
 
              current =iv_ruleInvokationParam; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleInvokationParam9890); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleInvokationParam9699); 
 
             }
 
@@ -10777,7 +10547,7 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleInvokationParam"
-    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4165:1: ruleInvokationParam returns [EObject current=null] : ( ( (lv_name_0_0= RULE_ID ) ) otherlv_1= '<-' ( (lv_source_2_0= ruleLiteralExpression ) ) ) ;
+    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4080:1: ruleInvokationParam returns [EObject current=null] : ( ( (lv_name_0_0= RULE_ID ) ) otherlv_1= '<-' ( (lv_source_2_0= ruleLiteralExpression ) ) ) ;
     public final EObject ruleInvokationParam() throws RecognitionException {
         EObject current = null;
 
@@ -10789,19 +10559,19 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4168:28: ( ( ( (lv_name_0_0= RULE_ID ) ) otherlv_1= '<-' ( (lv_source_2_0= ruleLiteralExpression ) ) ) )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4169:1: ( ( (lv_name_0_0= RULE_ID ) ) otherlv_1= '<-' ( (lv_source_2_0= ruleLiteralExpression ) ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4083:28: ( ( ( (lv_name_0_0= RULE_ID ) ) otherlv_1= '<-' ( (lv_source_2_0= ruleLiteralExpression ) ) ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4084:1: ( ( (lv_name_0_0= RULE_ID ) ) otherlv_1= '<-' ( (lv_source_2_0= ruleLiteralExpression ) ) )
             {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4169:1: ( ( (lv_name_0_0= RULE_ID ) ) otherlv_1= '<-' ( (lv_source_2_0= ruleLiteralExpression ) ) )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4169:2: ( (lv_name_0_0= RULE_ID ) ) otherlv_1= '<-' ( (lv_source_2_0= ruleLiteralExpression ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4084:1: ( ( (lv_name_0_0= RULE_ID ) ) otherlv_1= '<-' ( (lv_source_2_0= ruleLiteralExpression ) ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4084:2: ( (lv_name_0_0= RULE_ID ) ) otherlv_1= '<-' ( (lv_source_2_0= ruleLiteralExpression ) )
             {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4169:2: ( (lv_name_0_0= RULE_ID ) )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4170:1: (lv_name_0_0= RULE_ID )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4084:2: ( (lv_name_0_0= RULE_ID ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4085:1: (lv_name_0_0= RULE_ID )
             {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4170:1: (lv_name_0_0= RULE_ID )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4171:3: lv_name_0_0= RULE_ID
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4085:1: (lv_name_0_0= RULE_ID )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4086:3: lv_name_0_0= RULE_ID
             {
-            lv_name_0_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleInvokationParam9932); 
+            lv_name_0_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleInvokationParam9741); 
 
             			newLeafNode(lv_name_0_0, grammarAccess.getInvokationParamAccess().getNameIDTerminalRuleCall_0_0()); 
             		
@@ -10821,20 +10591,20 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,58,FOLLOW_58_in_ruleInvokationParam9949); 
+            otherlv_1=(Token)match(input,58,FOLLOW_58_in_ruleInvokationParam9758); 
 
                 	newLeafNode(otherlv_1, grammarAccess.getInvokationParamAccess().getLessThanSignHyphenMinusKeyword_1());
                 
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4191:1: ( (lv_source_2_0= ruleLiteralExpression ) )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4192:1: (lv_source_2_0= ruleLiteralExpression )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4106:1: ( (lv_source_2_0= ruleLiteralExpression ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4107:1: (lv_source_2_0= ruleLiteralExpression )
             {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4192:1: (lv_source_2_0= ruleLiteralExpression )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4193:3: lv_source_2_0= ruleLiteralExpression
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4107:1: (lv_source_2_0= ruleLiteralExpression )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4108:3: lv_source_2_0= ruleLiteralExpression
             {
              
             	        newCompositeNode(grammarAccess.getInvokationParamAccess().getSourceLiteralExpressionParserRuleCall_2_0()); 
             	    
-            pushFollow(FOLLOW_ruleLiteralExpression_in_ruleInvokationParam9970);
+            pushFollow(FOLLOW_ruleLiteralExpression_in_ruleInvokationParam9779);
             lv_source_2_0=ruleLiteralExpression();
 
             state._fsp--;
@@ -10877,7 +10647,7 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleLoop"
-    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4217:1: entryRuleLoop returns [EObject current=null] : iv_ruleLoop= ruleLoop EOF ;
+    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4132:1: entryRuleLoop returns [EObject current=null] : iv_ruleLoop= ruleLoop EOF ;
     public final EObject entryRuleLoop() throws RecognitionException {
         EObject current = null;
 
@@ -10885,17 +10655,17 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4218:2: (iv_ruleLoop= ruleLoop EOF )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4219:2: iv_ruleLoop= ruleLoop EOF
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4133:2: (iv_ruleLoop= ruleLoop EOF )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4134:2: iv_ruleLoop= ruleLoop EOF
             {
              newCompositeNode(grammarAccess.getLoopRule()); 
-            pushFollow(FOLLOW_ruleLoop_in_entryRuleLoop10006);
+            pushFollow(FOLLOW_ruleLoop_in_entryRuleLoop9815);
             iv_ruleLoop=ruleLoop();
 
             state._fsp--;
 
              current =iv_ruleLoop; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleLoop10016); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleLoop9825); 
 
             }
 
@@ -10913,7 +10683,7 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleLoop"
-    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4226:1: ruleLoop returns [EObject current=null] : (otherlv_0= 'loop' ( (lv_it_1_0= ruleLoopFor ) )? ( (lv_name_2_0= RULE_ID ) ) otherlv_3= '{' ( (lv_sentences_4_0= ruleLoopSentence ) )* otherlv_5= '}' ) ;
+    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4141:1: ruleLoop returns [EObject current=null] : (otherlv_0= 'loop' ( (lv_it_1_0= ruleLoopFor ) )? ( (lv_name_2_0= RULE_ID ) ) otherlv_3= '{' ( (lv_sentences_4_0= ruleLoopSentence ) )* otherlv_5= '}' ) ;
     public final EObject ruleLoop() throws RecognitionException {
         EObject current = null;
 
@@ -10929,34 +10699,34 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4229:28: ( (otherlv_0= 'loop' ( (lv_it_1_0= ruleLoopFor ) )? ( (lv_name_2_0= RULE_ID ) ) otherlv_3= '{' ( (lv_sentences_4_0= ruleLoopSentence ) )* otherlv_5= '}' ) )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4230:1: (otherlv_0= 'loop' ( (lv_it_1_0= ruleLoopFor ) )? ( (lv_name_2_0= RULE_ID ) ) otherlv_3= '{' ( (lv_sentences_4_0= ruleLoopSentence ) )* otherlv_5= '}' )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4144:28: ( (otherlv_0= 'loop' ( (lv_it_1_0= ruleLoopFor ) )? ( (lv_name_2_0= RULE_ID ) ) otherlv_3= '{' ( (lv_sentences_4_0= ruleLoopSentence ) )* otherlv_5= '}' ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4145:1: (otherlv_0= 'loop' ( (lv_it_1_0= ruleLoopFor ) )? ( (lv_name_2_0= RULE_ID ) ) otherlv_3= '{' ( (lv_sentences_4_0= ruleLoopSentence ) )* otherlv_5= '}' )
             {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4230:1: (otherlv_0= 'loop' ( (lv_it_1_0= ruleLoopFor ) )? ( (lv_name_2_0= RULE_ID ) ) otherlv_3= '{' ( (lv_sentences_4_0= ruleLoopSentence ) )* otherlv_5= '}' )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4230:3: otherlv_0= 'loop' ( (lv_it_1_0= ruleLoopFor ) )? ( (lv_name_2_0= RULE_ID ) ) otherlv_3= '{' ( (lv_sentences_4_0= ruleLoopSentence ) )* otherlv_5= '}'
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4145:1: (otherlv_0= 'loop' ( (lv_it_1_0= ruleLoopFor ) )? ( (lv_name_2_0= RULE_ID ) ) otherlv_3= '{' ( (lv_sentences_4_0= ruleLoopSentence ) )* otherlv_5= '}' )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4145:3: otherlv_0= 'loop' ( (lv_it_1_0= ruleLoopFor ) )? ( (lv_name_2_0= RULE_ID ) ) otherlv_3= '{' ( (lv_sentences_4_0= ruleLoopSentence ) )* otherlv_5= '}'
             {
-            otherlv_0=(Token)match(input,61,FOLLOW_61_in_ruleLoop10053); 
+            otherlv_0=(Token)match(input,61,FOLLOW_61_in_ruleLoop9862); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getLoopAccess().getLoopKeyword_0());
                 
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4234:1: ( (lv_it_1_0= ruleLoopFor ) )?
-            int alt56=2;
-            int LA56_0 = input.LA(1);
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4149:1: ( (lv_it_1_0= ruleLoopFor ) )?
+            int alt54=2;
+            int LA54_0 = input.LA(1);
 
-            if ( (LA56_0==62) ) {
-                alt56=1;
+            if ( (LA54_0==62) ) {
+                alt54=1;
             }
-            switch (alt56) {
+            switch (alt54) {
                 case 1 :
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4235:1: (lv_it_1_0= ruleLoopFor )
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4150:1: (lv_it_1_0= ruleLoopFor )
                     {
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4235:1: (lv_it_1_0= ruleLoopFor )
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4236:3: lv_it_1_0= ruleLoopFor
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4150:1: (lv_it_1_0= ruleLoopFor )
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4151:3: lv_it_1_0= ruleLoopFor
                     {
                      
                     	        newCompositeNode(grammarAccess.getLoopAccess().getItLoopForParserRuleCall_1_0()); 
                     	    
-                    pushFollow(FOLLOW_ruleLoopFor_in_ruleLoop10074);
+                    pushFollow(FOLLOW_ruleLoopFor_in_ruleLoop9883);
                     lv_it_1_0=ruleLoopFor();
 
                     state._fsp--;
@@ -10981,13 +10751,13 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4252:3: ( (lv_name_2_0= RULE_ID ) )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4253:1: (lv_name_2_0= RULE_ID )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4167:3: ( (lv_name_2_0= RULE_ID ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4168:1: (lv_name_2_0= RULE_ID )
             {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4253:1: (lv_name_2_0= RULE_ID )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4254:3: lv_name_2_0= RULE_ID
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4168:1: (lv_name_2_0= RULE_ID )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4169:3: lv_name_2_0= RULE_ID
             {
-            lv_name_2_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleLoop10092); 
+            lv_name_2_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleLoop9901); 
 
             			newLeafNode(lv_name_2_0, grammarAccess.getLoopAccess().getNameIDTerminalRuleCall_2_0()); 
             		
@@ -11007,32 +10777,32 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_3=(Token)match(input,40,FOLLOW_40_in_ruleLoop10109); 
+            otherlv_3=(Token)match(input,40,FOLLOW_40_in_ruleLoop9918); 
 
                 	newLeafNode(otherlv_3, grammarAccess.getLoopAccess().getLeftCurlyBracketKeyword_3());
                 
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4274:1: ( (lv_sentences_4_0= ruleLoopSentence ) )*
-            loop57:
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4189:1: ( (lv_sentences_4_0= ruleLoopSentence ) )*
+            loop55:
             do {
-                int alt57=2;
-                int LA57_0 = input.LA(1);
+                int alt55=2;
+                int LA55_0 = input.LA(1);
 
-                if ( (LA57_0==RULE_ID) ) {
-                    alt57=1;
+                if ( (LA55_0==RULE_ID) ) {
+                    alt55=1;
                 }
 
 
-                switch (alt57) {
+                switch (alt55) {
             	case 1 :
-            	    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4275:1: (lv_sentences_4_0= ruleLoopSentence )
+            	    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4190:1: (lv_sentences_4_0= ruleLoopSentence )
             	    {
-            	    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4275:1: (lv_sentences_4_0= ruleLoopSentence )
-            	    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4276:3: lv_sentences_4_0= ruleLoopSentence
+            	    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4190:1: (lv_sentences_4_0= ruleLoopSentence )
+            	    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4191:3: lv_sentences_4_0= ruleLoopSentence
             	    {
             	     
             	    	        newCompositeNode(grammarAccess.getLoopAccess().getSentencesLoopSentenceParserRuleCall_4_0()); 
             	    	    
-            	    pushFollow(FOLLOW_ruleLoopSentence_in_ruleLoop10130);
+            	    pushFollow(FOLLOW_ruleLoopSentence_in_ruleLoop9939);
             	    lv_sentences_4_0=ruleLoopSentence();
 
             	    state._fsp--;
@@ -11056,11 +10826,11 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    break loop57;
+            	    break loop55;
                 }
             } while (true);
 
-            otherlv_5=(Token)match(input,41,FOLLOW_41_in_ruleLoop10143); 
+            otherlv_5=(Token)match(input,42,FOLLOW_42_in_ruleLoop9952); 
 
                 	newLeafNode(otherlv_5, grammarAccess.getLoopAccess().getRightCurlyBracketKeyword_5());
                 
@@ -11085,7 +10855,7 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleLoopSentence"
-    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4304:1: entryRuleLoopSentence returns [EObject current=null] : iv_ruleLoopSentence= ruleLoopSentence EOF ;
+    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4219:1: entryRuleLoopSentence returns [EObject current=null] : iv_ruleLoopSentence= ruleLoopSentence EOF ;
     public final EObject entryRuleLoopSentence() throws RecognitionException {
         EObject current = null;
 
@@ -11093,17 +10863,17 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4305:2: (iv_ruleLoopSentence= ruleLoopSentence EOF )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4306:2: iv_ruleLoopSentence= ruleLoopSentence EOF
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4220:2: (iv_ruleLoopSentence= ruleLoopSentence EOF )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4221:2: iv_ruleLoopSentence= ruleLoopSentence EOF
             {
              newCompositeNode(grammarAccess.getLoopSentenceRule()); 
-            pushFollow(FOLLOW_ruleLoopSentence_in_entryRuleLoopSentence10179);
+            pushFollow(FOLLOW_ruleLoopSentence_in_entryRuleLoopSentence9988);
             iv_ruleLoopSentence=ruleLoopSentence();
 
             state._fsp--;
 
              current =iv_ruleLoopSentence; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleLoopSentence10189); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleLoopSentence9998); 
 
             }
 
@@ -11121,7 +10891,7 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleLoopSentence"
-    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4313:1: ruleLoopSentence returns [EObject current=null] : ( ( (lv_name_0_0= RULE_ID ) ) ( (lv_type_1_0= ruleTypeRef ) ) otherlv_2= '<-' ( (lv_o_3_0= ruleLiteralExpression ) ) (otherlv_4= '<-' ( (lv_i_5_0= ruleLiteralExpression ) ) )? ) ;
+    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4228:1: ruleLoopSentence returns [EObject current=null] : ( ( (lv_name_0_0= RULE_ID ) ) ( (lv_type_1_0= ruleTypeRef ) ) otherlv_2= '<-' ( (lv_o_3_0= ruleLiteralExpression ) ) (otherlv_4= '<-' ( (lv_i_5_0= ruleLiteralExpression ) ) )? ) ;
     public final EObject ruleLoopSentence() throws RecognitionException {
         EObject current = null;
 
@@ -11138,19 +10908,19 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4316:28: ( ( ( (lv_name_0_0= RULE_ID ) ) ( (lv_type_1_0= ruleTypeRef ) ) otherlv_2= '<-' ( (lv_o_3_0= ruleLiteralExpression ) ) (otherlv_4= '<-' ( (lv_i_5_0= ruleLiteralExpression ) ) )? ) )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4317:1: ( ( (lv_name_0_0= RULE_ID ) ) ( (lv_type_1_0= ruleTypeRef ) ) otherlv_2= '<-' ( (lv_o_3_0= ruleLiteralExpression ) ) (otherlv_4= '<-' ( (lv_i_5_0= ruleLiteralExpression ) ) )? )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4231:28: ( ( ( (lv_name_0_0= RULE_ID ) ) ( (lv_type_1_0= ruleTypeRef ) ) otherlv_2= '<-' ( (lv_o_3_0= ruleLiteralExpression ) ) (otherlv_4= '<-' ( (lv_i_5_0= ruleLiteralExpression ) ) )? ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4232:1: ( ( (lv_name_0_0= RULE_ID ) ) ( (lv_type_1_0= ruleTypeRef ) ) otherlv_2= '<-' ( (lv_o_3_0= ruleLiteralExpression ) ) (otherlv_4= '<-' ( (lv_i_5_0= ruleLiteralExpression ) ) )? )
             {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4317:1: ( ( (lv_name_0_0= RULE_ID ) ) ( (lv_type_1_0= ruleTypeRef ) ) otherlv_2= '<-' ( (lv_o_3_0= ruleLiteralExpression ) ) (otherlv_4= '<-' ( (lv_i_5_0= ruleLiteralExpression ) ) )? )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4317:2: ( (lv_name_0_0= RULE_ID ) ) ( (lv_type_1_0= ruleTypeRef ) ) otherlv_2= '<-' ( (lv_o_3_0= ruleLiteralExpression ) ) (otherlv_4= '<-' ( (lv_i_5_0= ruleLiteralExpression ) ) )?
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4232:1: ( ( (lv_name_0_0= RULE_ID ) ) ( (lv_type_1_0= ruleTypeRef ) ) otherlv_2= '<-' ( (lv_o_3_0= ruleLiteralExpression ) ) (otherlv_4= '<-' ( (lv_i_5_0= ruleLiteralExpression ) ) )? )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4232:2: ( (lv_name_0_0= RULE_ID ) ) ( (lv_type_1_0= ruleTypeRef ) ) otherlv_2= '<-' ( (lv_o_3_0= ruleLiteralExpression ) ) (otherlv_4= '<-' ( (lv_i_5_0= ruleLiteralExpression ) ) )?
             {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4317:2: ( (lv_name_0_0= RULE_ID ) )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4318:1: (lv_name_0_0= RULE_ID )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4232:2: ( (lv_name_0_0= RULE_ID ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4233:1: (lv_name_0_0= RULE_ID )
             {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4318:1: (lv_name_0_0= RULE_ID )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4319:3: lv_name_0_0= RULE_ID
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4233:1: (lv_name_0_0= RULE_ID )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4234:3: lv_name_0_0= RULE_ID
             {
-            lv_name_0_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleLoopSentence10231); 
+            lv_name_0_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleLoopSentence10040); 
 
             			newLeafNode(lv_name_0_0, grammarAccess.getLoopSentenceAccess().getNameIDTerminalRuleCall_0_0()); 
             		
@@ -11170,16 +10940,16 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4335:2: ( (lv_type_1_0= ruleTypeRef ) )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4336:1: (lv_type_1_0= ruleTypeRef )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4250:2: ( (lv_type_1_0= ruleTypeRef ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4251:1: (lv_type_1_0= ruleTypeRef )
             {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4336:1: (lv_type_1_0= ruleTypeRef )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4337:3: lv_type_1_0= ruleTypeRef
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4251:1: (lv_type_1_0= ruleTypeRef )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4252:3: lv_type_1_0= ruleTypeRef
             {
              
             	        newCompositeNode(grammarAccess.getLoopSentenceAccess().getTypeTypeRefParserRuleCall_1_0()); 
             	    
-            pushFollow(FOLLOW_ruleTypeRef_in_ruleLoopSentence10257);
+            pushFollow(FOLLOW_ruleTypeRef_in_ruleLoopSentence10066);
             lv_type_1_0=ruleTypeRef();
 
             state._fsp--;
@@ -11201,20 +10971,20 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_2=(Token)match(input,58,FOLLOW_58_in_ruleLoopSentence10269); 
+            otherlv_2=(Token)match(input,58,FOLLOW_58_in_ruleLoopSentence10078); 
 
                 	newLeafNode(otherlv_2, grammarAccess.getLoopSentenceAccess().getLessThanSignHyphenMinusKeyword_2());
                 
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4357:1: ( (lv_o_3_0= ruleLiteralExpression ) )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4358:1: (lv_o_3_0= ruleLiteralExpression )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4272:1: ( (lv_o_3_0= ruleLiteralExpression ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4273:1: (lv_o_3_0= ruleLiteralExpression )
             {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4358:1: (lv_o_3_0= ruleLiteralExpression )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4359:3: lv_o_3_0= ruleLiteralExpression
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4273:1: (lv_o_3_0= ruleLiteralExpression )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4274:3: lv_o_3_0= ruleLiteralExpression
             {
              
             	        newCompositeNode(grammarAccess.getLoopSentenceAccess().getOLiteralExpressionParserRuleCall_3_0()); 
             	    
-            pushFollow(FOLLOW_ruleLiteralExpression_in_ruleLoopSentence10290);
+            pushFollow(FOLLOW_ruleLiteralExpression_in_ruleLoopSentence10099);
             lv_o_3_0=ruleLiteralExpression();
 
             state._fsp--;
@@ -11236,31 +11006,31 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4375:2: (otherlv_4= '<-' ( (lv_i_5_0= ruleLiteralExpression ) ) )?
-            int alt58=2;
-            int LA58_0 = input.LA(1);
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4290:2: (otherlv_4= '<-' ( (lv_i_5_0= ruleLiteralExpression ) ) )?
+            int alt56=2;
+            int LA56_0 = input.LA(1);
 
-            if ( (LA58_0==58) ) {
-                alt58=1;
+            if ( (LA56_0==58) ) {
+                alt56=1;
             }
-            switch (alt58) {
+            switch (alt56) {
                 case 1 :
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4375:4: otherlv_4= '<-' ( (lv_i_5_0= ruleLiteralExpression ) )
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4290:4: otherlv_4= '<-' ( (lv_i_5_0= ruleLiteralExpression ) )
                     {
-                    otherlv_4=(Token)match(input,58,FOLLOW_58_in_ruleLoopSentence10303); 
+                    otherlv_4=(Token)match(input,58,FOLLOW_58_in_ruleLoopSentence10112); 
 
                         	newLeafNode(otherlv_4, grammarAccess.getLoopSentenceAccess().getLessThanSignHyphenMinusKeyword_4_0());
                         
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4379:1: ( (lv_i_5_0= ruleLiteralExpression ) )
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4380:1: (lv_i_5_0= ruleLiteralExpression )
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4294:1: ( (lv_i_5_0= ruleLiteralExpression ) )
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4295:1: (lv_i_5_0= ruleLiteralExpression )
                     {
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4380:1: (lv_i_5_0= ruleLiteralExpression )
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4381:3: lv_i_5_0= ruleLiteralExpression
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4295:1: (lv_i_5_0= ruleLiteralExpression )
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4296:3: lv_i_5_0= ruleLiteralExpression
                     {
                      
                     	        newCompositeNode(grammarAccess.getLoopSentenceAccess().getILiteralExpressionParserRuleCall_4_1_0()); 
                     	    
-                    pushFollow(FOLLOW_ruleLiteralExpression_in_ruleLoopSentence10324);
+                    pushFollow(FOLLOW_ruleLiteralExpression_in_ruleLoopSentence10133);
                     lv_i_5_0=ruleLiteralExpression();
 
                     state._fsp--;
@@ -11309,7 +11079,7 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleLoopFor"
-    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4405:1: entryRuleLoopFor returns [EObject current=null] : iv_ruleLoopFor= ruleLoopFor EOF ;
+    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4320:1: entryRuleLoopFor returns [EObject current=null] : iv_ruleLoopFor= ruleLoopFor EOF ;
     public final EObject entryRuleLoopFor() throws RecognitionException {
         EObject current = null;
 
@@ -11317,17 +11087,17 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4406:2: (iv_ruleLoopFor= ruleLoopFor EOF )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4407:2: iv_ruleLoopFor= ruleLoopFor EOF
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4321:2: (iv_ruleLoopFor= ruleLoopFor EOF )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4322:2: iv_ruleLoopFor= ruleLoopFor EOF
             {
              newCompositeNode(grammarAccess.getLoopForRule()); 
-            pushFollow(FOLLOW_ruleLoopFor_in_entryRuleLoopFor10362);
+            pushFollow(FOLLOW_ruleLoopFor_in_entryRuleLoopFor10171);
             iv_ruleLoopFor=ruleLoopFor();
 
             state._fsp--;
 
              current =iv_ruleLoopFor; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleLoopFor10372); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleLoopFor10181); 
 
             }
 
@@ -11345,7 +11115,7 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleLoopFor"
-    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4414:1: ruleLoopFor returns [EObject current=null] : (otherlv_0= 'for' this_SequenceLiteral_1= ruleSequenceLiteral ) ;
+    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4329:1: ruleLoopFor returns [EObject current=null] : (otherlv_0= 'for' this_SequenceLiteral_1= ruleSequenceLiteral ) ;
     public final EObject ruleLoopFor() throws RecognitionException {
         EObject current = null;
 
@@ -11356,20 +11126,20 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4417:28: ( (otherlv_0= 'for' this_SequenceLiteral_1= ruleSequenceLiteral ) )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4418:1: (otherlv_0= 'for' this_SequenceLiteral_1= ruleSequenceLiteral )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4332:28: ( (otherlv_0= 'for' this_SequenceLiteral_1= ruleSequenceLiteral ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4333:1: (otherlv_0= 'for' this_SequenceLiteral_1= ruleSequenceLiteral )
             {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4418:1: (otherlv_0= 'for' this_SequenceLiteral_1= ruleSequenceLiteral )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4418:3: otherlv_0= 'for' this_SequenceLiteral_1= ruleSequenceLiteral
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4333:1: (otherlv_0= 'for' this_SequenceLiteral_1= ruleSequenceLiteral )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4333:3: otherlv_0= 'for' this_SequenceLiteral_1= ruleSequenceLiteral
             {
-            otherlv_0=(Token)match(input,62,FOLLOW_62_in_ruleLoopFor10409); 
+            otherlv_0=(Token)match(input,62,FOLLOW_62_in_ruleLoopFor10218); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getLoopForAccess().getForKeyword_0());
                 
              
                     newCompositeNode(grammarAccess.getLoopForAccess().getSequenceLiteralParserRuleCall_1()); 
                 
-            pushFollow(FOLLOW_ruleSequenceLiteral_in_ruleLoopFor10431);
+            pushFollow(FOLLOW_ruleSequenceLiteral_in_ruleLoopFor10240);
             this_SequenceLiteral_1=ruleSequenceLiteral();
 
             state._fsp--;
@@ -11399,7 +11169,7 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleFactory"
-    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4439:1: entryRuleFactory returns [EObject current=null] : iv_ruleFactory= ruleFactory EOF ;
+    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4354:1: entryRuleFactory returns [EObject current=null] : iv_ruleFactory= ruleFactory EOF ;
     public final EObject entryRuleFactory() throws RecognitionException {
         EObject current = null;
 
@@ -11407,17 +11177,17 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4440:2: (iv_ruleFactory= ruleFactory EOF )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4441:2: iv_ruleFactory= ruleFactory EOF
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4355:2: (iv_ruleFactory= ruleFactory EOF )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4356:2: iv_ruleFactory= ruleFactory EOF
             {
              newCompositeNode(grammarAccess.getFactoryRule()); 
-            pushFollow(FOLLOW_ruleFactory_in_entryRuleFactory10466);
+            pushFollow(FOLLOW_ruleFactory_in_entryRuleFactory10275);
             iv_ruleFactory=ruleFactory();
 
             state._fsp--;
 
              current =iv_ruleFactory; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleFactory10476); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleFactory10285); 
 
             }
 
@@ -11435,7 +11205,7 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleFactory"
-    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4448:1: ruleFactory returns [EObject current=null] : (otherlv_0= 'factory' ( (lv_name_1_0= RULE_ID ) ) ( (lv_type_2_0= ruleTypeRef ) ) ) ;
+    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4363:1: ruleFactory returns [EObject current=null] : (otherlv_0= 'factory' ( (lv_name_1_0= RULE_ID ) ) ( (lv_type_2_0= ruleTypeRef ) ) ) ;
     public final EObject ruleFactory() throws RecognitionException {
         EObject current = null;
 
@@ -11447,23 +11217,23 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4451:28: ( (otherlv_0= 'factory' ( (lv_name_1_0= RULE_ID ) ) ( (lv_type_2_0= ruleTypeRef ) ) ) )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4452:1: (otherlv_0= 'factory' ( (lv_name_1_0= RULE_ID ) ) ( (lv_type_2_0= ruleTypeRef ) ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4366:28: ( (otherlv_0= 'factory' ( (lv_name_1_0= RULE_ID ) ) ( (lv_type_2_0= ruleTypeRef ) ) ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4367:1: (otherlv_0= 'factory' ( (lv_name_1_0= RULE_ID ) ) ( (lv_type_2_0= ruleTypeRef ) ) )
             {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4452:1: (otherlv_0= 'factory' ( (lv_name_1_0= RULE_ID ) ) ( (lv_type_2_0= ruleTypeRef ) ) )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4452:3: otherlv_0= 'factory' ( (lv_name_1_0= RULE_ID ) ) ( (lv_type_2_0= ruleTypeRef ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4367:1: (otherlv_0= 'factory' ( (lv_name_1_0= RULE_ID ) ) ( (lv_type_2_0= ruleTypeRef ) ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4367:3: otherlv_0= 'factory' ( (lv_name_1_0= RULE_ID ) ) ( (lv_type_2_0= ruleTypeRef ) )
             {
-            otherlv_0=(Token)match(input,63,FOLLOW_63_in_ruleFactory10513); 
+            otherlv_0=(Token)match(input,63,FOLLOW_63_in_ruleFactory10322); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getFactoryAccess().getFactoryKeyword_0());
                 
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4456:1: ( (lv_name_1_0= RULE_ID ) )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4457:1: (lv_name_1_0= RULE_ID )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4371:1: ( (lv_name_1_0= RULE_ID ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4372:1: (lv_name_1_0= RULE_ID )
             {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4457:1: (lv_name_1_0= RULE_ID )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4458:3: lv_name_1_0= RULE_ID
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4372:1: (lv_name_1_0= RULE_ID )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4373:3: lv_name_1_0= RULE_ID
             {
-            lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleFactory10530); 
+            lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleFactory10339); 
 
             			newLeafNode(lv_name_1_0, grammarAccess.getFactoryAccess().getNameIDTerminalRuleCall_1_0()); 
             		
@@ -11483,16 +11253,16 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4474:2: ( (lv_type_2_0= ruleTypeRef ) )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4475:1: (lv_type_2_0= ruleTypeRef )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4389:2: ( (lv_type_2_0= ruleTypeRef ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4390:1: (lv_type_2_0= ruleTypeRef )
             {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4475:1: (lv_type_2_0= ruleTypeRef )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4476:3: lv_type_2_0= ruleTypeRef
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4390:1: (lv_type_2_0= ruleTypeRef )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4391:3: lv_type_2_0= ruleTypeRef
             {
              
             	        newCompositeNode(grammarAccess.getFactoryAccess().getTypeTypeRefParserRuleCall_2_0()); 
             	    
-            pushFollow(FOLLOW_ruleTypeRef_in_ruleFactory10556);
+            pushFollow(FOLLOW_ruleTypeRef_in_ruleFactory10365);
             lv_type_2_0=ruleTypeRef();
 
             state._fsp--;
@@ -11535,7 +11305,7 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleFile"
-    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4500:1: entryRuleFile returns [EObject current=null] : iv_ruleFile= ruleFile EOF ;
+    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4415:1: entryRuleFile returns [EObject current=null] : iv_ruleFile= ruleFile EOF ;
     public final EObject entryRuleFile() throws RecognitionException {
         EObject current = null;
 
@@ -11543,17 +11313,17 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4501:2: (iv_ruleFile= ruleFile EOF )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4502:2: iv_ruleFile= ruleFile EOF
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4416:2: (iv_ruleFile= ruleFile EOF )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4417:2: iv_ruleFile= ruleFile EOF
             {
              newCompositeNode(grammarAccess.getFileRule()); 
-            pushFollow(FOLLOW_ruleFile_in_entryRuleFile10592);
+            pushFollow(FOLLOW_ruleFile_in_entryRuleFile10401);
             iv_ruleFile=ruleFile();
 
             state._fsp--;
 
              current =iv_ruleFile; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleFile10602); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleFile10411); 
 
             }
 
@@ -11571,7 +11341,7 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleFile"
-    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4509:1: ruleFile returns [EObject current=null] : (otherlv_0= 'file' ( (lv_name_1_0= RULE_ID ) ) ( ( (lv_isinput_2_0= '<-' ) ) | otherlv_3= '->' ) ( (lv_path_4_0= RULE_STRING ) ) ) ;
+    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4424:1: ruleFile returns [EObject current=null] : (otherlv_0= 'file' ( (lv_name_1_0= RULE_ID ) ) ( ( (lv_isinput_2_0= '<-' ) ) | otherlv_3= '->' ) ( (lv_path_4_0= RULE_STRING ) ) ) ;
     public final EObject ruleFile() throws RecognitionException {
         EObject current = null;
 
@@ -11584,23 +11354,23 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4512:28: ( (otherlv_0= 'file' ( (lv_name_1_0= RULE_ID ) ) ( ( (lv_isinput_2_0= '<-' ) ) | otherlv_3= '->' ) ( (lv_path_4_0= RULE_STRING ) ) ) )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4513:1: (otherlv_0= 'file' ( (lv_name_1_0= RULE_ID ) ) ( ( (lv_isinput_2_0= '<-' ) ) | otherlv_3= '->' ) ( (lv_path_4_0= RULE_STRING ) ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4427:28: ( (otherlv_0= 'file' ( (lv_name_1_0= RULE_ID ) ) ( ( (lv_isinput_2_0= '<-' ) ) | otherlv_3= '->' ) ( (lv_path_4_0= RULE_STRING ) ) ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4428:1: (otherlv_0= 'file' ( (lv_name_1_0= RULE_ID ) ) ( ( (lv_isinput_2_0= '<-' ) ) | otherlv_3= '->' ) ( (lv_path_4_0= RULE_STRING ) ) )
             {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4513:1: (otherlv_0= 'file' ( (lv_name_1_0= RULE_ID ) ) ( ( (lv_isinput_2_0= '<-' ) ) | otherlv_3= '->' ) ( (lv_path_4_0= RULE_STRING ) ) )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4513:3: otherlv_0= 'file' ( (lv_name_1_0= RULE_ID ) ) ( ( (lv_isinput_2_0= '<-' ) ) | otherlv_3= '->' ) ( (lv_path_4_0= RULE_STRING ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4428:1: (otherlv_0= 'file' ( (lv_name_1_0= RULE_ID ) ) ( ( (lv_isinput_2_0= '<-' ) ) | otherlv_3= '->' ) ( (lv_path_4_0= RULE_STRING ) ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4428:3: otherlv_0= 'file' ( (lv_name_1_0= RULE_ID ) ) ( ( (lv_isinput_2_0= '<-' ) ) | otherlv_3= '->' ) ( (lv_path_4_0= RULE_STRING ) )
             {
-            otherlv_0=(Token)match(input,64,FOLLOW_64_in_ruleFile10639); 
+            otherlv_0=(Token)match(input,64,FOLLOW_64_in_ruleFile10448); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getFileAccess().getFileKeyword_0());
                 
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4517:1: ( (lv_name_1_0= RULE_ID ) )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4518:1: (lv_name_1_0= RULE_ID )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4432:1: ( (lv_name_1_0= RULE_ID ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4433:1: (lv_name_1_0= RULE_ID )
             {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4518:1: (lv_name_1_0= RULE_ID )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4519:3: lv_name_1_0= RULE_ID
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4433:1: (lv_name_1_0= RULE_ID )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4434:3: lv_name_1_0= RULE_ID
             {
-            lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleFile10656); 
+            lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleFile10465); 
 
             			newLeafNode(lv_name_1_0, grammarAccess.getFileAccess().getNameIDTerminalRuleCall_1_0()); 
             		
@@ -11620,33 +11390,33 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4535:2: ( ( (lv_isinput_2_0= '<-' ) ) | otherlv_3= '->' )
-            int alt59=2;
-            int LA59_0 = input.LA(1);
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4450:2: ( ( (lv_isinput_2_0= '<-' ) ) | otherlv_3= '->' )
+            int alt57=2;
+            int LA57_0 = input.LA(1);
 
-            if ( (LA59_0==58) ) {
-                alt59=1;
+            if ( (LA57_0==58) ) {
+                alt57=1;
             }
-            else if ( (LA59_0==36) ) {
-                alt59=2;
+            else if ( (LA57_0==36) ) {
+                alt57=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 59, 0, input);
+                    new NoViableAltException("", 57, 0, input);
 
                 throw nvae;
             }
-            switch (alt59) {
+            switch (alt57) {
                 case 1 :
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4535:3: ( (lv_isinput_2_0= '<-' ) )
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4450:3: ( (lv_isinput_2_0= '<-' ) )
                     {
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4535:3: ( (lv_isinput_2_0= '<-' ) )
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4536:1: (lv_isinput_2_0= '<-' )
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4450:3: ( (lv_isinput_2_0= '<-' ) )
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4451:1: (lv_isinput_2_0= '<-' )
                     {
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4536:1: (lv_isinput_2_0= '<-' )
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4537:3: lv_isinput_2_0= '<-'
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4451:1: (lv_isinput_2_0= '<-' )
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4452:3: lv_isinput_2_0= '<-'
                     {
-                    lv_isinput_2_0=(Token)match(input,58,FOLLOW_58_in_ruleFile10680); 
+                    lv_isinput_2_0=(Token)match(input,58,FOLLOW_58_in_ruleFile10489); 
 
                             newLeafNode(lv_isinput_2_0, grammarAccess.getFileAccess().getIsinputLessThanSignHyphenMinusKeyword_2_0_0());
                         
@@ -11666,9 +11436,9 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4551:7: otherlv_3= '->'
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4466:7: otherlv_3= '->'
                     {
-                    otherlv_3=(Token)match(input,36,FOLLOW_36_in_ruleFile10711); 
+                    otherlv_3=(Token)match(input,36,FOLLOW_36_in_ruleFile10520); 
 
                         	newLeafNode(otherlv_3, grammarAccess.getFileAccess().getHyphenMinusGreaterThanSignKeyword_2_1());
                         
@@ -11678,13 +11448,13 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4555:2: ( (lv_path_4_0= RULE_STRING ) )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4556:1: (lv_path_4_0= RULE_STRING )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4470:2: ( (lv_path_4_0= RULE_STRING ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4471:1: (lv_path_4_0= RULE_STRING )
             {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4556:1: (lv_path_4_0= RULE_STRING )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4557:3: lv_path_4_0= RULE_STRING
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4471:1: (lv_path_4_0= RULE_STRING )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4472:3: lv_path_4_0= RULE_STRING
             {
-            lv_path_4_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleFile10729); 
+            lv_path_4_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleFile10538); 
 
             			newLeafNode(lv_path_4_0, grammarAccess.getFileAccess().getPathSTRINGTerminalRuleCall_3_0()); 
             		
@@ -11725,7 +11495,7 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleCanvas"
-    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4581:1: entryRuleCanvas returns [EObject current=null] : iv_ruleCanvas= ruleCanvas EOF ;
+    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4496:1: entryRuleCanvas returns [EObject current=null] : iv_ruleCanvas= ruleCanvas EOF ;
     public final EObject entryRuleCanvas() throws RecognitionException {
         EObject current = null;
 
@@ -11733,17 +11503,17 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4582:2: (iv_ruleCanvas= ruleCanvas EOF )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4583:2: iv_ruleCanvas= ruleCanvas EOF
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4497:2: (iv_ruleCanvas= ruleCanvas EOF )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4498:2: iv_ruleCanvas= ruleCanvas EOF
             {
              newCompositeNode(grammarAccess.getCanvasRule()); 
-            pushFollow(FOLLOW_ruleCanvas_in_entryRuleCanvas10770);
+            pushFollow(FOLLOW_ruleCanvas_in_entryRuleCanvas10579);
             iv_ruleCanvas=ruleCanvas();
 
             state._fsp--;
 
              current =iv_ruleCanvas; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleCanvas10780); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleCanvas10589); 
 
             }
 
@@ -11761,7 +11531,7 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleCanvas"
-    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4590:1: ruleCanvas returns [EObject current=null] : (otherlv_0= 'canvas' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( ( (lv_properties_3_0= rulePair ) ) otherlv_4= ';' )* otherlv_5= '}' ) ;
+    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4505:1: ruleCanvas returns [EObject current=null] : (otherlv_0= 'canvas' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( ( (lv_properties_3_0= rulePair ) ) otherlv_4= ';' )* otherlv_5= '}' ) ;
     public final EObject ruleCanvas() throws RecognitionException {
         EObject current = null;
 
@@ -11776,23 +11546,23 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4593:28: ( (otherlv_0= 'canvas' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( ( (lv_properties_3_0= rulePair ) ) otherlv_4= ';' )* otherlv_5= '}' ) )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4594:1: (otherlv_0= 'canvas' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( ( (lv_properties_3_0= rulePair ) ) otherlv_4= ';' )* otherlv_5= '}' )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4508:28: ( (otherlv_0= 'canvas' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( ( (lv_properties_3_0= rulePair ) ) otherlv_4= ';' )* otherlv_5= '}' ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4509:1: (otherlv_0= 'canvas' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( ( (lv_properties_3_0= rulePair ) ) otherlv_4= ';' )* otherlv_5= '}' )
             {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4594:1: (otherlv_0= 'canvas' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( ( (lv_properties_3_0= rulePair ) ) otherlv_4= ';' )* otherlv_5= '}' )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4594:3: otherlv_0= 'canvas' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( ( (lv_properties_3_0= rulePair ) ) otherlv_4= ';' )* otherlv_5= '}'
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4509:1: (otherlv_0= 'canvas' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( ( (lv_properties_3_0= rulePair ) ) otherlv_4= ';' )* otherlv_5= '}' )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4509:3: otherlv_0= 'canvas' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( ( (lv_properties_3_0= rulePair ) ) otherlv_4= ';' )* otherlv_5= '}'
             {
-            otherlv_0=(Token)match(input,65,FOLLOW_65_in_ruleCanvas10817); 
+            otherlv_0=(Token)match(input,65,FOLLOW_65_in_ruleCanvas10626); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getCanvasAccess().getCanvasKeyword_0());
                 
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4598:1: ( (lv_name_1_0= RULE_ID ) )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4599:1: (lv_name_1_0= RULE_ID )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4513:1: ( (lv_name_1_0= RULE_ID ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4514:1: (lv_name_1_0= RULE_ID )
             {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4599:1: (lv_name_1_0= RULE_ID )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4600:3: lv_name_1_0= RULE_ID
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4514:1: (lv_name_1_0= RULE_ID )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4515:3: lv_name_1_0= RULE_ID
             {
-            lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleCanvas10834); 
+            lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleCanvas10643); 
 
             			newLeafNode(lv_name_1_0, grammarAccess.getCanvasAccess().getNameIDTerminalRuleCall_1_0()); 
             		
@@ -11812,35 +11582,35 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_2=(Token)match(input,40,FOLLOW_40_in_ruleCanvas10851); 
+            otherlv_2=(Token)match(input,40,FOLLOW_40_in_ruleCanvas10660); 
 
                 	newLeafNode(otherlv_2, grammarAccess.getCanvasAccess().getLeftCurlyBracketKeyword_2());
                 
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4620:1: ( ( (lv_properties_3_0= rulePair ) ) otherlv_4= ';' )*
-            loop60:
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4535:1: ( ( (lv_properties_3_0= rulePair ) ) otherlv_4= ';' )*
+            loop58:
             do {
-                int alt60=2;
-                int LA60_0 = input.LA(1);
+                int alt58=2;
+                int LA58_0 = input.LA(1);
 
-                if ( (LA60_0==RULE_ID) ) {
-                    alt60=1;
+                if ( (LA58_0==RULE_ID) ) {
+                    alt58=1;
                 }
 
 
-                switch (alt60) {
+                switch (alt58) {
             	case 1 :
-            	    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4620:2: ( (lv_properties_3_0= rulePair ) ) otherlv_4= ';'
+            	    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4535:2: ( (lv_properties_3_0= rulePair ) ) otherlv_4= ';'
             	    {
-            	    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4620:2: ( (lv_properties_3_0= rulePair ) )
-            	    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4621:1: (lv_properties_3_0= rulePair )
+            	    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4535:2: ( (lv_properties_3_0= rulePair ) )
+            	    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4536:1: (lv_properties_3_0= rulePair )
             	    {
-            	    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4621:1: (lv_properties_3_0= rulePair )
-            	    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4622:3: lv_properties_3_0= rulePair
+            	    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4536:1: (lv_properties_3_0= rulePair )
+            	    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4537:3: lv_properties_3_0= rulePair
             	    {
             	     
             	    	        newCompositeNode(grammarAccess.getCanvasAccess().getPropertiesPairParserRuleCall_3_0_0()); 
             	    	    
-            	    pushFollow(FOLLOW_rulePair_in_ruleCanvas10873);
+            	    pushFollow(FOLLOW_rulePair_in_ruleCanvas10682);
             	    lv_properties_3_0=rulePair();
 
             	    state._fsp--;
@@ -11862,7 +11632,7 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
             	    }
 
-            	    otherlv_4=(Token)match(input,66,FOLLOW_66_in_ruleCanvas10885); 
+            	    otherlv_4=(Token)match(input,66,FOLLOW_66_in_ruleCanvas10694); 
 
             	        	newLeafNode(otherlv_4, grammarAccess.getCanvasAccess().getSemicolonKeyword_3_1());
             	        
@@ -11871,11 +11641,11 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    break loop60;
+            	    break loop58;
                 }
             } while (true);
 
-            otherlv_5=(Token)match(input,41,FOLLOW_41_in_ruleCanvas10899); 
+            otherlv_5=(Token)match(input,42,FOLLOW_42_in_ruleCanvas10708); 
 
                 	newLeafNode(otherlv_5, grammarAccess.getCanvasAccess().getRightCurlyBracketKeyword_4());
                 
@@ -11900,7 +11670,7 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleBinOp"
-    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4654:1: ruleBinOp returns [Enumerator current=null] : ( (enumLiteral_0= '&&' ) | (enumLiteral_1= '||' ) ) ;
+    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4569:1: ruleBinOp returns [Enumerator current=null] : ( (enumLiteral_0= '&&' ) | (enumLiteral_1= '||' ) ) ;
     public final Enumerator ruleBinOp() throws RecognitionException {
         Enumerator current = null;
 
@@ -11909,33 +11679,33 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
          enterRule(); 
         try {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4656:28: ( ( (enumLiteral_0= '&&' ) | (enumLiteral_1= '||' ) ) )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4657:1: ( (enumLiteral_0= '&&' ) | (enumLiteral_1= '||' ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4571:28: ( ( (enumLiteral_0= '&&' ) | (enumLiteral_1= '||' ) ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4572:1: ( (enumLiteral_0= '&&' ) | (enumLiteral_1= '||' ) )
             {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4657:1: ( (enumLiteral_0= '&&' ) | (enumLiteral_1= '||' ) )
-            int alt61=2;
-            int LA61_0 = input.LA(1);
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4572:1: ( (enumLiteral_0= '&&' ) | (enumLiteral_1= '||' ) )
+            int alt59=2;
+            int LA59_0 = input.LA(1);
 
-            if ( (LA61_0==67) ) {
-                alt61=1;
+            if ( (LA59_0==67) ) {
+                alt59=1;
             }
-            else if ( (LA61_0==68) ) {
-                alt61=2;
+            else if ( (LA59_0==68) ) {
+                alt59=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 61, 0, input);
+                    new NoViableAltException("", 59, 0, input);
 
                 throw nvae;
             }
-            switch (alt61) {
+            switch (alt59) {
                 case 1 :
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4657:2: (enumLiteral_0= '&&' )
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4572:2: (enumLiteral_0= '&&' )
                     {
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4657:2: (enumLiteral_0= '&&' )
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4657:4: enumLiteral_0= '&&'
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4572:2: (enumLiteral_0= '&&' )
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4572:4: enumLiteral_0= '&&'
                     {
-                    enumLiteral_0=(Token)match(input,67,FOLLOW_67_in_ruleBinOp10949); 
+                    enumLiteral_0=(Token)match(input,67,FOLLOW_67_in_ruleBinOp10758); 
 
                             current = grammarAccess.getBinOpAccess().getAndEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_0, grammarAccess.getBinOpAccess().getAndEnumLiteralDeclaration_0()); 
@@ -11947,12 +11717,12 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4663:6: (enumLiteral_1= '||' )
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4578:6: (enumLiteral_1= '||' )
                     {
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4663:6: (enumLiteral_1= '||' )
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4663:8: enumLiteral_1= '||'
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4578:6: (enumLiteral_1= '||' )
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4578:8: enumLiteral_1= '||'
                     {
-                    enumLiteral_1=(Token)match(input,68,FOLLOW_68_in_ruleBinOp10966); 
+                    enumLiteral_1=(Token)match(input,68,FOLLOW_68_in_ruleBinOp10775); 
 
                             current = grammarAccess.getBinOpAccess().getOrEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_1, grammarAccess.getBinOpAccess().getOrEnumLiteralDeclaration_1()); 
@@ -11984,7 +11754,7 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleNegationOp"
-    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4673:1: ruleNegationOp returns [Enumerator current=null] : (enumLiteral_0= '!' ) ;
+    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4588:1: ruleNegationOp returns [Enumerator current=null] : (enumLiteral_0= '!' ) ;
     public final Enumerator ruleNegationOp() throws RecognitionException {
         Enumerator current = null;
 
@@ -11992,13 +11762,13 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
          enterRule(); 
         try {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4675:28: ( (enumLiteral_0= '!' ) )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4676:1: (enumLiteral_0= '!' )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4590:28: ( (enumLiteral_0= '!' ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4591:1: (enumLiteral_0= '!' )
             {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4676:1: (enumLiteral_0= '!' )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4676:3: enumLiteral_0= '!'
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4591:1: (enumLiteral_0= '!' )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4591:3: enumLiteral_0= '!'
             {
-            enumLiteral_0=(Token)match(input,69,FOLLOW_69_in_ruleNegationOp11010); 
+            enumLiteral_0=(Token)match(input,69,FOLLOW_69_in_ruleNegationOp10819); 
 
                     current = grammarAccess.getNegationOpAccess().getNegEnumLiteralDeclaration().getEnumLiteral().getInstance();
                     newLeafNode(enumLiteral_0, grammarAccess.getNegationOpAccess().getNegEnumLiteralDeclaration()); 
@@ -12024,7 +11794,7 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleCompOp"
-    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4686:1: ruleCompOp returns [Enumerator current=null] : ( (enumLiteral_0= '==' ) | (enumLiteral_1= '!=' ) | (enumLiteral_2= '<' ) | (enumLiteral_3= '>' ) | (enumLiteral_4= '<=' ) | (enumLiteral_5= '>=' ) ) ;
+    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4601:1: ruleCompOp returns [Enumerator current=null] : ( (enumLiteral_0= '==' ) | (enumLiteral_1= '!=' ) | (enumLiteral_2= '<' ) | (enumLiteral_3= '>' ) | (enumLiteral_4= '<=' ) | (enumLiteral_5= '>=' ) ) ;
     public final Enumerator ruleCompOp() throws RecognitionException {
         Enumerator current = null;
 
@@ -12037,57 +11807,57 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
          enterRule(); 
         try {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4688:28: ( ( (enumLiteral_0= '==' ) | (enumLiteral_1= '!=' ) | (enumLiteral_2= '<' ) | (enumLiteral_3= '>' ) | (enumLiteral_4= '<=' ) | (enumLiteral_5= '>=' ) ) )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4689:1: ( (enumLiteral_0= '==' ) | (enumLiteral_1= '!=' ) | (enumLiteral_2= '<' ) | (enumLiteral_3= '>' ) | (enumLiteral_4= '<=' ) | (enumLiteral_5= '>=' ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4603:28: ( ( (enumLiteral_0= '==' ) | (enumLiteral_1= '!=' ) | (enumLiteral_2= '<' ) | (enumLiteral_3= '>' ) | (enumLiteral_4= '<=' ) | (enumLiteral_5= '>=' ) ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4604:1: ( (enumLiteral_0= '==' ) | (enumLiteral_1= '!=' ) | (enumLiteral_2= '<' ) | (enumLiteral_3= '>' ) | (enumLiteral_4= '<=' ) | (enumLiteral_5= '>=' ) )
             {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4689:1: ( (enumLiteral_0= '==' ) | (enumLiteral_1= '!=' ) | (enumLiteral_2= '<' ) | (enumLiteral_3= '>' ) | (enumLiteral_4= '<=' ) | (enumLiteral_5= '>=' ) )
-            int alt62=6;
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4604:1: ( (enumLiteral_0= '==' ) | (enumLiteral_1= '!=' ) | (enumLiteral_2= '<' ) | (enumLiteral_3= '>' ) | (enumLiteral_4= '<=' ) | (enumLiteral_5= '>=' ) )
+            int alt60=6;
             switch ( input.LA(1) ) {
             case 70:
                 {
-                alt62=1;
+                alt60=1;
                 }
                 break;
             case 71:
                 {
-                alt62=2;
+                alt60=2;
                 }
                 break;
             case 52:
                 {
-                alt62=3;
+                alt60=3;
                 }
                 break;
             case 53:
                 {
-                alt62=4;
+                alt60=4;
                 }
                 break;
             case 72:
                 {
-                alt62=5;
+                alt60=5;
                 }
                 break;
             case 73:
                 {
-                alt62=6;
+                alt60=6;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 62, 0, input);
+                    new NoViableAltException("", 60, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt62) {
+            switch (alt60) {
                 case 1 :
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4689:2: (enumLiteral_0= '==' )
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4604:2: (enumLiteral_0= '==' )
                     {
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4689:2: (enumLiteral_0= '==' )
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4689:4: enumLiteral_0= '=='
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4604:2: (enumLiteral_0= '==' )
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4604:4: enumLiteral_0= '=='
                     {
-                    enumLiteral_0=(Token)match(input,70,FOLLOW_70_in_ruleCompOp11054); 
+                    enumLiteral_0=(Token)match(input,70,FOLLOW_70_in_ruleCompOp10863); 
 
                             current = grammarAccess.getCompOpAccess().getEqEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_0, grammarAccess.getCompOpAccess().getEqEnumLiteralDeclaration_0()); 
@@ -12099,12 +11869,12 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4695:6: (enumLiteral_1= '!=' )
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4610:6: (enumLiteral_1= '!=' )
                     {
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4695:6: (enumLiteral_1= '!=' )
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4695:8: enumLiteral_1= '!='
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4610:6: (enumLiteral_1= '!=' )
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4610:8: enumLiteral_1= '!='
                     {
-                    enumLiteral_1=(Token)match(input,71,FOLLOW_71_in_ruleCompOp11071); 
+                    enumLiteral_1=(Token)match(input,71,FOLLOW_71_in_ruleCompOp10880); 
 
                             current = grammarAccess.getCompOpAccess().getNeEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_1, grammarAccess.getCompOpAccess().getNeEnumLiteralDeclaration_1()); 
@@ -12116,12 +11886,12 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4701:6: (enumLiteral_2= '<' )
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4616:6: (enumLiteral_2= '<' )
                     {
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4701:6: (enumLiteral_2= '<' )
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4701:8: enumLiteral_2= '<'
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4616:6: (enumLiteral_2= '<' )
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4616:8: enumLiteral_2= '<'
                     {
-                    enumLiteral_2=(Token)match(input,52,FOLLOW_52_in_ruleCompOp11088); 
+                    enumLiteral_2=(Token)match(input,52,FOLLOW_52_in_ruleCompOp10897); 
 
                             current = grammarAccess.getCompOpAccess().getLtEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_2, grammarAccess.getCompOpAccess().getLtEnumLiteralDeclaration_2()); 
@@ -12133,12 +11903,12 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4707:6: (enumLiteral_3= '>' )
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4622:6: (enumLiteral_3= '>' )
                     {
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4707:6: (enumLiteral_3= '>' )
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4707:8: enumLiteral_3= '>'
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4622:6: (enumLiteral_3= '>' )
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4622:8: enumLiteral_3= '>'
                     {
-                    enumLiteral_3=(Token)match(input,53,FOLLOW_53_in_ruleCompOp11105); 
+                    enumLiteral_3=(Token)match(input,53,FOLLOW_53_in_ruleCompOp10914); 
 
                             current = grammarAccess.getCompOpAccess().getGtEnumLiteralDeclaration_3().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_3, grammarAccess.getCompOpAccess().getGtEnumLiteralDeclaration_3()); 
@@ -12150,12 +11920,12 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 5 :
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4713:6: (enumLiteral_4= '<=' )
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4628:6: (enumLiteral_4= '<=' )
                     {
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4713:6: (enumLiteral_4= '<=' )
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4713:8: enumLiteral_4= '<='
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4628:6: (enumLiteral_4= '<=' )
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4628:8: enumLiteral_4= '<='
                     {
-                    enumLiteral_4=(Token)match(input,72,FOLLOW_72_in_ruleCompOp11122); 
+                    enumLiteral_4=(Token)match(input,72,FOLLOW_72_in_ruleCompOp10931); 
 
                             current = grammarAccess.getCompOpAccess().getLeEnumLiteralDeclaration_4().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_4, grammarAccess.getCompOpAccess().getLeEnumLiteralDeclaration_4()); 
@@ -12167,12 +11937,12 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 6 :
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4719:6: (enumLiteral_5= '>=' )
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4634:6: (enumLiteral_5= '>=' )
                     {
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4719:6: (enumLiteral_5= '>=' )
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4719:8: enumLiteral_5= '>='
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4634:6: (enumLiteral_5= '>=' )
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4634:8: enumLiteral_5= '>='
                     {
-                    enumLiteral_5=(Token)match(input,73,FOLLOW_73_in_ruleCompOp11139); 
+                    enumLiteral_5=(Token)match(input,73,FOLLOW_73_in_ruleCompOp10948); 
 
                             current = grammarAccess.getCompOpAccess().getGeEnumLiteralDeclaration_5().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_5, grammarAccess.getCompOpAccess().getGeEnumLiteralDeclaration_5()); 
@@ -12204,7 +11974,7 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleAddOp"
-    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4729:1: ruleAddOp returns [Enumerator current=null] : ( (enumLiteral_0= '+' ) | (enumLiteral_1= '-' ) ) ;
+    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4644:1: ruleAddOp returns [Enumerator current=null] : ( (enumLiteral_0= '+' ) | (enumLiteral_1= '-' ) ) ;
     public final Enumerator ruleAddOp() throws RecognitionException {
         Enumerator current = null;
 
@@ -12213,33 +11983,33 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
          enterRule(); 
         try {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4731:28: ( ( (enumLiteral_0= '+' ) | (enumLiteral_1= '-' ) ) )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4732:1: ( (enumLiteral_0= '+' ) | (enumLiteral_1= '-' ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4646:28: ( ( (enumLiteral_0= '+' ) | (enumLiteral_1= '-' ) ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4647:1: ( (enumLiteral_0= '+' ) | (enumLiteral_1= '-' ) )
             {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4732:1: ( (enumLiteral_0= '+' ) | (enumLiteral_1= '-' ) )
-            int alt63=2;
-            int LA63_0 = input.LA(1);
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4647:1: ( (enumLiteral_0= '+' ) | (enumLiteral_1= '-' ) )
+            int alt61=2;
+            int LA61_0 = input.LA(1);
 
-            if ( (LA63_0==29) ) {
-                alt63=1;
+            if ( (LA61_0==29) ) {
+                alt61=1;
             }
-            else if ( (LA63_0==30) ) {
-                alt63=2;
+            else if ( (LA61_0==30) ) {
+                alt61=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 63, 0, input);
+                    new NoViableAltException("", 61, 0, input);
 
                 throw nvae;
             }
-            switch (alt63) {
+            switch (alt61) {
                 case 1 :
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4732:2: (enumLiteral_0= '+' )
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4647:2: (enumLiteral_0= '+' )
                     {
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4732:2: (enumLiteral_0= '+' )
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4732:4: enumLiteral_0= '+'
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4647:2: (enumLiteral_0= '+' )
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4647:4: enumLiteral_0= '+'
                     {
-                    enumLiteral_0=(Token)match(input,29,FOLLOW_29_in_ruleAddOp11184); 
+                    enumLiteral_0=(Token)match(input,29,FOLLOW_29_in_ruleAddOp10993); 
 
                             current = grammarAccess.getAddOpAccess().getPlusEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_0, grammarAccess.getAddOpAccess().getPlusEnumLiteralDeclaration_0()); 
@@ -12251,12 +12021,12 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4738:6: (enumLiteral_1= '-' )
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4653:6: (enumLiteral_1= '-' )
                     {
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4738:6: (enumLiteral_1= '-' )
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4738:8: enumLiteral_1= '-'
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4653:6: (enumLiteral_1= '-' )
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4653:8: enumLiteral_1= '-'
                     {
-                    enumLiteral_1=(Token)match(input,30,FOLLOW_30_in_ruleAddOp11201); 
+                    enumLiteral_1=(Token)match(input,30,FOLLOW_30_in_ruleAddOp11010); 
 
                             current = grammarAccess.getAddOpAccess().getMinusEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_1, grammarAccess.getAddOpAccess().getMinusEnumLiteralDeclaration_1()); 
@@ -12288,7 +12058,7 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleMultiOp"
-    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4748:1: ruleMultiOp returns [Enumerator current=null] : ( (enumLiteral_0= '*' ) | (enumLiteral_1= '%' ) | (enumLiteral_2= '//' ) | (enumLiteral_3= '/' ) ) ;
+    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4663:1: ruleMultiOp returns [Enumerator current=null] : ( (enumLiteral_0= '*' ) | (enumLiteral_1= '%' ) | (enumLiteral_2= '//' ) | (enumLiteral_3= '/' ) ) ;
     public final Enumerator ruleMultiOp() throws RecognitionException {
         Enumerator current = null;
 
@@ -12299,47 +12069,47 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
          enterRule(); 
         try {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4750:28: ( ( (enumLiteral_0= '*' ) | (enumLiteral_1= '%' ) | (enumLiteral_2= '//' ) | (enumLiteral_3= '/' ) ) )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4751:1: ( (enumLiteral_0= '*' ) | (enumLiteral_1= '%' ) | (enumLiteral_2= '//' ) | (enumLiteral_3= '/' ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4665:28: ( ( (enumLiteral_0= '*' ) | (enumLiteral_1= '%' ) | (enumLiteral_2= '//' ) | (enumLiteral_3= '/' ) ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4666:1: ( (enumLiteral_0= '*' ) | (enumLiteral_1= '%' ) | (enumLiteral_2= '//' ) | (enumLiteral_3= '/' ) )
             {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4751:1: ( (enumLiteral_0= '*' ) | (enumLiteral_1= '%' ) | (enumLiteral_2= '//' ) | (enumLiteral_3= '/' ) )
-            int alt64=4;
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4666:1: ( (enumLiteral_0= '*' ) | (enumLiteral_1= '%' ) | (enumLiteral_2= '//' ) | (enumLiteral_3= '/' ) )
+            int alt62=4;
             switch ( input.LA(1) ) {
             case 74:
                 {
-                alt64=1;
+                alt62=1;
                 }
                 break;
             case 75:
                 {
-                alt64=2;
+                alt62=2;
                 }
                 break;
             case 76:
                 {
-                alt64=3;
+                alt62=3;
                 }
                 break;
             case 77:
                 {
-                alt64=4;
+                alt62=4;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 64, 0, input);
+                    new NoViableAltException("", 62, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt64) {
+            switch (alt62) {
                 case 1 :
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4751:2: (enumLiteral_0= '*' )
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4666:2: (enumLiteral_0= '*' )
                     {
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4751:2: (enumLiteral_0= '*' )
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4751:4: enumLiteral_0= '*'
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4666:2: (enumLiteral_0= '*' )
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4666:4: enumLiteral_0= '*'
                     {
-                    enumLiteral_0=(Token)match(input,74,FOLLOW_74_in_ruleMultiOp11246); 
+                    enumLiteral_0=(Token)match(input,74,FOLLOW_74_in_ruleMultiOp11055); 
 
                             current = grammarAccess.getMultiOpAccess().getTimesEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_0, grammarAccess.getMultiOpAccess().getTimesEnumLiteralDeclaration_0()); 
@@ -12351,12 +12121,12 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4757:6: (enumLiteral_1= '%' )
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4672:6: (enumLiteral_1= '%' )
                     {
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4757:6: (enumLiteral_1= '%' )
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4757:8: enumLiteral_1= '%'
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4672:6: (enumLiteral_1= '%' )
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4672:8: enumLiteral_1= '%'
                     {
-                    enumLiteral_1=(Token)match(input,75,FOLLOW_75_in_ruleMultiOp11263); 
+                    enumLiteral_1=(Token)match(input,75,FOLLOW_75_in_ruleMultiOp11072); 
 
                             current = grammarAccess.getMultiOpAccess().getModuloEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_1, grammarAccess.getMultiOpAccess().getModuloEnumLiteralDeclaration_1()); 
@@ -12368,12 +12138,12 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4763:6: (enumLiteral_2= '//' )
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4678:6: (enumLiteral_2= '//' )
                     {
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4763:6: (enumLiteral_2= '//' )
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4763:8: enumLiteral_2= '//'
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4678:6: (enumLiteral_2= '//' )
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4678:8: enumLiteral_2= '//'
                     {
-                    enumLiteral_2=(Token)match(input,76,FOLLOW_76_in_ruleMultiOp11280); 
+                    enumLiteral_2=(Token)match(input,76,FOLLOW_76_in_ruleMultiOp11089); 
 
                             current = grammarAccess.getMultiOpAccess().getIntdivisionEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_2, grammarAccess.getMultiOpAccess().getIntdivisionEnumLiteralDeclaration_2()); 
@@ -12385,12 +12155,12 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4769:6: (enumLiteral_3= '/' )
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4684:6: (enumLiteral_3= '/' )
                     {
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4769:6: (enumLiteral_3= '/' )
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4769:8: enumLiteral_3= '/'
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4684:6: (enumLiteral_3= '/' )
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4684:8: enumLiteral_3= '/'
                     {
-                    enumLiteral_3=(Token)match(input,77,FOLLOW_77_in_ruleMultiOp11297); 
+                    enumLiteral_3=(Token)match(input,77,FOLLOW_77_in_ruleMultiOp11106); 
 
                             current = grammarAccess.getMultiOpAccess().getDividebyEnumLiteralDeclaration_3().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_3, grammarAccess.getMultiOpAccess().getDividebyEnumLiteralDeclaration_3()); 
@@ -12422,7 +12192,7 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleExpOp"
-    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4779:1: ruleExpOp returns [Enumerator current=null] : (enumLiteral_0= '**' ) ;
+    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4694:1: ruleExpOp returns [Enumerator current=null] : (enumLiteral_0= '**' ) ;
     public final Enumerator ruleExpOp() throws RecognitionException {
         Enumerator current = null;
 
@@ -12430,13 +12200,13 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
          enterRule(); 
         try {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4781:28: ( (enumLiteral_0= '**' ) )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4782:1: (enumLiteral_0= '**' )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4696:28: ( (enumLiteral_0= '**' ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4697:1: (enumLiteral_0= '**' )
             {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4782:1: (enumLiteral_0= '**' )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4782:3: enumLiteral_0= '**'
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4697:1: (enumLiteral_0= '**' )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4697:3: enumLiteral_0= '**'
             {
-            enumLiteral_0=(Token)match(input,78,FOLLOW_78_in_ruleExpOp11341); 
+            enumLiteral_0=(Token)match(input,78,FOLLOW_78_in_ruleExpOp11150); 
 
                     current = grammarAccess.getExpOpAccess().getExpEnumLiteralDeclaration().getEnumLiteral().getInstance();
                     newLeafNode(enumLiteral_0, grammarAccess.getExpOpAccess().getExpEnumLiteralDeclaration()); 
@@ -12462,7 +12232,7 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleNumberType"
-    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4792:1: ruleNumberType returns [Enumerator current=null] : ( (enumLiteral_0= 'positive' ) | (enumLiteral_1= 'natural' ) | (enumLiteral_2= 'integer' ) | (enumLiteral_3= 'rational' ) ) ;
+    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4707:1: ruleNumberType returns [Enumerator current=null] : ( (enumLiteral_0= 'positive' ) | (enumLiteral_1= 'natural' ) | (enumLiteral_2= 'integer' ) | (enumLiteral_3= 'rational' ) ) ;
     public final Enumerator ruleNumberType() throws RecognitionException {
         Enumerator current = null;
 
@@ -12473,47 +12243,47 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
          enterRule(); 
         try {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4794:28: ( ( (enumLiteral_0= 'positive' ) | (enumLiteral_1= 'natural' ) | (enumLiteral_2= 'integer' ) | (enumLiteral_3= 'rational' ) ) )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4795:1: ( (enumLiteral_0= 'positive' ) | (enumLiteral_1= 'natural' ) | (enumLiteral_2= 'integer' ) | (enumLiteral_3= 'rational' ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4709:28: ( ( (enumLiteral_0= 'positive' ) | (enumLiteral_1= 'natural' ) | (enumLiteral_2= 'integer' ) | (enumLiteral_3= 'rational' ) ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4710:1: ( (enumLiteral_0= 'positive' ) | (enumLiteral_1= 'natural' ) | (enumLiteral_2= 'integer' ) | (enumLiteral_3= 'rational' ) )
             {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4795:1: ( (enumLiteral_0= 'positive' ) | (enumLiteral_1= 'natural' ) | (enumLiteral_2= 'integer' ) | (enumLiteral_3= 'rational' ) )
-            int alt65=4;
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4710:1: ( (enumLiteral_0= 'positive' ) | (enumLiteral_1= 'natural' ) | (enumLiteral_2= 'integer' ) | (enumLiteral_3= 'rational' ) )
+            int alt63=4;
             switch ( input.LA(1) ) {
             case 79:
                 {
-                alt65=1;
+                alt63=1;
                 }
                 break;
             case 80:
                 {
-                alt65=2;
+                alt63=2;
                 }
                 break;
             case 81:
                 {
-                alt65=3;
+                alt63=3;
                 }
                 break;
             case 82:
                 {
-                alt65=4;
+                alt63=4;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 65, 0, input);
+                    new NoViableAltException("", 63, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt65) {
+            switch (alt63) {
                 case 1 :
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4795:2: (enumLiteral_0= 'positive' )
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4710:2: (enumLiteral_0= 'positive' )
                     {
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4795:2: (enumLiteral_0= 'positive' )
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4795:4: enumLiteral_0= 'positive'
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4710:2: (enumLiteral_0= 'positive' )
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4710:4: enumLiteral_0= 'positive'
                     {
-                    enumLiteral_0=(Token)match(input,79,FOLLOW_79_in_ruleNumberType11385); 
+                    enumLiteral_0=(Token)match(input,79,FOLLOW_79_in_ruleNumberType11194); 
 
                             current = grammarAccess.getNumberTypeAccess().getPositiveEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_0, grammarAccess.getNumberTypeAccess().getPositiveEnumLiteralDeclaration_0()); 
@@ -12525,12 +12295,12 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4801:6: (enumLiteral_1= 'natural' )
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4716:6: (enumLiteral_1= 'natural' )
                     {
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4801:6: (enumLiteral_1= 'natural' )
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4801:8: enumLiteral_1= 'natural'
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4716:6: (enumLiteral_1= 'natural' )
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4716:8: enumLiteral_1= 'natural'
                     {
-                    enumLiteral_1=(Token)match(input,80,FOLLOW_80_in_ruleNumberType11402); 
+                    enumLiteral_1=(Token)match(input,80,FOLLOW_80_in_ruleNumberType11211); 
 
                             current = grammarAccess.getNumberTypeAccess().getNaturalEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_1, grammarAccess.getNumberTypeAccess().getNaturalEnumLiteralDeclaration_1()); 
@@ -12542,12 +12312,12 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4807:6: (enumLiteral_2= 'integer' )
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4722:6: (enumLiteral_2= 'integer' )
                     {
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4807:6: (enumLiteral_2= 'integer' )
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4807:8: enumLiteral_2= 'integer'
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4722:6: (enumLiteral_2= 'integer' )
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4722:8: enumLiteral_2= 'integer'
                     {
-                    enumLiteral_2=(Token)match(input,81,FOLLOW_81_in_ruleNumberType11419); 
+                    enumLiteral_2=(Token)match(input,81,FOLLOW_81_in_ruleNumberType11228); 
 
                             current = grammarAccess.getNumberTypeAccess().getIntegerEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_2, grammarAccess.getNumberTypeAccess().getIntegerEnumLiteralDeclaration_2()); 
@@ -12559,12 +12329,12 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4813:6: (enumLiteral_3= 'rational' )
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4728:6: (enumLiteral_3= 'rational' )
                     {
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4813:6: (enumLiteral_3= 'rational' )
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4813:8: enumLiteral_3= 'rational'
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4728:6: (enumLiteral_3= 'rational' )
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4728:8: enumLiteral_3= 'rational'
                     {
-                    enumLiteral_3=(Token)match(input,82,FOLLOW_82_in_ruleNumberType11436); 
+                    enumLiteral_3=(Token)match(input,82,FOLLOW_82_in_ruleNumberType11245); 
 
                             current = grammarAccess.getNumberTypeAccess().getRationalEnumLiteralDeclaration_3().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_3, grammarAccess.getNumberTypeAccess().getRationalEnumLiteralDeclaration_3()); 
@@ -12596,7 +12366,7 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleVisualType"
-    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4823:1: ruleVisualType returns [Enumerator current=null] : ( (enumLiteral_0= 'shape' ) | (enumLiteral_1= 'color' ) | (enumLiteral_2= 'angle' ) | (enumLiteral_3= 'size' ) | (enumLiteral_4= 'position' ) | (enumLiteral_5= 'texture' ) ) ;
+    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4738:1: ruleVisualType returns [Enumerator current=null] : ( (enumLiteral_0= 'shape' ) | (enumLiteral_1= 'color' ) | (enumLiteral_2= 'angle' ) | (enumLiteral_3= 'size' ) | (enumLiteral_4= 'position' ) | (enumLiteral_5= 'texture' ) ) ;
     public final Enumerator ruleVisualType() throws RecognitionException {
         Enumerator current = null;
 
@@ -12609,57 +12379,57 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
          enterRule(); 
         try {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4825:28: ( ( (enumLiteral_0= 'shape' ) | (enumLiteral_1= 'color' ) | (enumLiteral_2= 'angle' ) | (enumLiteral_3= 'size' ) | (enumLiteral_4= 'position' ) | (enumLiteral_5= 'texture' ) ) )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4826:1: ( (enumLiteral_0= 'shape' ) | (enumLiteral_1= 'color' ) | (enumLiteral_2= 'angle' ) | (enumLiteral_3= 'size' ) | (enumLiteral_4= 'position' ) | (enumLiteral_5= 'texture' ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4740:28: ( ( (enumLiteral_0= 'shape' ) | (enumLiteral_1= 'color' ) | (enumLiteral_2= 'angle' ) | (enumLiteral_3= 'size' ) | (enumLiteral_4= 'position' ) | (enumLiteral_5= 'texture' ) ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4741:1: ( (enumLiteral_0= 'shape' ) | (enumLiteral_1= 'color' ) | (enumLiteral_2= 'angle' ) | (enumLiteral_3= 'size' ) | (enumLiteral_4= 'position' ) | (enumLiteral_5= 'texture' ) )
             {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4826:1: ( (enumLiteral_0= 'shape' ) | (enumLiteral_1= 'color' ) | (enumLiteral_2= 'angle' ) | (enumLiteral_3= 'size' ) | (enumLiteral_4= 'position' ) | (enumLiteral_5= 'texture' ) )
-            int alt66=6;
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4741:1: ( (enumLiteral_0= 'shape' ) | (enumLiteral_1= 'color' ) | (enumLiteral_2= 'angle' ) | (enumLiteral_3= 'size' ) | (enumLiteral_4= 'position' ) | (enumLiteral_5= 'texture' ) )
+            int alt64=6;
             switch ( input.LA(1) ) {
             case 49:
                 {
-                alt66=1;
+                alt64=1;
                 }
                 break;
             case 83:
                 {
-                alt66=2;
+                alt64=2;
                 }
                 break;
             case 84:
                 {
-                alt66=3;
+                alt64=3;
                 }
                 break;
             case 85:
                 {
-                alt66=4;
+                alt64=4;
                 }
                 break;
             case 86:
                 {
-                alt66=5;
+                alt64=5;
                 }
                 break;
             case 87:
                 {
-                alt66=6;
+                alt64=6;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 66, 0, input);
+                    new NoViableAltException("", 64, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt66) {
+            switch (alt64) {
                 case 1 :
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4826:2: (enumLiteral_0= 'shape' )
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4741:2: (enumLiteral_0= 'shape' )
                     {
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4826:2: (enumLiteral_0= 'shape' )
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4826:4: enumLiteral_0= 'shape'
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4741:2: (enumLiteral_0= 'shape' )
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4741:4: enumLiteral_0= 'shape'
                     {
-                    enumLiteral_0=(Token)match(input,49,FOLLOW_49_in_ruleVisualType11481); 
+                    enumLiteral_0=(Token)match(input,49,FOLLOW_49_in_ruleVisualType11290); 
 
                             current = grammarAccess.getVisualTypeAccess().getShapeEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_0, grammarAccess.getVisualTypeAccess().getShapeEnumLiteralDeclaration_0()); 
@@ -12671,12 +12441,12 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4832:6: (enumLiteral_1= 'color' )
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4747:6: (enumLiteral_1= 'color' )
                     {
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4832:6: (enumLiteral_1= 'color' )
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4832:8: enumLiteral_1= 'color'
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4747:6: (enumLiteral_1= 'color' )
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4747:8: enumLiteral_1= 'color'
                     {
-                    enumLiteral_1=(Token)match(input,83,FOLLOW_83_in_ruleVisualType11498); 
+                    enumLiteral_1=(Token)match(input,83,FOLLOW_83_in_ruleVisualType11307); 
 
                             current = grammarAccess.getVisualTypeAccess().getColorEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_1, grammarAccess.getVisualTypeAccess().getColorEnumLiteralDeclaration_1()); 
@@ -12688,12 +12458,12 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4838:6: (enumLiteral_2= 'angle' )
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4753:6: (enumLiteral_2= 'angle' )
                     {
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4838:6: (enumLiteral_2= 'angle' )
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4838:8: enumLiteral_2= 'angle'
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4753:6: (enumLiteral_2= 'angle' )
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4753:8: enumLiteral_2= 'angle'
                     {
-                    enumLiteral_2=(Token)match(input,84,FOLLOW_84_in_ruleVisualType11515); 
+                    enumLiteral_2=(Token)match(input,84,FOLLOW_84_in_ruleVisualType11324); 
 
                             current = grammarAccess.getVisualTypeAccess().getAngleEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_2, grammarAccess.getVisualTypeAccess().getAngleEnumLiteralDeclaration_2()); 
@@ -12705,12 +12475,12 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4844:6: (enumLiteral_3= 'size' )
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4759:6: (enumLiteral_3= 'size' )
                     {
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4844:6: (enumLiteral_3= 'size' )
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4844:8: enumLiteral_3= 'size'
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4759:6: (enumLiteral_3= 'size' )
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4759:8: enumLiteral_3= 'size'
                     {
-                    enumLiteral_3=(Token)match(input,85,FOLLOW_85_in_ruleVisualType11532); 
+                    enumLiteral_3=(Token)match(input,85,FOLLOW_85_in_ruleVisualType11341); 
 
                             current = grammarAccess.getVisualTypeAccess().getSizeEnumLiteralDeclaration_3().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_3, grammarAccess.getVisualTypeAccess().getSizeEnumLiteralDeclaration_3()); 
@@ -12722,12 +12492,12 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 5 :
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4850:6: (enumLiteral_4= 'position' )
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4765:6: (enumLiteral_4= 'position' )
                     {
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4850:6: (enumLiteral_4= 'position' )
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4850:8: enumLiteral_4= 'position'
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4765:6: (enumLiteral_4= 'position' )
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4765:8: enumLiteral_4= 'position'
                     {
-                    enumLiteral_4=(Token)match(input,86,FOLLOW_86_in_ruleVisualType11549); 
+                    enumLiteral_4=(Token)match(input,86,FOLLOW_86_in_ruleVisualType11358); 
 
                             current = grammarAccess.getVisualTypeAccess().getPositionEnumLiteralDeclaration_4().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_4, grammarAccess.getVisualTypeAccess().getPositionEnumLiteralDeclaration_4()); 
@@ -12739,12 +12509,12 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 6 :
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4856:6: (enumLiteral_5= 'texture' )
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4771:6: (enumLiteral_5= 'texture' )
                     {
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4856:6: (enumLiteral_5= 'texture' )
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4856:8: enumLiteral_5= 'texture'
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4771:6: (enumLiteral_5= 'texture' )
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4771:8: enumLiteral_5= 'texture'
                     {
-                    enumLiteral_5=(Token)match(input,87,FOLLOW_87_in_ruleVisualType11566); 
+                    enumLiteral_5=(Token)match(input,87,FOLLOW_87_in_ruleVisualType11375); 
 
                             current = grammarAccess.getVisualTypeAccess().getTextureEnumLiteralDeclaration_5().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_5, grammarAccess.getVisualTypeAccess().getTextureEnumLiteralDeclaration_5()); 
@@ -12776,7 +12546,7 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleAuxType"
-    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4866:1: ruleAuxType returns [Enumerator current=null] : ( (enumLiteral_0= 'string' ) | (enumLiteral_1= 'bool' ) ) ;
+    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4781:1: ruleAuxType returns [Enumerator current=null] : ( (enumLiteral_0= 'string' ) | (enumLiteral_1= 'bool' ) ) ;
     public final Enumerator ruleAuxType() throws RecognitionException {
         Enumerator current = null;
 
@@ -12785,33 +12555,33 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
          enterRule(); 
         try {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4868:28: ( ( (enumLiteral_0= 'string' ) | (enumLiteral_1= 'bool' ) ) )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4869:1: ( (enumLiteral_0= 'string' ) | (enumLiteral_1= 'bool' ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4783:28: ( ( (enumLiteral_0= 'string' ) | (enumLiteral_1= 'bool' ) ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4784:1: ( (enumLiteral_0= 'string' ) | (enumLiteral_1= 'bool' ) )
             {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4869:1: ( (enumLiteral_0= 'string' ) | (enumLiteral_1= 'bool' ) )
-            int alt67=2;
-            int LA67_0 = input.LA(1);
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4784:1: ( (enumLiteral_0= 'string' ) | (enumLiteral_1= 'bool' ) )
+            int alt65=2;
+            int LA65_0 = input.LA(1);
 
-            if ( (LA67_0==88) ) {
-                alt67=1;
+            if ( (LA65_0==88) ) {
+                alt65=1;
             }
-            else if ( (LA67_0==89) ) {
-                alt67=2;
+            else if ( (LA65_0==89) ) {
+                alt65=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 67, 0, input);
+                    new NoViableAltException("", 65, 0, input);
 
                 throw nvae;
             }
-            switch (alt67) {
+            switch (alt65) {
                 case 1 :
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4869:2: (enumLiteral_0= 'string' )
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4784:2: (enumLiteral_0= 'string' )
                     {
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4869:2: (enumLiteral_0= 'string' )
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4869:4: enumLiteral_0= 'string'
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4784:2: (enumLiteral_0= 'string' )
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4784:4: enumLiteral_0= 'string'
                     {
-                    enumLiteral_0=(Token)match(input,88,FOLLOW_88_in_ruleAuxType11611); 
+                    enumLiteral_0=(Token)match(input,88,FOLLOW_88_in_ruleAuxType11420); 
 
                             current = grammarAccess.getAuxTypeAccess().getStringEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_0, grammarAccess.getAuxTypeAccess().getStringEnumLiteralDeclaration_0()); 
@@ -12823,12 +12593,12 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4875:6: (enumLiteral_1= 'bool' )
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4790:6: (enumLiteral_1= 'bool' )
                     {
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4875:6: (enumLiteral_1= 'bool' )
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4875:8: enumLiteral_1= 'bool'
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4790:6: (enumLiteral_1= 'bool' )
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4790:8: enumLiteral_1= 'bool'
                     {
-                    enumLiteral_1=(Token)match(input,89,FOLLOW_89_in_ruleAuxType11628); 
+                    enumLiteral_1=(Token)match(input,89,FOLLOW_89_in_ruleAuxType11437); 
 
                             current = grammarAccess.getAuxTypeAccess().getBoolEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_1, grammarAccess.getAuxTypeAccess().getBoolEnumLiteralDeclaration_1()); 
@@ -12860,7 +12630,7 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleCollectionType"
-    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4885:1: ruleCollectionType returns [Enumerator current=null] : ( (enumLiteral_0= 'set' ) | (enumLiteral_1= 'bag' ) | (enumLiteral_2= 'list' ) | (enumLiteral_3= 'graph' ) | (enumLiteral_4= 'single' ) ) ;
+    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4800:1: ruleCollectionType returns [Enumerator current=null] : ( (enumLiteral_0= 'set' ) | (enumLiteral_1= 'bag' ) | (enumLiteral_2= 'list' ) | (enumLiteral_3= 'graph' ) | (enumLiteral_4= 'single' ) ) ;
     public final Enumerator ruleCollectionType() throws RecognitionException {
         Enumerator current = null;
 
@@ -12872,52 +12642,52 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
 
          enterRule(); 
         try {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4887:28: ( ( (enumLiteral_0= 'set' ) | (enumLiteral_1= 'bag' ) | (enumLiteral_2= 'list' ) | (enumLiteral_3= 'graph' ) | (enumLiteral_4= 'single' ) ) )
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4888:1: ( (enumLiteral_0= 'set' ) | (enumLiteral_1= 'bag' ) | (enumLiteral_2= 'list' ) | (enumLiteral_3= 'graph' ) | (enumLiteral_4= 'single' ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4802:28: ( ( (enumLiteral_0= 'set' ) | (enumLiteral_1= 'bag' ) | (enumLiteral_2= 'list' ) | (enumLiteral_3= 'graph' ) | (enumLiteral_4= 'single' ) ) )
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4803:1: ( (enumLiteral_0= 'set' ) | (enumLiteral_1= 'bag' ) | (enumLiteral_2= 'list' ) | (enumLiteral_3= 'graph' ) | (enumLiteral_4= 'single' ) )
             {
-            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4888:1: ( (enumLiteral_0= 'set' ) | (enumLiteral_1= 'bag' ) | (enumLiteral_2= 'list' ) | (enumLiteral_3= 'graph' ) | (enumLiteral_4= 'single' ) )
-            int alt68=5;
+            // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4803:1: ( (enumLiteral_0= 'set' ) | (enumLiteral_1= 'bag' ) | (enumLiteral_2= 'list' ) | (enumLiteral_3= 'graph' ) | (enumLiteral_4= 'single' ) )
+            int alt66=5;
             switch ( input.LA(1) ) {
             case 90:
                 {
-                alt68=1;
+                alt66=1;
                 }
                 break;
             case 91:
                 {
-                alt68=2;
+                alt66=2;
                 }
                 break;
             case 92:
                 {
-                alt68=3;
+                alt66=3;
                 }
                 break;
             case 93:
                 {
-                alt68=4;
+                alt66=4;
                 }
                 break;
             case 94:
                 {
-                alt68=5;
+                alt66=5;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 68, 0, input);
+                    new NoViableAltException("", 66, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt68) {
+            switch (alt66) {
                 case 1 :
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4888:2: (enumLiteral_0= 'set' )
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4803:2: (enumLiteral_0= 'set' )
                     {
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4888:2: (enumLiteral_0= 'set' )
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4888:4: enumLiteral_0= 'set'
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4803:2: (enumLiteral_0= 'set' )
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4803:4: enumLiteral_0= 'set'
                     {
-                    enumLiteral_0=(Token)match(input,90,FOLLOW_90_in_ruleCollectionType11673); 
+                    enumLiteral_0=(Token)match(input,90,FOLLOW_90_in_ruleCollectionType11482); 
 
                             current = grammarAccess.getCollectionTypeAccess().getSetEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_0, grammarAccess.getCollectionTypeAccess().getSetEnumLiteralDeclaration_0()); 
@@ -12929,12 +12699,12 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4894:6: (enumLiteral_1= 'bag' )
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4809:6: (enumLiteral_1= 'bag' )
                     {
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4894:6: (enumLiteral_1= 'bag' )
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4894:8: enumLiteral_1= 'bag'
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4809:6: (enumLiteral_1= 'bag' )
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4809:8: enumLiteral_1= 'bag'
                     {
-                    enumLiteral_1=(Token)match(input,91,FOLLOW_91_in_ruleCollectionType11690); 
+                    enumLiteral_1=(Token)match(input,91,FOLLOW_91_in_ruleCollectionType11499); 
 
                             current = grammarAccess.getCollectionTypeAccess().getBagEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_1, grammarAccess.getCollectionTypeAccess().getBagEnumLiteralDeclaration_1()); 
@@ -12946,12 +12716,12 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4900:6: (enumLiteral_2= 'list' )
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4815:6: (enumLiteral_2= 'list' )
                     {
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4900:6: (enumLiteral_2= 'list' )
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4900:8: enumLiteral_2= 'list'
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4815:6: (enumLiteral_2= 'list' )
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4815:8: enumLiteral_2= 'list'
                     {
-                    enumLiteral_2=(Token)match(input,92,FOLLOW_92_in_ruleCollectionType11707); 
+                    enumLiteral_2=(Token)match(input,92,FOLLOW_92_in_ruleCollectionType11516); 
 
                             current = grammarAccess.getCollectionTypeAccess().getListEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_2, grammarAccess.getCollectionTypeAccess().getListEnumLiteralDeclaration_2()); 
@@ -12963,12 +12733,12 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4906:6: (enumLiteral_3= 'graph' )
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4821:6: (enumLiteral_3= 'graph' )
                     {
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4906:6: (enumLiteral_3= 'graph' )
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4906:8: enumLiteral_3= 'graph'
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4821:6: (enumLiteral_3= 'graph' )
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4821:8: enumLiteral_3= 'graph'
                     {
-                    enumLiteral_3=(Token)match(input,93,FOLLOW_93_in_ruleCollectionType11724); 
+                    enumLiteral_3=(Token)match(input,93,FOLLOW_93_in_ruleCollectionType11533); 
 
                             current = grammarAccess.getCollectionTypeAccess().getGraphEnumLiteralDeclaration_3().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_3, grammarAccess.getCollectionTypeAccess().getGraphEnumLiteralDeclaration_3()); 
@@ -12980,12 +12750,12 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 5 :
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4912:6: (enumLiteral_4= 'single' )
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4827:6: (enumLiteral_4= 'single' )
                     {
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4912:6: (enumLiteral_4= 'single' )
-                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4912:8: enumLiteral_4= 'single'
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4827:6: (enumLiteral_4= 'single' )
+                    // ../com.visualligence.g/src-gen/com/visualligence/g/parser/antlr/internal/InternalVML.g:4827:8: enumLiteral_4= 'single'
                     {
-                    enumLiteral_4=(Token)match(input,94,FOLLOW_94_in_ruleCollectionType11741); 
+                    enumLiteral_4=(Token)match(input,94,FOLLOW_94_in_ruleCollectionType11550); 
 
                             current = grammarAccess.getCollectionTypeAccess().getSingleEnumLiteralDeclaration_4().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_4, grammarAccess.getCollectionTypeAccess().getSingleEnumLiteralDeclaration_4()); 
@@ -13034,22 +12804,22 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
     static final String[] DFA21_transitionS = {
             "\1\1\3\2\20\uffff\1\3\4\uffff\2\4",
             "\1\2\20\uffff\3\2\1\uffff\1\2\1\5\2\6\2\2\2\4\3\uffff\3\2\1"+
-            "\uffff\2\2\1\uffff\1\2\1\uffff\5\2\2\uffff\2\2\2\uffff\3\2\1"+
+            "\uffff\1\2\1\uffff\2\2\1\uffff\5\2\2\uffff\2\2\2\uffff\3\2\1"+
             "\uffff\2\2\1\uffff\3\2\1\uffff\2\2\1\uffff\11\2",
             "",
             "\1\7",
             "",
             "\1\11\1\uffff\1\10\16\uffff\3\11\1\uffff\1\11\1\uffff\2\6\2"+
-            "\11\2\4\3\uffff\3\11\1\uffff\2\11\1\uffff\1\11\1\uffff\5\11"+
+            "\11\2\4\3\uffff\3\11\1\uffff\1\11\1\uffff\2\11\1\uffff\5\11"+
             "\2\uffff\2\11\2\uffff\3\11\1\uffff\2\11\1\uffff\3\11\1\uffff"+
             "\2\11\1\uffff\11\11",
             "",
             "\1\11\20\uffff\3\11\1\uffff\1\11\1\uffff\2\6\2\11\2\4\3\uffff"+
-            "\3\11\1\uffff\2\11\1\uffff\1\11\1\uffff\5\11\2\uffff\2\11\2"+
+            "\3\11\1\uffff\1\11\1\uffff\2\11\1\uffff\5\11\2\uffff\2\11\2"+
             "\uffff\3\11\1\uffff\2\11\1\uffff\3\11\1\uffff\2\11\1\uffff\11"+
             "\11",
             "\1\11\20\uffff\3\11\1\uffff\1\11\1\uffff\2\6\2\11\2\4\3\uffff"+
-            "\3\11\1\uffff\2\11\1\uffff\1\11\1\uffff\5\11\2\uffff\2\11\2"+
+            "\3\11\1\uffff\1\11\1\uffff\2\11\1\uffff\5\11\2\uffff\2\11\2"+
             "\uffff\3\11\1\uffff\2\11\1\uffff\3\11\1\uffff\2\11\1\uffff\11"+
             "\11",
             ""
@@ -13085,7 +12855,7 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
             this.transition = DFA21_transition;
         }
         public String getDescription() {
-            return "1384:1: (this_Integer_0= ruleInteger | this_Float_1= ruleFloat | this_SNotation_2= ruleSNotation | this_Imaginary_3= ruleImaginary )";
+            return "1374:1: (this_Integer_0= ruleInteger | this_Float_1= ruleFloat | this_SNotation_2= ruleSNotation | this_Imaginary_3= ruleImaginary )";
         }
     }
  
@@ -13133,11 +12903,11 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_ruleSwitch_in_entryRuleSwitch1086 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleSwitch1096 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_21_in_ruleSwitch1133 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleSwitch1150 = new BitSet(new long[]{0x0000018FE50003F0L,0x0000000000000020L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleSwitch1150 = new BitSet(new long[]{0x0000008FE50003F0L,0x0000000000000020L});
     public static final BitSet FOLLOW_ruleLiteralExpression_in_ruleSwitch1176 = new BitSet(new long[]{0x0000000000400000L});
-    public static final BitSet FOLLOW_22_in_ruleSwitch1188 = new BitSet(new long[]{0x0000018FE50003F0L,0x0000000000000020L});
+    public static final BitSet FOLLOW_22_in_ruleSwitch1188 = new BitSet(new long[]{0x0000008FE50003F0L,0x0000000000000020L});
     public static final BitSet FOLLOW_ruleLiteralExpression_in_ruleSwitch1209 = new BitSet(new long[]{0x0000000000800000L});
-    public static final BitSet FOLLOW_23_in_ruleSwitch1221 = new BitSet(new long[]{0x0000018FE50003F0L,0x0000000000000020L});
+    public static final BitSet FOLLOW_23_in_ruleSwitch1221 = new BitSet(new long[]{0x0000008FE50003F0L,0x0000000000000020L});
     public static final BitSet FOLLOW_ruleLiteralExpression_in_ruleSwitch1242 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleLiteralExpression_in_entryRuleLiteralExpression1278 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleLiteralExpression1288 = new BitSet(new long[]{0x0000000000000002L});
@@ -13145,37 +12915,37 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_ruleLiteralExpressionBin_in_entryRuleLiteralExpressionBin1368 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleLiteralExpressionBin1378 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleLiteralExpressionComp_in_ruleLiteralExpressionBin1425 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000018L});
-    public static final BitSet FOLLOW_ruleBinOp_in_ruleLiteralExpressionBin1455 = new BitSet(new long[]{0x0000018FE50003F0L,0x0000000000000020L});
+    public static final BitSet FOLLOW_ruleBinOp_in_ruleLiteralExpressionBin1455 = new BitSet(new long[]{0x0000008FE50003F0L,0x0000000000000020L});
     public static final BitSet FOLLOW_ruleLiteralExpressionBin_in_ruleLiteralExpressionBin1476 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleLiteralExpressionComp_in_entryRuleLiteralExpressionComp1514 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleLiteralExpressionComp1524 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleLiteralExpressionAdd_in_ruleLiteralExpressionComp1571 = new BitSet(new long[]{0x0030000000000002L,0x00000000000003C0L});
-    public static final BitSet FOLLOW_ruleCompOp_in_ruleLiteralExpressionComp1601 = new BitSet(new long[]{0x0000018FE50003F0L,0x0000000000000020L});
+    public static final BitSet FOLLOW_ruleCompOp_in_ruleLiteralExpressionComp1601 = new BitSet(new long[]{0x0000008FE50003F0L,0x0000000000000020L});
     public static final BitSet FOLLOW_ruleLiteralExpressionComp_in_ruleLiteralExpressionComp1622 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleLiteralExpressionAdd_in_entryRuleLiteralExpressionAdd1660 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleLiteralExpressionAdd1670 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleLiteralExpressionMulti_in_ruleLiteralExpressionAdd1717 = new BitSet(new long[]{0x0000000060000002L});
-    public static final BitSet FOLLOW_ruleAddOp_in_ruleLiteralExpressionAdd1747 = new BitSet(new long[]{0x0000018FE50003F0L,0x0000000000000020L});
+    public static final BitSet FOLLOW_ruleAddOp_in_ruleLiteralExpressionAdd1747 = new BitSet(new long[]{0x0000008FE50003F0L,0x0000000000000020L});
     public static final BitSet FOLLOW_ruleLiteralExpressionAdd_in_ruleLiteralExpressionAdd1768 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleLiteralExpressionMulti_in_entryRuleLiteralExpressionMulti1806 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleLiteralExpressionMulti1816 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleLiteralExpressionExp_in_ruleLiteralExpressionMulti1863 = new BitSet(new long[]{0x0000000000000002L,0x0000000000003C00L});
-    public static final BitSet FOLLOW_ruleMultiOp_in_ruleLiteralExpressionMulti1893 = new BitSet(new long[]{0x0000018FE50003F0L,0x0000000000000020L});
+    public static final BitSet FOLLOW_ruleMultiOp_in_ruleLiteralExpressionMulti1893 = new BitSet(new long[]{0x0000008FE50003F0L,0x0000000000000020L});
     public static final BitSet FOLLOW_ruleLiteralExpressionMulti_in_ruleLiteralExpressionMulti1914 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleLiteralExpressionExp_in_entryRuleLiteralExpressionExp1952 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleLiteralExpressionExp1962 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleLiteralExpressionSigned_in_ruleLiteralExpressionExp2009 = new BitSet(new long[]{0x0000000000000002L,0x0000000000004000L});
-    public static final BitSet FOLLOW_ruleExpOp_in_ruleLiteralExpressionExp2039 = new BitSet(new long[]{0x0000018FE50003F0L,0x0000000000000020L});
+    public static final BitSet FOLLOW_ruleExpOp_in_ruleLiteralExpressionExp2039 = new BitSet(new long[]{0x0000008FE50003F0L,0x0000000000000020L});
     public static final BitSet FOLLOW_ruleLiteralExpressionExp_in_ruleLiteralExpressionExp2060 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleLiteralExpressionSigned_in_entryRuleLiteralExpressionSigned2098 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleLiteralExpressionSigned2108 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleAddOp_in_ruleLiteralExpressionSigned2166 = new BitSet(new long[]{0x0000018FE50003F0L,0x0000000000000020L});
-    public static final BitSet FOLLOW_ruleNegationOp_in_ruleLiteralExpressionSigned2185 = new BitSet(new long[]{0x0000018FE50003F0L,0x0000000000000020L});
+    public static final BitSet FOLLOW_ruleAddOp_in_ruleLiteralExpressionSigned2166 = new BitSet(new long[]{0x0000008FE50003F0L,0x0000000000000020L});
+    public static final BitSet FOLLOW_ruleNegationOp_in_ruleLiteralExpressionSigned2185 = new BitSet(new long[]{0x0000008FE50003F0L,0x0000000000000020L});
     public static final BitSet FOLLOW_ruleLiteralExpressionTerminal_in_ruleLiteralExpressionSigned2209 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleLiteralExpressionTerminal_in_ruleLiteralExpressionSigned2238 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleLiteralExpressionTerminal_in_entryRuleLiteralExpressionTerminal2273 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleLiteralExpressionTerminal2283 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_24_in_ruleLiteralExpressionTerminal2321 = new BitSet(new long[]{0x0000018FE50003F0L,0x0000000000000020L});
+    public static final BitSet FOLLOW_24_in_ruleLiteralExpressionTerminal2321 = new BitSet(new long[]{0x0000008FE50003F0L,0x0000000000000020L});
     public static final BitSet FOLLOW_ruleLiteralExpression_in_ruleLiteralExpressionTerminal2343 = new BitSet(new long[]{0x0000000002000000L});
     public static final BitSet FOLLOW_25_in_ruleLiteralExpressionTerminal2354 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleRValue_in_ruleLiteralExpressionTerminal2383 = new BitSet(new long[]{0x0000000000000002L});
@@ -13184,358 +12954,350 @@ public class InternalVMLParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_ruleSingleLiteral_in_ruleRValue2475 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleSequenceLiteral_in_ruleRValue2502 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleTupleLiteral_in_ruleRValue2529 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSetLiteral_in_ruleRValue2556 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleConstantRef_in_ruleRValue2583 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleConstantRef_in_entryRuleConstantRef2622 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleConstantRef2632 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleConstantRef2676 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSingleLiteral_in_entryRuleSingleLiteral2711 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleSingleLiteral2721 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSingleLiteralDT_in_ruleSingleLiteral2766 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSingleLiteralDT_in_entryRuleSingleLiteralDT2802 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleSingleLiteralDT2813 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleBoolLiteral_in_ruleSingleLiteralDT2860 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleNumberLiteral_in_ruleSingleLiteralDT2893 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleStringLiteral_in_ruleSingleLiteralDT2926 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleStringLiteral_in_entryRuleStringLiteral2972 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleStringLiteral2983 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_ruleStringLiteral3022 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleNumberLiteral_in_entryRuleNumberLiteral3067 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleNumberLiteral3078 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleInteger_in_ruleNumberLiteral3125 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleFloat_in_ruleNumberLiteral3158 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSNotation_in_ruleNumberLiteral3191 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleImaginary_in_ruleNumberLiteral3224 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleInteger_in_entryRuleInteger3270 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleInteger3281 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_INT_in_ruleInteger3321 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_OCT_in_ruleInteger3347 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_HEX_in_ruleInteger3373 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_BIN_in_ruleInteger3399 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleFloat_in_entryRuleFloat3445 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleFloat3456 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_INT_in_ruleFloat3497 = new BitSet(new long[]{0x0000000004000000L});
-    public static final BitSet FOLLOW_26_in_ruleFloat3515 = new BitSet(new long[]{0x0000000000000042L});
-    public static final BitSet FOLLOW_RULE_INT_in_ruleFloat3531 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_26_in_ruleFloat3559 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_RULE_INT_in_ruleFloat3574 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSNotation_in_entryRuleSNotation3621 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleSNotation3632 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_INT_in_ruleSNotation3673 = new BitSet(new long[]{0x0000000018000000L});
-    public static final BitSet FOLLOW_ruleFloat_in_ruleSNotation3706 = new BitSet(new long[]{0x0000000018000000L});
-    public static final BitSet FOLLOW_ruleExpConstant_in_ruleSNotation3734 = new BitSet(new long[]{0x0000000060000040L});
-    public static final BitSet FOLLOW_ruleSign_in_ruleSNotation3762 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_RULE_INT_in_ruleSNotation3784 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleExpConstant_in_entryRuleExpConstant3830 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleExpConstant3841 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_27_in_ruleExpConstant3879 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_28_in_ruleExpConstant3898 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSign_in_entryRuleSign3939 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleSign3950 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_29_in_ruleSign3988 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_30_in_ruleSign4007 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleImaginary_in_entryRuleImaginary4048 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleImaginary4059 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_INT_in_ruleImaginary4100 = new BitSet(new long[]{0x00000001840003C0L});
-    public static final BitSet FOLLOW_ruleFloat_in_ruleImaginary4133 = new BitSet(new long[]{0x00000001840003C0L});
-    public static final BitSet FOLLOW_ruleImaginaryConstant_in_ruleImaginary4162 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleImaginaryConstant_in_entryRuleImaginaryConstant4208 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleImaginaryConstant4219 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_31_in_ruleImaginaryConstant4257 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_32_in_ruleImaginaryConstant4276 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleBoolLiteral_in_entryRuleBoolLiteral4317 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleBoolLiteral4328 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_33_in_ruleBoolLiteral4366 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_34_in_ruleBoolLiteral4385 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSequenceLiteral_in_entryRuleSequenceLiteral4425 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleSequenceLiteral4435 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSequenceLiteralPlain_in_ruleSequenceLiteral4482 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSequenceLiteralSerie_in_ruleSequenceLiteral4509 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSequenceLiteralSerie_in_entryRuleSequenceLiteralSerie4544 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleSequenceLiteralSerie4554 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_35_in_ruleSequenceLiteralSerie4591 = new BitSet(new long[]{0x0000018FE50003F0L,0x0000000000000020L});
-    public static final BitSet FOLLOW_ruleLiteralExpression_in_ruleSequenceLiteralSerie4612 = new BitSet(new long[]{0x0000001000000000L});
-    public static final BitSet FOLLOW_36_in_ruleSequenceLiteralSerie4624 = new BitSet(new long[]{0x0000018FE50003F0L,0x0000000000000020L});
-    public static final BitSet FOLLOW_ruleLiteralExpression_in_ruleSequenceLiteralSerie4645 = new BitSet(new long[]{0x0000006000000000L});
-    public static final BitSet FOLLOW_37_in_ruleSequenceLiteralSerie4658 = new BitSet(new long[]{0x0000018FE50003F0L,0x0000000000000020L});
-    public static final BitSet FOLLOW_ruleLiteralExpression_in_ruleSequenceLiteralSerie4679 = new BitSet(new long[]{0x0000004000000000L});
-    public static final BitSet FOLLOW_38_in_ruleSequenceLiteralSerie4693 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSequenceLiteralPlain_in_entryRuleSequenceLiteralPlain4729 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleSequenceLiteralPlain4739 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_39_in_ruleSequenceLiteralPlain4785 = new BitSet(new long[]{0x000001CFE50003F0L,0x0000000000000020L});
-    public static final BitSet FOLLOW_ruleLiteralExpression_in_ruleSequenceLiteralPlain4807 = new BitSet(new long[]{0x0000006000000000L});
-    public static final BitSet FOLLOW_37_in_ruleSequenceLiteralPlain4820 = new BitSet(new long[]{0x0000018FE50003F0L,0x0000000000000020L});
-    public static final BitSet FOLLOW_ruleLiteralExpression_in_ruleSequenceLiteralPlain4841 = new BitSet(new long[]{0x0000006000000000L});
-    public static final BitSet FOLLOW_38_in_ruleSequenceLiteralPlain4857 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleTupleLiteral_in_entryRuleTupleLiteral4893 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleTupleLiteral4903 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_24_in_ruleTupleLiteral4949 = new BitSet(new long[]{0x0000000002000010L});
-    public static final BitSet FOLLOW_ruleTupleItem_in_ruleTupleLiteral4971 = new BitSet(new long[]{0x0000002002000000L});
-    public static final BitSet FOLLOW_37_in_ruleTupleLiteral4984 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_ruleTupleItem_in_ruleTupleLiteral5005 = new BitSet(new long[]{0x0000002002000000L});
-    public static final BitSet FOLLOW_25_in_ruleTupleLiteral5021 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleTupleItem_in_entryRuleTupleItem5057 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleTupleItem5067 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleTupleItem5109 = new BitSet(new long[]{0x0000000000800000L});
-    public static final BitSet FOLLOW_23_in_ruleTupleItem5126 = new BitSet(new long[]{0x0000018FE50003F0L,0x0000000000000020L});
-    public static final BitSet FOLLOW_ruleLiteralExpression_in_ruleTupleItem5147 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSetLiteral_in_entryRuleSetLiteral5183 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleSetLiteral5193 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_40_in_ruleSetLiteral5239 = new BitSet(new long[]{0x0000038FE50003F0L,0x0000000000000020L});
-    public static final BitSet FOLLOW_ruleLiteralExpression_in_ruleSetLiteral5261 = new BitSet(new long[]{0x0000022000000000L});
-    public static final BitSet FOLLOW_37_in_ruleSetLiteral5274 = new BitSet(new long[]{0x0000018FE50003F0L,0x0000000000000020L});
-    public static final BitSet FOLLOW_ruleLiteralExpression_in_ruleSetLiteral5295 = new BitSet(new long[]{0x0000022000000000L});
-    public static final BitSet FOLLOW_41_in_ruleSetLiteral5311 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleBlock_in_entryRuleBlock5347 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleBlock5357 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_40_in_ruleBlock5403 = new BitSet(new long[]{0xB303EF0000200010L,0x0000000000000003L});
-    public static final BitSet FOLLOW_42_in_ruleBlock5416 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleBlock5433 = new BitSet(new long[]{0xB303EB0000200010L,0x0000000000000003L});
-    public static final BitSet FOLLOW_ruleSentence_in_ruleBlock5461 = new BitSet(new long[]{0xB303EB0000200010L,0x0000000000000003L});
-    public static final BitSet FOLLOW_41_in_ruleBlock5474 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleNoop_in_entryRuleNoop5510 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleNoop5520 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_43_in_ruleNoop5572 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulePair_in_entryRulePair5621 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRulePair5631 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rulePair5673 = new BitSet(new long[]{0x0000100000000000L});
-    public static final BitSet FOLLOW_44_in_rulePair5690 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rulePair5707 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleConstant_in_entryRuleConstant5748 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleConstant5758 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_45_in_ruleConstant5795 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleConstant5812 = new BitSet(new long[]{0x00CE019001000010L,0x000000007FFF8000L});
-    public static final BitSet FOLLOW_ruleTypeRef_in_ruleConstant5838 = new BitSet(new long[]{0x0000100000000000L});
-    public static final BitSet FOLLOW_44_in_ruleConstant5850 = new BitSet(new long[]{0x0000018FE50003F0L,0x0000000000000020L});
-    public static final BitSet FOLLOW_ruleLiteralExpression_in_ruleConstant5871 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleMulti_in_entryRuleMulti5907 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleMulti5917 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_46_in_ruleMulti5954 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleMulti5971 = new BitSet(new long[]{0x0000100000000000L});
-    public static final BitSet FOLLOW_44_in_ruleMulti5988 = new BitSet(new long[]{0x0000000000000040L,0x0000000000003C00L});
-    public static final BitSet FOLLOW_ruleMultiOp_in_ruleMulti6009 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_RULE_INT_in_ruleMulti6027 = new BitSet(new long[]{0x0000000000000012L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleMulti6052 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleUnit_in_entryRuleUnit6089 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleUnit6099 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleDUnit_in_ruleUnit6146 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleNUnit_in_ruleUnit6173 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleDUnit_in_entryRuleDUnit6208 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleDUnit6218 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_47_in_ruleDUnit6255 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleDUnit6272 = new BitSet(new long[]{0x0000100000000000L});
-    public static final BitSet FOLLOW_44_in_ruleDUnit6289 = new BitSet(new long[]{0x0000000000000040L,0x0000000000003C00L});
-    public static final BitSet FOLLOW_ruleMultiOp_in_ruleDUnit6310 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_RULE_INT_in_ruleDUnit6328 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleDUnit6353 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleDUnit6374 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleNUnit_in_entryRuleNUnit6410 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleNUnit6420 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_47_in_ruleNUnit6457 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleNUnit6474 = new BitSet(new long[]{0x0000000000000000L,0x0000000000078000L});
-    public static final BitSet FOLLOW_ruleNumberType_in_ruleNUnit6500 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleBox_in_entryRuleBox6536 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleBox6546 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_48_in_ruleBox6583 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleBox6600 = new BitSet(new long[]{0x0000010000000000L});
-    public static final BitSet FOLLOW_40_in_ruleBox6617 = new BitSet(new long[]{0x0000020000000010L});
-    public static final BitSet FOLLOW_ruleMember_in_ruleBox6638 = new BitSet(new long[]{0x0000020000000010L});
-    public static final BitSet FOLLOW_41_in_ruleBox6651 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleShape_in_entryRuleShape6687 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleShape6697 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_49_in_ruleShape6734 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleShape6751 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleMember_in_entryRuleMember6792 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleMember6802 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleMember6844 = new BitSet(new long[]{0x00CE019001000010L,0x000000007FFF8000L});
-    public static final BitSet FOLLOW_ruleTypeRef_in_ruleMember6870 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleTypeRef_in_entryRuleTypeRef6906 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleTypeRef6916 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulePlainTypeRef_in_ruleTypeRef6963 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleCompositeTypeRef_in_ruleTypeRef6990 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulePlainTypeRef_in_entryRulePlainTypeRef7025 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRulePlainTypeRef7035 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleVoidTypeRef_in_rulePlainTypeRef7082 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleAutoTypeRef_in_rulePlainTypeRef7109 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleNumberTypeRef_in_rulePlainTypeRef7136 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleVisualTypeRef_in_rulePlainTypeRef7163 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleAuxTypeRef_in_rulePlainTypeRef7190 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleTypeAliasRef_in_rulePlainTypeRef7217 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleShapeRef_in_rulePlainTypeRef7244 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleBoxRef_in_rulePlainTypeRef7271 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleUnitRef_in_rulePlainTypeRef7298 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleCollectionRef_in_rulePlainTypeRef7325 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleCompositeTypeRef_in_entryRuleCompositeTypeRef7360 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleCompositeTypeRef7370 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSequenceTypeRef_in_ruleCompositeTypeRef7417 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleTupleTypeRef_in_ruleCompositeTypeRef7444 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSetTypeRef_in_ruleCompositeTypeRef7471 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSequenceTypeRef_in_entryRuleSequenceTypeRef7506 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleSequenceTypeRef7516 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_39_in_ruleSequenceTypeRef7562 = new BitSet(new long[]{0x00CE019001000010L,0x000000007FFF8000L});
-    public static final BitSet FOLLOW_ruleTypeRef_in_ruleSequenceTypeRef7583 = new BitSet(new long[]{0x0000004000000000L});
-    public static final BitSet FOLLOW_38_in_ruleSequenceTypeRef7595 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleTupleTypeRef_in_entryRuleTupleTypeRef7631 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleTupleTypeRef7641 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_24_in_ruleTupleTypeRef7687 = new BitSet(new long[]{0x0000000002000010L});
-    public static final BitSet FOLLOW_ruleTupleTypeRefItem_in_ruleTupleTypeRef7709 = new BitSet(new long[]{0x0000002002000000L});
-    public static final BitSet FOLLOW_37_in_ruleTupleTypeRef7722 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_ruleTupleTypeRefItem_in_ruleTupleTypeRef7743 = new BitSet(new long[]{0x0000002002000000L});
-    public static final BitSet FOLLOW_25_in_ruleTupleTypeRef7759 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleTupleTypeRefItem_in_entryRuleTupleTypeRefItem7795 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleTupleTypeRefItem7805 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleTupleTypeRefItem7847 = new BitSet(new long[]{0x0000000000800000L});
-    public static final BitSet FOLLOW_23_in_ruleTupleTypeRefItem7864 = new BitSet(new long[]{0x00CE019001000010L,0x000000007FFF8000L});
-    public static final BitSet FOLLOW_ruleTypeRef_in_ruleTupleTypeRefItem7885 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSetTypeRef_in_entryRuleSetTypeRef7921 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleSetTypeRef7931 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_40_in_ruleSetTypeRef7977 = new BitSet(new long[]{0x00CE019001000010L,0x000000007FFF8000L});
-    public static final BitSet FOLLOW_ruleTypeRef_in_ruleSetTypeRef7998 = new BitSet(new long[]{0x0000020000000000L});
-    public static final BitSet FOLLOW_41_in_ruleSetTypeRef8010 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleVoidTypeRef_in_entryRuleVoidTypeRef8046 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleVoidTypeRef8056 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_50_in_ruleVoidTypeRef8098 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleAutoTypeRef_in_entryRuleAutoTypeRef8146 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleAutoTypeRef8156 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_51_in_ruleAutoTypeRef8202 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleCollectionRef_in_entryRuleCollectionRef8238 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleCollectionRef8248 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleCollectionType_in_ruleCollectionRef8294 = new BitSet(new long[]{0x0010000000000000L});
-    public static final BitSet FOLLOW_52_in_ruleCollectionRef8306 = new BitSet(new long[]{0x00CE019001000010L,0x000000007FFF8000L});
-    public static final BitSet FOLLOW_ruleTypeRef_in_ruleCollectionRef8327 = new BitSet(new long[]{0x0020000000000000L});
-    public static final BitSet FOLLOW_53_in_ruleCollectionRef8339 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleUnitRef_in_entryRuleUnitRef8375 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleUnitRef8385 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_54_in_ruleUnitRef8422 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleUnitRef8442 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleBoxRef_in_entryRuleBoxRef8478 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleBoxRef8488 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_36_in_ruleBoxRef8525 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleBoxRef8545 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleTypeAliasRef_in_entryRuleTypeAliasRef8581 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleTypeAliasRef8591 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleTypeAliasRef8635 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleAuxTypeRef_in_entryRuleAuxTypeRef8670 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleAuxTypeRef8680 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleAuxType_in_ruleAuxTypeRef8725 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleShapeRef_in_entryRuleShapeRef8760 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleShapeRef8770 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_55_in_ruleShapeRef8807 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleShapeRef8827 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleNumberTypeRef_in_entryRuleNumberTypeRef8863 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleNumberTypeRef8873 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleNumberType_in_ruleNumberTypeRef8918 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleVisualTypeRef_in_entryRuleVisualTypeRef8953 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleVisualTypeRef8963 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleVisualType_in_ruleVisualTypeRef9008 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleTypeAlias_in_entryRuleTypeAlias9043 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleTypeAlias9053 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_56_in_ruleTypeAlias9090 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleTypeAlias9107 = new BitSet(new long[]{0x00CE019001000010L,0x000000007FFF8000L});
-    public static final BitSet FOLLOW_ruleTypeRef_in_ruleTypeAlias9133 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleStream_in_entryRuleStream9169 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleStream9179 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_57_in_ruleStream9222 = new BitSet(new long[]{0x1200000000000000L});
-    public static final BitSet FOLLOW_ruleLStreamValue_in_ruleStream9257 = new BitSet(new long[]{0x0400000000000000L});
-    public static final BitSet FOLLOW_58_in_ruleStream9269 = new BitSet(new long[]{0x0800018FE50003F0L,0x0000000000000020L});
-    public static final BitSet FOLLOW_ruleRStreamValue_in_ruleStream9290 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleLStreamValue_in_entryRuleLStreamValue9326 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleLStreamValue9336 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleOutputRef_in_ruleLStreamValue9382 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleRStreamValue_in_entryRuleRStreamValue9416 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleRStreamValue9426 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleInputRef_in_ruleRStreamValue9473 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleLiteralExpression_in_ruleRStreamValue9500 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleInputRef_in_entryRuleInputRef9535 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleInputRef9545 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_59_in_ruleInputRef9591 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleOutputRef_in_entryRuleOutputRef9627 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleOutputRef9637 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_60_in_ruleOutputRef9683 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleInvokation_in_entryRuleInvokation9719 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleInvokation9729 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleInvokation9771 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleInvokation9793 = new BitSet(new long[]{0x0000010000000000L});
-    public static final BitSet FOLLOW_40_in_ruleInvokation9810 = new BitSet(new long[]{0x0000020000000010L});
-    public static final BitSet FOLLOW_ruleInvokationParam_in_ruleInvokation9831 = new BitSet(new long[]{0x0000020000000010L});
-    public static final BitSet FOLLOW_41_in_ruleInvokation9844 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleInvokationParam_in_entryRuleInvokationParam9880 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleInvokationParam9890 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleInvokationParam9932 = new BitSet(new long[]{0x0400000000000000L});
-    public static final BitSet FOLLOW_58_in_ruleInvokationParam9949 = new BitSet(new long[]{0x0000018FE50003F0L,0x0000000000000020L});
-    public static final BitSet FOLLOW_ruleLiteralExpression_in_ruleInvokationParam9970 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleLoop_in_entryRuleLoop10006 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleLoop10016 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_61_in_ruleLoop10053 = new BitSet(new long[]{0x4000000000000010L});
-    public static final BitSet FOLLOW_ruleLoopFor_in_ruleLoop10074 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleLoop10092 = new BitSet(new long[]{0x0000010000000000L});
-    public static final BitSet FOLLOW_40_in_ruleLoop10109 = new BitSet(new long[]{0x0000020000000010L});
-    public static final BitSet FOLLOW_ruleLoopSentence_in_ruleLoop10130 = new BitSet(new long[]{0x0000020000000010L});
-    public static final BitSet FOLLOW_41_in_ruleLoop10143 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleLoopSentence_in_entryRuleLoopSentence10179 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleLoopSentence10189 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleLoopSentence10231 = new BitSet(new long[]{0x00CE019001000010L,0x000000007FFF8000L});
-    public static final BitSet FOLLOW_ruleTypeRef_in_ruleLoopSentence10257 = new BitSet(new long[]{0x0400000000000000L});
-    public static final BitSet FOLLOW_58_in_ruleLoopSentence10269 = new BitSet(new long[]{0x0000018FE50003F0L,0x0000000000000020L});
-    public static final BitSet FOLLOW_ruleLiteralExpression_in_ruleLoopSentence10290 = new BitSet(new long[]{0x0400000000000002L});
-    public static final BitSet FOLLOW_58_in_ruleLoopSentence10303 = new BitSet(new long[]{0x0000018FE50003F0L,0x0000000000000020L});
-    public static final BitSet FOLLOW_ruleLiteralExpression_in_ruleLoopSentence10324 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleLoopFor_in_entryRuleLoopFor10362 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleLoopFor10372 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_62_in_ruleLoopFor10409 = new BitSet(new long[]{0x0000008800000000L});
-    public static final BitSet FOLLOW_ruleSequenceLiteral_in_ruleLoopFor10431 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleFactory_in_entryRuleFactory10466 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleFactory10476 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_63_in_ruleFactory10513 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleFactory10530 = new BitSet(new long[]{0x00CE019001000010L,0x000000007FFF8000L});
-    public static final BitSet FOLLOW_ruleTypeRef_in_ruleFactory10556 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleFile_in_entryRuleFile10592 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleFile10602 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_64_in_ruleFile10639 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleFile10656 = new BitSet(new long[]{0x0400001000000000L});
-    public static final BitSet FOLLOW_58_in_ruleFile10680 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_36_in_ruleFile10711 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_RULE_STRING_in_ruleFile10729 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleCanvas_in_entryRuleCanvas10770 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleCanvas10780 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_65_in_ruleCanvas10817 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleCanvas10834 = new BitSet(new long[]{0x0000010000000000L});
-    public static final BitSet FOLLOW_40_in_ruleCanvas10851 = new BitSet(new long[]{0x0000020000000010L});
-    public static final BitSet FOLLOW_rulePair_in_ruleCanvas10873 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000004L});
-    public static final BitSet FOLLOW_66_in_ruleCanvas10885 = new BitSet(new long[]{0x0000020000000010L});
-    public static final BitSet FOLLOW_41_in_ruleCanvas10899 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_67_in_ruleBinOp10949 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_68_in_ruleBinOp10966 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_69_in_ruleNegationOp11010 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_70_in_ruleCompOp11054 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_71_in_ruleCompOp11071 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_52_in_ruleCompOp11088 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_53_in_ruleCompOp11105 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_72_in_ruleCompOp11122 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_73_in_ruleCompOp11139 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_29_in_ruleAddOp11184 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_30_in_ruleAddOp11201 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_74_in_ruleMultiOp11246 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_75_in_ruleMultiOp11263 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_76_in_ruleMultiOp11280 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_77_in_ruleMultiOp11297 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_78_in_ruleExpOp11341 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_79_in_ruleNumberType11385 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_80_in_ruleNumberType11402 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_81_in_ruleNumberType11419 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_82_in_ruleNumberType11436 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_49_in_ruleVisualType11481 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_83_in_ruleVisualType11498 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_84_in_ruleVisualType11515 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_85_in_ruleVisualType11532 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_86_in_ruleVisualType11549 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_87_in_ruleVisualType11566 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_88_in_ruleAuxType11611 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_89_in_ruleAuxType11628 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_90_in_ruleCollectionType11673 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_91_in_ruleCollectionType11690 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_92_in_ruleCollectionType11707 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_93_in_ruleCollectionType11724 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_94_in_ruleCollectionType11741 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleConstantRef_in_ruleRValue2556 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleConstantRef_in_entryRuleConstantRef2595 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleConstantRef2605 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleConstantRef2649 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSingleLiteral_in_entryRuleSingleLiteral2684 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleSingleLiteral2694 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSingleLiteralDT_in_ruleSingleLiteral2739 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSingleLiteralDT_in_entryRuleSingleLiteralDT2775 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleSingleLiteralDT2786 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleBoolLiteral_in_ruleSingleLiteralDT2833 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleNumberLiteral_in_ruleSingleLiteralDT2866 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleStringLiteral_in_ruleSingleLiteralDT2899 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleStringLiteral_in_entryRuleStringLiteral2945 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleStringLiteral2956 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_ruleStringLiteral2995 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleNumberLiteral_in_entryRuleNumberLiteral3040 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleNumberLiteral3051 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleInteger_in_ruleNumberLiteral3098 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleFloat_in_ruleNumberLiteral3131 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSNotation_in_ruleNumberLiteral3164 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleImaginary_in_ruleNumberLiteral3197 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleInteger_in_entryRuleInteger3243 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleInteger3254 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_INT_in_ruleInteger3294 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_OCT_in_ruleInteger3320 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_HEX_in_ruleInteger3346 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_BIN_in_ruleInteger3372 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleFloat_in_entryRuleFloat3418 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleFloat3429 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_INT_in_ruleFloat3470 = new BitSet(new long[]{0x0000000004000000L});
+    public static final BitSet FOLLOW_26_in_ruleFloat3488 = new BitSet(new long[]{0x0000000000000042L});
+    public static final BitSet FOLLOW_RULE_INT_in_ruleFloat3504 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_26_in_ruleFloat3532 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_RULE_INT_in_ruleFloat3547 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSNotation_in_entryRuleSNotation3594 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleSNotation3605 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_INT_in_ruleSNotation3646 = new BitSet(new long[]{0x0000000018000000L});
+    public static final BitSet FOLLOW_ruleFloat_in_ruleSNotation3679 = new BitSet(new long[]{0x0000000018000000L});
+    public static final BitSet FOLLOW_ruleExpConstant_in_ruleSNotation3707 = new BitSet(new long[]{0x0000000060000040L});
+    public static final BitSet FOLLOW_ruleSign_in_ruleSNotation3735 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_RULE_INT_in_ruleSNotation3757 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleExpConstant_in_entryRuleExpConstant3803 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleExpConstant3814 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_27_in_ruleExpConstant3852 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_28_in_ruleExpConstant3871 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSign_in_entryRuleSign3912 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleSign3923 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_29_in_ruleSign3961 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_30_in_ruleSign3980 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleImaginary_in_entryRuleImaginary4021 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleImaginary4032 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_INT_in_ruleImaginary4073 = new BitSet(new long[]{0x00000001840003C0L});
+    public static final BitSet FOLLOW_ruleFloat_in_ruleImaginary4106 = new BitSet(new long[]{0x00000001840003C0L});
+    public static final BitSet FOLLOW_ruleImaginaryConstant_in_ruleImaginary4135 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleImaginaryConstant_in_entryRuleImaginaryConstant4181 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleImaginaryConstant4192 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_31_in_ruleImaginaryConstant4230 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_32_in_ruleImaginaryConstant4249 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleBoolLiteral_in_entryRuleBoolLiteral4290 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleBoolLiteral4301 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_33_in_ruleBoolLiteral4339 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_34_in_ruleBoolLiteral4358 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSequenceLiteral_in_entryRuleSequenceLiteral4398 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleSequenceLiteral4408 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSequenceLiteralPlain_in_ruleSequenceLiteral4455 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSequenceLiteralSerie_in_ruleSequenceLiteral4482 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSequenceLiteralSerie_in_entryRuleSequenceLiteralSerie4517 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleSequenceLiteralSerie4527 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_35_in_ruleSequenceLiteralSerie4564 = new BitSet(new long[]{0x0000008FE50003F0L,0x0000000000000020L});
+    public static final BitSet FOLLOW_ruleLiteralExpression_in_ruleSequenceLiteralSerie4585 = new BitSet(new long[]{0x0000001000000000L});
+    public static final BitSet FOLLOW_36_in_ruleSequenceLiteralSerie4597 = new BitSet(new long[]{0x0000008FE50003F0L,0x0000000000000020L});
+    public static final BitSet FOLLOW_ruleLiteralExpression_in_ruleSequenceLiteralSerie4618 = new BitSet(new long[]{0x0000006000000000L});
+    public static final BitSet FOLLOW_37_in_ruleSequenceLiteralSerie4631 = new BitSet(new long[]{0x0000008FE50003F0L,0x0000000000000020L});
+    public static final BitSet FOLLOW_ruleLiteralExpression_in_ruleSequenceLiteralSerie4652 = new BitSet(new long[]{0x0000004000000000L});
+    public static final BitSet FOLLOW_38_in_ruleSequenceLiteralSerie4666 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSequenceLiteralPlain_in_entryRuleSequenceLiteralPlain4702 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleSequenceLiteralPlain4712 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_39_in_ruleSequenceLiteralPlain4758 = new BitSet(new long[]{0x000000CFE50003F0L,0x0000000000000020L});
+    public static final BitSet FOLLOW_ruleLiteralExpression_in_ruleSequenceLiteralPlain4780 = new BitSet(new long[]{0x0000006000000000L});
+    public static final BitSet FOLLOW_37_in_ruleSequenceLiteralPlain4793 = new BitSet(new long[]{0x0000008FE50003F0L,0x0000000000000020L});
+    public static final BitSet FOLLOW_ruleLiteralExpression_in_ruleSequenceLiteralPlain4814 = new BitSet(new long[]{0x0000006000000000L});
+    public static final BitSet FOLLOW_38_in_ruleSequenceLiteralPlain4830 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleTupleLiteral_in_entryRuleTupleLiteral4866 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleTupleLiteral4876 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_24_in_ruleTupleLiteral4922 = new BitSet(new long[]{0x0000000002000010L});
+    public static final BitSet FOLLOW_ruleTupleItem_in_ruleTupleLiteral4944 = new BitSet(new long[]{0x0000002002000000L});
+    public static final BitSet FOLLOW_37_in_ruleTupleLiteral4957 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_ruleTupleItem_in_ruleTupleLiteral4978 = new BitSet(new long[]{0x0000002002000000L});
+    public static final BitSet FOLLOW_25_in_ruleTupleLiteral4994 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleTupleItem_in_entryRuleTupleItem5030 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleTupleItem5040 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleTupleItem5082 = new BitSet(new long[]{0x0000000000800000L});
+    public static final BitSet FOLLOW_23_in_ruleTupleItem5099 = new BitSet(new long[]{0x0000008FE50003F0L,0x0000000000000020L});
+    public static final BitSet FOLLOW_ruleLiteralExpression_in_ruleTupleItem5120 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleBlock_in_entryRuleBlock5156 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleBlock5166 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_40_in_ruleBlock5212 = new BitSet(new long[]{0xB303EF0000200010L,0x0000000000000003L});
+    public static final BitSet FOLLOW_41_in_ruleBlock5225 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleBlock5242 = new BitSet(new long[]{0xB303ED0000200010L,0x0000000000000003L});
+    public static final BitSet FOLLOW_ruleSentence_in_ruleBlock5270 = new BitSet(new long[]{0xB303ED0000200010L,0x0000000000000003L});
+    public static final BitSet FOLLOW_42_in_ruleBlock5283 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleNoop_in_entryRuleNoop5319 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleNoop5329 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_43_in_ruleNoop5381 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulePair_in_entryRulePair5430 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRulePair5440 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rulePair5482 = new BitSet(new long[]{0x0000100000000000L});
+    public static final BitSet FOLLOW_44_in_rulePair5499 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_RULE_STRING_in_rulePair5516 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleConstant_in_entryRuleConstant5557 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleConstant5567 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_45_in_ruleConstant5604 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleConstant5621 = new BitSet(new long[]{0x00CE019001000010L,0x000000007FFF8000L});
+    public static final BitSet FOLLOW_ruleTypeRef_in_ruleConstant5647 = new BitSet(new long[]{0x0000100000000000L});
+    public static final BitSet FOLLOW_44_in_ruleConstant5659 = new BitSet(new long[]{0x0000008FE50003F0L,0x0000000000000020L});
+    public static final BitSet FOLLOW_ruleLiteralExpression_in_ruleConstant5680 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleMulti_in_entryRuleMulti5716 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleMulti5726 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_46_in_ruleMulti5763 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleMulti5780 = new BitSet(new long[]{0x0000100000000000L});
+    public static final BitSet FOLLOW_44_in_ruleMulti5797 = new BitSet(new long[]{0x0000000000000040L,0x0000000000003C00L});
+    public static final BitSet FOLLOW_ruleMultiOp_in_ruleMulti5818 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_RULE_INT_in_ruleMulti5836 = new BitSet(new long[]{0x0000000000000012L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleMulti5861 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleUnit_in_entryRuleUnit5898 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleUnit5908 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleDUnit_in_ruleUnit5955 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleNUnit_in_ruleUnit5982 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleDUnit_in_entryRuleDUnit6017 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleDUnit6027 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_47_in_ruleDUnit6064 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleDUnit6081 = new BitSet(new long[]{0x0000100000000000L});
+    public static final BitSet FOLLOW_44_in_ruleDUnit6098 = new BitSet(new long[]{0x0000000000000040L,0x0000000000003C00L});
+    public static final BitSet FOLLOW_ruleMultiOp_in_ruleDUnit6119 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_RULE_INT_in_ruleDUnit6137 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleDUnit6162 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleDUnit6183 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleNUnit_in_entryRuleNUnit6219 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleNUnit6229 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_47_in_ruleNUnit6266 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleNUnit6283 = new BitSet(new long[]{0x0000000000000000L,0x0000000000078000L});
+    public static final BitSet FOLLOW_ruleNumberType_in_ruleNUnit6309 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleBox_in_entryRuleBox6345 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleBox6355 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_48_in_ruleBox6392 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleBox6409 = new BitSet(new long[]{0x0000010000000000L});
+    public static final BitSet FOLLOW_40_in_ruleBox6426 = new BitSet(new long[]{0x0000040000000010L});
+    public static final BitSet FOLLOW_ruleMember_in_ruleBox6447 = new BitSet(new long[]{0x0000040000000010L});
+    public static final BitSet FOLLOW_42_in_ruleBox6460 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleShape_in_entryRuleShape6496 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleShape6506 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_49_in_ruleShape6543 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleShape6560 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleMember_in_entryRuleMember6601 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleMember6611 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleMember6653 = new BitSet(new long[]{0x00CE019001000010L,0x000000007FFF8000L});
+    public static final BitSet FOLLOW_ruleTypeRef_in_ruleMember6679 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleTypeRef_in_entryRuleTypeRef6715 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleTypeRef6725 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulePlainTypeRef_in_ruleTypeRef6772 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleCompositeTypeRef_in_ruleTypeRef6799 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulePlainTypeRef_in_entryRulePlainTypeRef6834 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRulePlainTypeRef6844 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleVoidTypeRef_in_rulePlainTypeRef6891 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleAutoTypeRef_in_rulePlainTypeRef6918 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleNumberTypeRef_in_rulePlainTypeRef6945 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleVisualTypeRef_in_rulePlainTypeRef6972 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleAuxTypeRef_in_rulePlainTypeRef6999 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleTypeAliasRef_in_rulePlainTypeRef7026 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleShapeRef_in_rulePlainTypeRef7053 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleBoxRef_in_rulePlainTypeRef7080 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleUnitRef_in_rulePlainTypeRef7107 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleCollectionRef_in_rulePlainTypeRef7134 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleCompositeTypeRef_in_entryRuleCompositeTypeRef7169 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleCompositeTypeRef7179 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSequenceTypeRef_in_ruleCompositeTypeRef7226 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleTupleTypeRef_in_ruleCompositeTypeRef7253 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSetTypeRef_in_ruleCompositeTypeRef7280 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSequenceTypeRef_in_entryRuleSequenceTypeRef7315 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleSequenceTypeRef7325 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_39_in_ruleSequenceTypeRef7371 = new BitSet(new long[]{0x00CE019001000010L,0x000000007FFF8000L});
+    public static final BitSet FOLLOW_ruleTypeRef_in_ruleSequenceTypeRef7392 = new BitSet(new long[]{0x0000004000000000L});
+    public static final BitSet FOLLOW_38_in_ruleSequenceTypeRef7404 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleTupleTypeRef_in_entryRuleTupleTypeRef7440 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleTupleTypeRef7450 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_24_in_ruleTupleTypeRef7496 = new BitSet(new long[]{0x0000000002000010L});
+    public static final BitSet FOLLOW_ruleTupleTypeRefItem_in_ruleTupleTypeRef7518 = new BitSet(new long[]{0x0000002002000000L});
+    public static final BitSet FOLLOW_37_in_ruleTupleTypeRef7531 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_ruleTupleTypeRefItem_in_ruleTupleTypeRef7552 = new BitSet(new long[]{0x0000002002000000L});
+    public static final BitSet FOLLOW_25_in_ruleTupleTypeRef7568 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleTupleTypeRefItem_in_entryRuleTupleTypeRefItem7604 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleTupleTypeRefItem7614 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleTupleTypeRefItem7656 = new BitSet(new long[]{0x0000000000800000L});
+    public static final BitSet FOLLOW_23_in_ruleTupleTypeRefItem7673 = new BitSet(new long[]{0x00CE019001000010L,0x000000007FFF8000L});
+    public static final BitSet FOLLOW_ruleTypeRef_in_ruleTupleTypeRefItem7694 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSetTypeRef_in_entryRuleSetTypeRef7730 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleSetTypeRef7740 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_40_in_ruleSetTypeRef7786 = new BitSet(new long[]{0x00CE019001000010L,0x000000007FFF8000L});
+    public static final BitSet FOLLOW_ruleTypeRef_in_ruleSetTypeRef7807 = new BitSet(new long[]{0x0000040000000000L});
+    public static final BitSet FOLLOW_42_in_ruleSetTypeRef7819 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleVoidTypeRef_in_entryRuleVoidTypeRef7855 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleVoidTypeRef7865 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_50_in_ruleVoidTypeRef7907 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleAutoTypeRef_in_entryRuleAutoTypeRef7955 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleAutoTypeRef7965 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_51_in_ruleAutoTypeRef8011 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleCollectionRef_in_entryRuleCollectionRef8047 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleCollectionRef8057 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleCollectionType_in_ruleCollectionRef8103 = new BitSet(new long[]{0x0010000000000000L});
+    public static final BitSet FOLLOW_52_in_ruleCollectionRef8115 = new BitSet(new long[]{0x00CE019001000010L,0x000000007FFF8000L});
+    public static final BitSet FOLLOW_ruleTypeRef_in_ruleCollectionRef8136 = new BitSet(new long[]{0x0020000000000000L});
+    public static final BitSet FOLLOW_53_in_ruleCollectionRef8148 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleUnitRef_in_entryRuleUnitRef8184 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleUnitRef8194 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_54_in_ruleUnitRef8231 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleUnitRef8251 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleBoxRef_in_entryRuleBoxRef8287 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleBoxRef8297 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_36_in_ruleBoxRef8334 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleBoxRef8354 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleTypeAliasRef_in_entryRuleTypeAliasRef8390 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleTypeAliasRef8400 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleTypeAliasRef8444 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleAuxTypeRef_in_entryRuleAuxTypeRef8479 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleAuxTypeRef8489 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleAuxType_in_ruleAuxTypeRef8534 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleShapeRef_in_entryRuleShapeRef8569 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleShapeRef8579 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_55_in_ruleShapeRef8616 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleShapeRef8636 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleNumberTypeRef_in_entryRuleNumberTypeRef8672 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleNumberTypeRef8682 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleNumberType_in_ruleNumberTypeRef8727 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleVisualTypeRef_in_entryRuleVisualTypeRef8762 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleVisualTypeRef8772 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleVisualType_in_ruleVisualTypeRef8817 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleTypeAlias_in_entryRuleTypeAlias8852 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleTypeAlias8862 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_56_in_ruleTypeAlias8899 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleTypeAlias8916 = new BitSet(new long[]{0x00CE019001000010L,0x000000007FFF8000L});
+    public static final BitSet FOLLOW_ruleTypeRef_in_ruleTypeAlias8942 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleStream_in_entryRuleStream8978 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleStream8988 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_57_in_ruleStream9031 = new BitSet(new long[]{0x1200000000000000L});
+    public static final BitSet FOLLOW_ruleLStreamValue_in_ruleStream9066 = new BitSet(new long[]{0x0400000000000000L});
+    public static final BitSet FOLLOW_58_in_ruleStream9078 = new BitSet(new long[]{0x0800008FE50003F0L,0x0000000000000020L});
+    public static final BitSet FOLLOW_ruleRStreamValue_in_ruleStream9099 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleLStreamValue_in_entryRuleLStreamValue9135 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleLStreamValue9145 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleOutputRef_in_ruleLStreamValue9191 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleRStreamValue_in_entryRuleRStreamValue9225 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleRStreamValue9235 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleInputRef_in_ruleRStreamValue9282 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleLiteralExpression_in_ruleRStreamValue9309 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleInputRef_in_entryRuleInputRef9344 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleInputRef9354 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_59_in_ruleInputRef9400 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleOutputRef_in_entryRuleOutputRef9436 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleOutputRef9446 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_60_in_ruleOutputRef9492 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleInvokation_in_entryRuleInvokation9528 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleInvokation9538 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleInvokation9580 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleInvokation9602 = new BitSet(new long[]{0x0000010000000000L});
+    public static final BitSet FOLLOW_40_in_ruleInvokation9619 = new BitSet(new long[]{0x0000040000000010L});
+    public static final BitSet FOLLOW_ruleInvokationParam_in_ruleInvokation9640 = new BitSet(new long[]{0x0000040000000010L});
+    public static final BitSet FOLLOW_42_in_ruleInvokation9653 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleInvokationParam_in_entryRuleInvokationParam9689 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleInvokationParam9699 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleInvokationParam9741 = new BitSet(new long[]{0x0400000000000000L});
+    public static final BitSet FOLLOW_58_in_ruleInvokationParam9758 = new BitSet(new long[]{0x0000008FE50003F0L,0x0000000000000020L});
+    public static final BitSet FOLLOW_ruleLiteralExpression_in_ruleInvokationParam9779 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleLoop_in_entryRuleLoop9815 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleLoop9825 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_61_in_ruleLoop9862 = new BitSet(new long[]{0x4000000000000010L});
+    public static final BitSet FOLLOW_ruleLoopFor_in_ruleLoop9883 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleLoop9901 = new BitSet(new long[]{0x0000010000000000L});
+    public static final BitSet FOLLOW_40_in_ruleLoop9918 = new BitSet(new long[]{0x0000040000000010L});
+    public static final BitSet FOLLOW_ruleLoopSentence_in_ruleLoop9939 = new BitSet(new long[]{0x0000040000000010L});
+    public static final BitSet FOLLOW_42_in_ruleLoop9952 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleLoopSentence_in_entryRuleLoopSentence9988 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleLoopSentence9998 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleLoopSentence10040 = new BitSet(new long[]{0x00CE019001000010L,0x000000007FFF8000L});
+    public static final BitSet FOLLOW_ruleTypeRef_in_ruleLoopSentence10066 = new BitSet(new long[]{0x0400000000000000L});
+    public static final BitSet FOLLOW_58_in_ruleLoopSentence10078 = new BitSet(new long[]{0x0000008FE50003F0L,0x0000000000000020L});
+    public static final BitSet FOLLOW_ruleLiteralExpression_in_ruleLoopSentence10099 = new BitSet(new long[]{0x0400000000000002L});
+    public static final BitSet FOLLOW_58_in_ruleLoopSentence10112 = new BitSet(new long[]{0x0000008FE50003F0L,0x0000000000000020L});
+    public static final BitSet FOLLOW_ruleLiteralExpression_in_ruleLoopSentence10133 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleLoopFor_in_entryRuleLoopFor10171 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleLoopFor10181 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_62_in_ruleLoopFor10218 = new BitSet(new long[]{0x0000008800000000L});
+    public static final BitSet FOLLOW_ruleSequenceLiteral_in_ruleLoopFor10240 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleFactory_in_entryRuleFactory10275 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleFactory10285 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_63_in_ruleFactory10322 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleFactory10339 = new BitSet(new long[]{0x00CE019001000010L,0x000000007FFF8000L});
+    public static final BitSet FOLLOW_ruleTypeRef_in_ruleFactory10365 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleFile_in_entryRuleFile10401 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleFile10411 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_64_in_ruleFile10448 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleFile10465 = new BitSet(new long[]{0x0400001000000000L});
+    public static final BitSet FOLLOW_58_in_ruleFile10489 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_36_in_ruleFile10520 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_RULE_STRING_in_ruleFile10538 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleCanvas_in_entryRuleCanvas10579 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleCanvas10589 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_65_in_ruleCanvas10626 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleCanvas10643 = new BitSet(new long[]{0x0000010000000000L});
+    public static final BitSet FOLLOW_40_in_ruleCanvas10660 = new BitSet(new long[]{0x0000040000000010L});
+    public static final BitSet FOLLOW_rulePair_in_ruleCanvas10682 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000004L});
+    public static final BitSet FOLLOW_66_in_ruleCanvas10694 = new BitSet(new long[]{0x0000040000000010L});
+    public static final BitSet FOLLOW_42_in_ruleCanvas10708 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_67_in_ruleBinOp10758 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_68_in_ruleBinOp10775 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_69_in_ruleNegationOp10819 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_70_in_ruleCompOp10863 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_71_in_ruleCompOp10880 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_52_in_ruleCompOp10897 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_53_in_ruleCompOp10914 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_72_in_ruleCompOp10931 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_73_in_ruleCompOp10948 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_29_in_ruleAddOp10993 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_30_in_ruleAddOp11010 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_74_in_ruleMultiOp11055 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_75_in_ruleMultiOp11072 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_76_in_ruleMultiOp11089 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_77_in_ruleMultiOp11106 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_78_in_ruleExpOp11150 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_79_in_ruleNumberType11194 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_80_in_ruleNumberType11211 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_81_in_ruleNumberType11228 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_82_in_ruleNumberType11245 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_49_in_ruleVisualType11290 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_83_in_ruleVisualType11307 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_84_in_ruleVisualType11324 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_85_in_ruleVisualType11341 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_86_in_ruleVisualType11358 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_87_in_ruleVisualType11375 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_88_in_ruleAuxType11420 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_89_in_ruleAuxType11437 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_90_in_ruleCollectionType11482 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_91_in_ruleCollectionType11499 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_92_in_ruleCollectionType11516 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_93_in_ruleCollectionType11533 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_94_in_ruleCollectionType11550 = new BitSet(new long[]{0x0000000000000002L});
 
 }

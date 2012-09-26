@@ -298,7 +298,7 @@ public interface VMLPackage extends EPackage
    * @see com.visualligence.g.vML.impl.VMLPackageImpl#getRStreamValue()
    * @generated
    */
-  int RSTREAM_VALUE = 48;
+  int RSTREAM_VALUE = 47;
 
   /**
    * The number of structural features of the '<em>RStream Value</em>' class.
@@ -618,34 +618,6 @@ public interface VMLPackage extends EPackage
   int TUPLE_ITEM_FEATURE_COUNT = 2;
 
   /**
-   * The meta object id for the '{@link com.visualligence.g.vML.impl.SetLiteralImpl <em>Set Literal</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see com.visualligence.g.vML.impl.SetLiteralImpl
-   * @see com.visualligence.g.vML.impl.VMLPackageImpl#getSetLiteral()
-   * @generated
-   */
-  int SET_LITERAL = 16;
-
-  /**
-   * The feature id for the '<em><b>Items</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int SET_LITERAL__ITEMS = RVALUE_FEATURE_COUNT + 0;
-
-  /**
-   * The number of structural features of the '<em>Set Literal</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int SET_LITERAL_FEATURE_COUNT = RVALUE_FEATURE_COUNT + 1;
-
-  /**
    * The meta object id for the '{@link com.visualligence.g.vML.impl.BlockImpl <em>Block</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -653,7 +625,7 @@ public interface VMLPackage extends EPackage
    * @see com.visualligence.g.vML.impl.VMLPackageImpl#getBlock()
    * @generated
    */
-  int BLOCK = 17;
+  int BLOCK = 16;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -690,7 +662,7 @@ public interface VMLPackage extends EPackage
    * @see com.visualligence.g.vML.impl.VMLPackageImpl#getNoop()
    * @generated
    */
-  int NOOP = 18;
+  int NOOP = 17;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -718,7 +690,7 @@ public interface VMLPackage extends EPackage
    * @see com.visualligence.g.vML.impl.VMLPackageImpl#getPair()
    * @generated
    */
-  int PAIR = 19;
+  int PAIR = 18;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -755,7 +727,7 @@ public interface VMLPackage extends EPackage
    * @see com.visualligence.g.vML.impl.VMLPackageImpl#getConstant()
    * @generated
    */
-  int CONSTANT = 20;
+  int CONSTANT = 19;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -801,7 +773,7 @@ public interface VMLPackage extends EPackage
    * @see com.visualligence.g.vML.impl.VMLPackageImpl#getMulti()
    * @generated
    */
-  int MULTI = 21;
+  int MULTI = 20;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -856,7 +828,7 @@ public interface VMLPackage extends EPackage
    * @see com.visualligence.g.vML.impl.VMLPackageImpl#getUnit()
    * @generated
    */
-  int UNIT = 22;
+  int UNIT = 21;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -884,7 +856,7 @@ public interface VMLPackage extends EPackage
    * @see com.visualligence.g.vML.impl.VMLPackageImpl#getDUnit()
    * @generated
    */
-  int DUNIT = 23;
+  int DUNIT = 22;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -948,7 +920,7 @@ public interface VMLPackage extends EPackage
    * @see com.visualligence.g.vML.impl.VMLPackageImpl#getNUnit()
    * @generated
    */
-  int NUNIT = 24;
+  int NUNIT = 23;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -985,7 +957,7 @@ public interface VMLPackage extends EPackage
    * @see com.visualligence.g.vML.impl.VMLPackageImpl#getBox()
    * @generated
    */
-  int BOX = 25;
+  int BOX = 24;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1022,7 +994,7 @@ public interface VMLPackage extends EPackage
    * @see com.visualligence.g.vML.impl.VMLPackageImpl#getShape()
    * @generated
    */
-  int SHAPE = 26;
+  int SHAPE = 25;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1050,7 +1022,7 @@ public interface VMLPackage extends EPackage
    * @see com.visualligence.g.vML.impl.VMLPackageImpl#getMember()
    * @generated
    */
-  int MEMBER = 27;
+  int MEMBER = 26;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1087,7 +1059,7 @@ public interface VMLPackage extends EPackage
    * @see com.visualligence.g.vML.impl.VMLPackageImpl#getTypeRef()
    * @generated
    */
-  int TYPE_REF = 28;
+  int TYPE_REF = 27;
 
   /**
    * The number of structural features of the '<em>Type Ref</em>' class.
@@ -1106,7 +1078,7 @@ public interface VMLPackage extends EPackage
    * @see com.visualligence.g.vML.impl.VMLPackageImpl#getPlainTypeRef()
    * @generated
    */
-  int PLAIN_TYPE_REF = 29;
+  int PLAIN_TYPE_REF = 28;
 
   /**
    * The number of structural features of the '<em>Plain Type Ref</em>' class.
@@ -1125,7 +1097,7 @@ public interface VMLPackage extends EPackage
    * @see com.visualligence.g.vML.impl.VMLPackageImpl#getCompositeTypeRef()
    * @generated
    */
-  int COMPOSITE_TYPE_REF = 30;
+  int COMPOSITE_TYPE_REF = 29;
 
   /**
    * The number of structural features of the '<em>Composite Type Ref</em>' class.
@@ -1144,7 +1116,7 @@ public interface VMLPackage extends EPackage
    * @see com.visualligence.g.vML.impl.VMLPackageImpl#getSequenceTypeRef()
    * @generated
    */
-  int SEQUENCE_TYPE_REF = 31;
+  int SEQUENCE_TYPE_REF = 30;
 
   /**
    * The feature id for the '<em><b>Type</b></em>' containment reference.
@@ -1172,7 +1144,7 @@ public interface VMLPackage extends EPackage
    * @see com.visualligence.g.vML.impl.VMLPackageImpl#getTupleTypeRef()
    * @generated
    */
-  int TUPLE_TYPE_REF = 32;
+  int TUPLE_TYPE_REF = 31;
 
   /**
    * The feature id for the '<em><b>Items</b></em>' containment reference list.
@@ -1200,7 +1172,7 @@ public interface VMLPackage extends EPackage
    * @see com.visualligence.g.vML.impl.VMLPackageImpl#getTupleTypeRefItem()
    * @generated
    */
-  int TUPLE_TYPE_REF_ITEM = 33;
+  int TUPLE_TYPE_REF_ITEM = 32;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1237,7 +1209,7 @@ public interface VMLPackage extends EPackage
    * @see com.visualligence.g.vML.impl.VMLPackageImpl#getSetTypeRef()
    * @generated
    */
-  int SET_TYPE_REF = 34;
+  int SET_TYPE_REF = 33;
 
   /**
    * The feature id for the '<em><b>Type</b></em>' containment reference.
@@ -1265,7 +1237,7 @@ public interface VMLPackage extends EPackage
    * @see com.visualligence.g.vML.impl.VMLPackageImpl#getVoidTypeRef()
    * @generated
    */
-  int VOID_TYPE_REF = 35;
+  int VOID_TYPE_REF = 34;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1293,7 +1265,7 @@ public interface VMLPackage extends EPackage
    * @see com.visualligence.g.vML.impl.VMLPackageImpl#getAutoTypeRef()
    * @generated
    */
-  int AUTO_TYPE_REF = 36;
+  int AUTO_TYPE_REF = 35;
 
   /**
    * The number of structural features of the '<em>Auto Type Ref</em>' class.
@@ -1312,7 +1284,7 @@ public interface VMLPackage extends EPackage
    * @see com.visualligence.g.vML.impl.VMLPackageImpl#getCollectionRef()
    * @generated
    */
-  int COLLECTION_REF = 37;
+  int COLLECTION_REF = 36;
 
   /**
    * The feature id for the '<em><b>Collection</b></em>' attribute.
@@ -1349,7 +1321,7 @@ public interface VMLPackage extends EPackage
    * @see com.visualligence.g.vML.impl.VMLPackageImpl#getUnitRef()
    * @generated
    */
-  int UNIT_REF = 38;
+  int UNIT_REF = 37;
 
   /**
    * The feature id for the '<em><b>Unittype</b></em>' reference.
@@ -1377,7 +1349,7 @@ public interface VMLPackage extends EPackage
    * @see com.visualligence.g.vML.impl.VMLPackageImpl#getBoxRef()
    * @generated
    */
-  int BOX_REF = 39;
+  int BOX_REF = 38;
 
   /**
    * The feature id for the '<em><b>Ref</b></em>' reference.
@@ -1405,7 +1377,7 @@ public interface VMLPackage extends EPackage
    * @see com.visualligence.g.vML.impl.VMLPackageImpl#getTypeAliasRef()
    * @generated
    */
-  int TYPE_ALIAS_REF = 40;
+  int TYPE_ALIAS_REF = 39;
 
   /**
    * The feature id for the '<em><b>Ref</b></em>' reference.
@@ -1433,7 +1405,7 @@ public interface VMLPackage extends EPackage
    * @see com.visualligence.g.vML.impl.VMLPackageImpl#getAuxTypeRef()
    * @generated
    */
-  int AUX_TYPE_REF = 41;
+  int AUX_TYPE_REF = 40;
 
   /**
    * The feature id for the '<em><b>Ref</b></em>' attribute.
@@ -1461,7 +1433,7 @@ public interface VMLPackage extends EPackage
    * @see com.visualligence.g.vML.impl.VMLPackageImpl#getShapeRef()
    * @generated
    */
-  int SHAPE_REF = 42;
+  int SHAPE_REF = 41;
 
   /**
    * The feature id for the '<em><b>Ref</b></em>' reference.
@@ -1489,7 +1461,7 @@ public interface VMLPackage extends EPackage
    * @see com.visualligence.g.vML.impl.VMLPackageImpl#getNumberTypeRef()
    * @generated
    */
-  int NUMBER_TYPE_REF = 43;
+  int NUMBER_TYPE_REF = 42;
 
   /**
    * The feature id for the '<em><b>Ref</b></em>' attribute.
@@ -1517,7 +1489,7 @@ public interface VMLPackage extends EPackage
    * @see com.visualligence.g.vML.impl.VMLPackageImpl#getVisualTypeRef()
    * @generated
    */
-  int VISUAL_TYPE_REF = 44;
+  int VISUAL_TYPE_REF = 43;
 
   /**
    * The feature id for the '<em><b>Ref</b></em>' attribute.
@@ -1545,7 +1517,7 @@ public interface VMLPackage extends EPackage
    * @see com.visualligence.g.vML.impl.VMLPackageImpl#getTypeAlias()
    * @generated
    */
-  int TYPE_ALIAS = 45;
+  int TYPE_ALIAS = 44;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1582,7 +1554,7 @@ public interface VMLPackage extends EPackage
    * @see com.visualligence.g.vML.impl.VMLPackageImpl#getStream()
    * @generated
    */
-  int STREAM = 46;
+  int STREAM = 45;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1628,7 +1600,7 @@ public interface VMLPackage extends EPackage
    * @see com.visualligence.g.vML.impl.VMLPackageImpl#getLStreamValue()
    * @generated
    */
-  int LSTREAM_VALUE = 47;
+  int LSTREAM_VALUE = 46;
 
   /**
    * The number of structural features of the '<em>LStream Value</em>' class.
@@ -1647,7 +1619,7 @@ public interface VMLPackage extends EPackage
    * @see com.visualligence.g.vML.impl.VMLPackageImpl#getInputRef()
    * @generated
    */
-  int INPUT_REF = 49;
+  int INPUT_REF = 48;
 
   /**
    * The number of structural features of the '<em>Input Ref</em>' class.
@@ -1666,7 +1638,7 @@ public interface VMLPackage extends EPackage
    * @see com.visualligence.g.vML.impl.VMLPackageImpl#getOutputRef()
    * @generated
    */
-  int OUTPUT_REF = 50;
+  int OUTPUT_REF = 49;
 
   /**
    * The number of structural features of the '<em>Output Ref</em>' class.
@@ -1685,7 +1657,7 @@ public interface VMLPackage extends EPackage
    * @see com.visualligence.g.vML.impl.VMLPackageImpl#getInvokation()
    * @generated
    */
-  int INVOKATION = 51;
+  int INVOKATION = 50;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1731,7 +1703,7 @@ public interface VMLPackage extends EPackage
    * @see com.visualligence.g.vML.impl.VMLPackageImpl#getInvokationParam()
    * @generated
    */
-  int INVOKATION_PARAM = 52;
+  int INVOKATION_PARAM = 51;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1768,7 +1740,7 @@ public interface VMLPackage extends EPackage
    * @see com.visualligence.g.vML.impl.VMLPackageImpl#getLoop()
    * @generated
    */
-  int LOOP = 53;
+  int LOOP = 52;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1814,7 +1786,7 @@ public interface VMLPackage extends EPackage
    * @see com.visualligence.g.vML.impl.VMLPackageImpl#getLoopSentence()
    * @generated
    */
-  int LOOP_SENTENCE = 54;
+  int LOOP_SENTENCE = 53;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1869,7 +1841,7 @@ public interface VMLPackage extends EPackage
    * @see com.visualligence.g.vML.impl.VMLPackageImpl#getLoopFor()
    * @generated
    */
-  int LOOP_FOR = 55;
+  int LOOP_FOR = 54;
 
   /**
    * The number of structural features of the '<em>Loop For</em>' class.
@@ -1888,7 +1860,7 @@ public interface VMLPackage extends EPackage
    * @see com.visualligence.g.vML.impl.VMLPackageImpl#getFactory()
    * @generated
    */
-  int FACTORY = 56;
+  int FACTORY = 55;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1925,7 +1897,7 @@ public interface VMLPackage extends EPackage
    * @see com.visualligence.g.vML.impl.VMLPackageImpl#getFile()
    * @generated
    */
-  int FILE = 57;
+  int FILE = 56;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1971,7 +1943,7 @@ public interface VMLPackage extends EPackage
    * @see com.visualligence.g.vML.impl.VMLPackageImpl#getCanvas()
    * @generated
    */
-  int CANVAS = 58;
+  int CANVAS = 57;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2008,7 +1980,7 @@ public interface VMLPackage extends EPackage
    * @see com.visualligence.g.vML.impl.VMLPackageImpl#getOperation()
    * @generated
    */
-  int OPERATION = 59;
+  int OPERATION = 58;
 
   /**
    * The feature id for the '<em><b>Left</b></em>' containment reference.
@@ -2054,7 +2026,7 @@ public interface VMLPackage extends EPackage
    * @see com.visualligence.g.vML.impl.VMLPackageImpl#getUnaryOperation()
    * @generated
    */
-  int UNARY_OPERATION = 60;
+  int UNARY_OPERATION = 59;
 
   /**
    * The feature id for the '<em><b>Op</b></em>' attribute.
@@ -2091,7 +2063,7 @@ public interface VMLPackage extends EPackage
    * @see com.visualligence.g.vML.impl.VMLPackageImpl#getOp()
    * @generated
    */
-  int OP = 61;
+  int OP = 60;
 
   /**
    * The meta object id for the '{@link com.visualligence.g.vML.NumberType <em>Number Type</em>}' enum.
@@ -2101,7 +2073,7 @@ public interface VMLPackage extends EPackage
    * @see com.visualligence.g.vML.impl.VMLPackageImpl#getNumberType()
    * @generated
    */
-  int NUMBER_TYPE = 62;
+  int NUMBER_TYPE = 61;
 
   /**
    * The meta object id for the '{@link com.visualligence.g.vML.VisualType <em>Visual Type</em>}' enum.
@@ -2111,7 +2083,7 @@ public interface VMLPackage extends EPackage
    * @see com.visualligence.g.vML.impl.VMLPackageImpl#getVisualType()
    * @generated
    */
-  int VISUAL_TYPE = 63;
+  int VISUAL_TYPE = 62;
 
   /**
    * The meta object id for the '{@link com.visualligence.g.vML.AuxType <em>Aux Type</em>}' enum.
@@ -2121,7 +2093,7 @@ public interface VMLPackage extends EPackage
    * @see com.visualligence.g.vML.impl.VMLPackageImpl#getAuxType()
    * @generated
    */
-  int AUX_TYPE = 64;
+  int AUX_TYPE = 63;
 
   /**
    * The meta object id for the '{@link com.visualligence.g.vML.CollectionType <em>Collection Type</em>}' enum.
@@ -2131,7 +2103,7 @@ public interface VMLPackage extends EPackage
    * @see com.visualligence.g.vML.impl.VMLPackageImpl#getCollectionType()
    * @generated
    */
-  int COLLECTION_TYPE = 65;
+  int COLLECTION_TYPE = 64;
 
 
   /**
@@ -2557,27 +2529,6 @@ public interface VMLPackage extends EPackage
    * @generated
    */
   EReference getTupleItem_Value();
-
-  /**
-   * Returns the meta object for class '{@link com.visualligence.g.vML.SetLiteral <em>Set Literal</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Set Literal</em>'.
-   * @see com.visualligence.g.vML.SetLiteral
-   * @generated
-   */
-  EClass getSetLiteral();
-
-  /**
-   * Returns the meta object for the containment reference list '{@link com.visualligence.g.vML.SetLiteral#getItems <em>Items</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Items</em>'.
-   * @see com.visualligence.g.vML.SetLiteral#getItems()
-   * @see #getSetLiteral()
-   * @generated
-   */
-  EReference getSetLiteral_Items();
 
   /**
    * Returns the meta object for class '{@link com.visualligence.g.vML.Block <em>Block</em>}'.
@@ -4026,24 +3977,6 @@ public interface VMLPackage extends EPackage
      * @generated
      */
     EReference TUPLE_ITEM__VALUE = eINSTANCE.getTupleItem_Value();
-
-    /**
-     * The meta object literal for the '{@link com.visualligence.g.vML.impl.SetLiteralImpl <em>Set Literal</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see com.visualligence.g.vML.impl.SetLiteralImpl
-     * @see com.visualligence.g.vML.impl.VMLPackageImpl#getSetLiteral()
-     * @generated
-     */
-    EClass SET_LITERAL = eINSTANCE.getSetLiteral();
-
-    /**
-     * The meta object literal for the '<em><b>Items</b></em>' containment reference list feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference SET_LITERAL__ITEMS = eINSTANCE.getSetLiteral_Items();
 
     /**
      * The meta object literal for the '{@link com.visualligence.g.vML.impl.BlockImpl <em>Block</em>}' class.
