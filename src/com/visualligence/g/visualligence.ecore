@@ -27,7 +27,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" ordered="false" lowerBound="1"
         eType="#//NativeTypeOptions"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EEnum" name="NativeTypeOptions" serializable="false">
+  <eClassifiers xsi:type="ecore:EEnum" name="NativeTypeOptions">
     <eLiterals name="string"/>
     <eLiterals name="number"/>
     <eLiterals name="bool"/>
@@ -50,7 +50,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="HashItem" eSuperTypes="#//NamedElement #//TypedElement"/>
   <eClassifiers xsi:type="ecore:EClass" name="Stream" eSuperTypes="#//TypedElement #//NamedElement"/>
   <eClassifiers xsi:type="ecore:EClass" name="Literal" eSuperTypes="#//Stream">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="value"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType platform:/plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Input" eSuperTypes="#//Stream"/>
   <eClassifiers xsi:type="ecore:EClass" name="Output" eSuperTypes="#//Stream">
