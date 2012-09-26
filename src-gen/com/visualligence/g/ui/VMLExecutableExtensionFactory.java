@@ -8,6 +8,8 @@ import org.osgi.framework.Bundle;
 
 import com.google.inject.Injector;
 
+import com.visualligence.g.ui.internal.VMLActivator;
+
 /**
  * This class was generated. Customizations should only happen in a newly
  * introduced subclass. 
@@ -16,12 +18,12 @@ public class VMLExecutableExtensionFactory extends AbstractGuiceAwareExecutableE
 
 	@Override
 	protected Bundle getBundle() {
-		return com.visualligence.g.ui.internal.VMLActivator.getInstance().getBundle();
+		return VMLActivator.getInstance().getBundle();
 	}
 	
 	@Override
 	protected Injector getInjector() {
-		return com.visualligence.g.ui.internal.VMLActivator.getInstance().getInjector("com.visualligence.g.VML");
+		return VMLActivator.getInstance().getInjector(VMLActivator.COM_VISUALLIGENCE_G_VML);
 	}
 	
 }

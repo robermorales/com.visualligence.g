@@ -1,0 +1,1103 @@
+Apache Maven 3.0.4
+Maven home: /usr/share/maven
+Java version: 1.6.0_26, vendor: Sun Microsystems Inc.
+Java home: /usr/lib/jvm/java-6-sun-1.6.0.26/jre
+Default locale: es_ES, platform encoding: UTF-8
+OS name: "linux", version: "3.0.0-2-686-pae", arch: "i386", family: "unix"
+[INFO] Error stacktraces are turned on.
+[DEBUG] Reading global settings from /usr/share/maven/conf/settings.xml
+[DEBUG] Reading user settings from /home/rober/.m2/settings.xml
+[DEBUG] Using local repository at /home/rober/.m2/repository
+[DEBUG] Using manager EnhancedLocalRepositoryManager with priority 10 for /home/rober/.m2/repository
+[INFO] Scanning for projects...
+[DEBUG] org.eclipse.tycho:tycho-maven-plugin:jar:0.14.1:
+[DEBUG]    org.eclipse.tycho:tycho-core:jar:0.14.1:compile
+[DEBUG]       org.apache.maven:maven-core:jar:3.0:compile
+[DEBUG]          org.apache.maven:maven-model:jar:3.0:compile
+[DEBUG]          org.apache.maven:maven-settings:jar:3.0:compile
+[DEBUG]          org.apache.maven:maven-settings-builder:jar:3.0:compile
+[DEBUG]          org.apache.maven:maven-repository-metadata:jar:3.0:compile
+[DEBUG]          org.apache.maven:maven-artifact:jar:3.0:compile
+[DEBUG]          org.apache.maven:maven-model-builder:jar:3.0:compile
+[DEBUG]          org.apache.maven:maven-aether-provider:jar:3.0:runtime
+[DEBUG]          org.sonatype.aether:aether-impl:jar:1.7:compile
+[DEBUG]             org.sonatype.aether:aether-spi:jar:1.7:compile
+[DEBUG]          org.sonatype.aether:aether-api:jar:1.7:compile
+[DEBUG]          org.sonatype.aether:aether-util:jar:1.7:compile
+[DEBUG]          org.codehaus.plexus:plexus-interpolation:jar:1.14:compile
+[DEBUG]          org.codehaus.plexus:plexus-classworlds:jar:2.2.3:compile
+[DEBUG]          org.sonatype.plexus:plexus-sec-dispatcher:jar:1.3:compile
+[DEBUG]             org.sonatype.plexus:plexus-cipher:jar:1.4:compile
+[DEBUG]       org.apache.maven:maven-plugin-api:jar:3.0:compile
+[DEBUG]       org.codehaus.plexus:plexus-utils:jar:2.0.4:compile
+[DEBUG]       org.codehaus.plexus:plexus-archiver:jar:1.2:compile
+[DEBUG]          org.codehaus.plexus:plexus-io:jar:1.0.1:compile
+[DEBUG]       org.eclipse.tycho:org.eclipse.osgi:jar:3.8.0.v20120123-1419:compile
+[DEBUG]       org.eclipse.tycho:sisu-equinox-embedder:jar:0.14.1:compile
+[DEBUG]          org.eclipse.tycho:sisu-equinox-api:jar:0.14.1:compile
+[DEBUG]       org.eclipse.tycho:tycho-metadata-model:jar:0.14.1:compile
+[DEBUG]          de.pdark:decentxml:jar:1.3:compile
+[DEBUG]       org.eclipse.tycho:tycho-embedder-api:jar:0.14.1:compile
+[DEBUG]          org.eclipse.tycho:org.eclipse.tycho.embedder.shared:jar:0.14.1:compile
+[DEBUG]       org.eclipse.tycho:org.eclipse.tycho.core.shared:jar:0.14.1:compile
+[DEBUG]    org.eclipse.tycho:tycho-p2-facade:jar:0.14.1:compile
+[DEBUG]       org.codehaus.plexus:plexus-component-annotations:jar:1.5.5:compile
+[DEBUG]       org.sonatype.sisu:sisu-inject-plexus:jar:1.4.2:compile
+[DEBUG]          org.sonatype.sisu:sisu-inject-bean:jar:1.4.2:compile
+[DEBUG]             org.sonatype.sisu:sisu-guice:jar:noaop:2.1.7:compile
+[DEBUG]       org.eclipse.tycho:org.eclipse.tycho.p2.resolver.shared:jar:0.14.1:compile
+[DEBUG]       org.eclipse.tycho:org.eclipse.tycho.p2.tools.shared:jar:0.14.1:compile
+[DEBUG] Created new class realm maven.api
+[DEBUG] Importing foreign packages into class realm maven.api
+[DEBUG]   Imported: org.apache.maven.wagon.events < plexus.core
+[DEBUG]   Imported: org.sonatype.aether.transfer < plexus.core
+[DEBUG]   Imported: org.apache.maven.exception < plexus.core
+[DEBUG]   Imported: org.sonatype.aether.metadata < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.util.xml.Xpp3Dom < plexus.core
+[DEBUG]   Imported: org.sonatype.aether.collection < plexus.core
+[DEBUG]   Imported: org.sonatype.aether.version < plexus.core
+[DEBUG]   Imported: org.apache.maven.monitor < plexus.core
+[DEBUG]   Imported: org.apache.maven.wagon.repository < plexus.core
+[DEBUG]   Imported: org.apache.maven.repository < plexus.core
+[DEBUG]   Imported: org.apache.maven.wagon.resource < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.logging < plexus.core
+[DEBUG]   Imported: org.apache.maven.profiles < plexus.core
+[DEBUG]   Imported: org.sonatype.aether.repository < plexus.core
+[DEBUG]   Imported: org.apache.maven.classrealm < plexus.core
+[DEBUG]   Imported: org.apache.maven.execution < plexus.core
+[DEBUG]   Imported: org.sonatype.aether.artifact < plexus.core
+[DEBUG]   Imported: org.sonatype.aether.spi < plexus.core
+[DEBUG]   Imported: org.apache.maven.reporting < plexus.core
+[DEBUG]   Imported: org.apache.maven.usability < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.container < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.component < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.util.xml.pull.XmlSerializer < plexus.core
+[DEBUG]   Imported: org.apache.maven.wagon.authentication < plexus.core
+[DEBUG]   Imported: org.apache.maven.lifecycle < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.classworlds < plexus.core
+[DEBUG]   Imported: org.sonatype.aether.graph < plexus.core
+[DEBUG]   Imported: org.sonatype.aether.* < plexus.core
+[DEBUG]   Imported: org.apache.maven.settings < plexus.core
+[DEBUG]   Imported: org.codehaus.classworlds < plexus.core
+[DEBUG]   Imported: org.sonatype.aether.impl < plexus.core
+[DEBUG]   Imported: org.apache.maven.wagon.* < plexus.core
+[DEBUG]   Imported: org.apache.maven.toolchain < plexus.core
+[DEBUG]   Imported: org.sonatype.aether.deployment < plexus.core
+[DEBUG]   Imported: org.apache.maven.wagon.observers < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.util.xml.pull.XmlPullParserException < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.util.xml.pull.XmlPullParser < plexus.core
+[DEBUG]   Imported: org.apache.maven.configuration < plexus.core
+[DEBUG]   Imported: org.apache.maven.cli < plexus.core
+[DEBUG]   Imported: org.sonatype.aether.installation < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.context < plexus.core
+[DEBUG]   Imported: org.apache.maven.wagon.authorization < plexus.core
+[DEBUG]   Imported: org.apache.maven.project < plexus.core
+[DEBUG]   Imported: org.apache.maven.rtinfo < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.lifecycle < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.configuration < plexus.core
+[DEBUG]   Imported: org.apache.maven.artifact < plexus.core
+[DEBUG]   Imported: org.apache.maven.model < plexus.core
+[DEBUG]   Imported: org.apache.maven.* < plexus.core
+[DEBUG]   Imported: org.apache.maven.wagon.proxy < plexus.core
+[DEBUG]   Imported: org.sonatype.aether.resolution < plexus.core
+[DEBUG]   Imported: org.apache.maven.plugin < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.* < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.personality < plexus.core
+[DEBUG] Populating class realm maven.api
+[DEBUG] Created new class realm extension>org.eclipse.tycho:tycho-maven-plugin:0.14.1
+[DEBUG] Importing foreign packages into class realm extension>org.eclipse.tycho:tycho-maven-plugin:0.14.1
+[DEBUG]   Imported:  < maven.api
+[DEBUG] Populating class realm extension>org.eclipse.tycho:tycho-maven-plugin:0.14.1
+[DEBUG]   Included: org.eclipse.tycho:tycho-maven-plugin:jar:0.14.1
+[DEBUG]   Included: org.eclipse.tycho:tycho-core:jar:0.14.1
+[DEBUG]   Included: org.sonatype.aether:aether-util:jar:1.7
+[DEBUG]   Included: org.codehaus.plexus:plexus-interpolation:jar:1.14
+[DEBUG]   Included: org.sonatype.plexus:plexus-sec-dispatcher:jar:1.3
+[DEBUG]   Included: org.sonatype.plexus:plexus-cipher:jar:1.4
+[DEBUG]   Included: org.codehaus.plexus:plexus-utils:jar:2.0.4
+[DEBUG]   Included: org.codehaus.plexus:plexus-archiver:jar:1.2
+[DEBUG]   Included: org.codehaus.plexus:plexus-io:jar:1.0.1
+[DEBUG]   Included: org.eclipse.tycho:org.eclipse.osgi:jar:3.8.0.v20120123-1419
+[DEBUG]   Included: org.eclipse.tycho:sisu-equinox-embedder:jar:0.14.1
+[DEBUG]   Included: org.eclipse.tycho:sisu-equinox-api:jar:0.14.1
+[DEBUG]   Included: org.eclipse.tycho:tycho-metadata-model:jar:0.14.1
+[DEBUG]   Included: de.pdark:decentxml:jar:1.3
+[DEBUG]   Included: org.eclipse.tycho:tycho-embedder-api:jar:0.14.1
+[DEBUG]   Included: org.eclipse.tycho:org.eclipse.tycho.embedder.shared:jar:0.14.1
+[DEBUG]   Included: org.eclipse.tycho:org.eclipse.tycho.core.shared:jar:0.14.1
+[DEBUG]   Included: org.eclipse.tycho:tycho-p2-facade:jar:0.14.1
+[DEBUG]   Included: org.codehaus.plexus:plexus-component-annotations:jar:1.5.5
+[DEBUG]   Included: org.sonatype.sisu:sisu-inject-bean:jar:1.4.2
+[DEBUG]   Included: org.sonatype.sisu:sisu-guice:jar:noaop:2.1.7
+[DEBUG]   Included: org.eclipse.tycho:org.eclipse.tycho.p2.resolver.shared:jar:0.14.1
+[DEBUG]   Included: org.eclipse.tycho:org.eclipse.tycho.p2.tools.shared:jar:0.14.1
+[DEBUG] Extension realms for project com.visualligence.g:com.visualligence.g:eclipse-test-plugin:1.0.0: [ClassRealm[extension>org.eclipse.tycho:tycho-maven-plugin:0.14.1, parent: sun.misc.Launcher$AppClassLoader@1cde100]]
+[DEBUG] Created new class realm project>com.visualligence.g:com.visualligence.g:1.0.0
+[DEBUG] Populating class realm project>com.visualligence.g:com.visualligence.g:1.0.0
+[DEBUG] Looking up lifecyle mappings for packaging eclipse-test-plugin from ClassRealm[project>com.visualligence.g:com.visualligence.g:1.0.0, parent: ClassRealm[maven.api, parent: null]]
+[WARNING] No explicit target runtime environment configuration. Build is platform dependent.
+Time to load bundles: 239
+[DEBUG] clear OSGi proxy settings
+[DEBUG] Could not find metadata org.fornax.toolsupport:fornax-oaw-m2-plugin:3.1.0-SNAPSHOT/maven-metadata.xml in local (/home/rober/.m2/repository)
+[DEBUG] Failure to find org.fornax.toolsupport:fornax-oaw-m2-plugin:3.1.0-SNAPSHOT/maven-metadata.xml in http://build.eclipse.org/common/xtend/maven/ was cached in the local repository, resolution will not be reattempted until the update interval of xtend has elapsed or updates are forced
+[DEBUG] Skipped remote update check for org.fornax.toolsupport:fornax-oaw-m2-plugin:3.1.0-SNAPSHOT/maven-metadata.xml, locally cached metadata up-to-date.
+[DEBUG] org.eclipse.tycho:tycho-p2-plugin:jar:0.14.1:
+[DEBUG]    org.apache.maven:maven-plugin-api:jar:3.0:compile
+[DEBUG]       org.apache.maven:maven-model:jar:3.0:compile
+[DEBUG]       org.apache.maven:maven-artifact:jar:3.0:compile
+[DEBUG]       org.sonatype.sisu:sisu-inject-plexus:jar:1.4.2:compile
+[DEBUG]          org.sonatype.sisu:sisu-inject-bean:jar:1.4.2:compile
+[DEBUG]             org.sonatype.sisu:sisu-guice:jar:noaop:2.1.7:compile
+[DEBUG]    org.apache.maven:maven-core:jar:3.0:compile
+[DEBUG]       org.apache.maven:maven-settings:jar:3.0:compile
+[DEBUG]       org.apache.maven:maven-settings-builder:jar:3.0:compile
+[DEBUG]       org.apache.maven:maven-repository-metadata:jar:3.0:compile
+[DEBUG]       org.apache.maven:maven-model-builder:jar:3.0:compile
+[DEBUG]       org.apache.maven:maven-aether-provider:jar:3.0:runtime
+[DEBUG]       org.sonatype.aether:aether-impl:jar:1.7:compile
+[DEBUG]          org.sonatype.aether:aether-spi:jar:1.7:compile
+[DEBUG]       org.sonatype.aether:aether-api:jar:1.7:compile
+[DEBUG]       org.sonatype.aether:aether-util:jar:1.7:compile
+[DEBUG]       org.codehaus.plexus:plexus-interpolation:jar:1.14:compile
+[DEBUG]       org.codehaus.plexus:plexus-utils:jar:2.0.4:compile
+[DEBUG]       org.codehaus.plexus:plexus-classworlds:jar:2.2.3:compile
+[DEBUG]       org.codehaus.plexus:plexus-component-annotations:jar:1.5.5:compile
+[DEBUG]       org.sonatype.plexus:plexus-sec-dispatcher:jar:1.3:compile
+[DEBUG]          org.sonatype.plexus:plexus-cipher:jar:1.4:compile
+[DEBUG]    org.eclipse.tycho:sisu-equinox-launching:jar:0.14.1:compile
+[DEBUG]       org.eclipse.tycho:tycho-core:jar:0.14.1:compile
+[DEBUG]          org.codehaus.plexus:plexus-archiver:jar:1.2:compile
+[DEBUG]             org.codehaus.plexus:plexus-io:jar:1.0.1:compile
+[DEBUG]          org.eclipse.tycho:tycho-metadata-model:jar:0.14.1:compile
+[DEBUG]             de.pdark:decentxml:jar:1.3:compile
+[DEBUG]          org.eclipse.tycho:tycho-embedder-api:jar:0.14.1:compile
+[DEBUG]             org.eclipse.tycho:org.eclipse.tycho.embedder.shared:jar:0.14.1:compile
+[DEBUG]          org.eclipse.tycho:org.eclipse.tycho.core.shared:jar:0.14.1:compile
+[DEBUG]       org.eclipse.tycho:sisu-equinox-api:jar:0.14.1:compile
+[DEBUG]    org.eclipse.tycho:tycho-p2-facade:jar:0.14.1:compile
+[DEBUG]       org.eclipse.tycho:org.eclipse.osgi:jar:3.8.0.v20120123-1419:compile
+[DEBUG]       org.eclipse.tycho:sisu-equinox-embedder:jar:0.14.1:compile
+[DEBUG]       org.eclipse.tycho:org.eclipse.tycho.p2.resolver.shared:jar:0.14.1:compile
+[DEBUG]       org.eclipse.tycho:org.eclipse.tycho.p2.tools.shared:jar:0.14.1:compile
+[DEBUG] Created new class realm plugin>org.eclipse.tycho:tycho-p2-plugin:0.14.1
+[DEBUG] Importing foreign packages into class realm plugin>org.eclipse.tycho:tycho-p2-plugin:0.14.1
+[DEBUG]   Imported:  < project>com.visualligence.g:com.visualligence.g:1.0.0
+[DEBUG] Populating class realm plugin>org.eclipse.tycho:tycho-p2-plugin:0.14.1
+[DEBUG]   Included: org.eclipse.tycho:tycho-p2-plugin:jar:0.14.1
+[DEBUG]   Included: org.sonatype.sisu:sisu-inject-bean:jar:1.4.2
+[DEBUG]   Included: org.sonatype.sisu:sisu-guice:jar:noaop:2.1.7
+[DEBUG]   Included: org.sonatype.aether:aether-util:jar:1.7
+[DEBUG]   Included: org.codehaus.plexus:plexus-interpolation:jar:1.14
+[DEBUG]   Included: org.codehaus.plexus:plexus-utils:jar:2.0.4
+[DEBUG]   Included: org.codehaus.plexus:plexus-component-annotations:jar:1.5.5
+[DEBUG]   Included: org.sonatype.plexus:plexus-sec-dispatcher:jar:1.3
+[DEBUG]   Included: org.sonatype.plexus:plexus-cipher:jar:1.4
+[DEBUG]   Included: org.eclipse.tycho:sisu-equinox-launching:jar:0.14.1
+[DEBUG]   Included: org.codehaus.plexus:plexus-archiver:jar:1.2
+[DEBUG]   Included: org.codehaus.plexus:plexus-io:jar:1.0.1
+[DEBUG]   Excluded: org.apache.maven:maven-plugin-api:jar:3.0
+[DEBUG]   Excluded: org.apache.maven:maven-model:jar:3.0
+[DEBUG]   Excluded: org.apache.maven:maven-artifact:jar:3.0
+[DEBUG]   Excluded: org.sonatype.sisu:sisu-inject-plexus:jar:1.4.2
+[DEBUG]   Excluded: org.apache.maven:maven-core:jar:3.0
+[DEBUG]   Excluded: org.apache.maven:maven-settings:jar:3.0
+[DEBUG]   Excluded: org.apache.maven:maven-settings-builder:jar:3.0
+[DEBUG]   Excluded: org.apache.maven:maven-repository-metadata:jar:3.0
+[DEBUG]   Excluded: org.apache.maven:maven-model-builder:jar:3.0
+[DEBUG]   Excluded: org.apache.maven:maven-aether-provider:jar:3.0
+[DEBUG]   Excluded: org.sonatype.aether:aether-impl:jar:1.7
+[DEBUG]   Excluded: org.sonatype.aether:aether-spi:jar:1.7
+[DEBUG]   Excluded: org.sonatype.aether:aether-api:jar:1.7
+[DEBUG]   Excluded: org.codehaus.plexus:plexus-classworlds:jar:2.2.3
+[DEBUG]   Excluded: org.eclipse.tycho:tycho-core:jar:0.14.1
+[DEBUG]   Excluded: org.eclipse.tycho:tycho-metadata-model:jar:0.14.1
+[DEBUG]   Excluded: de.pdark:decentxml:jar:1.3
+[DEBUG]   Excluded: org.eclipse.tycho:tycho-embedder-api:jar:0.14.1
+[DEBUG]   Excluded: org.eclipse.tycho:org.eclipse.tycho.embedder.shared:jar:0.14.1
+[DEBUG]   Excluded: org.eclipse.tycho:org.eclipse.tycho.core.shared:jar:0.14.1
+[DEBUG]   Excluded: org.eclipse.tycho:sisu-equinox-api:jar:0.14.1
+[DEBUG]   Excluded: org.eclipse.tycho:tycho-p2-facade:jar:0.14.1
+[DEBUG]   Excluded: org.eclipse.tycho:org.eclipse.osgi:jar:3.8.0.v20120123-1419
+[DEBUG]   Excluded: org.eclipse.tycho:sisu-equinox-embedder:jar:0.14.1
+[DEBUG]   Excluded: org.eclipse.tycho:org.eclipse.tycho.p2.resolver.shared:jar:0.14.1
+[DEBUG]   Excluded: org.eclipse.tycho:org.eclipse.tycho.p2.tools.shared:jar:0.14.1
+[INFO] Computing target platform for MavenProject: com.visualligence.g:com.visualligence.g:1.0.0 @ /home/rober/git/com.visualligence.g/pom.xml
+[INFO] Fetching p2.index (0B of 96B at 0B/s) from http://download.eclipse.org/releases/indigo/
+[INFO] 1 operation remaining.
+[INFO] Fetching p2.index (128B of 96B at 0B/s) from http://download.eclipse.org/releases/indigo/
+[INFO] Adding repository http://download.eclipse.org/releases/indigo
+[INFO] Fetching p2.index (0B of 98B at 0B/s) from http://download.eclipse.org/technology/epp/packages/indigo/
+[INFO] 1 operation remaining.
+[INFO] Fetching p2.index (131B of 98B at 0B/s) from http://download.eclipse.org/technology/epp/packages/indigo/
+[INFO] Fetching p2.index (0B of 93B at 0B/s) from http://download.eclipse.org/releases/indigo/201202240900/
+[INFO] Fetching p2.index (119B of 93B at 0B/s) from http://download.eclipse.org/releases/indigo/201202240900/
+[INFO] 1 operation remaining.
+[INFO] Fetching p2.index (0B of 93B at 0B/s) from http://download.eclipse.org/releases/indigo/201109230900/
+[INFO] 1 operation remaining.
+[INFO] Fetching p2.index (119B of 93B at 0B/s) from http://download.eclipse.org/releases/indigo/201109230900/
+[INFO] Fetching p2.index (0B of 93B at 0B/s) from http://download.eclipse.org/releases/indigo/201106220900/
+[INFO] 1 operation remaining.
+[INFO] Fetching p2.index (119B of 93B at 0B/s) from http://download.eclipse.org/releases/indigo/201106220900/
+[INFO] Fetching p2.index (0B of 96B at 0B/s) from http://download.eclipse.org/releases/indigo/
+[INFO] 1 operation remaining.
+[INFO] Fetching p2.index (128B of 96B at 0B/s) from http://download.eclipse.org/releases/indigo/
+[INFO] Adding repository http://download.eclipse.org/releases/indigo
+[INFO] Fetching p2.index (0B of 98B at 0B/s) from http://download.eclipse.org/technology/epp/packages/indigo/
+[INFO] 1 operation remaining.
+[INFO] Fetching p2.index (131B of 98B at 0B/s) from http://download.eclipse.org/technology/epp/packages/indigo/
+[INFO] Fetching p2.index (0B of 93B at 0B/s) from http://download.eclipse.org/releases/indigo/201202240900/
+[INFO] Fetching p2.index (119B of 93B at 0B/s) from http://download.eclipse.org/releases/indigo/201202240900/
+[INFO] 1 operation remaining.
+[INFO] Fetching p2.index (0B of 93B at 0B/s) from http://download.eclipse.org/releases/indigo/201109230900/
+[INFO] 1 operation remaining.
+[INFO] Fetching p2.index (119B of 93B at 0B/s) from http://download.eclipse.org/releases/indigo/201109230900/
+[INFO] Fetching p2.index (0B of 93B at 0B/s) from http://download.eclipse.org/releases/indigo/201106220900/
+[INFO] 1 operation remaining.
+[INFO] Fetching p2.index (119B of 93B at 0B/s) from http://download.eclipse.org/releases/indigo/201106220900/
+[DEBUG] Added p2 repository eclipse-platform (http://download.eclipse.org/releases/indigo)
+[INFO] Fetching p2.index (0B of 99B at 0B/s) from http://download.eclipse.org/modeling/tmf/xtext/updates/composite/releases/
+[INFO] 1 operation remaining.
+[INFO] Fetching p2.index (134B of 99B at 0B/s) from http://download.eclipse.org/modeling/tmf/xtext/updates/composite/releases/
+[INFO] Adding repository http://download.eclipse.org/modeling/tmf/xtext/updates/composite/releases
+[INFO] Fetching p2.index (0B of 99B at 0B/s) from http://download.eclipse.org/modeling/emft/mwe/updates/releases/
+[INFO] 1 operation remaining.
+[INFO] Fetching p2.index (134B of 99B at 0B/s) from http://download.eclipse.org/modeling/emft/mwe/updates/releases/
+[INFO] Fetching p2.index (0B of 99B at 0B/s) from http://download.eclipse.org/modeling/m2t/xpand/updates/releases/
+[INFO] Fetching p2.index (134B of 99B at 0B/s) from http://download.eclipse.org/modeling/m2t/xpand/updates/releases/
+[INFO] 1 operation remaining.
+[INFO] Fetching p2.index (0B of 99B at 0B/s) from http://download.eclipse.org/modeling/tmf/xtext/updates/releases/
+[INFO] Fetching p2.index (134B of 99B at 0B/s) from http://download.eclipse.org/modeling/tmf/xtext/updates/releases/
+[INFO] Fetching p2.index (0B of 99B at 0B/s) from http://download.eclipse.org/modeling/tmf/xtext/updates/composite/releases/
+[INFO] Fetching p2.index (134B of 99B at 0B/s) from http://download.eclipse.org/modeling/tmf/xtext/updates/composite/releases/
+[INFO] 1 operation remaining.
+[INFO] Adding repository http://download.eclipse.org/modeling/tmf/xtext/updates/composite/releases
+[INFO] Fetching p2.index (0B of 99B at 0B/s) from http://download.eclipse.org/modeling/emft/mwe/updates/releases/
+[INFO] Fetching p2.index (134B of 99B at 0B/s) from http://download.eclipse.org/modeling/emft/mwe/updates/releases/
+[INFO] 1 operation remaining.
+[INFO] Fetching p2.index (0B of 99B at 0B/s) from http://download.eclipse.org/modeling/m2t/xpand/updates/releases/
+[INFO] Fetching p2.index (134B of 99B at 0B/s) from http://download.eclipse.org/modeling/m2t/xpand/updates/releases/
+[INFO] 1 operation remaining.
+[INFO] Fetching p2.index (0B of 99B at 0B/s) from http://download.eclipse.org/modeling/tmf/xtext/updates/releases/
+[INFO] Fetching p2.index (134B of 99B at 0B/s) from http://download.eclipse.org/modeling/tmf/xtext/updates/releases/
+[INFO] 1 operation remaining.
+[DEBUG] Added p2 repository xtext-composite (http://download.eclipse.org/modeling/tmf/xtext/updates/composite/releases)
+[DEBUG] Registered artifact repository org.eclipse.tycho.repository.registry.facade.RepositoryBlackboardKey(uri=file:/resolution-context-artifacts@/home/rober/git/com.visualligence.g)
+[DEBUG] Added 1 locally built units to the target platform
+[INFO] Resolving dependencies of MavenProject: com.visualligence.g:com.visualligence.g:1.0.0 @ /home/rober/git/com.visualligence.g/pom.xml
+[WARNING] The following locally built units have been used to resolve project dependencies:
+[WARNING]   com.visualligence.g/1.0.0
+[INFO] Resolving class path of MavenProject: com.visualligence.g:com.visualligence.g:1.0.0 @ /home/rober/git/com.visualligence.g/pom.xml
+[DEBUG] Bundle-ClassPath entry runtime_registry_compatibility.jar does not exist in/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.equinox.registry/3.5.101.R37x_v20110810-1611/org.eclipse.equinox.registry-3.5.101.R37x_v20110810-1611.jar
+[DEBUG] Bundle-ClassPath entry tools.jar does not exist in/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.jdt.debug/3.7.1.v20111006_r372/org.eclipse.jdt.debug-3.7.1.v20111006_r372.jar
+[DEBUG] Bundle-ClassPath entry icu-data.jar does not exist in/home/rober/.m2/repository/p2/osgi/bundle/com.ibm.icu/4.4.2.v20110823/com.ibm.icu-4.4.2.v20110823.jar
+[DEBUG] Bundle-ClassPath entry e4-workbench.jar does not exist in/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.ui.workbench/3.7.1.v20120104-1859/org.eclipse.ui.workbench-3.7.1.v20120104-1859.jar
+[DEBUG] Bundle-ClassPath entry compatibility.jar does not exist in/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.ui.workbench/3.7.1.v20120104-1859/org.eclipse.ui.workbench-3.7.1.v20120104-1859.jar
+[DEBUG] Bundle-ClassPath entry e4-ide.jar does not exist in/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.ui.ide/3.7.0.v20110928-1505/org.eclipse.ui.ide-3.7.0.v20110928-1505.jar
+[DEBUG] Bundle-ClassPath entry e4-ide.jar does not exist in/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.ui.ide/3.7.0.v20110928-1505/org.eclipse.ui.ide-3.7.0.v20110928-1505.jar
+[DEBUG] Bundle-ClassPath entry icu-data.jar does not exist in/home/rober/.m2/repository/p2/osgi/bundle/com.ibm.icu/4.4.2.v20110823/com.ibm.icu-4.4.2.v20110823.jar
+[DEBUG] Bundle-ClassPath entry runtime_registry_compatibility.jar does not exist in/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.equinox.registry/3.5.101.R37x_v20110810-1611/org.eclipse.equinox.registry-3.5.101.R37x_v20110810-1611.jar
+[DEBUG] Bundle-ClassPath entry e4-workbench.jar does not exist in/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.ui.workbench/3.7.1.v20120104-1859/org.eclipse.ui.workbench-3.7.1.v20120104-1859.jar
+[DEBUG] Bundle-ClassPath entry compatibility.jar does not exist in/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.ui.workbench/3.7.1.v20120104-1859/org.eclipse.ui.workbench-3.7.1.v20120104-1859.jar
+[DEBUG] Bundle-ClassPath entry tools.jar does not exist in/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.jdt.debug/3.7.1.v20111006_r372/org.eclipse.jdt.debug-3.7.1.v20111006_r372.jar
+[DEBUG] === REACTOR BUILD PLAN ================================================
+[DEBUG] Project: com.visualligence.g:com.visualligence.g:eclipse-test-plugin:1.0.0
+[DEBUG] Tasks:   [install]
+[DEBUG] Style:   Regular
+[DEBUG] =======================================================================
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building com.visualligence.g 1.0.0
+[INFO] ------------------------------------------------------------------------
+[DEBUG] Lifecycle default -> [validate, initialize, generate-sources, process-sources, generate-resources, process-resources, compile, process-classes, generate-test-sources, process-test-sources, generate-test-resources, process-test-resources, test-compile, process-test-classes, test, prepare-package, package, pre-integration-test, integration-test, post-integration-test, verify, install, deploy]
+[DEBUG] Lifecycle clean -> [pre-clean, clean, post-clean]
+[DEBUG] Lifecycle site -> [pre-site, site, post-site, site-deploy]
+[DEBUG] Lifecycle default -> [validate, initialize, generate-sources, process-sources, generate-resources, process-resources, compile, process-classes, generate-test-sources, process-test-sources, generate-test-resources, process-test-resources, test-compile, process-test-classes, test, prepare-package, package, pre-integration-test, integration-test, post-integration-test, verify, install, deploy]
+[DEBUG] Lifecycle clean -> [pre-clean, clean, post-clean]
+[DEBUG] Lifecycle site -> [pre-site, site, post-site, site-deploy]
+[DEBUG] Lifecycle default -> [validate, initialize, generate-sources, process-sources, generate-resources, process-resources, compile, process-classes, generate-test-sources, process-test-sources, generate-test-resources, process-test-resources, test-compile, process-test-classes, test, prepare-package, package, pre-integration-test, integration-test, post-integration-test, verify, install, deploy]
+[DEBUG] Lifecycle clean -> [pre-clean, clean, post-clean]
+[DEBUG] Lifecycle site -> [pre-site, site, post-site, site-deploy]
+[DEBUG] Lifecycle default -> [validate, initialize, generate-sources, process-sources, generate-resources, process-resources, compile, process-classes, generate-test-sources, process-test-sources, generate-test-resources, process-test-resources, test-compile, process-test-classes, test, prepare-package, package, pre-integration-test, integration-test, post-integration-test, verify, install, deploy]
+[DEBUG] Lifecycle clean -> [pre-clean, clean, post-clean]
+[DEBUG] Lifecycle site -> [pre-site, site, post-site, site-deploy]
+[DEBUG] Lifecycle default -> [validate, initialize, generate-sources, process-sources, generate-resources, process-resources, compile, process-classes, generate-test-sources, process-test-sources, generate-test-resources, process-test-resources, test-compile, process-test-classes, test, prepare-package, package, pre-integration-test, integration-test, post-integration-test, verify, install, deploy]
+[DEBUG] Lifecycle clean -> [pre-clean, clean, post-clean]
+[DEBUG] Lifecycle site -> [pre-site, site, post-site, site-deploy]
+[DEBUG] Lifecycle default -> [validate, initialize, generate-sources, process-sources, generate-resources, process-resources, compile, process-classes, generate-test-sources, process-test-sources, generate-test-resources, process-test-resources, test-compile, process-test-classes, test, prepare-package, package, pre-integration-test, integration-test, post-integration-test, verify, install, deploy]
+[DEBUG] Lifecycle clean -> [pre-clean, clean, post-clean]
+[DEBUG] Lifecycle site -> [pre-site, site, post-site, site-deploy]
+[DEBUG] Lifecycle default -> [validate, initialize, generate-sources, process-sources, generate-resources, process-resources, compile, process-classes, generate-test-sources, process-test-sources, generate-test-resources, process-test-resources, test-compile, process-test-classes, test, prepare-package, package, pre-integration-test, integration-test, post-integration-test, verify, install, deploy]
+[DEBUG] Lifecycle clean -> [pre-clean, clean, post-clean]
+[DEBUG] Lifecycle site -> [pre-site, site, post-site, site-deploy]
+[DEBUG] Lifecycle default -> [validate, initialize, generate-sources, process-sources, generate-resources, process-resources, compile, process-classes, generate-test-sources, process-test-sources, generate-test-resources, process-test-resources, test-compile, process-test-classes, test, prepare-package, package, pre-integration-test, integration-test, post-integration-test, verify, install, deploy]
+[DEBUG] Lifecycle clean -> [pre-clean, clean, post-clean]
+[DEBUG] Lifecycle site -> [pre-site, site, post-site, site-deploy]
+[DEBUG] Lifecycle default -> [validate, initialize, generate-sources, process-sources, generate-resources, process-resources, compile, process-classes, generate-test-sources, process-test-sources, generate-test-resources, process-test-resources, test-compile, process-test-classes, test, prepare-package, package, pre-integration-test, integration-test, post-integration-test, verify, install, deploy]
+[DEBUG] Lifecycle clean -> [pre-clean, clean, post-clean]
+[DEBUG] Lifecycle site -> [pre-site, site, post-site, site-deploy]
+[DEBUG] Lifecycle default -> [validate, initialize, generate-sources, process-sources, generate-resources, process-resources, compile, process-classes, generate-test-sources, process-test-sources, generate-test-resources, process-test-resources, test-compile, process-test-classes, test, prepare-package, package, pre-integration-test, integration-test, post-integration-test, verify, install, deploy]
+[DEBUG] Lifecycle clean -> [pre-clean, clean, post-clean]
+[DEBUG] Lifecycle site -> [pre-site, site, post-site, site-deploy]
+[DEBUG] Lifecycle default -> [validate, initialize, generate-sources, process-sources, generate-resources, process-resources, compile, process-classes, generate-test-sources, process-test-sources, generate-test-resources, process-test-resources, test-compile, process-test-classes, test, prepare-package, package, pre-integration-test, integration-test, post-integration-test, verify, install, deploy]
+[DEBUG] Lifecycle clean -> [pre-clean, clean, post-clean]
+[DEBUG] Lifecycle site -> [pre-site, site, post-site, site-deploy]
+[DEBUG] === PROJECT BUILD PLAN ================================================
+[DEBUG] Project:       com.visualligence.g:com.visualligence.g:1.0.0
+[DEBUG] Dependencies (collect): []
+[DEBUG] Dependencies (resolve): [compile, runtime, test]
+[DEBUG] Repositories (dependencies): [eclipse-platform (http://download.eclipse.org/releases/indigo, disabled), xtext-composite (http://download.eclipse.org/modeling/tmf/xtext/updates/composite/releases, disabled), xtend (http://build.eclipse.org/common/xtend/maven/, releases+snapshots), central (http://repo.maven.apache.org/maven2, releases)]
+[DEBUG] Repositories (plugins)     : [xtend (http://build.eclipse.org/common/xtend/maven/, releases+snapshots), fornax.plugin.repository (http://www.fornax-platform.org/m2/repository, releases+snapshots), central (http://repo.maven.apache.org/maven2, releases)]
+[DEBUG] -----------------------------------------------------------------------
+[DEBUG] Goal:          org.eclipse.tycho:tycho-packaging-plugin:0.14.1:build-qualifier (default-build-qualifier)
+[DEBUG] Style:         Regular
+[DEBUG] Configuration: <?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <baseDir default-value="${project.basedir}"/>
+  <forceContextQualifier>${forceContextQualifier}</forceContextQualifier>
+  <format default-value="yyyyMMddHHmm"/>
+  <packaging default-value="${project.packaging}"/>
+  <project default-value="${project}"/>
+  <session>${session}</session>
+</configuration>
+[DEBUG] -----------------------------------------------------------------------
+[DEBUG] Goal:          org.eclipse.tycho:tycho-packaging-plugin:0.14.1:validate-id (default-validate-id)
+[DEBUG] Style:         Regular
+[DEBUG] Configuration: <?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <packaging default-value="${project.packaging}"/>
+  <project default-value="${project}"/>
+</configuration>
+[DEBUG] -----------------------------------------------------------------------
+[DEBUG] Goal:          org.eclipse.tycho:tycho-packaging-plugin:0.14.1:validate-version (default-validate-version)
+[DEBUG] Style:         Regular
+[DEBUG] Configuration: <?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <packaging default-value="${project.packaging}"/>
+  <project default-value="${project}"/>
+  <strictVersions default-value="true"/>
+</configuration>
+[DEBUG] --- init fork of com.visualligence.g:com.visualligence.g:1.0.0 for org.fornax.toolsupport:fornax-oaw-m2-plugin:3.1.0-SNAPSHOT:run-workflow (default) ---
+[DEBUG] Dependencies (collect): []
+[DEBUG] Dependencies (resolve): []
+[DEBUG] --- exit fork of com.visualligence.g:com.visualligence.g:1.0.0 for org.fornax.toolsupport:fornax-oaw-m2-plugin:3.1.0-SNAPSHOT:run-workflow (default) ---
+[DEBUG] -----------------------------------------------------------------------
+[DEBUG] Goal:          org.fornax.toolsupport:fornax-oaw-m2-plugin:3.1.0-SNAPSHOT:run-workflow (default)
+[DEBUG] Style:         Regular
+[DEBUG] Configuration: <?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <defaultOawResourceDir default-value="oaw-generator"/>
+  <dependencies default-value="${project.artifacts}"/>
+  <outletResDir default-value="src/generated/resources"/>
+  <outletResOnceDir default-value="src/main/resources"/>
+  <outletResProtectedDir default-value="src/protected/resources"/>
+  <outletResTestDir default-value="src/test/generated/resources"/>
+  <outletResTestOnceDir default-value="src/testgenerated/java"/>
+  <outletResTestProtectedDir default-value="src/test/protected/resources"/>
+  <outletSrcDir default-value="src/generated/java"/>
+  <outletSrcOnceDir>${project.build.sourceDirectory}</outletSrcOnceDir>
+  <outletSrcProtectedDir default-value="src/protected/java"/>
+  <outletSrcTestDir default-value="src/test/generated/java"/>
+  <outletSrcTestOnceDir>${project.build.testSourceDirectory}</outletSrcTestOnceDir>
+  <outletSrcTestProtectedDir default-value="src/test/protected/java"/>
+  <project>${project}</project>
+  <timestampFileName default-value="oaw-generation-lastrun.timestamp"/>
+  <workflowDescriptor default-value="workflow.mwe2">src/com/visualligence/g/GenerateVML.mwe2</workflowDescriptor>
+  <workflowEngine default-value="mwe2">mwe2</workflowEngine>
+</configuration>
+[DEBUG] -----------------------------------------------------------------------
+[DEBUG] Goal:          org.codehaus.mojo:build-helper-maven-plugin:1.7:add-source (add-source)
+[DEBUG] Style:         Regular
+[DEBUG] Configuration: <?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <project>${project}</project>
+  <sources>
+    <source>xtend-gen</source>
+  </sources>
+</configuration>
+[DEBUG] -----------------------------------------------------------------------
+[DEBUG] Goal:          org.eclipse.xtend2:xtend-maven-plugin:2.2.0:compile (default)
+[DEBUG] Style:         Regular
+[DEBUG] Configuration: <?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <outputDirectory default-value="${basedir}/src/main/xtend-gen">xtend-gen</outputDirectory>
+  <project>${project}</project>
+  <tempDirectory default-value="${project.build.directory}/xtend"/>
+</configuration>
+[DEBUG] -----------------------------------------------------------------------
+[DEBUG] Goal:          org.apache.maven.plugins:maven-resources-plugin:2.4.3:resources (default-resources)
+[DEBUG] Style:         Regular
+[DEBUG] Configuration: <?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <buildFilters default-value="${project.build.filters}"/>
+  <encoding default-value="${project.build.sourceEncoding}">${encoding}</encoding>
+  <escapeString default-value="${maven.resources.escapeString}"/>
+  <escapeWindowsPaths default-value="true">${maven.resources.escapeWindowsPaths}</escapeWindowsPaths>
+  <includeEmptyDirs default-value="false">${maven.resources.includeEmptyDirs}</includeEmptyDirs>
+  <outputDirectory default-value="${project.build.outputDirectory}"/>
+  <overwrite default-value="false">${maven.resources.overwrite}</overwrite>
+  <project default-value="${project}"/>
+  <resources default-value="${project.resources}"/>
+  <session default-value="${session}"/>
+  <useBuildFilters default-value="true"/>
+  <useDefaultDelimiters default-value="true"/>
+</configuration>
+[DEBUG] -----------------------------------------------------------------------
+[DEBUG] Goal:          org.eclipse.tycho:tycho-compiler-plugin:0.14.1:compile (default-compile)
+[DEBUG] Style:         Regular
+[DEBUG] Configuration: <?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <basedir>${basedir}</basedir>
+  <buildDirectory>${project.build.directory}</buildDirectory>
+  <compilerId default-value="jdt">${maven.compiler.compilerId}</compilerId>
+  <compilerVersion>${maven.compiler.compilerVersion}</compilerVersion>
+  <debug default-value="true">${maven.compiler.debug}</debug>
+  <encoding>${maven.compiler.encoding}</encoding>
+  <executable>${maven.compiler.executable}</executable>
+  <fork default-value="false"/>
+  <maxmem>${maven.compiler.maxmem}</maxmem>
+  <meminitial>${maven.compiler.meminitial}</meminitial>
+  <optimize default-value="false">${maven.compiler.optimize}</optimize>
+  <outputFileName>${project.build.finalName}</outputFileName>
+  <project>${project}</project>
+  <session>${session}</session>
+  <showDeprecation default-value="false">${maven.compiler.showDeprecation}</showDeprecation>
+  <showWarnings default-value="false">${maven.compiler.showWarnings}</showWarnings>
+  <source>${maven.compiler.source}</source>
+  <staleMillis default-value="0">${lastModGranularityMs}</staleMillis>
+  <target>${maven.compiler.target}</target>
+  <useJDK default-value="SYSTEM"/>
+  <verbose default-value="false">${maven.compiler.verbose}</verbose>
+</configuration>
+[DEBUG] -----------------------------------------------------------------------
+[DEBUG] Goal:          org.eclipse.xtend2:xtend-maven-plugin:2.2.0:testCompile (default)
+[DEBUG] Style:         Regular
+[DEBUG] Configuration: <?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <project>${project}</project>
+  <testOutputDirectory default-value="${basedir}/src/test/xtend-gen"/>
+  <testTempDirectory default-value="${project.build.directory}/xtend-test"/>
+</configuration>
+[DEBUG] -----------------------------------------------------------------------
+[DEBUG] Goal:          org.apache.maven.plugins:maven-resources-plugin:2.4.3:testResources (default-testResources)
+[DEBUG] Style:         Regular
+[DEBUG] Configuration: <?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <buildFilters default-value="${project.build.filters}"/>
+  <encoding default-value="${project.build.sourceEncoding}">${encoding}</encoding>
+  <escapeString default-value="${maven.resources.escapeString}"/>
+  <escapeWindowsPaths default-value="true">${maven.resources.escapeWindowsPaths}</escapeWindowsPaths>
+  <includeEmptyDirs default-value="false">${maven.resources.includeEmptyDirs}</includeEmptyDirs>
+  <outputDirectory>${project.build.testOutputDirectory}</outputDirectory>
+  <overwrite default-value="false">${maven.resources.overwrite}</overwrite>
+  <project default-value="${project}"/>
+  <resources>${project.testResources}</resources>
+  <session default-value="${session}"/>
+  <useBuildFilters default-value="true"/>
+  <useDefaultDelimiters default-value="true"/>
+</configuration>
+[DEBUG] -----------------------------------------------------------------------
+[DEBUG] Goal:          org.eclipse.tycho:tycho-compiler-plugin:0.14.1:testCompile (default-testCompile)
+[DEBUG] Style:         Regular
+[DEBUG] Configuration: <?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <basedir>${basedir}</basedir>
+  <buildDirectory>${project.build.directory}</buildDirectory>
+  <compilerId default-value="jdt">${maven.compiler.compilerId}</compilerId>
+  <compilerVersion>${maven.compiler.compilerVersion}</compilerVersion>
+  <debug default-value="true">${maven.compiler.debug}</debug>
+  <encoding>${maven.compiler.encoding}</encoding>
+  <executable>${maven.compiler.executable}</executable>
+  <fork default-value="false"/>
+  <maxmem>${maven.compiler.maxmem}</maxmem>
+  <meminitial>${maven.compiler.meminitial}</meminitial>
+  <optimize default-value="false">${maven.compiler.optimize}</optimize>
+  <outputDirectory>${project.build.outputDirectory}</outputDirectory>
+  <outputFileName>${project.build.finalName}</outputFileName>
+  <project>${project}</project>
+  <session>${session}</session>
+  <showDeprecation default-value="false">${maven.compiler.showDeprecation}</showDeprecation>
+  <showWarnings default-value="false">${maven.compiler.showWarnings}</showWarnings>
+  <source>${maven.compiler.source}</source>
+  <staleMillis default-value="0">${lastModGranularityMs}</staleMillis>
+  <target>${maven.compiler.target}</target>
+  <useJDK default-value="SYSTEM"/>
+  <verbose default-value="false">${maven.compiler.verbose}</verbose>
+</configuration>
+[DEBUG] -----------------------------------------------------------------------
+[DEBUG] Goal:          org.eclipse.tycho:tycho-packaging-plugin:0.14.1:package-plugin (default-package-plugin)
+[DEBUG] Style:         Regular
+[DEBUG] Configuration: <?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <buildDirectory>${project.build.directory}</buildDirectory>
+  <finalName>${project.build.finalName}</finalName>
+  <project>${project}</project>
+  <qualifier>${buildQualifier}</qualifier>
+  <session>${session}</session>
+  <strictBinIncludes default-value="true"/>
+  <useDefaultExcludes default-value="true"/>
+</configuration>
+[DEBUG] -----------------------------------------------------------------------
+[DEBUG] Goal:          org.eclipse.tycho:tycho-p2-plugin:0.14.1:p2-metadata (default-p2-metadata)
+[DEBUG] Style:         Regular
+[DEBUG] Configuration: <?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <attachP2Metadata default-value="true"/>
+  <project>${project}</project>
+</configuration>
+[DEBUG] -----------------------------------------------------------------------
+[DEBUG] Goal:          org.eclipse.tycho:tycho-surefire-plugin:0.14.1:test (default-test)
+[DEBUG] Style:         Regular
+[DEBUG] Configuration: <?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <argLine>${tycho.testArgLine}</argLine>
+  <debugPort>${debugPort}</debugPort>
+  <devProperties>${project.build.directory}/dev.properties</devProperties>
+  <failIfNoTests default-value="true">${failIfNoTests}</failIfNoTests>
+  <forkedProcessTimeoutInSeconds>${surefire.timeout}</forkedProcessTimeoutInSeconds>
+  <pluginArtifacts>${plugin.artifacts}</pluginArtifacts>
+  <project>${project}</project>
+  <redirectTestOutputToFile default-value="false">${maven.test.redirectTestOutputToFile}</redirectTestOutputToFile>
+  <reportsDirectory>${project.build.directory}/surefire-reports</reportsDirectory>
+  <session>${session}</session>
+  <showEclipseLog default-value="false">${tycho.showEclipseLog}</showEclipseLog>
+  <skip default-value="false">${maven.test.skip}</skip>
+  <skipExec default-value="false">${maven.test.skipExec}</skipExec>
+  <skipTests default-value="false">${skipTests}</skipTests>
+  <surefireProperties>${project.build.directory}/surefire.properties</surefireProperties>
+  <test>${test}</test>
+  <testClass>${testClass}</testClass>
+  <testClassesDirectory>${project.build.outputDirectory}</testClassesDirectory>
+  <testFailureIgnore default-value="false">${maven.test.failure.ignore}</testFailureIgnore>
+  <testSuite>${testSuite}</testSuite>
+  <useUIHarness default-value="false"/>
+  <useUIThread default-value="true"/>
+  <work default-value="${project.build.directory}/work"/>
+</configuration>
+[DEBUG] -----------------------------------------------------------------------
+[DEBUG] Goal:          org.apache.maven.plugins:maven-install-plugin:2.3.1:install (default-install)
+[DEBUG] Style:         Regular
+[DEBUG] Configuration: <?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <artifact default-value="${project.artifact}"/>
+  <attachedArtifacts default-value="${project.attachedArtifacts}"/>
+  <createChecksum default-value="false">${createChecksum}</createChecksum>
+  <localRepository>${localRepository}</localRepository>
+  <packaging default-value="${project.packaging}"/>
+  <pomFile default-value="${project.file}"/>
+  <updateReleaseInfo default-value="false">${updateReleaseInfo}</updateReleaseInfo>
+</configuration>
+[DEBUG] -----------------------------------------------------------------------
+[DEBUG] Goal:          org.eclipse.tycho:tycho-p2-plugin:0.14.1:update-local-index (default-update-local-index)
+[DEBUG] Style:         Regular
+[DEBUG] Configuration: <?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <project>${project}</project>
+</configuration>
+[DEBUG] =======================================================================
+[DEBUG] com.visualligence.g:com.visualligence.g:eclipse-test-plugin:1.0.0
+[DEBUG]    p2.eclipse-plugin:com.google.inject:jar:3.0.0.no_aop:system
+[DEBUG]    p2.eclipse-plugin:javax.inject:jar:1.0.0.v20091030:system
+[DEBUG]    p2.eclipse-plugin:org.eclipse.xtext:jar:2.2.1.v201112130541:system
+[DEBUG]    p2.eclipse-plugin:org.apache.log4j:jar:1.2.15.v201012070815:system
+[DEBUG]    p2.eclipse-plugin:org.apache.commons.logging:jar:1.1.1.v201101211721:system
+[DEBUG]    p2.eclipse-plugin:org.eclipse.xtext.generator:jar:2.2.1.v201112130541:system
+[DEBUG]    p2.eclipse-plugin:org.eclipse.emf.codegen.ecore:jar:2.7.0.v20120130-0943:system
+[DEBUG]    p2.eclipse-plugin:org.eclipse.emf.mwe.utils:jar:1.2.1.v201112070431:system
+[DEBUG]    p2.eclipse-plugin:org.eclipse.emf.mwe2.launch:jar:2.2.0.v201112071250:system
+[DEBUG]    p2.eclipse-plugin:org.eclipse.xtext.util:jar:2.2.1.v201112130541:system
+[DEBUG]    p2.eclipse-plugin:org.eclipse.xtext.junit4:jar:2.2.1.v201112130541:system
+[DEBUG]    p2.eclipse-plugin:org.eclipse.xtext.ui.junit:jar:2.2.1.v201112130541:system
+[DEBUG]    p2.eclipse-plugin:org.junit4:jar:4.8.1.v20100525:system
+[DEBUG]    p2.eclipse-plugin:org.eclipse.emf.ecore:jar:2.7.0.v20120127-1122:system
+[DEBUG]    p2.eclipse-plugin:org.eclipse.emf.common:jar:2.7.0.v20120127-1122:system
+[DEBUG]    p2.eclipse-plugin:org.antlr.runtime:jar:3.2.0.v201101311130:system
+[DEBUG]    p2.eclipse-plugin:org.eclipse.xtext.common.types:jar:2.2.1.v201112130541:system
+[DEBUG]    p2.eclipse-plugin:org.eclipse.xtext.common.types.ui:jar:2.2.1.v201112130541:system
+[DEBUG]    p2.eclipse-plugin:org.eclipse.xtext.ui:jar:2.2.1.v201112130541:system
+[DEBUG]    p2.eclipse-plugin:org.eclipse.xtext.ui.shared:jar:2.2.1.v201112130541:system
+[DEBUG]    p2.eclipse-plugin:org.eclipse.xtext.builder:jar:2.2.1.v201112130541:system
+[DEBUG]    p2.eclipse-plugin:org.eclipse.ui.editors:jar:3.7.0.v20110928-1504:system
+[DEBUG]    p2.eclipse-plugin:org.eclipse.ui.ide:jar:3.7.0.v20110928-1505:system
+[DEBUG]    p2.eclipse-plugin:org.eclipse.ui:jar:3.7.0.v20110928-1505:system
+[DEBUG]    p2.eclipse-plugin:org.eclipse.xtext.ui.codetemplates.ui:jar:2.2.1.v201112130541:system
+[DEBUG]    p2.eclipse-plugin:org.eclipse.compare:jar:3.5.202.R37x_v20111109-0800:system
+[DEBUG]    p2.eclipse-plugin:org.eclipse.xtend2.lib:jar:2.2.1.v201112130541:system
+[DEBUG]    p2.eclipse-plugin:org.eclipse.xtext.xtend2.lib:jar:2.2.1.v201112130541:system
+[DEBUG]    p2.eclipse-plugin:org.eclipse.xtext.xbase.lib:jar:2.2.1.v201112130541:system
+[DEBUG]    p2.eclipse-plugin:org.eclipse.osgi:jar:3.7.2.v20120110-1415:system
+[DEBUG]    p2.eclipse-plugin:org.apache.ant:jar:lib/ant-antlr.jar:1.8.2.v20120109-1030:system
+[DEBUG]    p2.eclipse-plugin:org.apache.ant:jar:lib/ant-apache-bcel.jar:1.8.2.v20120109-1030:system
+[DEBUG]    p2.eclipse-plugin:org.apache.ant:jar:lib/ant-apache-bsf.jar:1.8.2.v20120109-1030:system
+[DEBUG]    p2.eclipse-plugin:org.apache.ant:jar:lib/ant-apache-log4j.jar:1.8.2.v20120109-1030:system
+[DEBUG]    p2.eclipse-plugin:org.apache.ant:jar:lib/ant-apache-oro.jar:1.8.2.v20120109-1030:system
+[DEBUG]    p2.eclipse-plugin:org.apache.ant:jar:lib/ant-apache-regexp.jar:1.8.2.v20120109-1030:system
+[DEBUG]    p2.eclipse-plugin:org.apache.ant:jar:lib/ant-apache-resolver.jar:1.8.2.v20120109-1030:system
+[DEBUG]    p2.eclipse-plugin:org.apache.ant:jar:lib/ant-apache-xalan2.jar:1.8.2.v20120109-1030:system
+[DEBUG]    p2.eclipse-plugin:org.apache.ant:jar:lib/ant-commons-logging.jar:1.8.2.v20120109-1030:system
+[DEBUG]    p2.eclipse-plugin:org.apache.ant:jar:lib/ant-commons-net.jar:1.8.2.v20120109-1030:system
+[DEBUG]    p2.eclipse-plugin:org.apache.ant:jar:lib/ant-jai.jar:1.8.2.v20120109-1030:system
+[DEBUG]    p2.eclipse-plugin:org.apache.ant:jar:lib/ant-javamail.jar:1.8.2.v20120109-1030:system
+[DEBUG]    p2.eclipse-plugin:org.apache.ant:jar:lib/ant-jdepend.jar:1.8.2.v20120109-1030:system
+[DEBUG]    p2.eclipse-plugin:org.apache.ant:jar:lib/ant-jmf.jar:1.8.2.v20120109-1030:system
+[DEBUG]    p2.eclipse-plugin:org.apache.ant:jar:lib/ant-jsch.jar:1.8.2.v20120109-1030:system
+[DEBUG]    p2.eclipse-plugin:org.apache.ant:jar:lib/ant-junit.jar:1.8.2.v20120109-1030:system
+[DEBUG]    p2.eclipse-plugin:org.apache.ant:jar:lib/ant-junit4.jar:1.8.2.v20120109-1030:system
+[DEBUG]    p2.eclipse-plugin:org.apache.ant:jar:lib/ant-launcher.jar:1.8.2.v20120109-1030:system
+[DEBUG]    p2.eclipse-plugin:org.apache.ant:jar:lib/ant-netrexx.jar:1.8.2.v20120109-1030:system
+[DEBUG]    p2.eclipse-plugin:org.apache.ant:jar:lib/ant-swing.jar:1.8.2.v20120109-1030:system
+[DEBUG]    p2.eclipse-plugin:org.apache.ant:jar:lib/ant-testutil.jar:1.8.2.v20120109-1030:system
+[DEBUG]    p2.eclipse-plugin:org.apache.ant:jar:lib/ant.jar:1.8.2.v20120109-1030:system
+[DEBUG]    p2.eclipse-plugin:org.apache.commons.lang:jar:2.4.0.v201005080502:system
+[DEBUG]    p2.eclipse-plugin:org.apache.commons.cli:jar:1.2.0.v201105210650:system
+[DEBUG]    p2.eclipse-plugin:org.eclipse.core.variables:jar:3.2.500.v20110928-1503:system
+[DEBUG]    p2.eclipse-plugin:org.eclipse.core.runtime:jar:3.7.0.v20110110:system
+[DEBUG]    p2.eclipse-plugin:org.eclipse.ant.core:jar:3.2.302.v20120110-1739:system
+[DEBUG]    p2.eclipse-plugin:org.eclipse.core.resources:jar:3.7.101.v20120125-1505:system
+[DEBUG]    p2.eclipse-plugin:org.eclipse.jface.text:jar:3.7.2.v20111213-1208:system
+[DEBUG]    p2.eclipse-plugin:org.eclipse.ui.views:jar:3.6.0.v20110928-1505:system
+[DEBUG]    p2.eclipse-plugin:org.eclipse.ui.workbench.texteditor:jar:3.7.0.v20110928-1504:system
+[DEBUG]    p2.eclipse-plugin:org.eclipse.core.expressions:jar:3.4.300.v20110228:system
+[DEBUG]    p2.eclipse-plugin:org.eclipse.ui.forms:jar:3.5.101.v20111011-1919:system
+[DEBUG]    p2.eclipse-plugin:org.eclipse.compare.core:jar:3.5.200.I20110208-0800:system
+[DEBUG]    p2.eclipse-plugin:com.ibm.icu:jar:4.4.2.v20110823:system
+[DEBUG]    p2.eclipse-plugin:org.eclipse.core.commands:jar:3.6.0.I20110111-0800:system
+[DEBUG]    p2.eclipse-plugin:org.eclipse.equinox.common:jar:3.6.0.v20110523:system
+[DEBUG]    p2.eclipse-plugin:org.eclipse.core.contenttype:jar:3.4.100.v20110423-0524:system
+[DEBUG]    p2.eclipse-plugin:org.eclipse.equinox.preferences:jar:3.4.2.v20120111-2020:system
+[DEBUG]    p2.eclipse-plugin:org.eclipse.equinox.registry:jar:3.5.101.R37x_v20110810-1611:system
+[DEBUG]    p2.eclipse-plugin:org.eclipse.core.databinding:jar:1.4.0.I20110111-0800:system
+[DEBUG]    p2.eclipse-plugin:org.eclipse.core.databinding.observable:jar:1.4.0.I20110222-0800:system
+[DEBUG]    p2.eclipse-plugin:org.eclipse.core.databinding.property:jar:1.4.0.I20110222-0800:system
+[DEBUG]    p2.eclipse-plugin:org.eclipse.text:jar:3.5.101.v20110928-1504:system
+[DEBUG]    p2.eclipse-plugin:org.eclipse.core.filesystem:jar:1.3.100.v20110423-0524:system
+[DEBUG]    p2.eclipse-plugin:org.eclipse.core.filebuffers:jar:3.5.200.v20110928-1504:system
+[DEBUG]    p2.eclipse-plugin:org.eclipse.core.jobs:jar:3.5.101.v20120113-1953:system
+[DEBUG]    p2.eclipse-plugin:org.eclipse.core.runtime.compatibility.auth:jar:3.2.200.v20110110:system
+[DEBUG]    p2.eclipse-plugin:org.eclipse.equinox.app:jar:1.3.100.v20110321:system
+[DEBUG]    p2.eclipse-plugin:org.eclipse.debug.core:jar:3.7.1.v20111129-2031:system
+[DEBUG]    p2.eclipse-plugin:org.eclipse.ui.console:jar:3.5.100.v20111007_r372:system
+[DEBUG]    p2.eclipse-plugin:org.eclipse.help:jar:3.5.100.v20110426:system
+[DEBUG]    p2.eclipse-plugin:org.eclipse.debug.ui:jar:3.7.102.v20111129-1423_r372:system
+[DEBUG]    p2.eclipse-plugin:org.eclipse.jdt.core:jar:3.7.3.v20120119-1537:system
+[DEBUG]    p2.eclipse-plugin:org.eclipse.jdt.launching:jar:3.6.1.v20111006_r372:system
+[DEBUG]    p2.eclipse-plugin:org.eclipse.emf.codegen:jar:2.6.0.v20120130-0943:system
+[DEBUG]    p2.eclipse-plugin:org.eclipse.emf.ecore.xmi:jar:2.7.0.v20120127-1122:system
+[DEBUG]    p2.eclipse-plugin:org.eclipse.emf.common.ui:jar:2.7.0.v20120130-0943:system
+[DEBUG]    p2.eclipse-plugin:org.eclipse.emf.ecore.change:jar:2.7.1.v20120127-1122:system
+[DEBUG]    p2.eclipse-plugin:org.eclipse.emf.edit:jar:2.7.2.v20120130-0943:system
+[DEBUG]    p2.eclipse-plugin:org.eclipse.emf.ecore.edit:jar:2.7.1.v20120130-0943:system
+[DEBUG]    p2.eclipse-plugin:org.eclipse.ui.workbench:jar:3.7.1.v20120104-1859:system
+[DEBUG]    p2.eclipse-plugin:org.eclipse.emf.edit.ui:jar:2.7.0.v20120130-0943:system
+[DEBUG]    p2.eclipse-plugin:org.eclipse.emf.mwe2.runtime:jar:2.2.0.v201112070431:system
+[DEBUG]    p2.eclipse-plugin:org.eclipse.emf.mwe.core:jar:1.2.1.v201112070431:system
+[DEBUG]    p2.eclipse-plugin:org.eclipse.emf.mwe2.lib:jar:2.2.0.v201112070431:system
+[DEBUG]    p2.eclipse-plugin:org.eclipse.emf.mwe2.language:jar:2.2.0.v201112071250:system
+[DEBUG]    p2.eclipse-plugin:org.eclipse.jface:jar:3.7.0.v20110928-1505:system
+[DEBUG]    p2.eclipse-plugin:org.eclipse.jdt.debug.ui:jar:3.6.1.v20111006_r372:system
+[DEBUG]    p2.eclipse-plugin:com.google.guava:jar:10.0.1.1:system
+[DEBUG]    p2.eclipse-plugin:org.eclipse.osgi.services:jar:3.3.0.v20110513:system
+[DEBUG]    p2.eclipse-plugin:org.eclipse.equinox.p2.core:jar:2.1.1.v20120113-1346:system
+[DEBUG]    p2.eclipse-plugin:org.eclipse.equinox.p2.metadata:jar:2.1.0.v20110815-1419:system
+[DEBUG]    p2.eclipse-plugin:org.eclipse.equinox.p2.metadata.repository:jar:1.2.0.v20110815-1419:system
+[DEBUG]    p2.eclipse-plugin:org.eclipse.equinox.p2.repository:jar:2.1.1.v20120113-1346:system
+[DEBUG]    p2.eclipse-plugin:org.eclipse.equinox.security:jar:1.1.1.R37x_v20110822-1018:system
+[DEBUG]    p2.eclipse-plugin:org.eclipse.equinox.p2.engine:jar:2.1.1.R37x_v20111003:system
+[DEBUG]    p2.eclipse-plugin:org.eclipse.team.core:jar:3.6.0.I20110525-0800:system
+[DEBUG]    p2.eclipse-plugin:org.eclipse.ltk.core.refactoring:jar:3.5.201.r372_v20111101-0700:system
+[DEBUG]    p2.eclipse-plugin:org.eclipse.jdt.core.manipulation:jar:1.4.0.v20110928-1453:system
+[DEBUG]    p2.eclipse-plugin:org.eclipse.jdt.debug:jar:jdi.jar:3.7.1.v20111006_r372:system
+[DEBUG]    p2.eclipse-plugin:org.eclipse.jdt.debug:jar:jdimodel.jar:3.7.1.v20111006_r372:system
+[DEBUG]    p2.eclipse-plugin:org.eclipse.jdt.ui:jar:3.7.2.v20120109-1427:system
+[DEBUG]    p2.eclipse-plugin:org.eclipse.search:jar:3.7.0.v20110928-1504:system
+[DEBUG]    p2.eclipse-plugin:org.eclipse.team.ui:jar:3.6.101.R37x_v20111109-0800:system
+[DEBUG]    p2.eclipse-plugin:org.eclipse.ltk.ui.refactoring:jar:3.6.0.v20110928-1453:system
+[DEBUG]    p2.eclipse-plugin:org.eclipse.ui.navigator:jar:3.5.101.v20120106-1355:system
+[DEBUG]    p2.eclipse-plugin:org.eclipse.ui.navigator.resources:jar:3.4.300.v20110928-1505:system
+[DEBUG]    p2.eclipse-plugin:org.eclipse.swt:jar:3.7.2.v3740f:system
+[DEBUG]    p2.eclipse-plugin:org.eclipse.jface.databinding:jar:1.5.0.I20100907-0800:system
+[DEBUG]    p2.eclipse-plugin:org.eclipse.ui.views.properties.tabbed:jar:3.5.200.v20110928-1505:system
+[DEBUG]    p2.eclipse-plugin:org.eclipse.xtend:jar:1.1.0.v201108020519:system
+[DEBUG]    p2.eclipse-plugin:org.eclipse.xpand:jar:1.1.0.v201108020519:system
+[DEBUG]    p2.eclipse-plugin:org.eclipse.xtend.typesystem.emf:jar:1.0.1.v201108020519:system
+[DEBUG]    p2.eclipse-plugin:org.eclipse.xtext.ecore:jar:2.2.1.v201112130541:system
+[DEBUG]    p2.eclipse-plugin:org.junit:jar:junit.jar:4.8.2.v4_8_2_v20110321-1705:system
+[DEBUG]    p2.eclipse-plugin:org.eclipse.xtext.junit:jar:2.2.1.v201112130541:system
+[DEBUG]    p2.eclipse-plugin:org.eclipse.xtext.ui.codetemplates:jar:2.2.1.v201112130541:system
+[DEBUG]    p2.eclipse-plugin:org.hamcrest.core:jar:1.1.0.v20090501071000:system
+[DEBUG]    p2.eclipse-plugin:org.eclipse.swt.gtk.linux.x86:jar:3.7.2.v3740f:system
+[INFO] 
+[INFO] --- tycho-packaging-plugin:0.14.1:build-qualifier (default-build-qualifier) @ com.visualligence.g ---
+[DEBUG] org.eclipse.tycho:tycho-packaging-plugin:jar:0.14.1:
+[DEBUG]    org.eclipse.tycho:tycho-core:jar:0.14.1:compile
+[DEBUG]       org.eclipse.tycho:sisu-equinox-embedder:jar:0.14.1:compile
+[DEBUG]          org.eclipse.tycho:sisu-equinox-api:jar:0.14.1:compile
+[DEBUG]       org.eclipse.tycho:tycho-metadata-model:jar:0.14.1:compile
+[DEBUG]          de.pdark:decentxml:jar:1.3:compile
+[DEBUG]       org.eclipse.tycho:tycho-embedder-api:jar:0.14.1:compile
+[DEBUG]          org.eclipse.tycho:org.eclipse.tycho.embedder.shared:jar:0.14.1:compile
+[DEBUG]       org.eclipse.tycho:org.eclipse.tycho.core.shared:jar:0.14.1:compile
+[DEBUG]    org.apache.maven:maven-core:jar:3.0:compile
+[DEBUG]       org.apache.maven:maven-model:jar:3.0:compile
+[DEBUG]       org.apache.maven:maven-settings:jar:3.0:compile
+[DEBUG]       org.apache.maven:maven-settings-builder:jar:3.0:compile
+[DEBUG]       org.apache.maven:maven-repository-metadata:jar:3.0:compile
+[DEBUG]       org.apache.maven:maven-artifact:jar:3.0:compile
+[DEBUG]       org.apache.maven:maven-model-builder:jar:3.0:compile
+[DEBUG]       org.apache.maven:maven-aether-provider:jar:3.0:runtime
+[DEBUG]       org.sonatype.aether:aether-impl:jar:1.7:compile
+[DEBUG]          org.sonatype.aether:aether-spi:jar:1.7:compile
+[DEBUG]       org.sonatype.aether:aether-api:jar:1.7:compile
+[DEBUG]       org.sonatype.aether:aether-util:jar:1.7:compile
+[DEBUG]       org.sonatype.sisu:sisu-inject-plexus:jar:1.4.2:compile
+[DEBUG]          org.sonatype.sisu:sisu-inject-bean:jar:1.4.2:compile
+[DEBUG]             org.sonatype.sisu:sisu-guice:jar:noaop:2.1.7:compile
+[DEBUG]       org.codehaus.plexus:plexus-interpolation:jar:1.14:compile
+[DEBUG]       org.codehaus.plexus:plexus-classworlds:jar:2.2.3:compile
+[DEBUG]       org.codehaus.plexus:plexus-component-annotations:jar:1.5.5:compile
+[DEBUG]       org.sonatype.plexus:plexus-sec-dispatcher:jar:1.3:compile
+[DEBUG]          org.sonatype.plexus:plexus-cipher:jar:1.4:compile
+[DEBUG]    org.apache.maven:maven-plugin-api:jar:3.0:compile
+[DEBUG]    org.codehaus.plexus:plexus-utils:jar:2.0.4:compile
+[DEBUG]    org.eclipse.tycho:org.eclipse.osgi:jar:3.8.0.v20120123-1419:compile
+[DEBUG]    org.apache.maven:maven-archiver:jar:2.4:compile
+[DEBUG]    org.codehaus.plexus:plexus-archiver:jar:1.2:compile
+[DEBUG]       org.codehaus.plexus:plexus-io:jar:1.0.1:compile
+[DEBUG] Created new class realm plugin>org.eclipse.tycho:tycho-packaging-plugin:0.14.1
+[DEBUG] Importing foreign packages into class realm plugin>org.eclipse.tycho:tycho-packaging-plugin:0.14.1
+[DEBUG]   Imported:  < project>com.visualligence.g:com.visualligence.g:1.0.0
+[DEBUG] Populating class realm plugin>org.eclipse.tycho:tycho-packaging-plugin:0.14.1
+[DEBUG]   Included: org.eclipse.tycho:tycho-packaging-plugin:jar:0.14.1
+[DEBUG]   Included: org.sonatype.aether:aether-util:jar:1.7
+[DEBUG]   Included: org.sonatype.sisu:sisu-inject-bean:jar:1.4.2
+[DEBUG]   Included: org.sonatype.sisu:sisu-guice:jar:noaop:2.1.7
+[DEBUG]   Included: org.codehaus.plexus:plexus-interpolation:jar:1.14
+[DEBUG]   Included: org.codehaus.plexus:plexus-component-annotations:jar:1.5.5
+[DEBUG]   Included: org.sonatype.plexus:plexus-sec-dispatcher:jar:1.3
+[DEBUG]   Included: org.sonatype.plexus:plexus-cipher:jar:1.4
+[DEBUG]   Included: org.codehaus.plexus:plexus-utils:jar:2.0.4
+[DEBUG]   Included: org.apache.maven:maven-archiver:jar:2.4
+[DEBUG]   Included: org.codehaus.plexus:plexus-archiver:jar:1.2
+[DEBUG]   Included: org.codehaus.plexus:plexus-io:jar:1.0.1
+[DEBUG]   Excluded: org.eclipse.tycho:tycho-core:jar:0.14.1
+[DEBUG]   Excluded: org.eclipse.tycho:sisu-equinox-embedder:jar:0.14.1
+[DEBUG]   Excluded: org.eclipse.tycho:sisu-equinox-api:jar:0.14.1
+[DEBUG]   Excluded: org.eclipse.tycho:tycho-metadata-model:jar:0.14.1
+[DEBUG]   Excluded: de.pdark:decentxml:jar:1.3
+[DEBUG]   Excluded: org.eclipse.tycho:tycho-embedder-api:jar:0.14.1
+[DEBUG]   Excluded: org.eclipse.tycho:org.eclipse.tycho.embedder.shared:jar:0.14.1
+[DEBUG]   Excluded: org.eclipse.tycho:org.eclipse.tycho.core.shared:jar:0.14.1
+[DEBUG]   Excluded: org.apache.maven:maven-core:jar:3.0
+[DEBUG]   Excluded: org.apache.maven:maven-model:jar:3.0
+[DEBUG]   Excluded: org.apache.maven:maven-settings:jar:3.0
+[DEBUG]   Excluded: org.apache.maven:maven-settings-builder:jar:3.0
+[DEBUG]   Excluded: org.apache.maven:maven-repository-metadata:jar:3.0
+[DEBUG]   Excluded: org.apache.maven:maven-artifact:jar:3.0
+[DEBUG]   Excluded: org.apache.maven:maven-model-builder:jar:3.0
+[DEBUG]   Excluded: org.apache.maven:maven-aether-provider:jar:3.0
+[DEBUG]   Excluded: org.sonatype.aether:aether-impl:jar:1.7
+[DEBUG]   Excluded: org.sonatype.aether:aether-spi:jar:1.7
+[DEBUG]   Excluded: org.sonatype.aether:aether-api:jar:1.7
+[DEBUG]   Excluded: org.sonatype.sisu:sisu-inject-plexus:jar:1.4.2
+[DEBUG]   Excluded: org.codehaus.plexus:plexus-classworlds:jar:2.2.3
+[DEBUG]   Excluded: org.apache.maven:maven-plugin-api:jar:3.0
+[DEBUG]   Excluded: org.eclipse.tycho:org.eclipse.osgi:jar:3.8.0.v20120123-1419
+[DEBUG] Configuring mojo org.eclipse.tycho:tycho-packaging-plugin:0.14.1:build-qualifier from plugin realm ClassRealm[plugin>org.eclipse.tycho:tycho-packaging-plugin:0.14.1, parent: sun.misc.Launcher$AppClassLoader@1cde100]
+[DEBUG] Configuring mojo 'org.eclipse.tycho:tycho-packaging-plugin:0.14.1:build-qualifier' with basic configurator -->
+[DEBUG]   (f) baseDir = /home/rober/git/com.visualligence.g
+[DEBUG]   (s) format = yyyyMMddHHmm
+[DEBUG]   (f) packaging = eclipse-test-plugin
+[DEBUG]   (f) project = MavenProject: com.visualligence.g:com.visualligence.g:1.0.0 @ /home/rober/git/com.visualligence.g/pom.xml
+[DEBUG]   (f) session = org.apache.maven.execution.MavenSession@4b1bcd
+[DEBUG] -- end configuration --
+[INFO] 
+[INFO] --- tycho-packaging-plugin:0.14.1:validate-id (default-validate-id) @ com.visualligence.g ---
+[DEBUG] Configuring mojo org.eclipse.tycho:tycho-packaging-plugin:0.14.1:validate-id from plugin realm ClassRealm[plugin>org.eclipse.tycho:tycho-packaging-plugin:0.14.1, parent: sun.misc.Launcher$AppClassLoader@1cde100]
+[DEBUG] Configuring mojo 'org.eclipse.tycho:tycho-packaging-plugin:0.14.1:validate-id' with basic configurator -->
+[DEBUG]   (f) packaging = eclipse-test-plugin
+[DEBUG]   (f) project = MavenProject: com.visualligence.g:com.visualligence.g:1.0.0 @ /home/rober/git/com.visualligence.g/pom.xml
+[DEBUG] -- end configuration --
+[INFO] 
+[INFO] --- tycho-packaging-plugin:0.14.1:validate-version (default-validate-version) @ com.visualligence.g ---
+[DEBUG] Configuring mojo org.eclipse.tycho:tycho-packaging-plugin:0.14.1:validate-version from plugin realm ClassRealm[plugin>org.eclipse.tycho:tycho-packaging-plugin:0.14.1, parent: sun.misc.Launcher$AppClassLoader@1cde100]
+[DEBUG] Configuring mojo 'org.eclipse.tycho:tycho-packaging-plugin:0.14.1:validate-version' with basic configurator -->
+[DEBUG]   (f) packaging = eclipse-test-plugin
+[DEBUG]   (f) project = MavenProject: com.visualligence.g:com.visualligence.g:1.0.0 @ /home/rober/git/com.visualligence.g/pom.xml
+[DEBUG]   (f) strictVersions = true
+[DEBUG] -- end configuration --
+[INFO] 
+[INFO] >>> fornax-oaw-m2-plugin:3.1.0-SNAPSHOT:run-workflow (default) @ com.visualligence.g >>>
+[INFO] 
+[INFO] <<< fornax-oaw-m2-plugin:3.1.0-SNAPSHOT:run-workflow (default) @ com.visualligence.g <<<
+[INFO] 
+[INFO] --- fornax-oaw-m2-plugin:3.1.0-SNAPSHOT:run-workflow (default) @ com.visualligence.g ---
+[DEBUG] org.fornax.toolsupport:fornax-oaw-m2-plugin:jar:3.1.0-20100824.081209-4:
+[DEBUG]    org.apache.maven:maven-plugin-api:jar:2.1.0:compile
+[DEBUG]    org.apache.maven:maven-project:jar:2.1.0:compile
+[DEBUG]       org.apache.maven:maven-settings:jar:2.1.0:compile
+[DEBUG]       org.apache.maven:maven-profile:jar:2.1.0:compile
+[DEBUG]       org.apache.maven:maven-artifact-manager:jar:2.1.0:compile
+[DEBUG]          org.apache.maven:maven-repository-metadata:jar:2.1.0:compile
+[DEBUG]          backport-util-concurrent:backport-util-concurrent:jar:3.1:compile
+[DEBUG]       org.apache.maven:maven-plugin-registry:jar:2.1.0:compile
+[DEBUG]       org.codehaus.plexus:plexus-interpolation:jar:1.8.1:compile
+[DEBUG]       org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-9-stable-1:compile
+[DEBUG]          junit:junit:jar:3.8.1:compile
+[DEBUG]          classworlds:classworlds:jar:1.1-alpha-2:compile
+[DEBUG]    org.apache.maven:maven-model:jar:2.1.0:compile
+[DEBUG]    org.apache.maven:maven-artifact:jar:2.1.0:compile
+[DEBUG]    org.codehaus.plexus:plexus-utils:jar:1.5.12:compile
+[DEBUG]    com.google.inject:guice:jar:2.0:compile
+[DEBUG]       aopalliance:aopalliance:jar:1.0:compile
+[DEBUG]    org.apache.ant:ant:jar:1.8.0:compile
+[DEBUG] Created new class realm plugin>org.fornax.toolsupport:fornax-oaw-m2-plugin:3.1.0-SNAPSHOT
+[DEBUG] Importing foreign packages into class realm plugin>org.fornax.toolsupport:fornax-oaw-m2-plugin:3.1.0-SNAPSHOT
+[DEBUG]   Imported:  < project>com.visualligence.g:com.visualligence.g:1.0.0
+[DEBUG] Populating class realm plugin>org.fornax.toolsupport:fornax-oaw-m2-plugin:3.1.0-SNAPSHOT
+[DEBUG]   Included: org.fornax.toolsupport:fornax-oaw-m2-plugin:jar:3.1.0-SNAPSHOT
+[DEBUG]   Included: backport-util-concurrent:backport-util-concurrent:jar:3.1
+[DEBUG]   Included: org.codehaus.plexus:plexus-interpolation:jar:1.8.1
+[DEBUG]   Included: junit:junit:jar:3.8.1
+[DEBUG]   Included: org.codehaus.plexus:plexus-utils:jar:1.5.12
+[DEBUG]   Included: com.google.inject:guice:jar:2.0
+[DEBUG]   Included: aopalliance:aopalliance:jar:1.0
+[DEBUG]   Included: org.apache.ant:ant:jar:1.8.0
+[DEBUG]   Excluded: org.apache.maven:maven-plugin-api:jar:2.1.0
+[DEBUG]   Excluded: org.apache.maven:maven-project:jar:2.1.0
+[DEBUG]   Excluded: org.apache.maven:maven-settings:jar:2.1.0
+[DEBUG]   Excluded: org.apache.maven:maven-profile:jar:2.1.0
+[DEBUG]   Excluded: org.apache.maven:maven-artifact-manager:jar:2.1.0
+[DEBUG]   Excluded: org.apache.maven:maven-repository-metadata:jar:2.1.0
+[DEBUG]   Excluded: org.apache.maven:maven-plugin-registry:jar:2.1.0
+[DEBUG]   Excluded: org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-9-stable-1
+[DEBUG]   Excluded: classworlds:classworlds:jar:1.1-alpha-2
+[DEBUG]   Excluded: org.apache.maven:maven-model:jar:2.1.0
+[DEBUG]   Excluded: org.apache.maven:maven-artifact:jar:2.1.0
+[DEBUG] Configuring mojo org.fornax.toolsupport:fornax-oaw-m2-plugin:3.1.0-SNAPSHOT:run-workflow from plugin realm ClassRealm[plugin>org.fornax.toolsupport:fornax-oaw-m2-plugin:3.1.0-SNAPSHOT, parent: sun.misc.Launcher$AppClassLoader@1cde100]
+[DEBUG] Configuring mojo 'org.fornax.toolsupport:fornax-oaw-m2-plugin:3.1.0-SNAPSHOT:run-workflow' with basic configurator -->
+[DEBUG]   (f) defaultOawResourceDir = oaw-generator
+[DEBUG]   (f) dependencies = [p2.eclipse-plugin:com.google.inject:jar:3.0.0.no_aop:system, p2.eclipse-plugin:javax.inject:jar:1.0.0.v20091030:system, p2.eclipse-plugin:org.eclipse.xtext:jar:2.2.1.v201112130541:system, p2.eclipse-plugin:org.apache.log4j:jar:1.2.15.v201012070815:system, p2.eclipse-plugin:org.apache.commons.logging:jar:1.1.1.v201101211721:system, p2.eclipse-plugin:org.eclipse.xtext.generator:jar:2.2.1.v201112130541:system, p2.eclipse-plugin:org.eclipse.emf.codegen.ecore:jar:2.7.0.v20120130-0943:system, p2.eclipse-plugin:org.eclipse.emf.mwe.utils:jar:1.2.1.v201112070431:system, p2.eclipse-plugin:org.eclipse.emf.mwe2.launch:jar:2.2.0.v201112071250:system, p2.eclipse-plugin:org.eclipse.xtext.util:jar:2.2.1.v201112130541:system, p2.eclipse-plugin:org.eclipse.xtext.junit4:jar:2.2.1.v201112130541:system, p2.eclipse-plugin:org.eclipse.xtext.ui.junit:jar:2.2.1.v201112130541:system, p2.eclipse-plugin:org.junit4:jar:4.8.1.v20100525:system, p2.eclipse-plugin:org.eclipse.emf.ecore:jar:2.7.0.v20120127-1122:system, p2.eclipse-plugin:org.eclipse.emf.common:jar:2.7.0.v20120127-1122:system, p2.eclipse-plugin:org.antlr.runtime:jar:3.2.0.v201101311130:system, p2.eclipse-plugin:org.eclipse.xtext.common.types:jar:2.2.1.v201112130541:system, p2.eclipse-plugin:org.eclipse.xtext.common.types.ui:jar:2.2.1.v201112130541:system, p2.eclipse-plugin:org.eclipse.xtext.ui:jar:2.2.1.v201112130541:system, p2.eclipse-plugin:org.eclipse.xtext.ui.shared:jar:2.2.1.v201112130541:system, p2.eclipse-plugin:org.eclipse.xtext.builder:jar:2.2.1.v201112130541:system, p2.eclipse-plugin:org.eclipse.ui.editors:jar:3.7.0.v20110928-1504:system, p2.eclipse-plugin:org.eclipse.ui.ide:jar:3.7.0.v20110928-1505:system, p2.eclipse-plugin:org.eclipse.ui:jar:3.7.0.v20110928-1505:system, p2.eclipse-plugin:org.eclipse.xtext.ui.codetemplates.ui:jar:2.2.1.v201112130541:system, p2.eclipse-plugin:org.eclipse.compare:jar:3.5.202.R37x_v20111109-0800:system, p2.eclipse-plugin:org.eclipse.xtend2.lib:jar:2.2.1.v201112130541:system, p2.eclipse-plugin:org.eclipse.xtext.xtend2.lib:jar:2.2.1.v201112130541:system, p2.eclipse-plugin:org.eclipse.xtext.xbase.lib:jar:2.2.1.v201112130541:system, p2.eclipse-plugin:org.eclipse.osgi:jar:3.7.2.v20120110-1415:system, p2.eclipse-plugin:org.apache.ant:jar:lib/ant-antlr.jar:1.8.2.v20120109-1030:system, p2.eclipse-plugin:org.apache.ant:jar:lib/ant-apache-bcel.jar:1.8.2.v20120109-1030:system, p2.eclipse-plugin:org.apache.ant:jar:lib/ant-apache-bsf.jar:1.8.2.v20120109-1030:system, p2.eclipse-plugin:org.apache.ant:jar:lib/ant-apache-log4j.jar:1.8.2.v20120109-1030:system, p2.eclipse-plugin:org.apache.ant:jar:lib/ant-apache-oro.jar:1.8.2.v20120109-1030:system, p2.eclipse-plugin:org.apache.ant:jar:lib/ant-apache-regexp.jar:1.8.2.v20120109-1030:system, p2.eclipse-plugin:org.apache.ant:jar:lib/ant-apache-resolver.jar:1.8.2.v20120109-1030:system, p2.eclipse-plugin:org.apache.ant:jar:lib/ant-apache-xalan2.jar:1.8.2.v20120109-1030:system, p2.eclipse-plugin:org.apache.ant:jar:lib/ant-commons-logging.jar:1.8.2.v20120109-1030:system, p2.eclipse-plugin:org.apache.ant:jar:lib/ant-commons-net.jar:1.8.2.v20120109-1030:system, p2.eclipse-plugin:org.apache.ant:jar:lib/ant-jai.jar:1.8.2.v20120109-1030:system, p2.eclipse-plugin:org.apache.ant:jar:lib/ant-javamail.jar:1.8.2.v20120109-1030:system, p2.eclipse-plugin:org.apache.ant:jar:lib/ant-jdepend.jar:1.8.2.v20120109-1030:system, p2.eclipse-plugin:org.apache.ant:jar:lib/ant-jmf.jar:1.8.2.v20120109-1030:system, p2.eclipse-plugin:org.apache.ant:jar:lib/ant-jsch.jar:1.8.2.v20120109-1030:system, p2.eclipse-plugin:org.apache.ant:jar:lib/ant-junit.jar:1.8.2.v20120109-1030:system, p2.eclipse-plugin:org.apache.ant:jar:lib/ant-junit4.jar:1.8.2.v20120109-1030:system, p2.eclipse-plugin:org.apache.ant:jar:lib/ant-launcher.jar:1.8.2.v20120109-1030:system, p2.eclipse-plugin:org.apache.ant:jar:lib/ant-netrexx.jar:1.8.2.v20120109-1030:system, p2.eclipse-plugin:org.apache.ant:jar:lib/ant-swing.jar:1.8.2.v20120109-1030:system, p2.eclipse-plugin:org.apache.ant:jar:lib/ant-testutil.jar:1.8.2.v20120109-1030:system, p2.eclipse-plugin:org.apache.ant:jar:lib/ant.jar:1.8.2.v20120109-1030:system, p2.eclipse-plugin:org.apache.commons.lang:jar:2.4.0.v201005080502:system, p2.eclipse-plugin:org.apache.commons.cli:jar:1.2.0.v201105210650:system, p2.eclipse-plugin:org.eclipse.core.variables:jar:3.2.500.v20110928-1503:system, p2.eclipse-plugin:org.eclipse.core.runtime:jar:3.7.0.v20110110:system, p2.eclipse-plugin:org.eclipse.ant.core:jar:3.2.302.v20120110-1739:system, p2.eclipse-plugin:org.eclipse.core.resources:jar:3.7.101.v20120125-1505:system, p2.eclipse-plugin:org.eclipse.jface.text:jar:3.7.2.v20111213-1208:system, p2.eclipse-plugin:org.eclipse.ui.views:jar:3.6.0.v20110928-1505:system, p2.eclipse-plugin:org.eclipse.ui.workbench.texteditor:jar:3.7.0.v20110928-1504:system, p2.eclipse-plugin:org.eclipse.core.expressions:jar:3.4.300.v20110228:system, p2.eclipse-plugin:org.eclipse.ui.forms:jar:3.5.101.v20111011-1919:system, p2.eclipse-plugin:org.eclipse.compare.core:jar:3.5.200.I20110208-0800:system, p2.eclipse-plugin:com.ibm.icu:jar:4.4.2.v20110823:system, p2.eclipse-plugin:org.eclipse.core.commands:jar:3.6.0.I20110111-0800:system, p2.eclipse-plugin:org.eclipse.equinox.common:jar:3.6.0.v20110523:system, p2.eclipse-plugin:org.eclipse.core.contenttype:jar:3.4.100.v20110423-0524:system, p2.eclipse-plugin:org.eclipse.equinox.preferences:jar:3.4.2.v20120111-2020:system, p2.eclipse-plugin:org.eclipse.equinox.registry:jar:3.5.101.R37x_v20110810-1611:system, p2.eclipse-plugin:org.eclipse.core.databinding:jar:1.4.0.I20110111-0800:system, p2.eclipse-plugin:org.eclipse.core.databinding.observable:jar:1.4.0.I20110222-0800:system, p2.eclipse-plugin:org.eclipse.core.databinding.property:jar:1.4.0.I20110222-0800:system, p2.eclipse-plugin:org.eclipse.text:jar:3.5.101.v20110928-1504:system, p2.eclipse-plugin:org.eclipse.core.filesystem:jar:1.3.100.v20110423-0524:system, p2.eclipse-plugin:org.eclipse.core.filebuffers:jar:3.5.200.v20110928-1504:system, p2.eclipse-plugin:org.eclipse.core.jobs:jar:3.5.101.v20120113-1953:system, p2.eclipse-plugin:org.eclipse.core.runtime.compatibility.auth:jar:3.2.200.v20110110:system, p2.eclipse-plugin:org.eclipse.equinox.app:jar:1.3.100.v20110321:system, p2.eclipse-plugin:org.eclipse.debug.core:jar:3.7.1.v20111129-2031:system, p2.eclipse-plugin:org.eclipse.ui.console:jar:3.5.100.v20111007_r372:system, p2.eclipse-plugin:org.eclipse.help:jar:3.5.100.v20110426:system, p2.eclipse-plugin:org.eclipse.debug.ui:jar:3.7.102.v20111129-1423_r372:system, p2.eclipse-plugin:org.eclipse.jdt.core:jar:3.7.3.v20120119-1537:system, p2.eclipse-plugin:org.eclipse.jdt.launching:jar:3.6.1.v20111006_r372:system, p2.eclipse-plugin:org.eclipse.emf.codegen:jar:2.6.0.v20120130-0943:system, p2.eclipse-plugin:org.eclipse.emf.ecore.xmi:jar:2.7.0.v20120127-1122:system, p2.eclipse-plugin:org.eclipse.emf.common.ui:jar:2.7.0.v20120130-0943:system, p2.eclipse-plugin:org.eclipse.emf.ecore.change:jar:2.7.1.v20120127-1122:system, p2.eclipse-plugin:org.eclipse.emf.edit:jar:2.7.2.v20120130-0943:system, p2.eclipse-plugin:org.eclipse.emf.ecore.edit:jar:2.7.1.v20120130-0943:system, p2.eclipse-plugin:org.eclipse.ui.workbench:jar:3.7.1.v20120104-1859:system, p2.eclipse-plugin:org.eclipse.emf.edit.ui:jar:2.7.0.v20120130-0943:system, p2.eclipse-plugin:org.eclipse.emf.mwe2.runtime:jar:2.2.0.v201112070431:system, p2.eclipse-plugin:org.eclipse.emf.mwe.core:jar:1.2.1.v201112070431:system, p2.eclipse-plugin:org.eclipse.emf.mwe2.lib:jar:2.2.0.v201112070431:system, p2.eclipse-plugin:org.eclipse.emf.mwe2.language:jar:2.2.0.v201112071250:system, p2.eclipse-plugin:org.eclipse.jface:jar:3.7.0.v20110928-1505:system, p2.eclipse-plugin:org.eclipse.jdt.debug.ui:jar:3.6.1.v20111006_r372:system, p2.eclipse-plugin:com.google.guava:jar:10.0.1.1:system, p2.eclipse-plugin:org.eclipse.osgi.services:jar:3.3.0.v20110513:system, p2.eclipse-plugin:org.eclipse.equinox.p2.core:jar:2.1.1.v20120113-1346:system, p2.eclipse-plugin:org.eclipse.equinox.p2.metadata:jar:2.1.0.v20110815-1419:system, p2.eclipse-plugin:org.eclipse.equinox.p2.metadata.repository:jar:1.2.0.v20110815-1419:system, p2.eclipse-plugin:org.eclipse.equinox.p2.repository:jar:2.1.1.v20120113-1346:system, p2.eclipse-plugin:org.eclipse.equinox.security:jar:1.1.1.R37x_v20110822-1018:system, p2.eclipse-plugin:org.eclipse.equinox.p2.engine:jar:2.1.1.R37x_v20111003:system, p2.eclipse-plugin:org.eclipse.team.core:jar:3.6.0.I20110525-0800:system, p2.eclipse-plugin:org.eclipse.ltk.core.refactoring:jar:3.5.201.r372_v20111101-0700:system, p2.eclipse-plugin:org.eclipse.jdt.core.manipulation:jar:1.4.0.v20110928-1453:system, p2.eclipse-plugin:org.eclipse.jdt.debug:jar:jdi.jar:3.7.1.v20111006_r372:system, p2.eclipse-plugin:org.eclipse.jdt.debug:jar:jdimodel.jar:3.7.1.v20111006_r372:system, p2.eclipse-plugin:org.eclipse.jdt.ui:jar:3.7.2.v20120109-1427:system, p2.eclipse-plugin:org.eclipse.search:jar:3.7.0.v20110928-1504:system, p2.eclipse-plugin:org.eclipse.team.ui:jar:3.6.101.R37x_v20111109-0800:system, p2.eclipse-plugin:org.eclipse.ltk.ui.refactoring:jar:3.6.0.v20110928-1453:system, p2.eclipse-plugin:org.eclipse.ui.navigator:jar:3.5.101.v20120106-1355:system, p2.eclipse-plugin:org.eclipse.ui.navigator.resources:jar:3.4.300.v20110928-1505:system, p2.eclipse-plugin:org.eclipse.swt:jar:3.7.2.v3740f:system, p2.eclipse-plugin:org.eclipse.jface.databinding:jar:1.5.0.I20100907-0800:system, p2.eclipse-plugin:org.eclipse.ui.views.properties.tabbed:jar:3.5.200.v20110928-1505:system, p2.eclipse-plugin:org.eclipse.xtend:jar:1.1.0.v201108020519:system, p2.eclipse-plugin:org.eclipse.xpand:jar:1.1.0.v201108020519:system, p2.eclipse-plugin:org.eclipse.xtend.typesystem.emf:jar:1.0.1.v201108020519:system, p2.eclipse-plugin:org.eclipse.xtext.ecore:jar:2.2.1.v201112130541:system, p2.eclipse-plugin:org.junit:jar:junit.jar:4.8.2.v4_8_2_v20110321-1705:system, p2.eclipse-plugin:org.eclipse.xtext.junit:jar:2.2.1.v201112130541:system, p2.eclipse-plugin:org.eclipse.xtext.ui.codetemplates:jar:2.2.1.v201112130541:system, p2.eclipse-plugin:org.hamcrest.core:jar:1.1.0.v20090501071000:system, p2.eclipse-plugin:org.eclipse.swt.gtk.linux.x86:jar:3.7.2.v3740f:system]
+[DEBUG]   (f) outletResDir = src/generated/resources
+[DEBUG]   (f) outletResOnceDir = src/main/resources
+[DEBUG]   (f) outletResProtectedDir = src/protected/resources
+[DEBUG]   (f) outletResTestDir = src/test/generated/resources
+[DEBUG]   (f) outletResTestOnceDir = src/testgenerated/java
+[DEBUG]   (f) outletResTestProtectedDir = src/test/protected/resources
+[DEBUG]   (f) outletSrcDir = src/generated/java
+[DEBUG]   (f) outletSrcOnceDir = /home/rober/git/com.visualligence.g/src
+[DEBUG]   (f) outletSrcProtectedDir = src/protected/java
+[DEBUG]   (f) outletSrcTestDir = src/test/generated/java
+[DEBUG]   (f) outletSrcTestOnceDir = /home/rober/git/com.visualligence.g/src/test/java
+[DEBUG]   (f) outletSrcTestProtectedDir = src/test/protected/java
+[DEBUG]   (f) project = MavenProject: com.visualligence.g:com.visualligence.g:1.0.0 @ /home/rober/git/com.visualligence.g/pom.xml
+[DEBUG]   (f) timestampFileName = oaw-generation-lastrun.timestamp
+[DEBUG]   (f) workflowDescriptor = src/com/visualligence/g/GenerateVML.mwe2
+[DEBUG]   (f) workflowEngine = mwe2
+[DEBUG] -- end configuration --
+[INFO] Fornax oAW/MWE/MWE2 Maven2 Plugin V3.1.0-SNAPSHOT
+[DEBUG] Added resource to classpath: file:/home/rober/git/com.visualligence.g/src-gen//
+[DEBUG] Added dependency to classpath: file:/home/rober/.m2/repository/p2/osgi/bundle/com.google.inject/3.0.0.no_aop/com.google.inject-3.0.0.no_aop.jar
+[DEBUG] Added dependency to classpath: file:/home/rober/.m2/repository/p2/osgi/bundle/javax.inject/1.0.0.v20091030/javax.inject-1.0.0.v20091030.jar
+[DEBUG] Added dependency to classpath: file:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.xtext/2.2.1.v201112130541/org.eclipse.xtext-2.2.1.v201112130541.jar
+[DEBUG] Added dependency to classpath: file:/home/rober/.m2/repository/p2/osgi/bundle/org.apache.log4j/1.2.15.v201012070815/org.apache.log4j-1.2.15.v201012070815.jar
+[DEBUG] Added dependency to classpath: file:/home/rober/.m2/repository/p2/osgi/bundle/org.apache.commons.logging/1.1.1.v201101211721/org.apache.commons.logging-1.1.1.v201101211721.jar
+[DEBUG] Added dependency to classpath: file:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.xtext.generator/2.2.1.v201112130541/org.eclipse.xtext.generator-2.2.1.v201112130541.jar
+[DEBUG] Added dependency to classpath: file:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.emf.codegen.ecore/2.7.0.v20120130-0943/org.eclipse.emf.codegen.ecore-2.7.0.v20120130-0943.jar
+[DEBUG] Added dependency to classpath: file:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.emf.mwe.utils/1.2.1.v201112070431/org.eclipse.emf.mwe.utils-1.2.1.v201112070431.jar
+[DEBUG] Added dependency to classpath: file:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.emf.mwe2.launch/2.2.0.v201112071250/org.eclipse.emf.mwe2.launch-2.2.0.v201112071250.jar
+[DEBUG] Added dependency to classpath: file:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.xtext.util/2.2.1.v201112130541/org.eclipse.xtext.util-2.2.1.v201112130541.jar
+[DEBUG] Added dependency to classpath: file:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.xtext.junit4/2.2.1.v201112130541/org.eclipse.xtext.junit4-2.2.1.v201112130541.jar
+[DEBUG] Added dependency to classpath: file:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.xtext.ui.junit/2.2.1.v201112130541/org.eclipse.xtext.ui.junit-2.2.1.v201112130541.jar
+[DEBUG] Added dependency to classpath: file:/home/rober/.m2/repository/p2/osgi/bundle/org.junit4/4.8.1.v20100525/org.junit4-4.8.1.v20100525.jar
+[DEBUG] Added dependency to classpath: file:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.emf.ecore/2.7.0.v20120127-1122/org.eclipse.emf.ecore-2.7.0.v20120127-1122.jar
+[DEBUG] Added dependency to classpath: file:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.emf.common/2.7.0.v20120127-1122/org.eclipse.emf.common-2.7.0.v20120127-1122.jar
+[DEBUG] Added dependency to classpath: file:/home/rober/.m2/repository/p2/osgi/bundle/org.antlr.runtime/3.2.0.v201101311130/org.antlr.runtime-3.2.0.v201101311130.jar
+[DEBUG] Added dependency to classpath: file:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.xtext.common.types/2.2.1.v201112130541/org.eclipse.xtext.common.types-2.2.1.v201112130541.jar
+[DEBUG] Added dependency to classpath: file:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.xtext.common.types.ui/2.2.1.v201112130541/org.eclipse.xtext.common.types.ui-2.2.1.v201112130541.jar
+[DEBUG] Added dependency to classpath: file:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.xtext.ui/2.2.1.v201112130541/org.eclipse.xtext.ui-2.2.1.v201112130541.jar
+[DEBUG] Added dependency to classpath: file:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.xtext.ui.shared/2.2.1.v201112130541/org.eclipse.xtext.ui.shared-2.2.1.v201112130541.jar
+[DEBUG] Added dependency to classpath: file:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.xtext.builder/2.2.1.v201112130541/org.eclipse.xtext.builder-2.2.1.v201112130541.jar
+[DEBUG] Added dependency to classpath: file:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.ui.editors/3.7.0.v20110928-1504/org.eclipse.ui.editors-3.7.0.v20110928-1504.jar
+[DEBUG] Added dependency to classpath: file:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.ui.ide/3.7.0.v20110928-1505/org.eclipse.ui.ide-3.7.0.v20110928-1505.jar
+[DEBUG] Added dependency to classpath: file:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.ui/3.7.0.v20110928-1505/org.eclipse.ui-3.7.0.v20110928-1505.jar
+[DEBUG] Added dependency to classpath: file:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.xtext.ui.codetemplates.ui/2.2.1.v201112130541/org.eclipse.xtext.ui.codetemplates.ui-2.2.1.v201112130541.jar
+[DEBUG] Added dependency to classpath: file:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.compare/3.5.202.R37x_v20111109-0800/org.eclipse.compare-3.5.202.R37x_v20111109-0800.jar
+[DEBUG] Added dependency to classpath: file:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.xtend2.lib/2.2.1.v201112130541/org.eclipse.xtend2.lib-2.2.1.v201112130541.jar
+[DEBUG] Added dependency to classpath: file:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.xtext.xtend2.lib/2.2.1.v201112130541/org.eclipse.xtext.xtend2.lib-2.2.1.v201112130541.jar
+[DEBUG] Added dependency to classpath: file:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.xtext.xbase.lib/2.2.1.v201112130541/org.eclipse.xtext.xbase.lib-2.2.1.v201112130541.jar
+[DEBUG] Added dependency to classpath: file:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.osgi/3.7.2.v20120110-1415/org.eclipse.osgi-3.7.2.v20120110-1415.jar
+[DEBUG] Added dependency to classpath: file:/home/rober/.m2/repository/.cache/tycho/org.apache.ant-1.8.2.v20120109-1030.jar/lib/ant-antlr.jar
+[DEBUG] Added dependency to classpath: file:/home/rober/.m2/repository/.cache/tycho/org.apache.ant-1.8.2.v20120109-1030.jar/lib/ant-apache-bcel.jar
+[DEBUG] Added dependency to classpath: file:/home/rober/.m2/repository/.cache/tycho/org.apache.ant-1.8.2.v20120109-1030.jar/lib/ant-apache-bsf.jar
+[DEBUG] Added dependency to classpath: file:/home/rober/.m2/repository/.cache/tycho/org.apache.ant-1.8.2.v20120109-1030.jar/lib/ant-apache-log4j.jar
+[DEBUG] Added dependency to classpath: file:/home/rober/.m2/repository/.cache/tycho/org.apache.ant-1.8.2.v20120109-1030.jar/lib/ant-apache-oro.jar
+[DEBUG] Added dependency to classpath: file:/home/rober/.m2/repository/.cache/tycho/org.apache.ant-1.8.2.v20120109-1030.jar/lib/ant-apache-regexp.jar
+[DEBUG] Added dependency to classpath: file:/home/rober/.m2/repository/.cache/tycho/org.apache.ant-1.8.2.v20120109-1030.jar/lib/ant-apache-resolver.jar
+[DEBUG] Added dependency to classpath: file:/home/rober/.m2/repository/.cache/tycho/org.apache.ant-1.8.2.v20120109-1030.jar/lib/ant-apache-xalan2.jar
+[DEBUG] Added dependency to classpath: file:/home/rober/.m2/repository/.cache/tycho/org.apache.ant-1.8.2.v20120109-1030.jar/lib/ant-commons-logging.jar
+[DEBUG] Added dependency to classpath: file:/home/rober/.m2/repository/.cache/tycho/org.apache.ant-1.8.2.v20120109-1030.jar/lib/ant-commons-net.jar
+[DEBUG] Added dependency to classpath: file:/home/rober/.m2/repository/.cache/tycho/org.apache.ant-1.8.2.v20120109-1030.jar/lib/ant-jai.jar
+[DEBUG] Added dependency to classpath: file:/home/rober/.m2/repository/.cache/tycho/org.apache.ant-1.8.2.v20120109-1030.jar/lib/ant-javamail.jar
+[DEBUG] Added dependency to classpath: file:/home/rober/.m2/repository/.cache/tycho/org.apache.ant-1.8.2.v20120109-1030.jar/lib/ant-jdepend.jar
+[DEBUG] Added dependency to classpath: file:/home/rober/.m2/repository/.cache/tycho/org.apache.ant-1.8.2.v20120109-1030.jar/lib/ant-jmf.jar
+[DEBUG] Added dependency to classpath: file:/home/rober/.m2/repository/.cache/tycho/org.apache.ant-1.8.2.v20120109-1030.jar/lib/ant-jsch.jar
+[DEBUG] Added dependency to classpath: file:/home/rober/.m2/repository/.cache/tycho/org.apache.ant-1.8.2.v20120109-1030.jar/lib/ant-junit.jar
+[DEBUG] Added dependency to classpath: file:/home/rober/.m2/repository/.cache/tycho/org.apache.ant-1.8.2.v20120109-1030.jar/lib/ant-junit4.jar
+[DEBUG] Added dependency to classpath: file:/home/rober/.m2/repository/.cache/tycho/org.apache.ant-1.8.2.v20120109-1030.jar/lib/ant-launcher.jar
+[DEBUG] Added dependency to classpath: file:/home/rober/.m2/repository/.cache/tycho/org.apache.ant-1.8.2.v20120109-1030.jar/lib/ant-netrexx.jar
+[DEBUG] Added dependency to classpath: file:/home/rober/.m2/repository/.cache/tycho/org.apache.ant-1.8.2.v20120109-1030.jar/lib/ant-swing.jar
+[DEBUG] Added dependency to classpath: file:/home/rober/.m2/repository/.cache/tycho/org.apache.ant-1.8.2.v20120109-1030.jar/lib/ant-testutil.jar
+[DEBUG] Added dependency to classpath: file:/home/rober/.m2/repository/.cache/tycho/org.apache.ant-1.8.2.v20120109-1030.jar/lib/ant.jar
+[DEBUG] Added dependency to classpath: file:/home/rober/.m2/repository/p2/osgi/bundle/org.apache.commons.lang/2.4.0.v201005080502/org.apache.commons.lang-2.4.0.v201005080502.jar
+[DEBUG] Added dependency to classpath: file:/home/rober/.m2/repository/p2/osgi/bundle/org.apache.commons.cli/1.2.0.v201105210650/org.apache.commons.cli-1.2.0.v201105210650.jar
+[DEBUG] Added dependency to classpath: file:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.core.variables/3.2.500.v20110928-1503/org.eclipse.core.variables-3.2.500.v20110928-1503.jar
+[DEBUG] Added dependency to classpath: file:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.core.runtime/3.7.0.v20110110/org.eclipse.core.runtime-3.7.0.v20110110.jar
+[DEBUG] Added dependency to classpath: file:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.ant.core/3.2.302.v20120110-1739/org.eclipse.ant.core-3.2.302.v20120110-1739.jar
+[DEBUG] Added dependency to classpath: file:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.core.resources/3.7.101.v20120125-1505/org.eclipse.core.resources-3.7.101.v20120125-1505.jar
+[DEBUG] Added dependency to classpath: file:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.jface.text/3.7.2.v20111213-1208/org.eclipse.jface.text-3.7.2.v20111213-1208.jar
+[DEBUG] Added dependency to classpath: file:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.ui.views/3.6.0.v20110928-1505/org.eclipse.ui.views-3.6.0.v20110928-1505.jar
+[DEBUG] Added dependency to classpath: file:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.ui.workbench.texteditor/3.7.0.v20110928-1504/org.eclipse.ui.workbench.texteditor-3.7.0.v20110928-1504.jar
+[DEBUG] Added dependency to classpath: file:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.core.expressions/3.4.300.v20110228/org.eclipse.core.expressions-3.4.300.v20110228.jar
+[DEBUG] Added dependency to classpath: file:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.ui.forms/3.5.101.v20111011-1919/org.eclipse.ui.forms-3.5.101.v20111011-1919.jar
+[DEBUG] Added dependency to classpath: file:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.compare.core/3.5.200.I20110208-0800/org.eclipse.compare.core-3.5.200.I20110208-0800.jar
+[DEBUG] Added dependency to classpath: file:/home/rober/.m2/repository/p2/osgi/bundle/com.ibm.icu/4.4.2.v20110823/com.ibm.icu-4.4.2.v20110823.jar
+[DEBUG] Added dependency to classpath: file:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.core.commands/3.6.0.I20110111-0800/org.eclipse.core.commands-3.6.0.I20110111-0800.jar
+[DEBUG] Added dependency to classpath: file:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.equinox.common/3.6.0.v20110523/org.eclipse.equinox.common-3.6.0.v20110523.jar
+[DEBUG] Added dependency to classpath: file:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.core.contenttype/3.4.100.v20110423-0524/org.eclipse.core.contenttype-3.4.100.v20110423-0524.jar
+[DEBUG] Added dependency to classpath: file:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.equinox.preferences/3.4.2.v20120111-2020/org.eclipse.equinox.preferences-3.4.2.v20120111-2020.jar
+[DEBUG] Added dependency to classpath: file:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.equinox.registry/3.5.101.R37x_v20110810-1611/org.eclipse.equinox.registry-3.5.101.R37x_v20110810-1611.jar
+[DEBUG] Added dependency to classpath: file:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.core.databinding/1.4.0.I20110111-0800/org.eclipse.core.databinding-1.4.0.I20110111-0800.jar
+[DEBUG] Added dependency to classpath: file:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.core.databinding.observable/1.4.0.I20110222-0800/org.eclipse.core.databinding.observable-1.4.0.I20110222-0800.jar
+[DEBUG] Added dependency to classpath: file:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.core.databinding.property/1.4.0.I20110222-0800/org.eclipse.core.databinding.property-1.4.0.I20110222-0800.jar
+[DEBUG] Added dependency to classpath: file:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.text/3.5.101.v20110928-1504/org.eclipse.text-3.5.101.v20110928-1504.jar
+[DEBUG] Added dependency to classpath: file:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.core.filesystem/1.3.100.v20110423-0524/org.eclipse.core.filesystem-1.3.100.v20110423-0524.jar
+[DEBUG] Added dependency to classpath: file:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.core.filebuffers/3.5.200.v20110928-1504/org.eclipse.core.filebuffers-3.5.200.v20110928-1504.jar
+[DEBUG] Added dependency to classpath: file:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.core.jobs/3.5.101.v20120113-1953/org.eclipse.core.jobs-3.5.101.v20120113-1953.jar
+[DEBUG] Added dependency to classpath: file:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.core.runtime.compatibility.auth/3.2.200.v20110110/org.eclipse.core.runtime.compatibility.auth-3.2.200.v20110110.jar
+[DEBUG] Added dependency to classpath: file:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.equinox.app/1.3.100.v20110321/org.eclipse.equinox.app-1.3.100.v20110321.jar
+[DEBUG] Added dependency to classpath: file:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.debug.core/3.7.1.v20111129-2031/org.eclipse.debug.core-3.7.1.v20111129-2031.jar
+[DEBUG] Added dependency to classpath: file:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.ui.console/3.5.100.v20111007_r372/org.eclipse.ui.console-3.5.100.v20111007_r372.jar
+[DEBUG] Added dependency to classpath: file:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.help/3.5.100.v20110426/org.eclipse.help-3.5.100.v20110426.jar
+[DEBUG] Added dependency to classpath: file:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.debug.ui/3.7.102.v20111129-1423_r372/org.eclipse.debug.ui-3.7.102.v20111129-1423_r372.jar
+[DEBUG] Added dependency to classpath: file:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.jdt.core/3.7.3.v20120119-1537/org.eclipse.jdt.core-3.7.3.v20120119-1537.jar
+[DEBUG] Added dependency to classpath: file:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.jdt.launching/3.6.1.v20111006_r372/org.eclipse.jdt.launching-3.6.1.v20111006_r372.jar
+[DEBUG] Added dependency to classpath: file:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.emf.codegen/2.6.0.v20120130-0943/org.eclipse.emf.codegen-2.6.0.v20120130-0943.jar
+[DEBUG] Added dependency to classpath: file:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.emf.ecore.xmi/2.7.0.v20120127-1122/org.eclipse.emf.ecore.xmi-2.7.0.v20120127-1122.jar
+[DEBUG] Added dependency to classpath: file:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.emf.common.ui/2.7.0.v20120130-0943/org.eclipse.emf.common.ui-2.7.0.v20120130-0943.jar
+[DEBUG] Added dependency to classpath: file:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.emf.ecore.change/2.7.1.v20120127-1122/org.eclipse.emf.ecore.change-2.7.1.v20120127-1122.jar
+[DEBUG] Added dependency to classpath: file:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.emf.edit/2.7.2.v20120130-0943/org.eclipse.emf.edit-2.7.2.v20120130-0943.jar
+[DEBUG] Added dependency to classpath: file:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.emf.ecore.edit/2.7.1.v20120130-0943/org.eclipse.emf.ecore.edit-2.7.1.v20120130-0943.jar
+[DEBUG] Added dependency to classpath: file:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.ui.workbench/3.7.1.v20120104-1859/org.eclipse.ui.workbench-3.7.1.v20120104-1859.jar
+[DEBUG] Added dependency to classpath: file:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.emf.edit.ui/2.7.0.v20120130-0943/org.eclipse.emf.edit.ui-2.7.0.v20120130-0943.jar
+[DEBUG] Added dependency to classpath: file:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.emf.mwe2.runtime/2.2.0.v201112070431/org.eclipse.emf.mwe2.runtime-2.2.0.v201112070431.jar
+[DEBUG] Added dependency to classpath: file:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.emf.mwe.core/1.2.1.v201112070431/org.eclipse.emf.mwe.core-1.2.1.v201112070431.jar
+[DEBUG] Added dependency to classpath: file:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.emf.mwe2.lib/2.2.0.v201112070431/org.eclipse.emf.mwe2.lib-2.2.0.v201112070431.jar
+[DEBUG] Added dependency to classpath: file:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.emf.mwe2.language/2.2.0.v201112071250/org.eclipse.emf.mwe2.language-2.2.0.v201112071250.jar
+[DEBUG] Added dependency to classpath: file:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.jface/3.7.0.v20110928-1505/org.eclipse.jface-3.7.0.v20110928-1505.jar
+[DEBUG] Added dependency to classpath: file:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.jdt.debug.ui/3.6.1.v20111006_r372/org.eclipse.jdt.debug.ui-3.6.1.v20111006_r372.jar
+[DEBUG] Added dependency to classpath: file:/home/rober/.m2/repository/p2/osgi/bundle/com.google.guava/10.0.1.1/com.google.guava-10.0.1.1.jar
+[DEBUG] Added dependency to classpath: file:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.osgi.services/3.3.0.v20110513/org.eclipse.osgi.services-3.3.0.v20110513.jar
+[DEBUG] Added dependency to classpath: file:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.equinox.p2.core/2.1.1.v20120113-1346/org.eclipse.equinox.p2.core-2.1.1.v20120113-1346.jar
+[DEBUG] Added dependency to classpath: file:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.equinox.p2.metadata/2.1.0.v20110815-1419/org.eclipse.equinox.p2.metadata-2.1.0.v20110815-1419.jar
+[DEBUG] Added dependency to classpath: file:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.equinox.p2.metadata.repository/1.2.0.v20110815-1419/org.eclipse.equinox.p2.metadata.repository-1.2.0.v20110815-1419.jar
+[DEBUG] Added dependency to classpath: file:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.equinox.p2.repository/2.1.1.v20120113-1346/org.eclipse.equinox.p2.repository-2.1.1.v20120113-1346.jar
+[DEBUG] Added dependency to classpath: file:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.equinox.security/1.1.1.R37x_v20110822-1018/org.eclipse.equinox.security-1.1.1.R37x_v20110822-1018.jar
+[DEBUG] Added dependency to classpath: file:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.equinox.p2.engine/2.1.1.R37x_v20111003/org.eclipse.equinox.p2.engine-2.1.1.R37x_v20111003.jar
+[DEBUG] Added dependency to classpath: file:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.team.core/3.6.0.I20110525-0800/org.eclipse.team.core-3.6.0.I20110525-0800.jar
+[DEBUG] Added dependency to classpath: file:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.ltk.core.refactoring/3.5.201.r372_v20111101-0700/org.eclipse.ltk.core.refactoring-3.5.201.r372_v20111101-0700.jar
+[DEBUG] Added dependency to classpath: file:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.jdt.core.manipulation/1.4.0.v20110928-1453/org.eclipse.jdt.core.manipulation-1.4.0.v20110928-1453.jar
+[DEBUG] Added dependency to classpath: file:/home/rober/.m2/repository/.cache/tycho/org.eclipse.jdt.debug-3.7.1.v20111006_r372.jar/jdi.jar
+[DEBUG] Added dependency to classpath: file:/home/rober/.m2/repository/.cache/tycho/org.eclipse.jdt.debug-3.7.1.v20111006_r372.jar/jdimodel.jar
+[DEBUG] Added dependency to classpath: file:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.jdt.ui/3.7.2.v20120109-1427/org.eclipse.jdt.ui-3.7.2.v20120109-1427.jar
+[DEBUG] Added dependency to classpath: file:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.search/3.7.0.v20110928-1504/org.eclipse.search-3.7.0.v20110928-1504.jar
+[DEBUG] Added dependency to classpath: file:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.team.ui/3.6.101.R37x_v20111109-0800/org.eclipse.team.ui-3.6.101.R37x_v20111109-0800.jar
+[DEBUG] Added dependency to classpath: file:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.ltk.ui.refactoring/3.6.0.v20110928-1453/org.eclipse.ltk.ui.refactoring-3.6.0.v20110928-1453.jar
+[DEBUG] Added dependency to classpath: file:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.ui.navigator/3.5.101.v20120106-1355/org.eclipse.ui.navigator-3.5.101.v20120106-1355.jar
+[DEBUG] Added dependency to classpath: file:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.ui.navigator.resources/3.4.300.v20110928-1505/org.eclipse.ui.navigator.resources-3.4.300.v20110928-1505.jar
+[DEBUG] Added dependency to classpath: file:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.swt/3.7.2.v3740f/org.eclipse.swt-3.7.2.v3740f.jar
+[DEBUG] Added dependency to classpath: file:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.jface.databinding/1.5.0.I20100907-0800/org.eclipse.jface.databinding-1.5.0.I20100907-0800.jar
+[DEBUG] Added dependency to classpath: file:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.ui.views.properties.tabbed/3.5.200.v20110928-1505/org.eclipse.ui.views.properties.tabbed-3.5.200.v20110928-1505.jar
+[DEBUG] Added dependency to classpath: file:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.xtend/1.1.0.v201108020519/org.eclipse.xtend-1.1.0.v201108020519.jar
+[DEBUG] Added dependency to classpath: file:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.xpand/1.1.0.v201108020519/org.eclipse.xpand-1.1.0.v201108020519.jar
+[DEBUG] Added dependency to classpath: file:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.xtend.typesystem.emf/1.0.1.v201108020519/org.eclipse.xtend.typesystem.emf-1.0.1.v201108020519.jar
+[DEBUG] Added dependency to classpath: file:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.xtext.ecore/2.2.1.v201112130541/org.eclipse.xtext.ecore-2.2.1.v201112130541.jar
+[DEBUG] Added dependency to classpath: file:/home/rober/.m2/repository/.cache/tycho/org.junit-4.8.2.v4_8_2_v20110321-1705.jar/junit.jar
+[DEBUG] Added dependency to classpath: file:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.xtext.junit/2.2.1.v201112130541/org.eclipse.xtext.junit-2.2.1.v201112130541.jar
+[DEBUG] Added dependency to classpath: file:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.xtext.ui.codetemplates/2.2.1.v201112130541/org.eclipse.xtext.ui.codetemplates-2.2.1.v201112130541.jar
+[DEBUG] Added dependency to classpath: file:/home/rober/.m2/repository/p2/osgi/bundle/org.hamcrest.core/1.1.0.v20090501071000/org.hamcrest.core-1.1.0.v20090501071000.jar
+[DEBUG] Added dependency to classpath: file:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.swt.gtk.linux.x86/3.7.2.v3740f/org.eclipse.swt.gtk.linux.x86-3.7.2.v3740f.jar
+[DEBUG] /usr/lib/jvm/java-6-sun-1.6.0.26/jre/bin/java -classpath /home/rober/git/com.visualligence.g/src-gen:/home/rober/.m2/repository/p2/osgi/bundle/com.google.inject/3.0.0.no_aop/com.google.inject-3.0.0.no_aop.jar:/home/rober/.m2/repository/p2/osgi/bundle/javax.inject/1.0.0.v20091030/javax.inject-1.0.0.v20091030.jar:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.xtext/2.2.1.v201112130541/org.eclipse.xtext-2.2.1.v201112130541.jar:/home/rober/.m2/repository/p2/osgi/bundle/org.apache.log4j/1.2.15.v201012070815/org.apache.log4j-1.2.15.v201012070815.jar:/home/rober/.m2/repository/p2/osgi/bundle/org.apache.commons.logging/1.1.1.v201101211721/org.apache.commons.logging-1.1.1.v201101211721.jar:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.xtext.generator/2.2.1.v201112130541/org.eclipse.xtext.generator-2.2.1.v201112130541.jar:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.emf.codegen.ecore/2.7.0.v20120130-0943/org.eclipse.emf.codegen.ecore-2.7.0.v20120130-0943.jar:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.emf.mwe.utils/1.2.1.v201112070431/org.eclipse.emf.mwe.utils-1.2.1.v201112070431.jar:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.emf.mwe2.launch/2.2.0.v201112071250/org.eclipse.emf.mwe2.launch-2.2.0.v201112071250.jar:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.xtext.util/2.2.1.v201112130541/org.eclipse.xtext.util-2.2.1.v201112130541.jar:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.xtext.junit4/2.2.1.v201112130541/org.eclipse.xtext.junit4-2.2.1.v201112130541.jar:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.xtext.ui.junit/2.2.1.v201112130541/org.eclipse.xtext.ui.junit-2.2.1.v201112130541.jar:/home/rober/.m2/repository/p2/osgi/bundle/org.junit4/4.8.1.v20100525/org.junit4-4.8.1.v20100525.jar:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.emf.ecore/2.7.0.v20120127-1122/org.eclipse.emf.ecore-2.7.0.v20120127-1122.jar:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.emf.common/2.7.0.v20120127-1122/org.eclipse.emf.common-2.7.0.v20120127-1122.jar:/home/rober/.m2/repository/p2/osgi/bundle/org.antlr.runtime/3.2.0.v201101311130/org.antlr.runtime-3.2.0.v201101311130.jar:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.xtext.common.types/2.2.1.v201112130541/org.eclipse.xtext.common.types-2.2.1.v201112130541.jar:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.xtext.common.types.ui/2.2.1.v201112130541/org.eclipse.xtext.common.types.ui-2.2.1.v201112130541.jar:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.xtext.ui/2.2.1.v201112130541/org.eclipse.xtext.ui-2.2.1.v201112130541.jar:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.xtext.ui.shared/2.2.1.v201112130541/org.eclipse.xtext.ui.shared-2.2.1.v201112130541.jar:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.xtext.builder/2.2.1.v201112130541/org.eclipse.xtext.builder-2.2.1.v201112130541.jar:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.ui.editors/3.7.0.v20110928-1504/org.eclipse.ui.editors-3.7.0.v20110928-1504.jar:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.ui.ide/3.7.0.v20110928-1505/org.eclipse.ui.ide-3.7.0.v20110928-1505.jar:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.ui/3.7.0.v20110928-1505/org.eclipse.ui-3.7.0.v20110928-1505.jar:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.xtext.ui.codetemplates.ui/2.2.1.v201112130541/org.eclipse.xtext.ui.codetemplates.ui-2.2.1.v201112130541.jar:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.compare/3.5.202.R37x_v20111109-0800/org.eclipse.compare-3.5.202.R37x_v20111109-0800.jar:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.xtend2.lib/2.2.1.v201112130541/org.eclipse.xtend2.lib-2.2.1.v201112130541.jar:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.xtext.xtend2.lib/2.2.1.v201112130541/org.eclipse.xtext.xtend2.lib-2.2.1.v201112130541.jar:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.xtext.xbase.lib/2.2.1.v201112130541/org.eclipse.xtext.xbase.lib-2.2.1.v201112130541.jar:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.osgi/3.7.2.v20120110-1415/org.eclipse.osgi-3.7.2.v20120110-1415.jar:/home/rober/.m2/repository/.cache/tycho/org.apache.ant-1.8.2.v20120109-1030.jar/lib/ant-antlr.jar:/home/rober/.m2/repository/.cache/tycho/org.apache.ant-1.8.2.v20120109-1030.jar/lib/ant-apache-bcel.jar:/home/rober/.m2/repository/.cache/tycho/org.apache.ant-1.8.2.v20120109-1030.jar/lib/ant-apache-bsf.jar:/home/rober/.m2/repository/.cache/tycho/org.apache.ant-1.8.2.v20120109-1030.jar/lib/ant-apache-log4j.jar:/home/rober/.m2/repository/.cache/tycho/org.apache.ant-1.8.2.v20120109-1030.jar/lib/ant-apache-oro.jar:/home/rober/.m2/repository/.cache/tycho/org.apache.ant-1.8.2.v20120109-1030.jar/lib/ant-apache-regexp.jar:/home/rober/.m2/repository/.cache/tycho/org.apache.ant-1.8.2.v20120109-1030.jar/lib/ant-apache-resolver.jar:/home/rober/.m2/repository/.cache/tycho/org.apache.ant-1.8.2.v20120109-1030.jar/lib/ant-apache-xalan2.jar:/home/rober/.m2/repository/.cache/tycho/org.apache.ant-1.8.2.v20120109-1030.jar/lib/ant-commons-logging.jar:/home/rober/.m2/repository/.cache/tycho/org.apache.ant-1.8.2.v20120109-1030.jar/lib/ant-commons-net.jar:/home/rober/.m2/repository/.cache/tycho/org.apache.ant-1.8.2.v20120109-1030.jar/lib/ant-jai.jar:/home/rober/.m2/repository/.cache/tycho/org.apache.ant-1.8.2.v20120109-1030.jar/lib/ant-javamail.jar:/home/rober/.m2/repository/.cache/tycho/org.apache.ant-1.8.2.v20120109-1030.jar/lib/ant-jdepend.jar:/home/rober/.m2/repository/.cache/tycho/org.apache.ant-1.8.2.v20120109-1030.jar/lib/ant-jmf.jar:/home/rober/.m2/repository/.cache/tycho/org.apache.ant-1.8.2.v20120109-1030.jar/lib/ant-jsch.jar:/home/rober/.m2/repository/.cache/tycho/org.apache.ant-1.8.2.v20120109-1030.jar/lib/ant-junit.jar:/home/rober/.m2/repository/.cache/tycho/org.apache.ant-1.8.2.v20120109-1030.jar/lib/ant-junit4.jar:/home/rober/.m2/repository/.cache/tycho/org.apache.ant-1.8.2.v20120109-1030.jar/lib/ant-launcher.jar:/home/rober/.m2/repository/.cache/tycho/org.apache.ant-1.8.2.v20120109-1030.jar/lib/ant-netrexx.jar:/home/rober/.m2/repository/.cache/tycho/org.apache.ant-1.8.2.v20120109-1030.jar/lib/ant-swing.jar:/home/rober/.m2/repository/.cache/tycho/org.apache.ant-1.8.2.v20120109-1030.jar/lib/ant-testutil.jar:/home/rober/.m2/repository/.cache/tycho/org.apache.ant-1.8.2.v20120109-1030.jar/lib/ant.jar:/home/rober/.m2/repository/p2/osgi/bundle/org.apache.commons.lang/2.4.0.v201005080502/org.apache.commons.lang-2.4.0.v201005080502.jar:/home/rober/.m2/repository/p2/osgi/bundle/org.apache.commons.cli/1.2.0.v201105210650/org.apache.commons.cli-1.2.0.v201105210650.jar:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.core.variables/3.2.500.v20110928-1503/org.eclipse.core.variables-3.2.500.v20110928-1503.jar:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.core.runtime/3.7.0.v20110110/org.eclipse.core.runtime-3.7.0.v20110110.jar:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.ant.core/3.2.302.v20120110-1739/org.eclipse.ant.core-3.2.302.v20120110-1739.jar:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.core.resources/3.7.101.v20120125-1505/org.eclipse.core.resources-3.7.101.v20120125-1505.jar:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.jface.text/3.7.2.v20111213-1208/org.eclipse.jface.text-3.7.2.v20111213-1208.jar:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.ui.views/3.6.0.v20110928-1505/org.eclipse.ui.views-3.6.0.v20110928-1505.jar:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.ui.workbench.texteditor/3.7.0.v20110928-1504/org.eclipse.ui.workbench.texteditor-3.7.0.v20110928-1504.jar:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.core.expressions/3.4.300.v20110228/org.eclipse.core.expressions-3.4.300.v20110228.jar:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.ui.forms/3.5.101.v20111011-1919/org.eclipse.ui.forms-3.5.101.v20111011-1919.jar:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.compare.core/3.5.200.I20110208-0800/org.eclipse.compare.core-3.5.200.I20110208-0800.jar:/home/rober/.m2/repository/p2/osgi/bundle/com.ibm.icu/4.4.2.v20110823/com.ibm.icu-4.4.2.v20110823.jar:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.core.commands/3.6.0.I20110111-0800/org.eclipse.core.commands-3.6.0.I20110111-0800.jar:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.equinox.common/3.6.0.v20110523/org.eclipse.equinox.common-3.6.0.v20110523.jar:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.core.contenttype/3.4.100.v20110423-0524/org.eclipse.core.contenttype-3.4.100.v20110423-0524.jar:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.equinox.preferences/3.4.2.v20120111-2020/org.eclipse.equinox.preferences-3.4.2.v20120111-2020.jar:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.equinox.registry/3.5.101.R37x_v20110810-1611/org.eclipse.equinox.registry-3.5.101.R37x_v20110810-1611.jar:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.core.databinding/1.4.0.I20110111-0800/org.eclipse.core.databinding-1.4.0.I20110111-0800.jar:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.core.databinding.observable/1.4.0.I20110222-0800/org.eclipse.core.databinding.observable-1.4.0.I20110222-0800.jar:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.core.databinding.property/1.4.0.I20110222-0800/org.eclipse.core.databinding.property-1.4.0.I20110222-0800.jar:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.text/3.5.101.v20110928-1504/org.eclipse.text-3.5.101.v20110928-1504.jar:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.core.filesystem/1.3.100.v20110423-0524/org.eclipse.core.filesystem-1.3.100.v20110423-0524.jar:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.core.filebuffers/3.5.200.v20110928-1504/org.eclipse.core.filebuffers-3.5.200.v20110928-1504.jar:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.core.jobs/3.5.101.v20120113-1953/org.eclipse.core.jobs-3.5.101.v20120113-1953.jar:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.core.runtime.compatibility.auth/3.2.200.v20110110/org.eclipse.core.runtime.compatibility.auth-3.2.200.v20110110.jar:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.equinox.app/1.3.100.v20110321/org.eclipse.equinox.app-1.3.100.v20110321.jar:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.debug.core/3.7.1.v20111129-2031/org.eclipse.debug.core-3.7.1.v20111129-2031.jar:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.ui.console/3.5.100.v20111007_r372/org.eclipse.ui.console-3.5.100.v20111007_r372.jar:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.help/3.5.100.v20110426/org.eclipse.help-3.5.100.v20110426.jar:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.debug.ui/3.7.102.v20111129-1423_r372/org.eclipse.debug.ui-3.7.102.v20111129-1423_r372.jar:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.jdt.core/3.7.3.v20120119-1537/org.eclipse.jdt.core-3.7.3.v20120119-1537.jar:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.jdt.launching/3.6.1.v20111006_r372/org.eclipse.jdt.launching-3.6.1.v20111006_r372.jar:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.emf.codegen/2.6.0.v20120130-0943/org.eclipse.emf.codegen-2.6.0.v20120130-0943.jar:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.emf.ecore.xmi/2.7.0.v20120127-1122/org.eclipse.emf.ecore.xmi-2.7.0.v20120127-1122.jar:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.emf.common.ui/2.7.0.v20120130-0943/org.eclipse.emf.common.ui-2.7.0.v20120130-0943.jar:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.emf.ecore.change/2.7.1.v20120127-1122/org.eclipse.emf.ecore.change-2.7.1.v20120127-1122.jar:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.emf.edit/2.7.2.v20120130-0943/org.eclipse.emf.edit-2.7.2.v20120130-0943.jar:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.emf.ecore.edit/2.7.1.v20120130-0943/org.eclipse.emf.ecore.edit-2.7.1.v20120130-0943.jar:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.ui.workbench/3.7.1.v20120104-1859/org.eclipse.ui.workbench-3.7.1.v20120104-1859.jar:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.emf.edit.ui/2.7.0.v20120130-0943/org.eclipse.emf.edit.ui-2.7.0.v20120130-0943.jar:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.emf.mwe2.runtime/2.2.0.v201112070431/org.eclipse.emf.mwe2.runtime-2.2.0.v201112070431.jar:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.emf.mwe.core/1.2.1.v201112070431/org.eclipse.emf.mwe.core-1.2.1.v201112070431.jar:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.emf.mwe2.lib/2.2.0.v201112070431/org.eclipse.emf.mwe2.lib-2.2.0.v201112070431.jar:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.emf.mwe2.language/2.2.0.v201112071250/org.eclipse.emf.mwe2.language-2.2.0.v201112071250.jar:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.jface/3.7.0.v20110928-1505/org.eclipse.jface-3.7.0.v20110928-1505.jar:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.jdt.debug.ui/3.6.1.v20111006_r372/org.eclipse.jdt.debug.ui-3.6.1.v20111006_r372.jar:/home/rober/.m2/repository/p2/osgi/bundle/com.google.guava/10.0.1.1/com.google.guava-10.0.1.1.jar:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.osgi.services/3.3.0.v20110513/org.eclipse.osgi.services-3.3.0.v20110513.jar:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.equinox.p2.core/2.1.1.v20120113-1346/org.eclipse.equinox.p2.core-2.1.1.v20120113-1346.jar:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.equinox.p2.metadata/2.1.0.v20110815-1419/org.eclipse.equinox.p2.metadata-2.1.0.v20110815-1419.jar:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.equinox.p2.metadata.repository/1.2.0.v20110815-1419/org.eclipse.equinox.p2.metadata.repository-1.2.0.v20110815-1419.jar:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.equinox.p2.repository/2.1.1.v20120113-1346/org.eclipse.equinox.p2.repository-2.1.1.v20120113-1346.jar:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.equinox.security/1.1.1.R37x_v20110822-1018/org.eclipse.equinox.security-1.1.1.R37x_v20110822-1018.jar:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.equinox.p2.engine/2.1.1.R37x_v20111003/org.eclipse.equinox.p2.engine-2.1.1.R37x_v20111003.jar:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.team.core/3.6.0.I20110525-0800/org.eclipse.team.core-3.6.0.I20110525-0800.jar:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.ltk.core.refactoring/3.5.201.r372_v20111101-0700/org.eclipse.ltk.core.refactoring-3.5.201.r372_v20111101-0700.jar:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.jdt.core.manipulation/1.4.0.v20110928-1453/org.eclipse.jdt.core.manipulation-1.4.0.v20110928-1453.jar:/home/rober/.m2/repository/.cache/tycho/org.eclipse.jdt.debug-3.7.1.v20111006_r372.jar/jdi.jar:/home/rober/.m2/repository/.cache/tycho/org.eclipse.jdt.debug-3.7.1.v20111006_r372.jar/jdimodel.jar:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.jdt.ui/3.7.2.v20120109-1427/org.eclipse.jdt.ui-3.7.2.v20120109-1427.jar:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.search/3.7.0.v20110928-1504/org.eclipse.search-3.7.0.v20110928-1504.jar:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.team.ui/3.6.101.R37x_v20111109-0800/org.eclipse.team.ui-3.6.101.R37x_v20111109-0800.jar:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.ltk.ui.refactoring/3.6.0.v20110928-1453/org.eclipse.ltk.ui.refactoring-3.6.0.v20110928-1453.jar:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.ui.navigator/3.5.101.v20120106-1355/org.eclipse.ui.navigator-3.5.101.v20120106-1355.jar:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.ui.navigator.resources/3.4.300.v20110928-1505/org.eclipse.ui.navigator.resources-3.4.300.v20110928-1505.jar:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.swt/3.7.2.v3740f/org.eclipse.swt-3.7.2.v3740f.jar:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.jface.databinding/1.5.0.I20100907-0800/org.eclipse.jface.databinding-1.5.0.I20100907-0800.jar:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.ui.views.properties.tabbed/3.5.200.v20110928-1505/org.eclipse.ui.views.properties.tabbed-3.5.200.v20110928-1505.jar:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.xtend/1.1.0.v201108020519/org.eclipse.xtend-1.1.0.v201108020519.jar:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.xpand/1.1.0.v201108020519/org.eclipse.xpand-1.1.0.v201108020519.jar:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.xtend.typesystem.emf/1.0.1.v201108020519/org.eclipse.xtend.typesystem.emf-1.0.1.v201108020519.jar:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.xtext.ecore/2.2.1.v201112130541/org.eclipse.xtext.ecore-2.2.1.v201112130541.jar:/home/rober/.m2/repository/.cache/tycho/org.junit-4.8.2.v4_8_2_v20110321-1705.jar/junit.jar:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.xtext.junit/2.2.1.v201112130541/org.eclipse.xtext.junit-2.2.1.v201112130541.jar:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.xtext.ui.codetemplates/2.2.1.v201112130541/org.eclipse.xtext.ui.codetemplates-2.2.1.v201112130541.jar:/home/rober/.m2/repository/p2/osgi/bundle/org.hamcrest.core/1.1.0.v20090501071000/org.hamcrest.core-1.1.0.v20090501071000.jar:/home/rober/.m2/repository/p2/osgi/bundle/org.eclipse.swt.gtk.linux.x86/3.7.2.v3740f/org.eclipse.swt.gtk.linux.x86-3.7.2.v3740f.jar org.eclipse.emf.mwe2.launch.runtime.Mwe2Launcher src/com/visualligence/g/GenerateVML.mwe2
+[ERROR] ExitStatusException occurred while running workflow: Java returned: 1
+[DEBUG] 
+Java returned: 1
+	at org.apache.tools.ant.taskdefs.Java.execute(Java.java:111)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.tools.ant.dispatch.DispatchUtils.execute(DispatchUtils.java:106)
+	at org.apache.tools.ant.Task.perform(Task.java:348)
+	at org.apache.tools.ant.Target.execute(Target.java:390)
+	at org.apache.tools.ant.Target.performTasks(Target.java:411)
+	at org.apache.tools.ant.Project.executeSortedTargets(Project.java:1360)
+	at org.apache.tools.ant.Project.executeTarget(Project.java:1329)
+	at org.fornax.toolsupport.maven2.MojoWorkflowRunner.run(MojoWorkflowRunner.java:52)
+	at org.fornax.toolsupport.maven2.WorkflowMojo.execute(WorkflowMojo.java:400)
+	at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo(DefaultBuildPluginManager.java:101)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:209)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:153)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:145)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:84)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:59)
+	at org.apache.maven.lifecycle.internal.LifecycleStarter.singleThreadedBuild(LifecycleStarter.java:183)
+	at org.apache.maven.lifecycle.internal.LifecycleStarter.execute(LifecycleStarter.java:161)
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:320)
+	at org.apache.maven.DefaultMaven.execute(DefaultMaven.java:156)
+	at org.apache.maven.cli.MavenCli.execute(MavenCli.java:537)
+	at org.apache.maven.cli.MavenCli.doMain(MavenCli.java:196)
+	at org.apache.maven.cli.MavenCli.main(MavenCli.java:141)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced(Launcher.java:290)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launch(Launcher.java:230)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode(Launcher.java:409)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.main(Launcher.java:352)
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 45.836s
+[INFO] Finished at: Wed Mar 28 13:42:10 CEST 2012
+[INFO] Final Memory: 61M/399M
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.fornax.toolsupport:fornax-oaw-m2-plugin:3.1.0-SNAPSHOT:run-workflow (default) on project com.visualligence.g: Generation failed -> [Help 1]
+org.apache.maven.lifecycle.LifecycleExecutionException: Failed to execute goal org.fornax.toolsupport:fornax-oaw-m2-plugin:3.1.0-SNAPSHOT:run-workflow (default) on project com.visualligence.g: Generation failed
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:217)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:153)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:145)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:84)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:59)
+	at org.apache.maven.lifecycle.internal.LifecycleStarter.singleThreadedBuild(LifecycleStarter.java:183)
+	at org.apache.maven.lifecycle.internal.LifecycleStarter.execute(LifecycleStarter.java:161)
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:320)
+	at org.apache.maven.DefaultMaven.execute(DefaultMaven.java:156)
+	at org.apache.maven.cli.MavenCli.execute(MavenCli.java:537)
+	at org.apache.maven.cli.MavenCli.doMain(MavenCli.java:196)
+	at org.apache.maven.cli.MavenCli.main(MavenCli.java:141)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced(Launcher.java:290)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launch(Launcher.java:230)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode(Launcher.java:409)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.main(Launcher.java:352)
+Caused by: org.apache.maven.plugin.MojoExecutionException: Generation failed
+	at org.fornax.toolsupport.maven2.WorkflowMojo.execute(WorkflowMojo.java:406)
+	at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo(DefaultBuildPluginManager.java:101)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:209)
+	... 19 more
+[ERROR] 
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoExecutionException

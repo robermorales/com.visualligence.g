@@ -7,6 +7,8 @@ package com.visualligence.g.services;
 import com.google.inject.Singleton;
 import com.google.inject.Inject;
 
+import java.util.List;
+
 import org.eclipse.xtext.*;
 import org.eclipse.xtext.service.GrammarProvider;
 import org.eclipse.xtext.service.AbstractElementFinder.*;
@@ -56,11 +58,13 @@ public class VMLGrammarAccess extends AbstractGrammarElementFinder {
 		//// @TODO Nombre con estilo Java y paquetes. imprescindible para crecer.
 		//Module:
 		//	{Module} ("module" name=ID)? ("input" inputtype=TypeRef)? ("output" outputtype=TypeRef)? ("author" author=STRING)?
-		//	("creation" creation=STRING)? ("more" link=STRING)? imports+=Import* sentences+=Sentence*;
+		//	("creation" creation=STRING)? ("more" link=STRING)? //	( 'patterns' patterns   = VPDesc   )?
+		//	imports+=Import* sentences+=Sentence*;
 		public ParserRule getRule() { return rule; }
 
 		//{Module} ("module" name=ID)? ("input" inputtype=TypeRef)? ("output" outputtype=TypeRef)? ("author" author=STRING)?
-		//("creation" creation=STRING)? ("more" link=STRING)? imports+=Import* sentences+=Sentence*
+		//("creation" creation=STRING)? ("more" link=STRING)? //	( 'patterns' patterns   = VPDesc   )?
+		//imports+=Import* sentences+=Sentence*
 		public Group getGroup() { return cGroup; }
 
 		//{Module}
@@ -138,6 +142,7 @@ public class VMLGrammarAccess extends AbstractGrammarElementFinder {
 		//STRING
 		public RuleCall getLinkSTRINGTerminalRuleCall_6_1_0() { return cLinkSTRINGTerminalRuleCall_6_1_0; }
 
+		////	( 'patterns' patterns   = VPDesc   )?
 		//imports+=Import*
 		public Assignment getImportsAssignment_7() { return cImportsAssignment_7; }
 
@@ -158,6 +163,9 @@ public class VMLGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cImportURIAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final RuleCall cImportURISTRINGTerminalRuleCall_1_0 = (RuleCall)cImportURIAssignment_1.eContents().get(0);
 		
+		////VPDesc returns visualligence::VisualPattern:
+		////	{visualligence::VisualPattern}
+		////;
 		//Import:
 		//	"import" importURI=STRING;
 		public ParserRule getRule() { return rule; }
@@ -3212,19 +3220,36 @@ public class VMLGrammarAccess extends AbstractGrammarElementFinder {
 	private FileElements pFile;
 	private CanvasElements pCanvas;
 	
-	private final GrammarProvider grammarProvider;
+	private final Grammar grammar;
 
 	private TerminalsGrammarAccess gaTerminals;
 
 	@Inject
 	public VMLGrammarAccess(GrammarProvider grammarProvider,
 		TerminalsGrammarAccess gaTerminals) {
-		this.grammarProvider = grammarProvider;
+		this.grammar = internalFindGrammar(grammarProvider);
 		this.gaTerminals = gaTerminals;
 	}
 	
-	public Grammar getGrammar() {	
-		return grammarProvider.getGrammar(this);
+	protected Grammar internalFindGrammar(GrammarProvider grammarProvider) {
+		Grammar grammar = grammarProvider.getGrammar(this);
+		while (grammar != null) {
+			if ("com.visualligence.g.VML".equals(grammar.getName())) {
+				return grammar;
+			}
+			List<Grammar> grammars = grammar.getUsedGrammars();
+			if (!grammars.isEmpty()) {
+				grammar = grammars.iterator().next();
+			} else {
+				return null;
+			}
+		}
+		return grammar;
+	}
+	
+	
+	public Grammar getGrammar() {
+		return grammar;
 	}
 	
 
@@ -3239,7 +3264,8 @@ public class VMLGrammarAccess extends AbstractGrammarElementFinder {
 	//// @TODO Nombre con estilo Java y paquetes. imprescindible para crecer.
 	//Module:
 	//	{Module} ("module" name=ID)? ("input" inputtype=TypeRef)? ("output" outputtype=TypeRef)? ("author" author=STRING)?
-	//	("creation" creation=STRING)? ("more" link=STRING)? imports+=Import* sentences+=Sentence*;
+	//	("creation" creation=STRING)? ("more" link=STRING)? //	( 'patterns' patterns   = VPDesc   )?
+	//	imports+=Import* sentences+=Sentence*;
 	public ModuleElements getModuleAccess() {
 		return (pModule != null) ? pModule : (pModule = new ModuleElements());
 	}
@@ -3248,6 +3274,9 @@ public class VMLGrammarAccess extends AbstractGrammarElementFinder {
 		return getModuleAccess().getRule();
 	}
 
+	////VPDesc returns visualligence::VisualPattern:
+	////	{visualligence::VisualPattern}
+	////;
 	//Import:
 	//	"import" importURI=STRING;
 	public ImportElements getImportAccess() {

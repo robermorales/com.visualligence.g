@@ -1,5 +1,6 @@
 package com.visualligence.g.generator;
 
+import com.google.common.base.Objects;
 import com.visualligence.g.vML.AuxType;
 import com.visualligence.g.vML.AuxTypeRef;
 import com.visualligence.g.vML.Box;
@@ -44,10 +45,7 @@ import org.eclipse.xtext.generator.IGenerator;
 import org.eclipse.xtext.generator.parser.antlr.splitting.simpleExpressions.NumberLiteral;
 import org.eclipse.xtext.xbase.lib.Exceptions;
 import org.eclipse.xtext.xbase.lib.Functions.Function1;
-import org.eclipse.xtext.xbase.lib.IntegerExtensions;
 import org.eclipse.xtext.xbase.lib.IterableExtensions;
-import org.eclipse.xtext.xbase.lib.ObjectExtensions;
-import org.eclipse.xtext.xbase.lib.StringExtensions;
 
 @SuppressWarnings("all")
 public class VMLGenerator implements IGenerator {
@@ -78,74 +76,63 @@ public class VMLGenerator implements IGenerator {
   public CharSequence cName(final Resource r) {
     URI _uRI = r.getURI();
     String _lastSegment = _uRI.lastSegment();
-    CharSequence _base = this.base(_lastSegment);
-    return _base;
+    return this.base(_lastSegment);
   }
   
   public String pName(final Resource r) {
     CharSequence _cName = this.cName(r);
-    String _operator_plus = StringExtensions.operator_plus("com/visualligence/gen/", _cName);
-    String _operator_plus_1 = StringExtensions.operator_plus(_operator_plus, "/");
-    return _operator_plus_1;
+    String _plus = ("com/visualligence/gen/" + _cName);
+    return (_plus + "/");
   }
   
   public void doGenerate(final Resource resource, final IFileSystemAccess fsa) {
-      EList<EObject> _contents = resource.getContents();
-      EObject _head = IterableExtensions.<EObject>head(_contents);
-      Module m = ((Module) _head);
-      try {
+    EList<EObject> _contents = resource.getContents();
+    EObject _head = IterableExtensions.<EObject>head(_contents);
+    Module m = ((Module) _head);
+    try {
+      CharSequence txt = this.toTxt(m);
+      String _pName = this.pName(resource);
+      CharSequence _cName = this.cName(resource);
+      String _plus = (_pName + _cName);
+      String _plus_1 = (_plus + ".dump.txt");
+      fsa.generateFile(_plus_1, txt);
+      CharSequence java = this.toJavaCode(m);
+      String _pName_1 = this.pName(resource);
+      CharSequence _cName_1 = this.cName(resource);
+      String _plus_2 = (_pName_1 + _cName_1);
+      String _plus_3 = (_plus_2 + ".java");
+      fsa.generateFile(_plus_3, java);
+      EList<Sentence> _sentences = m.getSentences();
+      final Function1<Sentence,Boolean> _function = new Function1<Sentence,Boolean>() {
+          public Boolean apply(final Sentence e) {
+            return Boolean.valueOf((e instanceof Box));
+          }
+        };
+      Iterable<Sentence> _filter = IterableExtensions.<Sentence>filter(_sentences, _function);
+      for (final Sentence s : _filter) {
         {
-          CharSequence _txt = this.toTxt(m);
-          CharSequence txt = _txt;
-          String _pName = this.pName(resource);
-          CharSequence _cName = this.cName(resource);
-          String _operator_plus = StringExtensions.operator_plus(_pName, _cName);
-          String _operator_plus_1 = StringExtensions.operator_plus(_operator_plus, ".dump.txt");
-          fsa.generateFile(_operator_plus_1, txt);
-          CharSequence _javaCode = this.toJavaCode(m);
-          CharSequence java = _javaCode;
-          String _pName_1 = this.pName(resource);
-          CharSequence _cName_1 = this.cName(resource);
-          String _operator_plus_2 = StringExtensions.operator_plus(_pName_1, _cName_1);
-          String _operator_plus_3 = StringExtensions.operator_plus(_operator_plus_2, ".java");
-          fsa.generateFile(_operator_plus_3, java);
-          EList<Sentence> _sentences = m.getSentences();
-          final Function1<Sentence,Boolean> _function = new Function1<Sentence,Boolean>() {
-              public Boolean apply(final Sentence e) {
-                return Boolean.valueOf((e instanceof Box));
-              }
-            };
-          Iterable<Sentence> _filter = IterableExtensions.<Sentence>filter(_sentences, _function);
-          for (final Sentence s : _filter) {
-            {
-              CharSequence _javaCodeBox = this.toJavaCodeBox(((Box) s), m);
-              CharSequence java_box = _javaCodeBox;
-              String _pName_2 = this.pName(resource);
-              String _name = ((Box) s).getName();
-              String _operator_plus_4 = StringExtensions.operator_plus(_pName_2, _name);
-              String _operator_plus_5 = StringExtensions.operator_plus(_operator_plus_4, ".java");
-              String java_box_filename = _operator_plus_5;
-              fsa.generateFile(java_box_filename, java_box);
-            }
-          }
-        }
-      } catch (final Throwable _t) {
-        if (_t instanceof Exception) {
-          final Exception e = (Exception)_t;
-          {
-            String _operator_plus_6 = StringExtensions.operator_plus("/*", e);
-            String _operator_plus_7 = StringExtensions.operator_plus(_operator_plus_6, "*/");
-            String error = _operator_plus_7;
-            String _pName_3 = this.pName(resource);
-            CharSequence _cName_2 = this.cName(resource);
-            String _operator_plus_8 = StringExtensions.operator_plus(_pName_3, _cName_2);
-            String _operator_plus_9 = StringExtensions.operator_plus(_operator_plus_8, ".java");
-            fsa.generateFile(_operator_plus_9, error);
-          }
-        } else {
-          throw Exceptions.sneakyThrow(_t);
+          CharSequence java_box = this.toJavaCodeBox(((Box) s), m);
+          String _pName_2 = this.pName(resource);
+          String _name = ((Box) s).getName();
+          String _plus_4 = (_pName_2 + _name);
+          String java_box_filename = (_plus_4 + ".java");
+          fsa.generateFile(java_box_filename, java_box);
         }
       }
+    } catch (final Throwable _t) {
+      if (_t instanceof Exception) {
+        final Exception e = (Exception)_t;
+        String _plus_4 = ("/*" + e);
+        String error = (_plus_4 + "*/");
+        String _pName_2 = this.pName(resource);
+        CharSequence _cName_2 = this.cName(resource);
+        String _plus_5 = (_pName_2 + _cName_2);
+        String _plus_6 = (_plus_5 + ".java");
+        fsa.generateFile(_plus_6, error);
+      } else {
+        throw Exceptions.sneakyThrow(_t);
+      }
+    }
   }
   
   public CharSequence automark() {
@@ -443,17 +430,17 @@ public class VMLGenerator implements IGenerator {
   protected CharSequence _toType(final AuxTypeRef at) {
     String _switchResult = null;
     AuxType _ref = at.getRef();
-    final AuxType __valOfSwitchOver = _ref;
-    boolean matched = false;
-    if (!matched) {
-      if (ObjectExtensions.operator_equals(__valOfSwitchOver,AuxType.BOOL)) {
-        matched=true;
+    final AuxType _switchValue = _ref;
+    boolean _matched = false;
+    if (!_matched) {
+      if (Objects.equal(_switchValue,AuxType.BOOL)) {
+        _matched=true;
         _switchResult = "VBool";
       }
     }
-    if (!matched) {
-      if (ObjectExtensions.operator_equals(__valOfSwitchOver,AuxType.STRING)) {
-        matched=true;
+    if (!_matched) {
+      if (Objects.equal(_switchValue,AuxType.STRING)) {
+        _matched=true;
         _switchResult = "VString";
       }
     }
@@ -556,41 +543,41 @@ public class VMLGenerator implements IGenerator {
     {
       String _switchResult = null;
       Op _op = oper.getOp();
-      final Op __valOfSwitchOver = _op;
-      boolean matched = false;
-      if (!matched) {
-        if (ObjectExtensions.operator_equals(__valOfSwitchOver,Op.PLUS)) {
-          matched=true;
+      final Op _switchValue = _op;
+      boolean _matched = false;
+      if (!_matched) {
+        if (Objects.equal(_switchValue,Op.PLUS)) {
+          _matched=true;
           _switchResult = "Plus";
         }
       }
-      if (!matched) {
-        if (ObjectExtensions.operator_equals(__valOfSwitchOver,Op.MINUS)) {
-          matched=true;
+      if (!_matched) {
+        if (Objects.equal(_switchValue,Op.MINUS)) {
+          _matched=true;
           _switchResult = "Minus";
         }
       }
-      if (!matched) {
-        if (ObjectExtensions.operator_equals(__valOfSwitchOver,Op.TIMES)) {
-          matched=true;
+      if (!_matched) {
+        if (Objects.equal(_switchValue,Op.TIMES)) {
+          _matched=true;
           _switchResult = "Times";
         }
       }
-      if (!matched) {
-        if (ObjectExtensions.operator_equals(__valOfSwitchOver,Op.DIVIDEBY)) {
-          matched=true;
+      if (!_matched) {
+        if (Objects.equal(_switchValue,Op.DIVIDEBY)) {
+          _matched=true;
           _switchResult = "DivideBy";
         }
       }
-      if (!matched) {
-        if (ObjectExtensions.operator_equals(__valOfSwitchOver,Op.INTDIVISION)) {
-          matched=true;
+      if (!_matched) {
+        if (Objects.equal(_switchValue,Op.INTDIVISION)) {
+          _matched=true;
           _switchResult = "IntDivision";
         }
       }
-      if (!matched) {
-        if (ObjectExtensions.operator_equals(__valOfSwitchOver,Op.MODULO)) {
-          matched=true;
+      if (!_matched) {
+        if (Objects.equal(_switchValue,Op.MODULO)) {
+          _matched=true;
           _switchResult = "Modulo";
         }
       }
@@ -621,41 +608,41 @@ public class VMLGenerator implements IGenerator {
     {
       String _switchResult = null;
       Op _op = oper.getOp();
-      final Op __valOfSwitchOver = _op;
-      boolean matched = false;
-      if (!matched) {
-        if (ObjectExtensions.operator_equals(__valOfSwitchOver,Op.PLUS)) {
-          matched=true;
+      final Op _switchValue = _op;
+      boolean _matched = false;
+      if (!_matched) {
+        if (Objects.equal(_switchValue,Op.PLUS)) {
+          _matched=true;
           _switchResult = "Plus";
         }
       }
-      if (!matched) {
-        if (ObjectExtensions.operator_equals(__valOfSwitchOver,Op.MINUS)) {
-          matched=true;
+      if (!_matched) {
+        if (Objects.equal(_switchValue,Op.MINUS)) {
+          _matched=true;
           _switchResult = "Minus";
         }
       }
-      if (!matched) {
-        if (ObjectExtensions.operator_equals(__valOfSwitchOver,Op.TIMES)) {
-          matched=true;
+      if (!_matched) {
+        if (Objects.equal(_switchValue,Op.TIMES)) {
+          _matched=true;
           _switchResult = "Times";
         }
       }
-      if (!matched) {
-        if (ObjectExtensions.operator_equals(__valOfSwitchOver,Op.DIVIDEBY)) {
-          matched=true;
+      if (!_matched) {
+        if (Objects.equal(_switchValue,Op.DIVIDEBY)) {
+          _matched=true;
           _switchResult = "DivideBy";
         }
       }
-      if (!matched) {
-        if (ObjectExtensions.operator_equals(__valOfSwitchOver,Op.INTDIVISION)) {
-          matched=true;
+      if (!_matched) {
+        if (Objects.equal(_switchValue,Op.INTDIVISION)) {
+          _matched=true;
           _switchResult = "IntDivision";
         }
       }
-      if (!matched) {
-        if (ObjectExtensions.operator_equals(__valOfSwitchOver,Op.MODULO)) {
-          matched=true;
+      if (!_matched) {
+        if (Objects.equal(_switchValue,Op.MODULO)) {
+          _matched=true;
           _switchResult = "Modulo";
         }
       }
@@ -900,9 +887,9 @@ public class VMLGenerator implements IGenerator {
       int _size = _eCrossReferences.size();
       EList<EObject> _eContents = m.eContents();
       int _size_1 = _eContents.size();
-      int _operator_plus = IntegerExtensions.operator_plus(_size, _size_1);
-      boolean _operator_greaterThan = IntegerExtensions.operator_greaterThan(_operator_plus, 0);
-      if (_operator_greaterThan) {
+      int _plus = (_size + _size_1);
+      boolean _greaterThan = (_plus > 0);
+      if (_greaterThan) {
         {
           EList<EObject> _eCrossReferences_1 = m.eCrossReferences();
           for(final EObject ref : _eCrossReferences_1) {

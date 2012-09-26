@@ -13,8 +13,8 @@ import org.eclipse.xtext.serializer.analysis.ISyntacticSequencerPDAProvider.ISyn
 import org.eclipse.xtext.serializer.analysis.ISyntacticSequencerPDAProvider.ISynTransition;
 import org.eclipse.xtext.serializer.sequencer.AbstractSyntacticSequencer;
 
-@SuppressWarnings("restriction")
-public class AbstractVMLSyntacticSequencer extends AbstractSyntacticSequencer {
+@SuppressWarnings("all")
+public abstract class AbstractVMLSyntacticSequencer extends AbstractSyntacticSequencer {
 
 	protected VMLGrammarAccess grammarAccess;
 	protected AbstractElementAlias match_LiteralExpressionTerminal_LeftParenthesisKeyword_0_0_a;

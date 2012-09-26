@@ -57,38 +57,18 @@ import org.eclipse.xtext.serializer.acceptor.ISemanticSequenceAcceptor;
 import org.eclipse.xtext.serializer.acceptor.SequenceFeeder;
 import org.eclipse.xtext.serializer.diagnostic.ISemanticSequencerDiagnosticProvider;
 import org.eclipse.xtext.serializer.diagnostic.ISerializationDiagnostic.Acceptor;
-import org.eclipse.xtext.serializer.sequencer.AbstractSemanticSequencer;
+import org.eclipse.xtext.serializer.sequencer.AbstractDelegatingSemanticSequencer;
 import org.eclipse.xtext.serializer.sequencer.GenericSequencer;
 import org.eclipse.xtext.serializer.sequencer.ISemanticNodeProvider.INodesForEObjectProvider;
 import org.eclipse.xtext.serializer.sequencer.ISemanticSequencer;
 import org.eclipse.xtext.serializer.sequencer.ITransientValueService;
 import org.eclipse.xtext.serializer.sequencer.ITransientValueService.ValueTransient;
 
-@SuppressWarnings("restriction")
-public class AbstractVMLSemanticSequencer extends AbstractSemanticSequencer {
+@SuppressWarnings("all")
+public abstract class AbstractVMLSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 
 	@Inject
-	protected VMLGrammarAccess grammarAccess;
-	
-	@Inject
-	protected ISemanticSequencerDiagnosticProvider diagnosticProvider;
-	
-	@Inject
-	protected ITransientValueService transientValues;
-	
-	@Inject
-	@GenericSequencer
-	protected Provider<ISemanticSequencer> genericSequencerProvider;
-	
-	protected ISemanticSequencer genericSequencer;
-	
-	
-	@Override
-	public void init(ISemanticSequencer sequencer, ISemanticSequenceAcceptor sequenceAcceptor, Acceptor errorAcceptor) {
-		super.init(sequencer, sequenceAcceptor, errorAcceptor);
-		this.genericSequencer = genericSequencerProvider.get();
-		this.genericSequencer.init(sequencer, sequenceAcceptor, errorAcceptor);
-	}
+	private VMLGrammarAccess grammarAccess;
 	
 	public void createSequence(EObject context, EObject semanticObject) {
 		if(semanticObject.eClass().getEPackage() == VMLPackage.eINSTANCE) switch(semanticObject.eClass().getClassifierID()) {
@@ -96,7 +76,7 @@ public class AbstractVMLSemanticSequencer extends AbstractSemanticSequencer {
 				if(context == grammarAccess.getAutoTypeRefRule() ||
 				   context == grammarAccess.getPlainTypeRefRule() ||
 				   context == grammarAccess.getTypeRefRule()) {
-					sequence_TypeRef(context, (AutoTypeRef) semanticObject); 
+					sequence_AutoTypeRef(context, (AutoTypeRef) semanticObject); 
 					return; 
 				}
 				else break;
@@ -206,7 +186,7 @@ public class AbstractVMLSemanticSequencer extends AbstractSemanticSequencer {
 			case VMLPackage.INPUT_REF:
 				if(context == grammarAccess.getInputRefRule() ||
 				   context == grammarAccess.getRStreamValueRule()) {
-					sequence_RStreamValue(context, (InputRef) semanticObject); 
+					sequence_InputRef(context, (InputRef) semanticObject); 
 					return; 
 				}
 				else break;
@@ -307,14 +287,14 @@ public class AbstractVMLSemanticSequencer extends AbstractSemanticSequencer {
 				   context == grammarAccess.getLiteralExpressionSignedRule() ||
 				   context == grammarAccess.getLiteralExpressionTerminalRule() ||
 				   context == grammarAccess.getRStreamValueRule()) {
-					sequence_LiteralExpressionMulti(context, (Operation) semanticObject); 
+					sequence_LiteralExpressionAdd_LiteralExpressionBin_LiteralExpressionComp_LiteralExpressionExp_LiteralExpressionMulti(context, (Operation) semanticObject); 
 					return; 
 				}
 				else break;
 			case VMLPackage.OUTPUT_REF:
 				if(context == grammarAccess.getLStreamValueRule() ||
 				   context == grammarAccess.getOutputRefRule()) {
-					sequence_LStreamValue(context, (OutputRef) semanticObject); 
+					sequence_OutputRef(context, (OutputRef) semanticObject); 
 					return; 
 				}
 				else break;
@@ -542,6 +522,15 @@ public class AbstractVMLSemanticSequencer extends AbstractSemanticSequencer {
 	
 	/**
 	 * Constraint:
+	 *     {AutoTypeRef}
+	 */
+	protected void sequence_AutoTypeRef(EObject context, AutoTypeRef semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
 	 *     ref=AuxType
 	 */
 	protected void sequence_AuxTypeRef(EObject context, AuxTypeRef semanticObject) {
@@ -711,6 +700,15 @@ public class AbstractVMLSemanticSequencer extends AbstractSemanticSequencer {
 	
 	/**
 	 * Constraint:
+	 *     {InputRef}
+	 */
+	protected void sequence_InputRef(EObject context, InputRef semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
 	 *     (name=ID source=LiteralExpression)
 	 */
 	protected void sequence_InvokationParam(EObject context, InvokationParam semanticObject) {
@@ -739,15 +737,6 @@ public class AbstractVMLSemanticSequencer extends AbstractSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     {OutputRef}
-	 */
-	protected void sequence_LStreamValue(EObject context, OutputRef semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Constraint:
 	 *     (
 	 *         (left=LiteralExpressionMulti_Operation_1_0 op=MultiOp right=LiteralExpressionMulti) | 
 	 *         (left=LiteralExpressionExp_Operation_1_0 op=ExpOp right=LiteralExpressionExp) | 
@@ -756,7 +745,7 @@ public class AbstractVMLSemanticSequencer extends AbstractSemanticSequencer {
 	 *         (left=LiteralExpressionBin_Operation_1_0 op=BinOp right=LiteralExpressionBin)
 	 *     )
 	 */
-	protected void sequence_LiteralExpressionMulti(EObject context, Operation semanticObject) {
+	protected void sequence_LiteralExpressionAdd_LiteralExpressionBin_LiteralExpressionComp_LiteralExpressionExp_LiteralExpressionMulti(EObject context, Operation semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -919,6 +908,15 @@ public class AbstractVMLSemanticSequencer extends AbstractSemanticSequencer {
 	
 	/**
 	 * Constraint:
+	 *     {OutputRef}
+	 */
+	protected void sequence_OutputRef(EObject context, OutputRef semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
 	 *     (name=ID value=STRING)
 	 */
 	protected void sequence_Pair(EObject context, Pair semanticObject) {
@@ -933,15 +931,6 @@ public class AbstractVMLSemanticSequencer extends AbstractSemanticSequencer {
 		feeder.accept(grammarAccess.getPairAccess().getNameIDTerminalRuleCall_0_0(), semanticObject.getName());
 		feeder.accept(grammarAccess.getPairAccess().getValueSTRINGTerminalRuleCall_2_0(), semanticObject.getValue());
 		feeder.finish();
-	}
-	
-	
-	/**
-	 * Constraint:
-	 *     {InputRef}
-	 */
-	protected void sequence_RStreamValue(EObject context, InputRef semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
@@ -1165,15 +1154,6 @@ public class AbstractVMLSemanticSequencer extends AbstractSemanticSequencer {
 		feeder.accept(grammarAccess.getTypeAliasAccess().getNameIDTerminalRuleCall_1_0(), semanticObject.getName());
 		feeder.accept(grammarAccess.getTypeAliasAccess().getTypeTypeRefParserRuleCall_2_0(), semanticObject.getType());
 		feeder.finish();
-	}
-	
-	
-	/**
-	 * Constraint:
-	 *     {AutoTypeRef}
-	 */
-	protected void sequence_TypeRef(EObject context, AutoTypeRef semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
