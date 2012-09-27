@@ -16,7 +16,7 @@ import org.junit.runner.RunWith;
 import com.google.inject.Inject;
 import com.visualligence.g.VMLInjectorProvider;
 import com.visualligence.g.generator.VMLGenerator;
-import com.visualligence.g.model.visualligence.Module;
+import com.visualligence.g.vML.Module;
 
 @InjectWith(VMLInjectorProvider.class)
 @RunWith(XtextRunner.class)
@@ -38,7 +38,9 @@ public class ParserTest {
 
 				log.debug("Test " + test.getName());
 				byte[] buffer_vml = new byte[(int) body.length()];
-				new FileInputStream(body).read(buffer_vml);
+				FileInputStream fis = new FileInputStream(body);
+				fis.read(buffer_vml);
+				fis.close();
 				log.debug(space + "[parse]");
 
 				Module module = parser.parse(new String(buffer_vml));

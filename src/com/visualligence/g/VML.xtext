@@ -2,48 +2,106 @@ grammar com.visualligence.g.VML with org.eclipse.xtext.common.Terminals
 
 import "http://www.eclipse.org/emf/2002/Ecore" as ecore
 //import "platform:/resource/com.visualligence.g/src/com/visualligence/g/model/visualligence.ecore" as visualligence
-import "http://www.visualligence.com/vml"
+//import "http://www.visualligence.com/vml"
 
-//generate vML "http://www.visualligence.com/g/VML"
+import "http://www.visualligence.com/g/VML"
 
 // @TODO syntax coloring for numeric terminals
 // @TODO revisar tuplas !!! tupla vacía??? (: a:a, a:b )
 // @TODO genericidad en los tipos
 // @TODO Nombre con estilo Java y paquetes. imprescindible para crecer.
 
-Module:
+
+Module returns Module:
 	{Module}
-	( 'types'     types += TypeDecl  )*
-	( 'input'     input += Input     )*
-	( 'output'   output += Output    )*
-	;
-
-TypeDecl:
-	'type'
-	Hash
-	name=STRING
-;
-
-Hash:
-	{Hash}
+	'Module'
+	name=EString
 	'{'
-	(items+=HashItem
-	(',' items+=HashItem)*)?
-	'}'
-	;
+		('input' '{' input+=Input ( "," input+=Input)* '}' )?
+		('output' '{' output+=Output ( "," output+=Output)* '}' )?
+		('instances' '{' instances+=ModuleInstances ( "," instances+=ModuleInstances)* '}' )?
+		('types' '{' types+=TypeDecl ( "," types+=TypeDecl)* '}' )?
+	'}';
 
-HashItem:
-	{HashItem}
-	name=STRING ':' type=[TypeDecl]
-	;
+TypeDecl returns TypeDecl:
+	NativeType | List | Hash;
 
-Input:
-	name=STRING ':' type=[TypeDecl]
-	;
+Stream returns Stream:
+	Stream_Impl | Literal | Input | Output;
 
-Output:
-	name=STRING ':' type=[TypeDecl]
-	;
+
+EString returns ecore::EString:
+	STRING | ID;
+
+Input returns Input:
+	'Input'
+	name=EString
+	'{'
+		'type' type=[TypeDecl|EString]
+	'}';
+
+Output returns Output:
+	'Output'
+	name=EString
+	'{'
+		'type' type=[TypeDecl|EString]
+		('left' left=[Stream|EString])?
+	'}';
+
+ModuleInstances returns ModuleInstances:
+	'ModuleInstances'
+	name=EString
+	'{'
+		'desc' desc=[Module|EString]
+		('left' '{' left+=Stream ( "," left+=Stream)* '}' )?
+	'}';
+
+Stream_Impl returns Stream:
+	'Stream'
+	name=EString
+	'{'
+		'type' type=[TypeDecl|EString]
+	'}';
+
+Literal returns Literal:
+	'Literal'
+	name=EString
+	'{'
+		('value' value=EString)?
+		'type' type=[TypeDecl|EString]
+	'}';
+
+NativeType returns NativeType:
+	'NativeType'
+	name=EString
+	'{'
+		'type' type=NativeTypeOptions
+	'}';
+
+List returns List:
+	'List'
+	name=EString
+	'{'
+		'type' type=[TypeDecl|EString]
+	'}';
+
+Hash returns Hash:
+	{Hash}
+	'Hash'
+	name=EString
+	'{'
+		('items' '{' items+=HashItem ( "," items+=HashItem)* '}' )?
+	'}';
+
+NativeTypeOptions returns NativeTypeOptions:
+	'NativeTypeOptions' /* TODO: implement this rule and an appropriate IValueConverter */;
+
+HashItem returns HashItem:
+	'HashItem'
+	name=EString
+	'{'
+		'type' type=[TypeDecl|EString]
+	'}';
 
 /*
 Module:

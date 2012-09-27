@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/com.visualligence.g/src-gen" editDirectory="/com.visualligence.g.edit/src"
+    editorDirectory="/com.visualligence.g.editor/src" modelPluginID="com.visualligence.g"
+    forceOverwrite="true" modelName="VML" updateClasspath="false" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    complianceLevel="5.0" copyrightFields="false" editPluginID="com.visualligence.g.edit"
+    editorPluginID="com.visualligence.g.editor" runtimeVersion="2.8">
+  <genPackages prefix="VML" basePackage="com.visualligence.g" disposableProviderFactory="true"
+      ecorePackage="VML.ecore#/">
+    <genClasses ecoreClass="VML.ecore#//Module">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute VML.ecore#//Module/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference VML.ecore#//Module/input"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference VML.ecore#//Module/output"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference VML.ecore#//Module/instances"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference VML.ecore#//Module/types"/>
+    </genClasses>
+    <genClasses ecoreClass="VML.ecore#//TypeDecl">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute VML.ecore#//TypeDecl/name"/>
+    </genClasses>
+    <genClasses ecoreClass="VML.ecore#//Stream">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute VML.ecore#//Stream/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference VML.ecore#//Stream/type"/>
+    </genClasses>
+    <genClasses ecoreClass="VML.ecore#//Input"/>
+    <genClasses ecoreClass="VML.ecore#//Output">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference VML.ecore#//Output/left"/>
+    </genClasses>
+    <genClasses ecoreClass="VML.ecore#//ModuleInstances">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute VML.ecore#//ModuleInstances/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference VML.ecore#//ModuleInstances/desc"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference VML.ecore#//ModuleInstances/left"/>
+    </genClasses>
+    <genClasses ecoreClass="VML.ecore#//Literal">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute VML.ecore#//Literal/value"/>
+    </genClasses>
+    <genClasses ecoreClass="VML.ecore#//NativeType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference VML.ecore#//NativeType/type"/>
+    </genClasses>
+    <genClasses ecoreClass="VML.ecore#//List">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference VML.ecore#//List/type"/>
+    </genClasses>
+    <genClasses ecoreClass="VML.ecore#//Hash">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference VML.ecore#//Hash/items"/>
+    </genClasses>
+    <genClasses ecoreClass="VML.ecore#//NativeTypeOptions"/>
+    <genClasses ecoreClass="VML.ecore#//HashItem">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute VML.ecore#//HashItem/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference VML.ecore#//HashItem/type"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

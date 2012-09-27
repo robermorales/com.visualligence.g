@@ -13,10 +13,13 @@ Workflow {
     bean = StandaloneSetup {
         scanClassPath = true
         platformUri = "${runtimeProject}/.."
+
+	registerGeneratedEPackage = "com.visualligence.g.vML.VMLPackage"
+	registerGenModelFile = "platform:/resource/com.visualligence.g/src/com/visualligence/g/VML.genmodel"
+
         
-        registerGenModelFile = "${runtimeProject}/src/com/visualligence/g/model/visualligence.genmodel"
-        registerEcoreFile    = "${runtimeProject}/src/com/visualligence/g/model/visualligence.ecore"
-//        registerGeneratedEPackage = "com.visualligence.g.model.visualligence"
+//        registerGenModelFile      = "${runtimeProject}/src/com/visualligence/g/model/visualligence.genmodel"
+//        registerEcoreFile         = "${runtimeProject}/src/com/visualligence/g/model/visualligence.ecore"
     }
 
     component = DirectoryCleaner {
@@ -39,7 +42,7 @@ Workflow {
             fileExtensions = file.extensions
 
             // Java API to access grammar elements (required by several other fragments)
-            fragment = grammarAccess.GrammarAccessFragment {}
+            fragment = grammarAccess.GrammarAccessFragment{}
 
             // generates Java API for the generated EPackages
             fragment = ecore.EcoreGeneratorFragment {

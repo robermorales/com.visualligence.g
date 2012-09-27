@@ -43,7 +43,9 @@ import com.visualligence.g.vML.SingleLiteral
 
 class VMLGenerator implements IGenerator {
 
-	def base( String uri )'''«uri.substring(0,uri.indexOf('.'))»'''
+	def base( String uri ){
+		return uri.substring(0,uri.indexOf('.'))
+	}
 
 	def cName( Resource r ){
 		return r.URI.lastSegment.base
@@ -57,7 +59,8 @@ class VMLGenerator implements IGenerator {
 
 	override void doGenerate(Resource resource, IFileSystemAccess fsa) {
 	
-		fsa.generateFile( resource.pName + resource.cName + ".dump.txt", resource.contents.size.toString )
+		fsa.generateFile( resource.pName + resource.cName + ".dump.txt", "as" )
+//		resource.contents.size.toString
 	
 		/*	
 		var Module m = ( resource.contents.head as Module )

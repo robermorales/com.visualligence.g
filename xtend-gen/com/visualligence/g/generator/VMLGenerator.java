@@ -1,9 +1,7 @@
 package com.visualligence.g.generator;
 
 import java.util.Date;
-import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.URI;
-import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.xtend2.lib.StringConcatenation;
 import org.eclipse.xtext.generator.IFileSystemAccess;
@@ -43,22 +41,19 @@ import org.eclipse.xtext.generator.IGenerator;
  */
 @SuppressWarnings("all")
 public class VMLGenerator implements IGenerator {
-  public CharSequence base(final String uri) {
-    StringConcatenation _builder = new StringConcatenation();
+  public String base(final String uri) {
     int _indexOf = uri.indexOf(".");
-    String _substring = uri.substring(0, _indexOf);
-    _builder.append(_substring, "");
-    return _builder;
+    return uri.substring(0, _indexOf);
   }
   
-  public CharSequence cName(final Resource r) {
+  public String cName(final Resource r) {
     URI _uRI = r.getURI();
     String _lastSegment = _uRI.lastSegment();
     return this.base(_lastSegment);
   }
   
   public String pName(final Resource r) {
-    CharSequence _cName = this.cName(r);
+    String _cName = this.cName(r);
     String _plus = ("com/visualligence/gen/" + _cName);
     return (_plus + "/");
   }
@@ -73,12 +68,9 @@ public class VMLGenerator implements IGenerator {
   
   public void doGenerate(final Resource resource, final IFileSystemAccess fsa) {
     String _pName = this.pName(resource);
-    CharSequence _cName = this.cName(resource);
+    String _cName = this.cName(resource);
     String _plus = (_pName + _cName);
     String _plus_1 = (_plus + ".dump.txt");
-    EList<EObject> _contents = resource.getContents();
-    int _size = _contents.size();
-    String _string = Integer.valueOf(_size).toString();
-    fsa.generateFile(_plus_1, _string);
+    fsa.generateFile(_plus_1, "as");
   }
 }
