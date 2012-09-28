@@ -1,105 +1,119 @@
 package com.visualligence.g.tests;
 
-import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
 
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.IOException;
+import java.text.MessageFormat;
+import java.util.ArrayList;
+import java.util.Collection;
 
 import org.apache.log4j.Logger;
 import org.eclipse.xtext.junit4.InjectWith;
-import org.eclipse.xtext.junit4.XtextRunner;
 import org.eclipse.xtext.junit4.util.ParseHelper;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.junit.runners.Parameterized;
+import org.junit.runners.Parameterized.Parameters;
 
 import com.google.inject.Inject;
 import com.visualligence.g.VMLInjectorProvider;
-import com.visualligence.g.generator.VMLGenerator;
 import com.visualligence.g.vML.Module;
 
 @InjectWith(VMLInjectorProvider.class)
-@RunWith(XtextRunner.class)
+@RunWith(Parameterized.class)
 public class ParserTest {
 
+	private File input;
+	private File output;
+	private File model;
+
+	public ParserTest(File model, File input, File output) {
+		this.model = model;
+		this.input = input;
+		this.output = output;
+	}
+
 	@Inject
-	ParseHelper<Module> parser;
+	static ParseHelper<Module> parser;
 
 	private static Logger log = Logger.getLogger(ParserTest.class);
-	private String space = "           ";
+
+	public static byte[] read(File body) throws IOException {
+		byte[] byte_array = new byte[(int) body.length()];
+		FileInputStream fos = new FileInputStream(body);
+		fos.read(byte_array);
+		fos.close();
+		return byte_array;
+	}
 
 	@Test
 	public void model_i_o() throws Exception {
+		log.debug(MessageFormat.format("Test [{0}] [{1}]",
+				this.model.getName(), this.input.getName()));
+
+		byte[] buffer_in  = read( this.input );
+		byte[] buffer_out = read( this.output );
+		byte[] buffer_vml = read( this.model );
+
+		log.debug(MessageFormat.format("Test [{0}] [{1}] [parse]    ",
+				this.model.getName(), this.input.getName()));
+
+		// Module module = parser.parse(new String(buffer_vml));
+		// assertNotNull(module);
+
+		log.debug(MessageFormat.format("Test [{0}] [{1}] [generate] ",
+				this.model.getName(), this.input.getName()));
+
+		// VMLGenerator vml = new VMLGenerator();
+		// IFileSystemAccess fsa;
+		// vml.doGenerate( module, fsa );
+
+		log.debug(MessageFormat.format("Test [{0}] [{1}] [comparate]",
+				this.model.getName(), this.input.getName()));
+
+		assertTrue( buffer_in .equals( buffer_in ) );
+		assertTrue( buffer_out.equals( buffer_out ) );
+		assertTrue( buffer_vml.equals( buffer_vml ) );
+	}
+
+	@Parameters
+	public static Collection<Object[]> data() throws IOException {
+		Collection<Object[]> data = new ArrayList<Object[]>();
+
 		File dir = new File("models-io");
 		assertTrue(dir.isDirectory());
+
 		for (File test : dir.listFiles()) {
 			if (test.isDirectory()) {
-				File body = new File(dir, test.getName() + ".vml");
 
-				log.debug("Test " + test.getName());
-				byte[] buffer_vml = new byte[(int) body.length()];
-				FileInputStream fis = new FileInputStream(body);
-				fis.read(buffer_vml);
-				fis.close();
-				log.debug(space + "[parse]");
-
-				Module module = parser.parse(new String(buffer_vml));
-				assertNotNull(module);
-				
-				VMLGenerator vml = new VMLGenerator();
-				// vml.doGenerate( module );
-
+				File model = new File(dir, test.getName() + ".vml");
 				File inputs = new File(test, "input");
 				File outputs = new File(test, "output");
-				int input_i = 0;
 				for (File input : inputs.listFiles()) {
-					log.debug(space + "[input] [" + (++input_i) + "] "
-							+ input.getName());
-
-					File output;
-					try {
-						output = new File(outputs, input.getName());
-
-						byte[] buffer_in = new byte[(int) input.length()];
-						new FileInputStream(input).read(buffer_in);
-
-						byte[] buffer_out = new byte[(int) output.length()];
-						new FileInputStream(output).read(buffer_out);
-						
-						System.out.println( new String( buffer_in ) );
-						System.out.println( new String( buffer_out ) );
-						
-					} catch (Exception e) {
-
-					}
+					File output = new File(outputs, input.getName());
+					data.add(new Object[] { model, input, output });
 				}
 			}
 		}
+		return data;
 	}
-	
-	public void sandbox(){
-		
+
+	public void sandbox() throws Exception {
+
 		String s = " module example                      \n"
 				+ "  input void                          \n"
 				+ "  output void                         \n"
 				+ "  author \"Rober Morales-Chaparro\"   \n"
 				+ "  creation \"2012/03/24\"             \n"
 				+ "  more \"http://visualligence.com/\"  \n"
-				
-				+ " <<<--->> asdf;; "
-				;
 
+				+ " <<<--->> asdf;; ";
 
-		try {
-			
-			Module module = parser.parse( s );
-			
-			String name = module.getName();
-			
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		Module module = parser.parse(s);
+		String name = module.getName();
+		System.out.println(name);
 
 	}
 }
