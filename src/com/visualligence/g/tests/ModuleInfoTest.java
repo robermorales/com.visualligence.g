@@ -12,7 +12,7 @@ import org.junit.runner.RunWith;
 
 import com.google.inject.Inject;
 import com.visualligence.g.VMLInjectorProvider;
-import com.visualligence.g.model.visualligence.Module;
+import com.visualligence.g.vML.Module;
 
 @InjectWith(VMLInjectorProvider.class)
 @RunWith(XtextRunner.class)

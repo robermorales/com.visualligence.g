@@ -16,8 +16,6 @@ Workflow {
 
 	registerGeneratedEPackage = "com.visualligence.g.vML.VMLPackage"
 	registerGenModelFile = "platform:/resource/com.visualligence.g/src/com/visualligence/g/VML.genmodel"
-
-        
 //        registerGenModelFile      = "${runtimeProject}/src/com/visualligence/g/model/visualligence.genmodel"
 //        registerEcoreFile         = "${runtimeProject}/src/com/visualligence/g/model/visualligence.ecore"
     }
